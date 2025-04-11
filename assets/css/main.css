@@ -1762,11 +1762,13 @@ h6 {
 
 @media (max-width: 991px) {
   .placeholder-decorativo {
+    font-size: 0rem;
     height: auto;
   }
   .img-fluid {
-    max-width: 0%;
-}
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 
