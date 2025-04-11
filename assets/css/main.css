@@ -1825,6 +1825,32 @@ h6 {
   max-width: 100%;
   margin-top: 20px;
 }
+/*--------------------------------------------------------------
+# Imagem da página em construção
+--------------------------------------------------------------*/
+
+.logo-image-container {
+  background-color: transparent;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image-container img {
+  max-width: 30%;
+  margin-left: 400px;
+
+}
+
+.logo-image-container img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 991px) {
+  .logo-image-container img {
+    max-width: 0%;
+  }
+}
 
 
 /* ========================= */
@@ -1841,6 +1867,20 @@ h6 {
   }
   .equipment-section .section-description {
     font-size: var(--font-size-paragraph-desktop) !important;
+  }
+  .equipment-main-section .section-title {
+    font-size: var(--font-size-title-desktop) !important;
+    
+    font-weight: lighter;
+    text-align: left !important;
+    padding-bottom: 8px;
+    margin-right: -300px;
+    color: var(--heading-color);
+  }
+  .equipment-main-section .section-description {
+    font-size: var(--font-size-paragraph-desktop) !important;
+    margin-right: -300px;
+    color: var(--heading-color);
   }
 }
 
@@ -1864,6 +1904,23 @@ h6 {
     margin-right: -90px;
     padding-bottom: 16px;
   }
+  .equipment-main-section .section-title {
+    margin-right: -75px;
+   
+    font-size: var(--font-size-title-tablet) !important;
+    color: var(--heading-color);
+    padding-bottom: 8px;
+    font-weight: 300;
+    
+  
+  }
+  
+  .equipment-main-section .section-description {
+    margin-right: -90px;
+    font-size: var(--font-size-paragraph-tablet) !important;
+    color: var(--heading-color);
+    padding-bottom: 16px;
+  }
   
   .equipment-section .text-content {
     margin-right: 135px;
@@ -1885,6 +1942,23 @@ h6 {
   
   .equipment-section .section-description {
     font-size: var(--font-size-paragraph-mobile) !important;
+    margin-right: 0;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  .equipment-main-section .section-title {
+    
+    font-size: var(--font-size-title-mobile) !important;
+    color: var(--heading-color);
+    font-weight: 300;
+    margin-bottom: -40px !important;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  
+  .equipment-main-section .section-description {
+    font-size: var(--font-size-paragraph-mobile) !important;
+    color: var(--heading-color);
     margin-right: 0;
     margin-bottom: 30px;
     line-height: 1.4;
@@ -2079,7 +2153,7 @@ h6 {
 
 .footer .footer-main .footer-widget .logo img {
   
-  height: 64px;
+  height: 56px;
   
 }
 
@@ -2087,7 +2161,7 @@ h6 {
   margin-right: 26px;
   line-height: 1.7;
   color: color-mix(in srgb, var(--default-color), transparent 10%);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .footer .footer-main .footer-widget h4 {
@@ -2107,7 +2181,6 @@ h6 {
 .footer .footer-main .footer-contact .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
   justify-content: flex-start;
 }
 
@@ -2764,10 +2837,11 @@ section,
 }
 @media (min-width: 1200px) {
   .hero .welcome h2 {
-    margin-top: -500px;
+    margin-top: -425px;
     font-size: 60px;
     font-weight: lighter;
   }
+  
   .hero {
     position: relative;
     z-index: 1;
@@ -2778,6 +2852,23 @@ section,
     
     overflow: hidden;
   }
+  .hero-main .welcome h2 {
+    margin-top: -565px;
+    font-size: 60px;
+    font-weight: lighter;
+  }
+  
+  .hero-main {
+    position: relative;
+    z-index: 1;
+    padding-top: 0px;
+    
+    height: 280px;
+    
+    
+    overflow: hidden;
+  }
+  
   .hero-image-wrapper img.hero-img {
     width: 100%;
     height: auto;
@@ -2801,6 +2892,21 @@ section,
     height: auto;
     overflow: hidden;
   }
+  .hero-main .welcome h2 {
+    font-size: var(--font-size-title-tablet) !important;
+    margin: -290px 0px 0px 12px;
+    font-weight: lighter;
+  }
+  .hero-main {
+    position: relative;
+    z-index: 1;
+    padding: 0px;
+    height: auto;
+    overflow: hidden;
+    margin-top: -140px;
+  }
+
+
   .mobile-slide-text {
     position: absolute;
     top: 80px;
@@ -2847,6 +2953,21 @@ section,
     height: auto;
     overflow: hidden;
   }
+  .hero-main .welcome h2 {
+    margin-top: -240px;  /* Ajuste o valor conforme sua necessidade */
+    margin-left:12px;
+    font-size: var(--font-size-title-mobile) !important;
+    font-weight: lighter;
+  }
+  .hero-main {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0px 0px 0px;
+    height:auto;
+    overflow: hidden;
+  }
+  
+  
   .hero-image-wrapper img.hero-img {
     width: 100%;
     height: auto;
@@ -2860,7 +2981,6 @@ section,
       padding-left: calc(var(--bs-spacing-mobile-left) * 0.5);
     }
 }
-
 
 
 
