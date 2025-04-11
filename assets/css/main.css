@@ -1764,11 +1764,19 @@ h6 {
   .placeholder-decorativo {
     font-size: 0rem;
     height: auto;
+    padding: 0px;
   }
   .img-fluid {
     max-width: 100%;
     height: auto;
+    
   }
+  /* Estiliza a imagem dentro do container */
+  .placeholder-decorativo img {
+    max-width: 0%;
+    
+  }
+
 }
 
 
