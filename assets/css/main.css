@@ -1761,10 +1761,12 @@ h6 {
 
 
 @media (max-width: 991px) {
+  .placeholder-decorativo {
+    height: auto;
+  }
   .img-fluid {
     max-width: 0%;
-    
-  }
+}
 }
 
 
@@ -1826,7 +1828,6 @@ h6 {
     font-weight: lighter;
     text-align: left !important;
     padding-bottom: 8px;
-    margin-right: -20px;
   }
   .equipment-section .section-description {
     font-size: var(--font-size-paragraph-desktop) !important;
