@@ -57,10 +57,6 @@ html, body {
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
-  --background-color: #ffffff;
-  --surface-color: #ffffff;
-}
 
 .dark-background {
   --background-color: #232931;
@@ -112,6 +108,22 @@ h6 {
   font-size: 60px;
     font-weight: 300;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  h1, h2, h3, h4, h5, h6 {
+   
+    font-size: 48px;
+  
+    margin-top: 24px;
+  }
+}
+@media (max-width: 767px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 32px;
+    margin-top: 85px;
+  
+  }
+}
+
 
 .container .info p {
   /* Estilos exclusivos para o <p> */
@@ -1907,7 +1919,7 @@ h6 {
     padding-bottom: 16px;
   }
   .equipment-main-section .section-title {
-    margin-right: -75px;
+    
    
     font-size: var(--font-size-title-tablet) !important;
     color: var(--heading-color);
@@ -2552,7 +2564,7 @@ color-mix(in srgb, var(--default-color), transparent 50%);
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--default-color);
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
@@ -2989,7 +3001,7 @@ section,
 .hero-main-custom {
   position: relative;
   /* Aqui definimos o background desejado usando color-mix */
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: color-mix(in srgb, var(--surface-color), transparent 0%);
 }
 
 /* Overlay customizado para o hero */
@@ -12597,7 +12609,7 @@ section,
 .catalog-section .btn-saiba-mais {
   margin-right: -40px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  color: white;
+  color: var(--default-color);
   font-weight: 500;
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
