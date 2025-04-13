@@ -109,6 +109,8 @@ h5,
 h6 {
   color: var(--default-color);
   font-family: 'Quicksand', sans-serif;
+  font-size: 60px;
+    font-weight: 300;
 }
 
 .container .info p {
@@ -2153,7 +2155,7 @@ h6 {
 
 .footer .footer-main .footer-widget .logo img {
   
-  height: 56px;
+  height: 40px;
   
 }
 
@@ -2363,23 +2365,23 @@ color-mix(in srgb, var(--default-color), transparent 50%);
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .footer .footer-main .footer-widget p {
-    font-size: 24px;
+    font-size: 16px;
   }
   .footer .footer-main .footer-widget h4 {
-    font-size: 22px;
+    font-size: 20px;
     
   }
   .footer .footer-main .footer-links a {
     
     
-    font-size: 20px;
+    font-size: 16px;
   }
   .footer .footer-main .footer-contact .contact-item span {
     
-    font-size: 20px;
+    font-size: 16px;
   }
   .footer .footer-bottom .copyright p {
-    font-size: 20px;
+    font-size: 16px;
   }
   
   .footer .footer-newsletter {
@@ -2983,6 +2985,57 @@ section,
 }
 
 
+/* Estilização da seção hero customizada */
+.hero-main-custom {
+  position: relative;
+  /* Aqui definimos o background desejado usando color-mix */
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+/* Overlay customizado para o hero */
+.hero-main-custom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Overlay para mesclar a cor de fundo com uma transparência adicional */
+  background: color-mix(in srgb, var(--surface-color), transparent 85%);
+  pointer-events: none; /* Permite interações nos elementos abaixo */
+  z-index: 2;
+}
+
+/* Garantindo que o título fique acima do overlay */
+.welcome-custom {
+  position: relative;
+  z-index: 3; /* Valor maior que o do overlay */
+}
+
+/* Se desejar, pode-se ocultar a imagem que está causando conflito */
+/* .hero-image-wrapper-custom {
+  display: none;
+} */
+
+/* Caso precise de ajustes específicos para textos no mobile */
+.mobile-slide-text-custom {
+  position: relative;
+}
+.custom-hero-title {
+  position: relative;
+  z-index: 10; /* Certifique-se de que esse valor seja maior que o dos overlays */
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Estilização específica para o título */
+.custom-hero-title h2 {
+  margin: 0;
+  font-size: 2.5rem; /* Ajuste o tamanho conforme necessário */
+  line-height: 1.2;
+  color: var(--text-color, #fff); /* Utilize a variável ou defina uma cor padrão */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 
 
@@ -8525,7 +8578,7 @@ section,
 @media (min-width: 768px) and (max-width: 1199px) {
 
   .testimonials .testimonial-item p {
-    font-size: var(--font-size-paragraph-tablet) !important;
+    font-size: 16px;
   }
 }
 
@@ -12542,6 +12595,7 @@ section,
    prevalece, sendo aplicada também para .btn-saiba-mais fora da .catalog-section se necessário. */
 .btn-saiba-mais,
 .catalog-section .btn-saiba-mais {
+  margin-right: -40px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
   color: white;
   font-weight: 500;
@@ -12561,3 +12615,13 @@ section,
 
 
 
+
+
+/* Corrigir parallax para dispositivos móveis */
+@media (max-width: 991px) {
+  .parallax-section {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}

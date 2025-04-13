@@ -1,3 +1,8 @@
+// ========================================================== //
+// Section: Principal
+// Descrição: Importação de todos os módulos SCSS.
+// ========================================================== //
+
 body { font-family: 'Quicksand', sans-serif; }
 // out: ../css/main.css
 // You can use the "Easy Compile" VS Code extension to easily compile the scss files https://marketplace.visualstudio.com/items?itemName=refgd.easy-compile
@@ -14,3 +19,70 @@ body { font-family: 'Quicksand', sans-serif; }
 @import './layouts/_page-titles.scss';
 @import './_sections.scss';
 @import './_widgets.scss';
+// ========================================================== //
+// Ajustes de Tipografia Responsiva
+// ========================================================== //
+
+body {
+  font-size: 16px;
+
+  @include mobile {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 15px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
+
+  @include tablet {
+    font-size: 2.2rem;
+  }
+
+  @include desktop {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+
+  @include mobile {
+    font-size: 1.6rem;
+  }
+
+  @include tablet {
+    font-size: 1.9rem;
+  }
+
+  @include desktop {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+
+  @include mobile {
+    font-size: 1.3rem;
+  }
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
+
+  @include desktop {
+    font-size: 1.6rem;
+  }
+}
