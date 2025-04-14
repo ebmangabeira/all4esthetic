@@ -77,8 +77,6 @@ html, body {
 
 }
 
-
-
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -4400,17 +4398,6 @@ section,
   background-repeat: no-repeat;
   overflow: hidden;
 }
-/* Alinhar h2 e p à esquerda */
-.parallax-section h2,
-.parallax-section p {
-  text-align: left !important;
-  color: #ffffff; /* cor opcional, pode ajustar */
-  padding-top: 4px;
-  
-}
-.col-lg-8 {
-  width: 100%;
-}
 @media (min-width: 992px) {
   .parallax-section {
     background-attachment: fixed;
@@ -4420,7 +4407,6 @@ section,
 @media (max-width: 991px) {
   .parallax-section {
     background-attachment: scroll;
-    
   }
 }
 
@@ -4439,18 +4425,19 @@ section,
   position: relative;
   z-index: 2;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
-  .parallax-section {
-    height: 300px !important; /* altura reduzida no mobile */
-    
-  }
-}
-
 @media (max-width: 767px) {
   .parallax-section {
     height: 300px !important; /* altura reduzida no mobile */
-    
+    background-position: right center !important; /* desloca imagem para a direita */
   }
+  
+  .parallax-section h2 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+.parallax-section p {
+  padding-bottom: 80px;
+}
 }
 
 

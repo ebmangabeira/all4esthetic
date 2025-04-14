@@ -422,6 +422,7 @@ style="background-image: url('assets/img/parallax-img.png');">
 <div class="container text-center">
   <div class="row justify-content-center">
     <div class="col-lg-8">
+
     </div>
   </div>
 </div>
@@ -767,12 +768,6 @@ style="background-image: url('assets/img/parallax-img.png');">
       });
     </script>
     
-    <!-- INÍCIO DO NOVO CARROSSEL SOBRE -->
-    <script>
-      // Carrossel automático #2 (sobre-carousel) — Removido porque era duplicado do anterior
-      // Se quiser manter dois carrosséis distintos, altere o ID ou container-alvo
-    </script>
-    
     <script>
       // Inicialização do Swiper.js para o carrossel
       new Swiper(".sobre-swiper", {
@@ -818,37 +813,6 @@ style="background-image: url('assets/img/parallax-img.png');">
         });
       });
     </script>
-    <!-- PARALLAX FUNCIONAL EM MOBILE (<767px) COM IMAGEM MAIS PARA A DIREITA -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const parallaxSection = document.querySelector(".parallax-section");
-
-    function isMobile() {
-      return window.innerWidth <= 767;
-    }
-
-    function handleParallaxScroll() {
-      if (!parallaxSection || !isMobile()) return;
-      const scrolled = window.scrollY;
-      const horizontalOffset = 30; // pixels para a direita
-      parallaxSection.style.backgroundPosition = `${horizontalOffset}px ${scrolled * 0.5}px`;
-    }
-
-    if (isMobile()) {
-      window.addEventListener("scroll", handleParallaxScroll);
-      handleParallaxScroll(); // chamada inicial
-    }
-
-    window.addEventListener("resize", () => {
-      if (!isMobile() && parallaxSection) {
-        parallaxSection.style.backgroundPosition = "center center";
-        parallaxSection.style.height = "500px"; // altura padrão
-      }
-    });
-  });
-</script>
-
-
     
   </body>
 </html>
