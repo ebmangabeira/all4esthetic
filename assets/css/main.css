@@ -1857,7 +1857,7 @@ h6 {
 
 }
 
-.logo-image-container img:hover {
+.logo-image-container img:hover{
   transform: scale(1.05);
 }
 @media (max-width: 991px) {
@@ -1865,6 +1865,17 @@ h6 {
     max-width: 0%;
   }
 }
+@media (max-width: 767px) {
+  .logo-image-container {
+    padding: 0px;
+
+  }
+}
+
+.section-main{
+  background-color: var(--default-color);
+}
+
 
 
 /* ========================= */
@@ -2994,6 +3005,12 @@ section,
       padding-right: calc(var(--bs-spacing-mobile-right) * 0.5);
       padding-left: calc(var(--bs-spacing-mobile-left) * 0.5);
     }
+    .hero-main-custom {
+      position: relative;
+      background: 
+  color-mix(in srgb, var(--surface-color), transparent 0%);
+      padding: 24px 0px 8px 0px;
+  }
 }
 
 
