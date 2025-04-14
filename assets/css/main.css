@@ -4425,10 +4425,15 @@ section,
   position: relative;
   z-index: 2;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .parallax-section {
+    height: 400px !important;
+  }
+}
+
 @media (max-width: 767px) {
   .parallax-section {
     height: 300px !important; /* altura reduzida no mobile */
-    background-position: right center !important; /* desloca imagem para a direita */
   }
   
   .parallax-section h2 {
