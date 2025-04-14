@@ -1015,38 +1015,3 @@
 })();  // Fim do IIFE
 
 // Esthetic Equipment Carousel Initialization (ajustado) - executado fora do IIFE
-
-
-
-
-
-
-
-// Simula Parallax para dispositivos móveis
-function mobileParallax() {
-  const elements = document.querySelectorAll('.parallax');
-  window.addEventListener('scroll', () => {
-    elements.forEach(el => {
-      const scrolled = window.pageYOffset;
-      el.style.backgroundPosition = 'center ' + (scrolled * 0.4) + 'px';
-    });
-  });
-}
-
-// Ativa apenas em telas pequenas
-if (window.innerWidth <= 767) {
-  document.addEventListener('DOMContentLoaded', mobileParallax);
-}
-
-
-function simulateParallax() {
-  const parallaxEls = document.querySelectorAll('.parallax');
-  window.addEventListener('scroll', function() {
-    const scrollY = window.scrollY;
-    parallaxEls.forEach(el => {
-      const speed = el.dataset.speed ? parseFloat(el.dataset.speed) : 0.4;
-      el.style.backgroundPosition = `center ${scrollY * speed}px`;
-    });
-  });
-}
-document.addEventListener('DOMContentLoaded', simulateParallax);

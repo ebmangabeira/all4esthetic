@@ -416,20 +416,18 @@
         </div>
       </section>
       <!-- Parallax Section -->
-      <section
-        class="parallax-section text-white d-flex align-items-center"
-        style="background-image: url('assets/img/parallax-img.png');"
-      >
-        <div class="container text-center">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <h2 class="display-5 fw-bold" data-aos="fade-up"></h2>
-              <p class="lead mt-3" data-aos="fade-up" data-aos-delay="100"></p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Parallax Section -->
+<section
+class="parallax-section text-white d-flex align-items-center"
+style="background-image: url('assets/img/parallax-img.png');">
+<div class="container text-center">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Parallax Section -->
+
       <!-- Testimonials Section -->
       <section class="testimonials section" id="testimonials">
         <div class="container">
@@ -735,60 +733,48 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script>
+      // Oculta o header ao rolar a página
       window.addEventListener("scroll", function () {
         const header = document.getElementById("header");
         if (window.scrollY > 50) {
-          // ajuste o valor conforme necessário
           header.classList.add("hide-main");
         } else {
           header.classList.remove("hide-main");
         }
       });
     </script>
+    
     <script>
+      // Carrossel automático #1 (sobre-carousel)
       document.addEventListener("DOMContentLoaded", function () {
         const slides = document.querySelectorAll("#sobre-carousel .carousel-slide");
         let current = 0;
-
+    
         function showSlide(index) {
           slides.forEach((slide, i) => {
             slide.classList.remove("active");
             if (i === index) slide.classList.add("active");
           });
         }
-
+    
         function nextSlide() {
           current = (current + 1) % slides.length;
           showSlide(current);
         }
-
+    
         setInterval(nextSlide, 6000);
         showSlide(current);
       });
     </script>
+    
     <!-- INÍCIO DO NOVO CARROSSEL SOBRE -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const slides = document.querySelectorAll("#sobre-carousel .carousel-slide");
-        let current = 0;
-
-        function showSlide(index) {
-          slides.forEach((slide, i) => {
-            slide.classList.remove("active");
-            if (i === index) slide.classList.add("active");
-          });
-        }
-
-        function nextSlide() {
-          current = (current + 1) % slides.length;
-          showSlide(current);
-        }
-
-        setInterval(nextSlide, 6000);
-        showSlide(current);
-      });
+      // Carrossel automático #2 (sobre-carousel) — Removido porque era duplicado do anterior
+      // Se quiser manter dois carrosséis distintos, altere o ID ou container-alvo
     </script>
+    
     <script>
+      // Inicialização do Swiper.js para o carrossel
       new Swiper(".sobre-swiper", {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -804,5 +790,65 @@
         },
       });
     </script>
+    
+    <!-- PARALLAX FUNCIONAL EM MOBILE E TABLET -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const parallaxSection = document.querySelector(".parallax-section");
+    
+        function isMobile() {
+          return window.innerWidth <= 991;
+        }
+    
+        function handleParallaxScroll() {
+          if (!parallaxSection || !isMobile()) return;
+          const scrolled = window.scrollY;
+          parallaxSection.style.backgroundPosition = `center ${scrolled * 0.5}px`;
+        }
+    
+        if (isMobile()) {
+          window.addEventListener("scroll", handleParallaxScroll);
+          handleParallaxScroll(); // chamada inicial
+        }
+    
+        window.addEventListener("resize", () => {
+          if (!isMobile() && parallaxSection) {
+            parallaxSection.style.backgroundPosition = "center center";
+          }
+        });
+      });
+    </script>
+    <!-- PARALLAX FUNCIONAL EM MOBILE (<767px) COM IMAGEM MAIS PARA A DIREITA -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const parallaxSection = document.querySelector(".parallax-section");
+
+    function isMobile() {
+      return window.innerWidth <= 767;
+    }
+
+    function handleParallaxScroll() {
+      if (!parallaxSection || !isMobile()) return;
+      const scrolled = window.scrollY;
+      const horizontalOffset = 30; // pixels para a direita
+      parallaxSection.style.backgroundPosition = `${horizontalOffset}px ${scrolled * 0.5}px`;
+    }
+
+    if (isMobile()) {
+      window.addEventListener("scroll", handleParallaxScroll);
+      handleParallaxScroll(); // chamada inicial
+    }
+
+    window.addEventListener("resize", () => {
+      if (!isMobile() && parallaxSection) {
+        parallaxSection.style.backgroundPosition = "center center";
+        parallaxSection.style.height = "500px"; // altura padrão
+      }
+    });
+  });
+</script>
+
+
+    
   </body>
 </html>

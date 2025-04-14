@@ -77,6 +77,8 @@ html, body {
 
 }
 
+
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -4387,16 +4389,39 @@ section,
   }
 }
 /*--------------------------------------------------------------
-# Parallax Section
+# Parallax Section (compatível com mobile)
 --------------------------------------------------------------*/
 .parallax-section {
   position: relative;
-  background-image: url(assets/img/parallax.webp);
-  background-attachment: fixed;
+  height: 500px;
+  background-image: url(assets/img/parallax-img.png);
   background-size: cover;
   background-position: center;
-  height: 500px;
+  background-repeat: no-repeat;
   overflow: hidden;
+}
+/* Alinhar h2 e p à esquerda */
+.parallax-section h2,
+.parallax-section p {
+  text-align: left !important;
+  color: #ffffff; /* cor opcional, pode ajustar */
+  padding-top: 4px;
+  
+}
+.col-lg-8 {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .parallax-section {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 991px) {
+  .parallax-section {
+    background-attachment: scroll;
+    
+  }
 }
 
 .parallax-section::before {
@@ -4406,24 +4431,29 @@ section,
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: color-mix(in srgb, var(--surface-color), transparent 25%);
+  background-color: rgba(0, 0, 0, 0.3); /* máscara escura */
   z-index: 1;
 }
 
-/* Para garantir que o conteúdo fique visível por cima da película */
 .parallax-section .container {
   position: relative;
   z-index: 2;
 }
-/* Máscara da seção Parallax */
-.parallax-mask {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
-  z-index: 1;
-  pointer-events: none;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .parallax-section {
+    height: 300px !important; /* altura reduzida no mobile */
+    
+  }
 }
-.parallax-section > .container {
-  z-index: 2;
+
+@media (max-width: 767px) {
+  .parallax-section {
+    height: 300px !important; /* altura reduzida no mobile */
+    
+  }
 }
+
+
 /*--------------------------------------------------------------
 # Category Product List Section
 --------------------------------------------------------------*/
@@ -12646,129 +12676,3 @@ section,
 
 
 
-/* Corrigir parallax para dispositivos móveis */
-@media (max-width: 991px) {
-  .parallax-section {
-    background-attachment: scroll !important;
-    background-position: center center !important;
-    background-size: cover !important;
-  }
-}
-
-
-/* Corrigir parallax em dispositivos móveis */
-@media screen and (max-width: 767px) {
-  .parallax {
-    background-attachment: scroll !important;
-  }
-}
-
-
-/* Compatível com todos os tamanhos de tela */
-.parallax {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: scroll !important;
-}
-
-
-/* Parallax que funciona em qualquer dispositivo */
-.parallax-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.parallax-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/parallax-img.png');
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
-
-.parallax-content {
-  position: relative;
-  z-index: 1;
-  color: white;
-}
-
-
-/* Parallax real e funcional em qualquer dispositivo */
-.parallax-wrapper {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.parallax-background {
-  background-image: url('../img/parallax-img.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-.parallax-foreground {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4); /* leve escurecimento p/ contraste */
-}
-
-
-/* Parallax moderno e compatível com todos os dispositivos */
-.parallax-container {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.parallax-image {
-  background-image: url('../img/parallax-img.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-.parallax-content {
-  position: relative;
-  z-index: 1;
-  padding: 5rem 1rem;
-  text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
