@@ -628,6 +628,35 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* Garanta que o ul esteja em position: relative para o posicionamento absoluto do close */
+  
+  
+  /* Estilize o botão de fechar */
+  #navmenu > ul .mobile-close {
+    position: absolute;
+    top: 10px;    /* ajuste conforme a necessidade */
+    right: 10px;  /* ajuste conforme a necessidade */
+    list-style: none;
+  }
+  
+  #navmenu > ul .mobile-close a {
+    font-size: 40px;
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);  
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: -16px -8px 0px 0px;
+    font-weight: 700;
+  }
+
+  
+
+  /* Opcional: se desejar ocultar o close button para outras resoluções */
+  .mobile-close {
+    display: block;
+  }
+}
+
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -640,7 +669,6 @@ h6 {
     list-style: none;
     align-items: center;
     justify-content: center;
-    
   }
 
   .navmenu li {
@@ -835,7 +863,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -846,7 +874,7 @@ h6 {
 
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
-    position: absolute;
+    position: fixed; /* Alterado de absolute para fixed */
     font-size: 32px;
     top: 15px;
     right: 15px;
@@ -1489,6 +1517,7 @@ h6 {
     display: block;
   }
 }
+
 
 /* =================================================================================
    CSS - Seção Sobre Nós
