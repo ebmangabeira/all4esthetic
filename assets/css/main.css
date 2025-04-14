@@ -119,9 +119,9 @@ h6 {
 @media (max-width: 767px) {
   h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
-    margin-top: 85px;
-  
-  }
+    margin-top: 95px;
+    margin-bottom: 30px;
+}
 }
 
 
@@ -1763,6 +1763,8 @@ h6 {
 @media (max-width: 767px) {
   .sobre .content h3 {
     font-size: var(--font-size-title-mobile) !important;
+    margin-top: 8px;
+    padding-bottom: 16px;
   }
   .sobre .content p {
     font-size: var(--font-size-paragraph-mobile) !important;
@@ -2192,7 +2194,7 @@ h6 {
 .footer .footer-main .footer-widget h4 {
   font-size: 18px;
   font-weight: 600;
-  margin: 0px;
+  margin: -8px 0px 24px 0px;
   position: relative;
 }
 
@@ -2200,7 +2202,7 @@ h6 {
   color: var(--default-color);
   font-size: 16px;
   font-weight: 500;
-  margin-top: 15px;
+  margin: -8px 0px 16px 0px;
 }
 
 .footer .footer-main .footer-contact .contact-item {
@@ -2907,7 +2909,7 @@ section,
 @media (min-width: 768px) and (max-width: 1199px) {
   .hero .welcome h2 {
     font-size: var(--font-size-title-tablet) !important;
-    margin: -425px 0px 0px 12px;
+    margin: -380px 0px 0px 12px;
     font-weight: lighter;
   }
   .hero {
@@ -2966,7 +2968,7 @@ section,
     z-index: 10;
   }
   .hero .welcome h2 {
-    margin-top: -227px;  /* Ajuste o valor conforme sua necessidade */
+    margin-top: -300px;  /* Ajuste o valor conforme sua necessidade */
     margin-left:12px;
     font-size: var(--font-size-title-mobile) !important;
     font-weight: lighter;
@@ -2978,24 +2980,9 @@ section,
     height: auto;
     overflow: hidden;
   }
-  .hero-main .welcome h2 {
-    margin-top: -240px;  /* Ajuste o valor conforme sua necessidade */
-    margin-left:12px;
-    font-size: var(--font-size-title-mobile) !important;
-    font-weight: lighter;
-  }
-  .hero-main {
-    position: relative;
-    z-index: 1;
-    padding: 100px 0px 0px 0px;
-    height:auto;
-    overflow: hidden;
-  }
-  
-  
   .hero-image-wrapper img.hero-img {
     width: 100%;
-    height: auto;
+    height: 300px;
     display: block;
     max-height: 500px;
     object-fit: cover;
@@ -3009,7 +2996,20 @@ section,
       position: relative;
       background: 
   color-mix(in srgb, var(--surface-color), transparent 0%);
-      padding: 24px 0px 8px 0px;
+      padding: 40px 0px 8px 0px;
+  }
+  .hero-main .welcome h2 {
+    margin-top: -240px;  /* Ajuste o valor conforme sua necessidade */
+    margin-left:12px;
+    font-size: var(--font-size-title-mobile) !important;
+    font-weight: lighter;
+  }
+  .hero-main {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0px 0px 0px;
+    height:auto;
+    overflow: hidden;
   }
 }
 
@@ -12624,7 +12624,7 @@ section,
    prevalece, sendo aplicada também para .btn-saiba-mais fora da .catalog-section se necessário. */
 .btn-saiba-mais,
 .catalog-section .btn-saiba-mais {
-  margin-right: -40px;
+  margin-right: -80px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
   color: var(--default-color);
   font-weight: 500;
@@ -12653,4 +12653,122 @@ section,
     background-position: center center !important;
     background-size: cover !important;
   }
+}
+
+
+/* Corrigir parallax em dispositivos móveis */
+@media screen and (max-width: 767px) {
+  .parallax {
+    background-attachment: scroll !important;
+  }
+}
+
+
+/* Compatível com todos os tamanhos de tela */
+.parallax {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll !important;
+}
+
+
+/* Parallax que funciona em qualquer dispositivo */
+.parallax-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/parallax-img.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+
+/* Parallax real e funcional em qualquer dispositivo */
+.parallax-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-background {
+  background-image: url('../img/parallax-img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.parallax-foreground {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* leve escurecimento p/ contraste */
+}
+
+
+/* Parallax moderno e compatível com todos os dispositivos */
+.parallax-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-image {
+  background-image: url('../img/parallax-img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 1rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
