@@ -2181,7 +2181,7 @@ h6 {
 .footer .footer-main .footer-widget h4 {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin: 0px;
   position: relative;
 }
 
@@ -2189,7 +2189,7 @@ h6 {
   color: var(--default-color);
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .footer .footer-main .footer-contact .contact-item {
@@ -2564,7 +2564,7 @@ color-mix(in srgb, var(--default-color), transparent 50%);
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--default-color);
+  background-color: var(    --background-color);
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
