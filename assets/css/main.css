@@ -1744,6 +1744,7 @@ section,
 /*========================================================================
   10. PARALLAX SECTION
 ========================================================================*/
+/* Estilo padrão para desktops */
 .parallax-section {
   position: relative;
   background-image: url('assets/img/parallax-img.png');
@@ -1753,6 +1754,8 @@ section,
   height: 400px;
   overflow: hidden;
 }
+
+/* Máscara e z-index para o overlay */
 .parallax-section::before {
   content: "";
   position: absolute;
@@ -1763,20 +1766,14 @@ section,
   background-color: color-mix(in srgb, var(--surface-color), transparent 25%);
   z-index: 1;
 }
-.parallax-section .container {
-  position: relative;
-  z-index: 2;
+/* Ajuste para dispositivos móveis */
+@media (max-width: 1023px) {
+  .parallax-section {
+    background-attachment: scroll; 
+    height: 300px;
+  }
+  
 }
-/* Máscara da seção Parallax */
-.parallax-mask {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
-  z-index: 1;
-  pointer-events: none;
-}
-.parallax-section > .container {
-  z-index: 2;
-}
-
 
 /*========================================================================
   11. TESTIMONIALS SECTION

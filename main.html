@@ -737,32 +737,8 @@
           header.classList.remove("hide-main");
         }
       });
-    </script>
-    <script>
-      // Carrossel automático #1 (sobre-carousel)
-      document.addEventListener("DOMContentLoaded", function () {
-        const slides = document.querySelectorAll("#sobre-carousel .carousel-slide");
-        let current = 0;
-    
-        function showSlide(index) {
-          slides.forEach((slide, i) => {
-            slide.classList.remove("active");
-            if (i === index) slide.classList.add("active");
-          });
-        }
-    
-        function nextSlide() {
-          current = (current + 1) % slides.length;
-          showSlide(current);
-        }
-    
-        setInterval(nextSlide, 6000);
-        showSlide(current);
-      });
-    </script>
-    <script>
-      // Inicialização do Swiper.js para o carrossel
-      new Swiper(".sobre-swiper", {
+       // Inicialização do Swiper.js para o carrossel
+       new Swiper(".sobre-swiper", {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
