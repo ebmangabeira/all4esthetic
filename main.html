@@ -33,14 +33,13 @@
       <div class="main-header">
         <div class="container-fluid container-xl">
           <div class="d-flex py-3 align-items-center justify-content-between">
-            <!-- Logo -->
-            <a class="logo d-flex align-items-center d-flex d-xl-none" href="index.html">
+            <!-- Logo para mobile -->
+            <a class="logo d-flex align-items-center d-xl-none" href="index.html">
               <img alt="Logo" src="assets/img/logo-header.png" />
             </a>
-            <!-- Actions -->
+            <!-- Botão de abrir (hamburguer) na header -->
             <div class="header-actions d-flex align-items-center justify-content-end">
-              <!-- Mobile Navigation Toggle -->
-              <i class="mobile-nav-toggle d-xl-none bi bi-list me-0"></i>
+              <i class="mobile-nav-open d-xl-none bi bi-list me-0"></i>
             </div>
           </div>
         </div>
@@ -50,18 +49,23 @@
         <div class="container-fluid container-xl">
           <div class="position-relative">
             <div class="d-flex align-items-center justify-content-between">
+              <!-- Logo para desktop -->
               <a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
                 <img alt="Logo" src="assets/img/logo-header.png" />
               </a>
               <nav class="navmenu mx-auto justify-content-center" id="navmenu">
                 <ul>
+                  <!-- Botão de fechar (toggle) inserido dentro do menu -->
+                  <li class="navmenu-close">
+                    <i class="mobile-nav-close d-xl-none bi bi-x"></i>
+                  </li>
+                  <!-- Itens do menu -->
                   <li>
                     <a class="active" href="main.html">Início</a>
                   </li>
                   <li>
                     <a href="#">Quem Somos</a>
                   </li>
-                  <!-- End Products Mega Menu 1 -->
                   <li class="dropdown">
                     <a href="#">
                       <span>Serviços</span>
@@ -74,7 +78,6 @@
                       <li><a href="#">Formação</a></li>
                     </ul>
                   </li>
-                  <!-- Estética -->
                   <li class="products-megamenu-2">
                     <a href="#">
                       <span>Estética</span>
@@ -137,14 +140,8 @@
                     </ul>
                     <!-- Estética Desktop View -->
                     <div class="desktop-megamenu">
-                      <!-- Tabs Content -->
                       <div class="megamenu-content tab-content">
-                        <div
-                          aria-labelledby="womens-tab"
-                          class="tab-pane fade show active"
-                          id="womens-content-1883"
-                          role="tabpanel"
-                        >
+                        <div aria-labelledby="womens-tab" class="tab-pane fade show active" id="womens-content-1883" role="tabpanel">
                           <div class="category-layout">
                             <div class="categories-section">
                               <div class="category-headers">
@@ -190,9 +187,7 @@
                         </div>
                       </div>
                     </div>
-                    <!-- End Estética Desktop View -->
                   </li>
-                  <!-- End Estética -->
                   <li class="dropdown">
                     <a href="#">
                       <span>Equipamentos</span>
@@ -214,7 +209,6 @@
           </div>
         </div>
       </div>
-      <!-- Mobile Search Form -->
       <div class="collapse" id="mobileSearch">
         <div class="container">
           <form class="search-form">
@@ -739,6 +733,60 @@
       });
        // Inicialização do Swiper.js para o carrossel
        new Swiper(".sobre-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        speed: 800,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script>
+      const openToggle = document.querySelector('.mobile-nav-open');
+      const closeToggle = document.querySelector('.mobile-nav-close');
+      
+      function openMobileNav() {
+        console.log("Abrindo menu");
+        document.body.classList.add('mobile-nav-active');
+      }
+      function closeMobileNav() {
+        console.log("Fechando menu");
+        document.body.classList.remove('mobile-nav-active');
+      }
+      
+      if (openToggle) {
+        openToggle.addEventListener('click', openMobileNav);
+      }
+      if (closeToggle) {
+        closeToggle.addEventListener('click', closeMobileNav);
+      }
+      
+      // Quando o menu estiver aberto, força o ul a ter position relative para posicionar o X corretamente
+      document.addEventListener('DOMContentLoaded', function(){
+        const navUl = document.querySelector('.mobile-nav-active .navmenu > ul');
+        if(navUl){
+          navUl.style.position = 'relative';
+        }
+      });
+      
+      // Oculta o header ao rolar a página
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 50) {
+          header.classList.add("hide-main");
+        } else {
+          header.classList.remove("hide-main");
+        }
+      });
+      
+      // Inicialização do Swiper.js para o carrossel
+      new Swiper(".sobre-swiper", {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,

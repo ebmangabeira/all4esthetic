@@ -1,3 +1,11 @@
+/**
+* Template Name: eStore
+* Template URL: https://bootstrapmade.com/estore-bootstrap-ecommerce-template/
+* Updated: Mar 01 2025 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
 (function() {
   "use strict";
 
@@ -7,12 +15,8 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') &&
-        !selectHeader.classList.contains('sticky-top') &&
-        !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100
-      ? selectBody.classList.add('scrolled')
-      : selectBody.classList.remove('scrolled');
+    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
+    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
   document.addEventListener('scroll', toggleScrolled);
@@ -60,6 +64,7 @@
         mobileNavToogle();
       }
     });
+
   });
 
   /**
@@ -91,9 +96,7 @@
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100
-        ? scrollTop.classList.add('active')
-        : scrollTop.classList.remove('active');
+      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
   scrollTop.addEventListener('click', (e) => {
@@ -150,12 +153,14 @@
         }
       }, false);
     });
+
   });
 
   /**
    * Ecommerce Cart Functionality
    * Handles quantity changes and item removal
    */
+
   function ecommerceCartTools() {
     // Get all quantity buttons and inputs directly
     const decreaseButtons = document.querySelectorAll('.quantity-btn.decrease');
@@ -214,6 +219,7 @@
   /**
    * Product Image Zoom and Thumbnail Functionality
    */
+
   function productDetailFeatures() {
     // Initialize Drift for image zoom
     function initDriftZoom() {
@@ -325,8 +331,7 @@
       const maxPriceInput = widget.querySelector('.max-price-input');
       const applyButton = widget.querySelector('.filter-actions .btn-primary');
 
-      if (!minRange || !maxRange || !sliderProgress || !minPriceDisplay || !maxPriceDisplay || !minPriceInput || !maxPriceInput)
-        return;
+      if (!minRange || !maxRange || !sliderProgress || !minPriceDisplay || !maxPriceDisplay || !minPriceInput || !maxPriceInput) return;
 
       // Slider configuration
       const sliderMin = parseInt(minRange.min);
@@ -418,7 +423,8 @@
         applyButton.addEventListener('click', function() {
           // This would typically trigger a form submission or AJAX request
           console.log(`Applying price filter: $${minValue} - $${maxValue}`);
-          // Aqui você pode adicionar a lógica para filtrar os produtos ou redirecionar para uma URL filtrada
+
+          // Here you would typically add code to filter products or redirect to a filtered URL
         });
       }
 
@@ -445,6 +451,7 @@
    * Ecommerce Checkout Section
    * This script handles the functionality of both multi-step and one-page checkout processes
    */
+
   function initCheckout() {
     // Detect checkout type
     const isMultiStepCheckout = document.querySelector('.checkout-steps') !== null;
@@ -701,7 +708,7 @@
                 block: 'center'
               });
               field.focus();
-              isValid = null; // Para que só role para o primeiro campo inválido
+              isValid = null; // Set to null so we only scroll to the first invalid field
             }
           } else {
             field.classList.remove('is-invalid');
@@ -953,65 +960,5 @@
     });
   });
 
-  // ---------------------------------------------------------------------
-  // Blocos de código adicionais solicitados
-  // ---------------------------------------------------------------------
+})();
 
-  // Code Block A: Ação de scroll para adicionar ou remover a classe "hide-main" no header
-  window.addEventListener('scroll', function() {
-    const header = document.getElementById('header');
-    if (window.scrollY > 50) {  // ajuste o valor conforme necessário
-      header.classList.add('hide-main');
-    } else {
-      header.classList.remove('hide-main');
-    }
-  });
-
-  // Code Block B: Carousel automático para "#sobre-carousel .carousel-slide"
-  document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll("#sobre-carousel .carousel-slide");
-    let current = 0;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        if (i === index) slide.classList.add("active");
-      });
-    }
-
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
-
-    setInterval(nextSlide, 6000);
-    showSlide(current);
-  });
-
-  // Code Block C: Inicialização do Swiper para a seção "sobre" com efeito fade
-  
-
-  // Code Block D: (Duplicado do Block B) Carousel automático para "#sobre-carousel .carousel-slide"
-  document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll("#sobre-carousel .carousel-slide");
-    let current = 0;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        if (i === index) slide.classList.add("active");
-      });
-    }
-
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
-
-    setInterval(nextSlide, 6000);
-    showSlide(current);
-  });
-
-})();  // Fim do IIFE
-
-// Esthetic Equipment Carousel Initialization (ajustado) - executado fora do IIFE
