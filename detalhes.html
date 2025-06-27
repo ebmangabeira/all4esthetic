@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>all4esthetic</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <!-- Ícones de favorito -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <!-- AOS (Animações ao Rolagem) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+    <!-- GLightbox (Galeria de Imagens) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css"/>
+    <!-- Drift Zoom (Zoom de Imagem) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css"/>
+    <!-- Ficheiros do Carrossel Swiper -->
+    <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- Ficheiro CSS Principal -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body class="index-page">
+    <header class="header position-fixed top-0 w-100" id="header">
+      <!-- Cabeçalho Principal -->
+      <div class="main-header">
+        <div class="container-fluid container-xl">
+          <div class="d-flex py-3 align-items-center justify-content-between">
+            <!-- Logótipo para telemóvel -->
+            <a class="logo d-flex align-items-center d-xl-none" href="index.html">
+              <img alt="Logo" src="assets/img/logo-header.png" />
+            </a>
+            <!-- Botão de abrir menu (hambúrguer) no cabeçalho -->
+            <div class="header-actions d-flex align-items-center justify-content-end">
+              <i class="mobile-nav-open d-xl-none bi bi-list me-0"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navegação -->
+      <div class="header-nav">
+        <div class="container-fluid container-xl">
+          <div class="position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+              <!-- Logótipo para computador -->
+              <a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
+                <img alt="Logo" src="assets/img/logo-header.png" />
+              </a>
+              <nav class="navmenu mx-auto justify-content-center" id="navmenu">
+                <ul>
+                  <!-- Botão de fechar menu inserido dentro do nav -->
+                  <li class="navmenu-close">
+                    <i class="mobile-nav-close d-xl-none bi bi-x"></i>
+                  </li>
+                  <!-- Itens do menu -->
+                  <li>
+                    <a href="index.html">Início</a>
+                  </li>
+                  <li>
+                    <a href="quem-somos.html">Quem Somos</a>
+                  </li>
+                  <li class="dropdown">
+                    <a class="active" href="#">
+                      <span>Equipamentos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Assistência</a>
+                  </li>
+                  <li>
+                    <a href="#">Contacto</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pesquisa móvel (colapsável) -->
+      <div class="collapse" id="mobileSearch">
+        <div class="container">
+          <form class="search-form">
+            <div class="input-group">
+              <input class="form-control" placeholder="Pesquisar produtos" type="text" />
+              <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+    <!-- Page Title -->
+    <div class="page-title light-background" data-aos="fade-down">
+        <div class="breadcrumbs container d-lg-flex justify-content-between align-items-center">
+            <h1 class="mb-2 mb-lg-0">Detalhes do Equipamento</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li class="current">Início</li>
+                    <li><a href="equipamentos.html">Equipamentos</a></li>
+                    <li><a class="current">Detalhes</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div><!-- End Page Title -->
+
+    <!-- Product Details Section -->
+    <section id="product-details" class="product-details section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+                <!-- Product Image -->
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
+                    <div class="product-images">
+                        <div class="category-tag">
+                            <span id="product-category"></span>
+                        </div>
+                        <img id="main-product-image" src="" alt="Product Image" class="img-fluid main-image" />
+                    </div>
+                    <div class="small-images mt-3">
+                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
+                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
+                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="product-info">
+                        <h1 id="product-title" class="product-title"></h1>
+                        <p id="product-description" class="product-text"></p>
+
+                        <div class="product-features">
+                            <h5>Características:</h5>
+                            <ul id="product-features"></ul>
+                        </div>
+
+                        <!-- Availability -->
+                        <div class="product-availability">
+                            <h5>Disponibilidade:</h5>
+                            <ul id="availability-list"></ul>
+                        </div>
+
+                        <div class="product-actions">
+                            <a href="equipamentos.html" class="btn btn-primary">Voltar para os Equipamentos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="footer">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-widget footer-about">
+                        <a class="logo" href="index.html">
+                            <img alt="Logo all4esthetic" src="assets/img/logo-footer.png" />
+                        </a>
+                        <p>Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.</p>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6">
+                    <div class="footer-widget">
+                        <h4>Institucional</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Quem Somos</a></li>
+                            <li><a href="#">Missão &amp; Visão</a></li>
+                            <li><a href="#">Nossa História</a></li>
+                            <li><a href="#">Carreiras</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const equipmentId = urlParams.get('id');
+
+        fetch('assets/data/equipamentos.json')
+            .then(response => response.json())
+            .then(data => {
+                const equipamento = data.find(eq => eq.id === equipmentId);
+                if (equipamento) {
+                    // Set main image
+                    document.getElementById('main-product-image').src = equipamento.image;
+                    // Set product title and description
+                    document.getElementById('product-title').textContent = equipamento.name;
+                    document.getElementById('product-description').textContent = equipamento.description;
+
+                    // Set product category in the corner of the large image
+                    document.getElementById('product-category').textContent = equipamento.category;
+
+                    // Add small images below the main image
+                    const smallImages = document.querySelectorAll('.small-image');
+                    smallImages[0].src = equipamento.images[0];
+                    smallImages[1].src = equipamento.images[1];
+                    smallImages[2].src = equipamento.images[2];
+
+                    // Add features to the product info
+                    const featuresContainer = document.getElementById('product-features');
+                    equipamento.features.forEach(feature => {
+                        const li = document.createElement('li');
+                        li.textContent = feature;
+                        featuresContainer.appendChild(li);
+                    });
+
+                    // Add availability with markers
+                    const availabilityContainer = document.getElementById('availability-list');
+                    let availabilityText = '';
+
+                    // Venda
+                    const vendaItem = document.createElement('li');
+                    vendaItem.textContent = equipamento.sale ? 'Disponível para venda' : 'Não disponível para venda';
+                    availabilityContainer.appendChild(vendaItem);
+
+                    // Aluguel
+                    const aluguelItem = document.createElement('li');
+                    aluguelItem.textContent = equipamento.rental ? 'Disponível para aluguel' : 'Não disponível para aluguel';
+                    availabilityContainer.appendChild(aluguelItem);
+
+                    // Rent Types (Diário, Bid diário, Semanal, Mensal)
+                    if (equipamento.rental) {
+                        const rentTypesContainer = document.createElement('ul');
+                        if (equipamento.rental.diario) {
+                            const diarioItem = document.createElement('li');
+                            diarioItem.textContent = 'Aluguel Diário: Disponível';
+                            rentTypesContainer.appendChild(diarioItem);
+                        }
+                        if (equipamento.rental.bidiario) {
+                            const bidiarioItem = document.createElement('li');
+                            bidiarioItem.textContent = 'Aluguel Bid diário: Disponível';
+                            rentTypesContainer.appendChild(bidiarioItem);
+                        }
+                        if (equipamento.rental.semanal) {
+                            const semanalItem = document.createElement('li');
+                            semanalItem.textContent = 'Aluguel Semanal: Disponível';
+                            rentTypesContainer.appendChild(semanalItem);
+                        }
+                        if (equipamento.rental.mensal) {
+                            const mensalItem = document.createElement('li');
+                            mensalItem.textContent = 'Aluguel Mensal: Disponível';
+                            rentTypesContainer.appendChild(mensalItem);
+                        }
+                        availabilityContainer.appendChild(rentTypesContainer);
+                    }
+                } else {
+                    document.getElementById('product-details').innerHTML = '<p>Equipamento não encontrado.</p>';
+                }
+            });
+    });
+</script>
+
+
+
+
+    <footer class="footer" id="footer">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Coluna 1: Sobre a all4esthetic -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="footer-widget footer-about">
+                <a class="logo" href="index.html">
+                  <img alt="Logo all4esthetic" src="assets/img/logo-footer.png" />
+                </a>
+                <p>
+                  Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.
+                </p>
+                <div class="social-links mt-4">
+                  <h5>Siga-nos:</h5>
+                  <div class="social-icons">
+                    <a aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
+                    <a aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
+                    <a aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a>
+                    <a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Coluna 2: Institucional -->
+            <div class="col-lg col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Institucional</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Quem Somos</a></li>
+                  <li><a href="#">Missão &amp; Visão</a></li>
+                  <li><a href="#">Nossa História</a></li>
+                  <li><a href="#">Carreiras</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Coluna 3: Catálogo -->
+            <div class="col-lg col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Catálogo</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Equipamentos</a></li>
+                  <li><a href="#">Acessórios</a></li>
+                  <li><a href="#">Produtos de Estética</a></li>
+                  <li><a href="#">Soluções Inovadoras</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Coluna 4: Política e Termos -->
+            <div class="col-lg col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Informações</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Política de Privacidade</a></li>
+                  <li><a href="#">Termos de Uso</a></li>
+                  <li><a href="#">Aviso Legal</a></li>
+                  <li><a href="#">Política de Cookies</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Coluna 5: Contacto -->
+            <div class="col-lg col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Contacto</h4>
+                <div class="footer-contact mt-4">
+                  <div class="contact-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-telephone"></i>
+                    <span>(+351) 21 409 5469</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <span>geral@all4esthetic.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Fim da linha -->
+        </div> <!-- Fim do container -->
+      </div> <!-- Fim do footer-main -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="container copyright text-center mt-4">
+            <p>
+              © <span>Copyright</span>
+              <strong class="px-1 sitename">2025 all4esthetic.</strong>
+              <span>Todos os Direitos Reservados.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Botão de scroll para topo -->
+    <a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <!-- Pré-carregador -->
+    <div id="preloader"></div>
+    <!-- Ficheiros SWIPER -->
+    <script src="assets/swiper/swiper-bundle.min.js"></script>
+    <!-- JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/dist/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js"></script>
+    <!-- Opcional (caso utilize filtros/carrosséis etc) -->
+    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
+    <!-- Ficheiro JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

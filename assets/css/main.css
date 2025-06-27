@@ -46,58 +46,24 @@
 .page-title .breadcrumbs a {
   color: var(--primary-color);
   text-decoration: none;
-}
-.page-title .breadcrumbs a:hover {
-  color: var(--primary-hover);
-  text-decoration: underline;
-}
-.page-title .breadcrumbs li.current {
-  color: #777;
-}
-
-/* ========================================
-   Sidebar & Widgets
-======================================== */
-.sidebar {
-  position: sticky;
-  top: 2rem;
-}
-/* ========================================
-   Page Title & Breadcrumbs
-======================================== */
-.page-title.light-background {
-  background-color: var(--light-bg);
-  padding: 48px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-.page-title h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--heading-color);
-  text-transform: capitalize;
-  letter-spacing: -0.5px;
-}
-.breadcrumbs {
-  display: flex;
-  font-size: 14px;
-}
-.page-title .breadcrumbs ol {
-  list-style: none;
-  padding-left: 0;
   font-size: 16px;
 }
-.page-title .breadcrumbs a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
 .page-title .breadcrumbs a:hover {
   color: var(--primary-hover);
   text-decoration: underline;
 }
 .page-title .breadcrumbs li.current {
-  color: #777;
+  color: var(--nav-color);
+  font-weight: 400;
+  font-size: 16px;
+  padding-right: 8px;
 }
 
+
+.page-title.light-background h1 {
+  font-weight: lighter;
+  color: var(--heading-color);
+}
 /* ========================================
    Sidebar & Widgets
 ======================================== */
@@ -105,6 +71,7 @@
   position: sticky;
   top: 2rem;
 }
+
 @media (max-width: 1199px) {
   .sidebar {
     position: static;
@@ -560,6 +527,20 @@ body.no-scroll { overflow: hidden; }
 #mobile-filters .form-check-label {
     font-size: 12px !important;
 }
+.page-title .breadcrumbs a {
+    
+    font-size: 14px;
+}
+.page-title.light-background {
+    
+    padding: 24px 0;
+    
+}
+.page-title .breadcrumbs li.current {
+  
+    font-size: 14px;
+    padding-right: 4px;
+}
 
     
     
@@ -679,38 +660,8 @@ body.no-scroll { overflow: hidden; }
   --shadow-medium: rgba(0,0,0,0.1);
 }
 
-/* ========================================
-   Page Title & Breadcrumbs (Base)
-======================================== */
-.page-title.light-background {
-  background: color-mix(in srgb, var(--default-color), transparent 75%);
-  border-bottom: 0;
-  padding: 32px 0;
-}
-.page-title.light-background h1 {
-  font-size: 24px;
-  font-weight: lighter;
-  color: var(--heading-color);
-}
-.breadcrumbs {
-  display: flex;
-}
-.page-title .breadcrumbs ol {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-  margin: 0;
-  font-size: 14px;
-}
-.page-title .breadcrumbs a {
-  color: #EA4595BE;
-}
-.page-title .breadcrumbs a:hover {
-  color: var(--primary-hover);
-}
-.page-title .breadcrumbs li.current {
-  color: #777;
-}
+
+
 
 /* ========================================
    Sobre (About) Section (Base)
@@ -784,7 +735,7 @@ body.no-scroll { overflow: hidden; }
     padding: 32px 16px;
   }
   .page-title.light-background h1 {
-    font-size: 24px;
+    font-size: -6px !important;
   }
   .page-title .breadcrumbs ol {
     gap: 20px;
@@ -1015,6 +966,178 @@ body.no-scroll { overflow: hidden; }
   VARIÁVEIS (Fontes, Cores, Tamanhos de Fonte e Espaçamentos)
 ========================================================================*/
 
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.page-title {
+    background-color: #fff;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumbs ol li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.breadcrumbs ol li.current {
+    font-weight: bold;
+}
+
+.breadcrumbs ol li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumbs ol li a:hover {
+    text-decoration: underline;
+}
+
+/* Detalhes do produto */
+#product-details {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.product-info h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-info .product-text {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.product-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.product-features ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.product-availability ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.product-actions {
+    margin-top: 30px;
+}
+
+.product-actions h5 {
+    font-size: 18px;
+    color: #333;
+}
+
+.product-actions .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.product-actions .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Imagens do produto */
+.main-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-images {
+    position: relative;
+}
+
+.small-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.small-image {
+    width: 30%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.small-image:hover {
+    transform: scale(1.05);
+}
+
+/* Efeito de zoom nas imagens */
+.main-image:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 768px) {
+    .product-images {
+        justify-content: flex-start;
+    }
+
+    .product-info h1 {
+        font-size: 24px;
+    }
+
+    .product-info .product-text {
+        font-size: 14px;
+    }
+
+    .small-images {
+        flex-direction: column;
+    }
+
+    .small-image {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
 :root {
   /* Fontes */
   --default-font: "Quicksand", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
@@ -1038,13 +1161,13 @@ body.no-scroll { overflow: hidden; }
   --nav-dropdown-hover-color: #EA4595;  
 
   /* Tamanhos de Fonte */
-  --font-size-title-mobile: 24px;
-  --font-size-title-tablet: 32px;
-  --font-size-title-desktop: 40px;
+  --font-size-title-mobile: 32px;
+  --font-size-title-tablet: 40px;
+  --font-size-title-desktop: 48px;
   
-  --font-size-paragraph-mobile: 14px;
-  --font-size-paragraph-tablet: 14px;
-  --font-size-paragraph-desktop: 16px;
+  --font-size-paragraph-mobile: 16px;
+  --font-size-paragraph-tablet: 18px;
+  --font-size-paragraph-desktop: 20px;
 
   /* Espaçamento dos Contentores (horizontal) */
   --bs-spacing-tablet-left: 80px;
@@ -1475,7 +1598,7 @@ h1, h2, h3, h4, h5, h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     display: flex;
@@ -1591,7 +1714,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--nav-dropdown-color);
     padding: 20px 20px;
     font-family: 'Quicksand', sans-serif;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 400;
     display: flex;
     align-items: center;
