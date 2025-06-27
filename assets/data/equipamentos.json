@@ -1,0 +1,172 @@
+[
+  {
+    "id": "E007",
+    "name": "Electroestimulação",
+    "description": "Tratamento de Electroestimulação.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Modelagem",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false }
+  },
+  {
+    "id": "E012V1",
+    "name": "Emsculpt Machine com 2 Manipulos",
+    "description": "Emsculpt Machine com 2 Manipulos.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Modelagem",
+    "sale": true,
+    "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E058V2",
+    "name": "Criolipólise 360º com 2 Manipulos",
+    "description": "Criolipólise 360º com 2 Manipulos.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Modelagem",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E058V3",
+    "name": "Criolipólise de Placas",
+    "description": "Criolipólise de Placas.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Modelagem",
+    "sale": true,
+    "rental": { "diario": true, "bidiario": false, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E061V1",
+    "name": "V-Shape com 4 Manipulos",
+    "description": "V-Shape com 4 Manipulos.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Modelagem",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E048V1",
+    "name": "Pressoterapia 3 em 1",
+    "description": "Pressoterapia 3 em 1.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Modelagem",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": true, "mensal": false }
+  },
+  {
+    "id": "E049V1",
+    "name": "Pressoterapia",
+    "description": "Pressoterapia.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Modelagem",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E176V2",
+    "name": "Hifu e Liposonix",
+    "description": "Hifu e Liposonix.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Modelagem",
+    "sale": false,
+    "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false }
+  },
+  {
+    "id": "E025",
+    "name": "Microdermobração",
+    "description": "Tratamento de Microdermobração.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Rejuvenescimento",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false }
+  },
+  {
+    "id": "E059",
+    "name": "Radiofrequência",
+    "description": "Radiofrequência.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Rejuvenescence",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false }
+  },
+  {
+    "id": "E174",
+    "name": "Laser Derrames e Micoses",
+    "description": "Laser Derrames e Micoses.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Rejuvenescimento",
+    "sale": true,
+    "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E060",
+    "name": "SHR / IPL",
+    "description": "SHR / IPL.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Depilação",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E069V1",
+    "name": "Laser Diodo 1 onda",
+    "description": "Laser Diodo 1 onda.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Depilação",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E169V1",
+    "name": "Laser Diodo 3 ondas",
+    "description": "Laser Diodo 3 ondas.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Depilação",
+    "sale": true,
+    "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": true }
+  },
+  {
+    "id": "E169V3",
+    "name": "Laser Diodo 3 ondas (V3)",
+    "description": "Laser Diodo 3 ondas (V3).",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Depilação",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": true, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E169V4",
+    "name": "Laser Diodo Eos Ice",
+    "description": "Laser Diodo Eos Ice.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Depilação",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": true }
+  },
+  {
+    "id": "E055",
+    "name": "Multifunções 5 em 1",
+    "description": "Multifunções 5 em 1.",
+    "image": "assets/img/equipments/equipamento.png",
+    "details": "#",
+    "category": "Multifuncional",
+    "sale": true,
+    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": true }
+  }
+]

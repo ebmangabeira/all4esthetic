@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>all4esthetic</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <!-- Ícones de favorito -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <!-- AOS (Animações ao Rolagem) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+    <!-- GLightbox (Galeria de Imagens) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css"/>
+    <!-- Drift Zoom (Zoom de Imagem) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css"/>
+    <!-- Ficheiros do Carrossel Swiper -->
+    <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- Ficheiro CSS Principal -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body class="index-page">
+    <header class="header position-fixed top-0 w-100" id="header">
+      <!-- Cabeçalho Principal -->
+      <div class="main-header">
+        <div class="container-fluid container-xl">
+          <div class="d-flex py-3 align-items-center justify-content-between">
+            <!-- Logótipo para telemóvel -->
+            <a class="logo d-flex align-items-center d-xl-none" href="index.html">
+              <img alt="Logo" src="assets/img/logo-header.png" />
+            </a>
+            <!-- Botão de abrir menu (hambúrguer) no cabeçalho -->
+            <div class="header-actions d-flex align-items-center justify-content-end">
+              <i class="mobile-nav-open d-xl-none bi bi-list me-0"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navegação -->
+      <div class="header-nav">
+        <div class="container-fluid container-xl">
+          <div class="position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+              <!-- Logótipo para computador -->
+              <a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
+                <img alt="Logo" src="assets/img/logo-header.png" />
+              </a>
+              <nav class="navmenu mx-auto justify-content-center" id="navmenu">
+                <ul>
+                  <!-- Botão de fechar menu inserido dentro do nav -->
+                  <li class="navmenu-close">
+                    <i class="mobile-nav-close d-xl-none bi bi-x"></i>
+                  </li>
+                  <!-- Itens do menu -->
+                  <li>
+                    <a href="index.html">Início</a>
+                  </li>
+                  <li>
+                    <a href="quem-somos.html">Quem Somos</a>
+                  </li>
+                  <li class="dropdown">
+                    <a class="active" href="#">
+                      <span>Equipamentos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">Assistência</a>
+                  </li>
+                  <li>
+                    <a href="#">Contacto</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pesquisa móvel (colapsável) -->
+      <div class="collapse" id="mobileSearch">
+        <div class="container">
+          <form class="search-form">
+            <div class="input-group">
+              <input class="form-control" placeholder="Pesquisar produtos" type="text" />
+              <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+  <!-- Page Title -->
+  <div class="page-title light-background" data-aos="fade-down">
+    <div class="breadcrumbs container d-lg-flex justify-content-between align-items-center">
+      <h1 class="mb-2 mb-lg-0">Equipamentos</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li class="current">Início</li>
+          <li><a>Equipamentos</a></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
+
+  <div class="container py-5">
+    <div class="row">
+      <!-- SIDEBAR ORIGINAL (desktop/tablet) -->
+      <div class="widget sidebar widgets-container d-none d-md-block">
+        <!-- Categorias -->
+        <div class="widget-item">
+          <h3 class="widget-title">Categorias</h3>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Modelagem" id="cat-modelagem">
+            <label class="form-check-label" for="cat-modelagem">Modelagem</label>
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento">
+            <label class="form-check-label" for="cat-rejuvenescimento">Rejuvenescimento</label>
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" value="Depilação" id="cat-depilacao">
+            <label class="form-check-label" for="cat-depilacao">Depilação</label>
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" value="Multifuncional" id="cat-multifuncional">
+            <label class="form-check-label" for="cat-multifuncional">Multifuncional</label>
+          </div>
+        </div>
+        <!-- Disponibilidade -->
+        <div class="widget-item mt-4">
+          <h3 class="widget-title">Disponibilidade</h3>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="availability" value="Venda" id="filter-venda">
+            <label class="form-check-label" for="filter-venda">Venda</label>
+          </div>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="radio" name="availability" value="Aluguer" id="filter-aluguer">
+            <label class="form-check-label" for="filter-aluguer">Aluguer</label>
+          </div>
+        </div>
+        <!-- Períodos de Aluguer -->
+        <div class="widget-item mt-3" id="aluguer-periodos" style="display:none;">
+          <h3 class="widget-title">Períodos de Aluguer</h3>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rental-period" value="Diário" id="filter-diario">
+            <label class="form-check-label" for="filter-diario">Diário</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rental-period" value="Bidiário" id="filter-bidiario">
+            <label class="form-check-label" for="filter-bidiario">Bidiário</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rental-period" value="Semanal" id="filter-semanal">
+            <label class="form-check-label" for="filter-semanal">Semanal</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="rental-period" value="Mensal" id="filter-mensal">
+            <label class="form-check-label" for="filter-mensal">Mensal</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR MÓVEL (mobile) -->
+      <div class="col-12 d-block d-md-none">
+        <button id="filtro-btn" class="btn btn-primary mb-3 w-100">Filtro</button>
+        <div id="mobile-filters" class="widgets-container">
+          <div class="mobile-filters-header">
+            <h3>Filtros</h3>
+            <button id="close-filtro" aria-label="Fechar">&times;</button>
+          </div>
+          <!-- Categorias -->
+          <div class="widget-item">
+            <h4 class="widget-title">Categorias</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Modelagem" id="cat-modelagem-mob">
+              <label class="form-check-label" for="cat-modelagem-mob">Modelagem</label>
+            </div>
+            <div class="form-check mt-2">
+              <input class="form-check-input" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento-mob">
+              <label class="form-check-label" for="cat-rejuvenescimento-mob">Rejuvenescimento</label>
+            </div>
+            <div class="form-check mt-2">
+              <input class="form-check-input" type="checkbox" value="Depilação" id="cat-depilacao-mob">
+              <label class="form-check-label" for="cat-depilacao-mob">Depilação</label>
+            </div>
+            <div class="form-check mt-2">
+              <input class="form-check-input" type="checkbox" value="Multifuncional" id="cat-multifuncional-mob">
+              <label class="form-check-label" for="cat-multifuncional-mob">Multifuncional</label>
+            </div>
+          </div>
+          <!-- Disponibilidade -->
+          <div class="widget-item mt-4">
+            <h4 class="widget-title">Disponibilidade</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="availability-mob" value="Venda" id="filter-venda-mob">
+              <label class="form-check-label" for="filter-venda-mob">Venda</label>
+            </div>
+            <div class="form-check mt-2">
+              <input class="form-check-input" type="radio" name="availability-mob" value="Aluguer" id="filter-aluguer-mob">
+              <label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
+            </div>
+          </div>
+          <!-- Períodos de Aluguer -->
+          <div class="widget-item mt-4" id="aluguer-periodos-mob" style="display:none;">
+            <h4 class="widget-title">Períodos de Aluguer</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rental-period-mob" value="Diário" id="filter-diario-mob">
+              <label class="form-check-label" for="filter-diario-mob">Diário</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rental-period-mob" value="Bidiário" id="filter-bidiario-mob">
+              <label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rental-period-mob" value="Semanal" id="filter-semanal-mob">
+              <label class="form-check-label" for="filter-semanal-mob">Semanal</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rental-period-mob" value="Mensal" id="filter-mensal-mob">
+              <label class="form-check-label" for="filter-mensal-mob">Mensal</label>
+            </div>
+          </div>
+          <button id="pesquisar-btn" class="btn btn-primary mt-4 w-100">Pesquisar</button>
+        </div>
+      </div>
+
+      <!-- Conteúdo Principal -->
+      <div class="col-lg-8">
+        <div id="active-filters-mobile" class="active-filters-mobile d-none"></div>
+        <section id="equipamentos" data-aos="fade-up">
+          <div class="row g-4" id="equipamentos-container"></div>
+          <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const res = await fetch('assets/data/equipamentos.json');
+      const allEquipamentos = await res.json();
+      const container = document.getElementById('equipamentos-container');
+      const paginationEl = document.getElementById('pagination');
+      const activeMobile = document.getElementById('active-filters-mobile');
+      const itemsPerPage = 6;
+      let currentPage = 1;
+      let filteredEq = [...allEquipamentos];
+
+      const catDesktop = Array.from(document.querySelectorAll('.sidebar input[id^="cat-"]'));
+      const availDesktop = Array.from(document.querySelectorAll('.sidebar input[name="availability"]'));
+      const rentDesktop  = Array.from(document.querySelectorAll('.sidebar input[name="rental-period"]'));
+      const periodDesktopDiv = document.getElementById('aluguer-periodos');
+      const catMobile = Array.from(document.querySelectorAll('#mobile-filters input[id^="cat-"]'));
+      const availMobile = Array.from(document.querySelectorAll('#mobile-filters input[name="availability-mob"]'));
+      const rentMobile  = Array.from(document.querySelectorAll('input[name="rental-period-mob"]'));
+      const periodMobileDiv = document.getElementById('aluguer-periodos-mob');
+      const filtroBtn     = document.getElementById('filtro-btn');
+      const mobileFilters = document.getElementById('mobile-filters');
+      const closeBtn      = document.getElementById('close-filtro');
+      const pesquisarBtn  = document.getElementById('pesquisar-btn');
+
+      availDesktop.forEach(r => {
+        r.addEventListener('change', () => {
+          if (document.getElementById('filter-aluguer').checked) {
+            periodDesktopDiv.style.display = 'block';
+          } else {
+            periodDesktopDiv.style.display = 'none';
+            rentDesktop.forEach(p=>p.checked=false);
+          }
+          autoApply();
+        });
+      });
+      catDesktop.concat(rentDesktop).forEach(i=>i.addEventListener('change', autoApply));
+      function autoApply(){
+        const cats  = catDesktop.filter(c=>c.checked).map(c=>c.value);
+        const av    = document.querySelector('.sidebar input[name="availability"]:checked')?.value;
+        const rents = rentDesktop.filter(p=>p.checked).map(p=>p.value);
+        applyFilters(cats,av,rents,false);
+      }
+
+      availMobile.forEach(r => {
+        r.addEventListener('change', () => {
+          if (document.getElementById('filter-aluguer-mob').checked) {
+            periodMobileDiv.style.display = 'block';
+          } else {
+            periodMobileDiv.style.display = 'none';
+            rentMobile.forEach(p=>p.checked=false);
+          }
+        });
+      });
+      filtroBtn.addEventListener('click', ()=>{
+        mobileFilters.classList.add('open');
+        document.body.classList.add('no-scroll');
+      });
+      closeBtn.addEventListener('click', ()=>{
+        mobileFilters.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+      });
+      pesquisarBtn.addEventListener('click', ()=>{
+        const cats  = catMobile.filter(c=>c.checked).map(c=>c.value);
+        const av    = document.querySelector('input[name="availability-mob"]:checked')?.value;
+        const rents = rentMobile.filter(p=>p.checked).map(p=>p.value);
+        applyFilters(cats,av,rents,true);
+        mobileFilters.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+      });
+
+      function applyFilters(cats, av, rents, showChips){
+        currentPage = 1;
+        if (showChips && !cats.length && !av && !rents.length) {
+          filteredEq = [];
+        } else {
+          filteredEq = allEquipamentos.filter(eq=>{
+            if (cats.length && !cats.includes(eq.category)) return false;
+            if (av==='Venda') return eq.sale;
+            if (av==='Aluguer') {
+              if (rents.length) return rents.some(r=>eq.rental[r.toLowerCase()]);
+              return Object.values(eq.rental).some(v=>v);
+            }
+            return true;
+          });
+        }
+
+        renderPagination();
+        renderPage();
+        if (showChips) renderActiveMobile(cats,av,rents);
+      }
+
+      function renderActiveMobile(cats,av,rents){
+        activeMobile.innerHTML = '';
+        const labels = [
+          ...cats.map(v=>({t:'cat',value:v})),
+          ...(av? [{t:'avail',value:av}]:[]),
+          ...rents.map(v=>({t:'rent',value:v}))
+        ];
+        if (!labels.length) {
+          activeMobile.classList.add('d-none');
+          return;
+        }
+        activeMobile.classList.remove('d-none');
+        labels.forEach(item=>{
+          const span = document.createElement('span');
+          span.className = 'active-filter-chip';
+          span.textContent = item.value;
+          const btn = document.createElement('button');
+          btn.className = 'chip-close';
+          btn.innerHTML = '&times;';
+          btn.addEventListener('click', ()=> removeFilter(item));
+          span.appendChild(btn);
+          activeMobile.appendChild(span);
+        });
+      }
+
+      function removeFilter(item){
+        document.querySelectorAll(`input[value="${item.value}"]`).forEach(inp=>{
+          if ((item.t==='cat'&&inp.type==='checkbox')
+           ||(item.t==='avail'&&inp.name.startsWith('availability'))
+           ||(item.t==='rent'&&inp.name.startsWith('rental-period'))
+          ) inp.checked = false;
+        });
+        if (item.t==='avail') {
+          periodDesktopDiv.style.display='none';
+          periodMobileDiv.style.display='none';
+          rentDesktop.concat(rentMobile).forEach(p=>p.checked=false);
+        }
+
+        const cats  = Array.from(document.querySelectorAll('input[id^="cat-"]:checked')).map(i=>i.value);
+        const av    = document.querySelector('input[name="availability"]:checked, input[name="availability-mob"]:checked')?.value;
+        const rents = Array.from(document.querySelectorAll('input[name="rental-period"]:checked, input[name="rental-period-mob"]:checked')).map(i=>i.value);
+        applyFilters(cats,av,rents,true);
+      }
+
+      function renderPage(){
+        container.innerHTML = '';
+        const start = (currentPage-1)*itemsPerPage;
+        filteredEq.slice(start,start+itemsPerPage).forEach((eq,i)=>{
+          const div = document.createElement('div');
+          div.className='col-12 col-sm-6 col-lg-4';
+          div.innerHTML=`
+            <div class="card equipamento-card h-100" data-aos="zoom-in" data-aos-delay="${i*100}">
+              <img src="${eq.image}" class="card-img-top" alt="${eq.name}">
+              <div class="card-category">${eq.category}</div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${eq.name}</h5>
+                <p class="card-text flex-grow-1">${eq.description}</p>
+                <a href="${eq.details}" class="btn btn-primary mt-auto">Mais detalhes</a>
+              </div>
+            </div>`;
+          container.appendChild(div);
+        });
+      }
+
+      function renderPagination(){
+        paginationEl.innerHTML='';
+        const pageCount = Math.ceil(filteredEq.length/itemsPerPage);
+
+        const mk = (disabled,html,fn)=>{ const li=document.createElement('li'); li.className=`page-item ${disabled?'disabled':''}`; li.innerHTML=html; if(!disabled) li.onclick=fn; return li; };
+
+        paginationEl.appendChild(mk(currentPage===1, `<a class="page-link" href="#"><span>&laquo;</span></a>`,
+          e=>{e.preventDefault(); currentPage--; renderPagination(); renderPage();}
+        ));
+
+        for(let i=1;i<=pageCount;i++){
+          const li=document.createElement('li');
+          li.className=`page-item${i===currentPage?' active':''}`;
+          li.innerHTML=`<a class="page-link" href="#">${i}</a>`;
+          li.onclick=e=>{e.preventDefault(); currentPage=i; renderPagination(); renderPage();};
+          paginationEl.appendChild(li);
+        }
+
+        paginationEl.appendChild(mk(currentPage===pageCount, `<a class="page-link" href="#"><span>&raquo;</span></a>`,
+          e=>{e.preventDefault(); currentPage++; renderPagination(); renderPage();}
+        ));
+      }
+
+      renderPagination();
+      renderPage();
+    });
+  </script>
+</main>
+
+
+    <footer class="footer" id="footer">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Coluna 1: Sobre a all4esthetic -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="footer-widget footer-about">
+                <a class="logo" href="index.html">
+                  <img alt="Logo all4esthetic" src="assets/img/logo-footer.png" />
+                </a>
+                <p>
+                  Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.
+                </p>
+                <div class="social-links mt-4">
+                  <h5>Siga-nos:</h5>
+                  <div class="social-icons">
+                    <a aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
+                    <a aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
+                    <a aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a>
+                    <a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Coluna 2: Institucional -->
+            <div class="col-lg col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Institucional</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Quem Somos</a></li>
+                  <li><a href="#">Missão &amp; Visão</a></li>
+                  <li><a href="#">Nossa História</a></li>
+                  <li><a href="#">Carreiras</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Coluna 3: Catálogo -->
+            <div class="col-lg col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Catálogo</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Equipamentos</a></li>
+                  <li><a href="#">Acessórios</a></li>
+                  <li><a href="#">Produtos de Estética</a></li>
+                  <li><a href="#">Soluções Inovadoras</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Coluna 4: Política e Termos -->
+            <div class="col-lg col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Informações</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Política de Privacidade</a></li>
+                  <li><a href="#">Termos de Uso</a></li>
+                  <li><a href="#">Aviso Legal</a></li>
+                  <li><a href="#">Política de Cookies</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Coluna 5: Contacto -->
+            <div class="col-lg col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Contacto</h4>
+                <div class="footer-contact mt-4">
+                  <div class="contact-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-telephone"></i>
+                    <span>(+351) 21 409 5469</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <span>geral@all4esthetic.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- Fim da linha -->
+        </div> <!-- Fim do container -->
+      </div> <!-- Fim do footer-main -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="container copyright text-center mt-4">
+            <p>
+              © <span>Copyright</span>
+              <strong class="px-1 sitename">2025 all4esthetic.</strong>
+              <span>Todos os Direitos Reservados.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Botão de scroll para topo -->
+    <a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <!-- Pré-carregador -->
+    <div id="preloader"></div>
+    <!-- Ficheiros SWIPER -->
+    <script src="assets/swiper/swiper-bundle.min.js"></script>
+    <!-- JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/dist/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js"></script>
+    <!-- Opcional (caso utilize filtros/carrosséis etc) -->
+    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
+    <!-- Ficheiro JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
