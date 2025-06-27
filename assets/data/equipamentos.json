@@ -5,9 +5,9 @@
     "description": "A Electroestimulação é um tratamento avançado utilizado para modelagem corporal e tonificação muscular. Este equipamento ajuda a reduzir a gordura localizada, melhora a firmeza e a definição muscular, e estimula a circulação sanguínea. Ideal para academias, clínicas de estética e centros de reabilitação, proporcionando um tratamento eficaz para quem busca melhorar a estética do corpo.",
     "image": "assets/img/equipments/equipamento.png",
     "images": [
-      "assets/img/equipments/equipamento1.png",
-      "assets/img/equipments/equipamento2.png",
-      "assets/img/equipments/equipamento3.png"
+      "assets/img/equipments/equipamento.png",
+      "assets/img/equipments/equipamento.png",
+      "assets/img/equipments/equipamento.png"
     ],
     "image_extra": "assets/img/equipments/equipamento_extra.png",
     "category": "Modelagem",
