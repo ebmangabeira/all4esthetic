@@ -54,11 +54,12 @@
               <a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
                 <img alt="Logo" src="assets/img/logo-header.png" />
               </a>
-              <nav class="navmenu mx-auto justify-content-center" id="navmenu">
+             <nav class="navmenu mx-auto justify-content-center" id="navmenu">
                 <ul>
                   <li class="navmenu-close">
                     <i class="mobile-nav-close d-xl-none bi bi-x"></i>
                   </li>
+                  <li>
                     <a href="index.html">Início</a>
                   </li>
                   <li>
@@ -68,7 +69,7 @@
                     <a href="equipamentos.html">Equipamentos</a>
                   </li>
                   <li>
-                    <a href="contacto.html">Contacto</a>
+                    <a class="active" href="#">Contacto</a>
                   </li>
                 </ul>
               </nav>
@@ -90,149 +91,109 @@
         </div>
       </div>
     </header>
-    <main class="main">
+    
+
+
+<main class="main">
+
     <!-- Page Title -->
     <div class="page-title light-background" data-aos="fade-down">
         <div class="breadcrumbs container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">Detalhes</h1>
-            <nav class="breadcrumbs">
-                <ol>
-                  <li><a href="index.html">Início</a></li>
-                  <li><a href="equipamentos.html">Equipamentos</a></li>
-                  <li class="current">Detalhes</li>
-                </ol>
-            </nav>
+        <h1 class="mb-2 mb-lg-0">Equipamentos</h1>
+        <nav class="breadcrumbs">
+            <ol>
+            <li><a href="index.html">Início</a></li>
+            <li class="current">Equipamentos</li>
+            </ol>
+        </nav>
         </div>
-    </div><!-- End Page Title -->
+    </div>
+    <!-- End Page Title -->
 
-    <!-- Product Details Section -->
-    <section id="product-details" class="product-details section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row">
-                <!-- Product Image -->
-                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
-                    <div class="product-images">
-                        <div class="category-tag">
-                            <span id="product-category"></span>
-                        </div>
-                        <img id="main-product-image" src="" alt="Product Image" class="img-fluid main-image" />
-                    </div>
-                    <div class="small-images mt-3">
-                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
-                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
-                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
-                    </div>
-                </div>
+    <!-- Contact 2 Section -->
+    <section id="contact-2" class="contact-2 section">
 
-                <!-- Product Info -->
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                    <div class="product-info">
-                        <h1 id="product-title" class="product-title"></h1>
-                        <p id="product-description" class="product-text"></p>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                        <div class="product-features">
-                            <h5>Características:</h5>
-                            <ul id="product-features"></ul>
-                        </div>
+        <div class="row gy-4">
 
-                        <!-- Availability -->
-                        <div class="product-availability">
-                            <h5>Disponibilidade:</h5>
-                            <ul id="availability-list"></ul>
-                        </div>
-
-                        <div class="product-actions">
-                            <a href="equipamentos.html" class="btn btn-primary">Voltar para os Equipamentos</a>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Endereço</h3>
+              <p>R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607</p>
             </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Contacto</h3>
+              <p>(+351) 21 409 5469</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Nosso Email</h3>
+              <p>geral@all4esthetic.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
         </div>
-    </section>
-</main>
 
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <iframe
+  src="https://maps.google.com/maps?q=R.%20dos%20Tractores%20506,%20Armazém%20AE,%20Lisboa,%20PT%202870-607&z=15&output=embed"
+  frameborder="0"
+  style="border:0; width:100%; height:400px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+          </div><!-- End Google Maps -->
 
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+              <div class="row gy-4">
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const equipmentId = urlParams.get('id');
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Seu Nome" required="">
+                </div>
 
-        fetch('assets/data/equipamentos.json')
-            .then(response => response.json())
-            .then(data => {
-                const equipamento = data.find(eq => eq.id === equipmentId);
-                if (equipamento) {
-                    // Set main image
-                    document.getElementById('main-product-image').src = equipamento.image;
-                    // Set product title and description
-                    document.getElementById('product-title').textContent = equipamento.name;
-                    document.getElementById('product-description').textContent = equipamento.description;
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Seu Email" required="">
+                </div>
 
-                    // Set product category in the corner of the large image
-                    document.getElementById('product-category').textContent = equipamento.category;
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Assunto" required="">
+                </div>
 
-                    // Add small images below the main image
-                    const smallImages = document.querySelectorAll('.small-image');
-                    smallImages[0].src = equipamento.images[0];
-                    smallImages[1].src = equipamento.images[1];
-                    smallImages[2].src = equipamento.images[2];
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Mensagem" required=""></textarea>
+                </div>
 
-                    // Add features to the product info
-                    const featuresContainer = document.getElementById('product-features');
-                    equipamento.features.forEach(feature => {
-                        const li = document.createElement('li');
-                        li.textContent = feature;
-                        featuresContainer.appendChild(li);
-                    });
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
 
-                    // Add availability with markers
-                    const availabilityContainer = document.getElementById('availability-list');
-                    let availabilityText = '';
+                  <button type="submit">Envie Mensagem!</button>
+                </div>
 
-                    // Venda
-                    const vendaItem = document.createElement('li');
-                    vendaItem.textContent = equipamento.sale ? 'Disponível para venda' : 'Não disponível para venda';
-                    availabilityContainer.appendChild(vendaItem);
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
 
-                    // Aluguel
-                    const aluguelItem = document.createElement('li');
-                    aluguelItem.textContent = equipamento.rental ? 'Disponível para aluguel' : 'Não disponível para aluguel';
-                    availabilityContainer.appendChild(aluguelItem);
+        </div>
 
-                    // Rent Types (Diário, Bid diário, Semanal, Mensal)
-                    if (equipamento.rental) {
-                        const rentTypesContainer = document.createElement('ul');
-                        if (equipamento.rental.diario) {
-                            const diarioItem = document.createElement('li');
-                            diarioItem.textContent = 'Aluguel Diário: Disponível';
-                            rentTypesContainer.appendChild(diarioItem);
-                        }
-                        if (equipamento.rental.bidiario) {
-                            const bidiarioItem = document.createElement('li');
-                            bidiarioItem.textContent = 'Aluguel Bid diário: Disponível';
-                            rentTypesContainer.appendChild(bidiarioItem);
-                        }
-                        if (equipamento.rental.semanal) {
-                            const semanalItem = document.createElement('li');
-                            semanalItem.textContent = 'Aluguel Semanal: Disponível';
-                            rentTypesContainer.appendChild(semanalItem);
-                        }
-                        if (equipamento.rental.mensal) {
-                            const mensalItem = document.createElement('li');
-                            mensalItem.textContent = 'Aluguel Mensal: Disponível';
-                            rentTypesContainer.appendChild(mensalItem);
-                        }
-                        availabilityContainer.appendChild(rentTypesContainer);
-                    }
-                } else {
-                    document.getElementById('product-details').innerHTML = '<p>Equipamento não encontrado.</p>';
-                }
-            });
-    });
-</script>
+      </div>
 
+    </section><!-- /Contact 2 Section -->
 
+  </main>
 
 
     <footer class="footer" id="footer">

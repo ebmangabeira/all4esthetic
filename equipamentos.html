@@ -56,27 +56,20 @@
               </a>
               <nav class="navmenu mx-auto justify-content-center" id="navmenu">
                 <ul>
-                  <!-- Botão de fechar menu inserido dentro do nav -->
                   <li class="navmenu-close">
                     <i class="mobile-nav-close d-xl-none bi bi-x"></i>
                   </li>
-                  <!-- Itens do menu -->
                   <li>
                     <a href="index.html">Início</a>
                   </li>
                   <li>
                     <a href="quem-somos.html">Quem Somos</a>
                   </li>
-                  <li class="dropdown">
-                    <a class="active" href="#">
-                      <span>Equipamentos</span>
-                    </a>
+                  <li>
+                    <a class="active" href="#">Equipamentos</a>
                   </li>
                   <li>
-                    <a href="#">Assistência</a>
-                  </li>
-                  <li>
-                    <a href="#">Contacto</a>
+                    <a href="contacto.html">Contacto</a>
                   </li>
                 </ul>
               </nav>
@@ -105,8 +98,8 @@
       <h1 class="mb-2 mb-lg-0">Equipamentos</h1>
       <nav class="breadcrumbs">
         <ol>
-          <li class="current">Início</li>
-          <li><a>Equipamentos</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li class="current">Equipamentos</li>
         </ol>
       </nav>
     </div>
@@ -173,7 +166,21 @@
 
       <!-- SIDEBAR MÓVEL (mobile) -->
       <div class="col-12 d-block d-md-none">
-        <button id="filtro-btn" class="btn btn-primary mb-3 w-100">Filtro</button>
+        <button id="filtro-btn" class="btn btn-primary mb-3 w-100 d-flex align-items-center justify-content-center">
+  <!-- Ícone SVG inline -->
+  <svg class="me-2" width="16" height="16" viewBox="0 0 24 24"
+       fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+    <line x1="3"  y1="5"  x2="17" y2="5"/>
+    <circle cx="19" cy="5"  r="2" fill="currentColor"/>
+    <line x1="7"  y1="12" x2="21" y2="12"/>
+    <circle cx="5"  cy="12" r="2" fill="currentColor"/>
+    <line x1="3"  y1="19" x2="15" y2="19"/>
+    <circle cx="17" cy="19" r="2" fill="currentColor"/>
+  </svg>
+  Filtro
+</button>
+
         <div id="mobile-filters" class="widgets-container">
           <div class="mobile-filters-header">
             <h3>Filtros</h3>
