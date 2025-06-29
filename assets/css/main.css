@@ -279,7 +279,7 @@ body.no-scroll { overflow: hidden; }
     margin-bottom: 0.5rem;
 }
 #mobile-filters .widget-title {
-  font-size: 14px !important;
+  font-size: 20px !important;
   font-weight: 400; margin-bottom: 28px;
 }
 #mobile-filters .form-check { margin-bottom: 0.75rem; }
@@ -454,7 +454,7 @@ body.no-scroll { overflow: hidden; }
         padding: 16px 12px;
     }
     #equipamentos-container .card-title {
-    font-size: 16px !important;
+    font-size: 20px !important;
     font-weight: 400;
     color: var(--heading-color);
     margin: 8px 0px 24px 0px;
@@ -492,7 +492,7 @@ body.no-scroll { overflow: hidden; }
     background-color: #EA4595BE;
     border: none;
     padding: 8px 16px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     border-radius: 25px;
     transition: background-color 0.3s ease;
@@ -517,7 +517,7 @@ body.no-scroll { overflow: hidden; }
         border-radius: 25px;
     }
     .page-title.light-background h1 {
-    font-size: 18px !important;
+    font-size: 22px !important;
     font-weight: lighter !important;
     color: var(--heading-color);
     margin-bottom: -90px !important;
@@ -529,7 +529,7 @@ body.no-scroll { overflow: hidden; }
 }
 
 #mobile-filters .form-check-label {
-    font-size: 12px !important;
+    font-size: 16px !important;
 }
 .page-title .breadcrumbs a {
     
@@ -653,7 +653,7 @@ body.no-scroll { overflow: hidden; }
 /* Responsividade - no mobile, o botão será ligeiramente menor */
 @media (max-width: 767px) {
     #filtro-btn {
-       font-size: 14px;
+       font-size: 16px;
        padding: 16px 8px;
        margin-top: 60px;
     }
