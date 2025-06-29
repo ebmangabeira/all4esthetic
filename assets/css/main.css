@@ -32,8 +32,8 @@
   /* Espaçamento dos Contentores (horizontal) */
   --bs-spacing-tablet-left: 80px;
   --bs-spacing-tablet-right: 80px;
-  --bs-spacing-mobile-left: 80px;
-  --bs-spacing-mobile-right: 80px;
+  --bs-spacing-mobile-left: 40px;
+  --bs-spacing-mobile-right: 40px;
 }
 
 
