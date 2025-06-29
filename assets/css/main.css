@@ -944,7 +944,7 @@ body.no-scroll { overflow: hidden; }
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: color-mix(in srgb, var(--accent-color), transparent 75%);
+  background: var(--accent-color);
   color: #fff;
   border: none;
   width: 2rem;
@@ -958,7 +958,7 @@ body.no-scroll { overflow: hidden; }
   cursor: pointer;
 }
 .btn-close-history:hover {
-  background: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
