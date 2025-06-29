@@ -942,21 +942,24 @@ body.no-scroll { overflow: hidden; }
 }
 .btn-close-history {
   position: absolute;
-  bottom: 1rem;
+  top: 1rem;
   right: 1rem;
-  background:  color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: color-mix(in srgb, var(--accent-color), transparent 75%);
   color: #fff;
   border: none;
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   line-height: 1;
-  opacity: 0.9;
-  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .btn-close-history:hover {
-  opacity: 1;
+  background: var(--accent-color);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Responsividade Modal História */
