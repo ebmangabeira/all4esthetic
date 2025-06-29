@@ -285,7 +285,7 @@ body.no-scroll { overflow: hidden; }
 #mobile-filters .form-check { margin-bottom: 0.75rem; }
 #mobile-filters .form-check-label { font-size: 1rem; }
 #mobile-filters .btn {
-  width: 100%; font-size: 12px; padding: 0.85rem;
+  width: 100%; font-size: 14px; padding: 0.85rem;
   border-radius: 25px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 25%);
   color: var(--contrast-color);
