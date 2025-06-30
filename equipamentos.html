@@ -92,350 +92,355 @@
       </div>
     </header>
     <main class="main">
-  <!-- Page Title -->
-  <div class="page-title light-background" data-aos="fade-down">
-    <div class="breadcrumbs container d-lg-flex justify-content-between align-items-center">
-      <h1 class="mb-2 mb-lg-0">Equipamentos</h1>
-      <nav class="breadcrumbs">
-        <ol>
-          <li><a href="index.html">Início</a></li>
-          <li class="current">Equipamentos</li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-  <!-- End Page Title -->
-
-  <div class="container py-5">
-    <div class="row">
-      <!-- SIDEBAR ORIGINAL (desktop/tablet) -->
-      <div class="widget sidebar widgets-container d-none d-md-block">
-        <!-- Categorias -->
-        <div class="widget-item">
-          <h3 class="widget-title">Categorias</h3>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="Modelagem" id="cat-modelagem">
-            <label class="form-check-label" for="cat-modelagem">Modelagem</label>
-          </div>
-          <div class="form-check mt-2">
-            <input class="form-check-input" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento">
-            <label class="form-check-label" for="cat-rejuvenescimento">Rejuvenescimento</label>
-          </div>
-          <div class="form-check mt-2">
-            <input class="form-check-input" type="checkbox" value="Depilação" id="cat-depilacao">
-            <label class="form-check-label" for="cat-depilacao">Depilação</label>
-          </div>
-          <div class="form-check mt-2">
-            <input class="form-check-input" type="checkbox" value="Multifuncional" id="cat-multifuncional">
-            <label class="form-check-label" for="cat-multifuncional">Multifuncional</label>
-          </div>
-        </div>
-        <!-- Disponibilidade -->
-        <div class="widget-item mt-4">
-          <h3 class="widget-title">Disponibilidade</h3>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="availability" value="Venda" id="filter-venda">
-            <label class="form-check-label" for="filter-venda">Venda</label>
-          </div>
-          <div class="form-check mt-2">
-            <input class="form-check-input" type="radio" name="availability" value="Aluguer" id="filter-aluguer">
-            <label class="form-check-label" for="filter-aluguer">Aluguer</label>
-          </div>
-        </div>
-        <!-- Períodos de Aluguer -->
-        <div class="widget-item mt-3" id="aluguer-periodos" style="display:none;">
-          <h3 class="widget-title">Períodos de Aluguer</h3>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="rental-period" value="Diário" id="filter-diario">
-            <label class="form-check-label" for="filter-diario">Diário</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="rental-period" value="Bidiário" id="filter-bidiario">
-            <label class="form-check-label" for="filter-bidiario">Bidiário</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="rental-period" value="Semanal" id="filter-semanal">
-            <label class="form-check-label" for="filter-semanal">Semanal</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="rental-period" value="Mensal" id="filter-mensal">
-            <label class="form-check-label" for="filter-mensal">Mensal</label>
-          </div>
-        </div>
+    <!-- Page Title -->
+    <div class="pd-page-title pd-light-bg">
+      <div class="pd-breadcrumbs pd-container">
+        <h1 class="pd-title-text">Equipamentos</h1>
+        <nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Início</a></li>
+            <li class="current" aria-current="page">Equipamentos</li>
+          </ol>
+        </nav>
       </div>
+    </div>
+    <!-- End Page Title -->
 
-      <!-- SIDEBAR MÓVEL (mobile) -->
-      <div class="col-12 d-block d-md-none">
-        <button id="filtro-btn" class="btn btn-primary mb-3 w-100 d-flex align-items-center justify-content-center">
-          <svg class="me-2" width="16" height="16" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="2"
-               stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
-            <line x1="3"  y1="5"  x2="17" y2="5"/>
-            <circle cx="19" cy="5"  r="2" fill="currentColor"/>
-            <line x1="7"  y1="12" x2="21" y2="12"/>
-            <circle cx="5"  cy="12" r="2" fill="currentColor"/>
-            <line x1="3"  y1="19" x2="15" y2="19"/>
-            <circle cx="17" cy="19" r="2" fill="currentColor"/>
-          </svg>
-          Filtro
-        </button>
-
-        <div id="mobile-filters" class="widgets-container">
-          <div class="mobile-filters-header">
-            <h3>Filtros</h3>
-            <button id="close-filtro" aria-label="Fechar">&times;</button>
-          </div>
+    <div class="container py-5">
+      <div class="row">
+        <!-- SIDEBAR ORIGINAL (desktop/tablet) -->
+        <div class="widget sidebar widgets-container d-none d-md-block">
           <!-- Categorias -->
           <div class="widget-item">
-            <h4 class="widget-title">Categorias</h4>
+            <h3 class="widget-title">Categorias</h3>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="Modelagem" id="cat-modelagem-mob">
-              <label class="form-check-label" for="cat-modelagem-mob">Modelagem</label>
+              <input class="form-check-input" type="checkbox" value="Modelagem" id="cat-modelagem">
+              <label class="form-check-label" for="cat-modelagem">Modelagem</label>
             </div>
             <div class="form-check mt-2">
-              <input class="form-check-input" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento-mob">
-              <label class="form-check-label" for="cat-rejuvenescimento-mob">Rejuvenescimento</label>
+              <input class="form-check-input" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento">
+              <label class="form-check-label" for="cat-rejuvenescimento">Rejuvenescimento</label>
             </div>
             <div class="form-check mt-2">
-              <input class="form-check-input" type="checkbox" value="Depilação" id="cat-depilacao-mob">
-              <label class="form-check-label" for="cat-depilacao-mob">Depilação</label>
+              <input class="form-check-input" type="checkbox" value="Depilação" id="cat-depilacao">
+              <label class="form-check-label" for="cat-depilacao">Depilação</label>
             </div>
             <div class="form-check mt-2">
-              <input class="form-check-input" type="checkbox" value="Multifuncional" id="cat-multifuncional-mob">
-              <label class="form-check-label" for="cat-multifuncional-mob">Multifuncional</label>
+              <input class="form-check-input" type="checkbox" value="Multifuncional" id="cat-multifuncional">
+              <label class="form-check-label" for="cat-multifuncional">Multifuncional</label>
             </div>
           </div>
           <!-- Disponibilidade -->
           <div class="widget-item mt-4">
-            <h4 class="widget-title">Disponibilidade</h4>
+            <h3 class="widget-title">Disponibilidade</h3>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="availability-mob" value="Venda" id="filter-venda-mob">
-              <label class="form-check-label" for="filter-venda-mob">Venda</label>
+              <input class="form-check-input" type="radio" name="availability" value="Venda" id="filter-venda">
+              <label class="form-check-label" for="filter-venda">Venda</label>
             </div>
             <div class="form-check mt-2">
-              <input class="form-check-input" type="radio" name="availability-mob" value="Aluguer" id="filter-aluguer-mob">
-              <label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
+              <input class="form-check-input" type="radio" name="availability" value="Aluguer" id="filter-aluguer">
+              <label class="form-check-label" for="filter-aluguer">Aluguer</label>
             </div>
           </div>
           <!-- Períodos de Aluguer -->
-          <div class="widget-item mt-4" id="aluguer-periodos-mob" style="display:none;">
-            <h4 class="widget-title">Períodos de Aluguer</h4>
+          <div class="widget-item mt-3" id="aluguer-periodos" style="display:none;">
+            <h3 class="widget-title">Períodos de Aluguer</h3>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="rental-period-mob" value="Diário" id="filter-diario-mob">
-              <label class="form-check-label" for="filter-diario-mob">Diário</label>
+              <input class="form-check-input" type="radio" name="rental-period" value="Diário" id="filter-diario">
+              <label class="form-check-label" for="filter-diario">Diário</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="rental-period-mob" value="Bidiário" id="filter-bidiario-mob">
-              <label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
+              <input class="form-check-input" type="radio" name="rental-period" value="Bidiário" id="filter-bidiario">
+              <label class="form-check-label" for="filter-bidiario">Bidiário</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="rental-period-mob" value="Semanal" id="filter-semanal-mob">
-              <label class="form-check-label" for="filter-semanal-mob">Semanal</label>
+              <input class="form-check-input" type="radio" name="rental-period" value="Semanal" id="filter-semanal">
+              <label class="form-check-label" for="filter-semanal">Semanal</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="rental-period-mob" value="Mensal" id="filter-mensal-mob">
-              <label class="form-check-label" for="filter-mensal-mob">Mensal</label>
+              <input class="form-check-input" type="radio" name="rental-period" value="Mensal" id="filter-mensal">
+              <label class="form-check-label" for="filter-mensal">Mensal</label>
             </div>
           </div>
-          <button id="pesquisar-btn" class="btn btn-primary mt-4 w-100">Pesquisar</button>
+        </div>
+
+        <!-- SIDEBAR MÓVEL (mobile) -->
+        <div class="col-12 d-block d-md-none">
+          <button id="filtro-btn" class="btn btn-primary mb-3 w-100 d-flex align-items-center justify-content-center">
+            <svg class="me-2" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+              <line x1="3" y1="5" x2="17" y2="5"/>
+              <circle cx="19" cy="5" r="2" fill="currentColor"/>
+              <line x1="7" y1="12" x2="21" y2="12"/>
+              <circle cx="5" cy="12" r="2" fill="currentColor"/>
+              <line x1="3" y1="19" x2="15" y2="19"/>
+              <circle cx="17" cy="19" r="2" fill="currentColor"/>
+            </svg>
+            Filtro
+          </button>
+
+          <div id="mobile-filters" class="widgets-container">
+            <div class="mobile-filters-header">
+              <h3>Filtros</h3>
+              <button id="close-filtro" aria-label="Fechar">&times;</button>
+            </div>
+            <!-- Categorias -->
+            <div class="widget-item">
+              <h4 class="widget-title">Categorias</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Modelagem" id="cat-modelagem-mob">
+                <label class="form-check-label" for="cat-modelagem-mob">Modelagem</label>
+              </div>
+              <div class="form-check mt-2">
+                <input class="form-check-input" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento-mob">
+                <label class="form-check-label" for="cat-rejuvenescimento-mob">Rejuvenescimento</label>
+              </div>
+              <div class="form-check mt-2">
+                <input class="form-check-input" type="checkbox" value="Depilação" id="cat-depilacao-mob">
+                <label class="form-check-label" for="cat-depilacao-mob">Depilação</label>
+              </div>
+              <div class="form-check mt-2">
+                <input class="form-check-input" type="checkbox" value="Multifuncional" id="cat-multifuncional-mob">
+                <label class="form-check-label" for="cat-multifuncional-mob">Multifuncional</label>
+              </div>
+            </div>
+            <!-- Disponibilidade -->
+            <div class="widget-item mt-4">
+              <h4 class="widget-title">Disponibilidade</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="availability-mob" value="Venda" id="filter-venda-mob">
+                <label class="form-check-label" for="filter-venda-mob">Venda</label>
+              </div>
+              <div class="form-check mt-2">
+                <input class="form-check-input" type="radio" name="availability-mob" value="Aluguer" id="filter-aluguer-mob">
+                <label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
+              </div>
+            </div>
+            <!-- Períodos de Aluguer -->
+            <div class="widget-item mt-4" id="aluguer-periodos-mob" style="display:none;">
+              <h4 class="widget-title">Períodos de Aluguer</h4>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="rental-period-mob" value="Diário" id="filter-diario-mob">
+                <label class="form-check-label" for="filter-diario-mob">Diário</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="rental-period-mob" value="Bidiário" id="filter-bidiario-mob">
+                <label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="rental-period-mob" value="Semanal" id="filter-semanal-mob">
+                <label class="form-check-label" for="filter-semanal-mob">Semanal</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="rental-period-mob" value="Mensal" id="filter-mensal-mob">
+                <label class="form-check-label" for="filter-mensal-mob">Mensal</label>
+              </div>
+            </div>
+            <button id="pesquisar-btn" class="btn btn-primary mt-4 w-100">Pesquisar</button>
+          </div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="col-lg-8">
+          <div id="active-filters-mobile" class="active-filters-mobile d-none"></div>
+          <section id="equipamentos" data-aos="fade-up">
+            <div class="row g-4" id="equipamentos-container"></div>
+            <nav aria-label="Page navigation" class="mt-4">
+              <ul class="pagination justify-content-center" id="pagination"></ul>
+            </nav>
+          </section>
         </div>
       </div>
-
-      <!-- Conteúdo Principal -->
-      <div class="col-lg-8">
-        <div id="active-filters-mobile" class="active-filters-mobile d-none"></div>
-        <section id="equipamentos" data-aos="fade-up">
-          <div class="row g-4" id="equipamentos-container"></div>
-          <nav aria-label="Page navigation" class="mt-4">
-            <ul class="pagination justify-content-center" id="pagination"></ul>
-          </nav>
-        </section>
-      </div>
     </div>
-  </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      const res = await fetch('assets/data/equipamentos.json');
-      const allEquipamentos = await res.json();
-      const container = document.getElementById('equipamentos-container');
-      const paginationEl = document.getElementById('pagination');
-      const activeMobile = document.getElementById('active-filters-mobile');
-      const itemsPerPage = 6;
-      let currentPage = 1;
-      let filteredEq = [...allEquipamentos];
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        const res = await fetch('assets/data/equipamentos.json');
+        const allEquipamentos = await res.json();
+        const container = document.getElementById('equipamentos-container');
+        const paginationEl = document.getElementById('pagination');
+        const activeMobile = document.getElementById('active-filters-mobile');
+        const itemsPerPage = 6;
+        let currentPage = 1;
+        let filteredEq = [...allEquipamentos];
 
-      const catDesktop = Array.from(document.querySelectorAll('.sidebar input[id^="cat-"]'));
-      const availDesktop = Array.from(document.querySelectorAll('.sidebar input[name="availability"]'));
-      const rentDesktop  = Array.from(document.querySelectorAll('.sidebar input[name="rental-period"]'));
-      const periodDesktopDiv = document.getElementById('aluguer-periodos');
-      const catMobile = Array.from(document.querySelectorAll('#mobile-filters input[id^="cat-"]'));
-      const availMobile = Array.from(document.querySelectorAll('#mobile-filters input[name="availability-mob"]'));
-      const rentMobile  = Array.from(document.querySelectorAll('input[name="rental-period-mob"]'));
-      const periodMobileDiv = document.getElementById('aluguer-periodos-mob');
-      const filtroBtn     = document.getElementById('filtro-btn');
-      const mobileFilters = document.getElementById('mobile-filters');
-      const closeBtn      = document.getElementById('close-filtro');
-      const pesquisarBtn  = document.getElementById('pesquisar-btn');
+        const catDesktop = Array.from(document.querySelectorAll('.sidebar input[id^="cat-"]'));
+        const availDesktop = Array.from(document.querySelectorAll('.sidebar input[name="availability"]'));
+        const rentDesktop  = Array.from(document.querySelectorAll('.sidebar input[name="rental-period"]'));
+        const periodDesktopDiv = document.getElementById('aluguer-periodos');
+        const catMobile = Array.from(document.querySelectorAll('#mobile-filters input[id^="cat-"]'));
+        const availMobile = Array.from(document.querySelectorAll('#mobile-filters input[name="availability-mob"]'));
+        const rentMobile  = Array.from(document.querySelectorAll('input[name="rental-period-mob"]'));
+        const periodMobileDiv = document.getElementById('aluguer-periodos-mob');
+        const filtroBtn     = document.getElementById('filtro-btn');
+        const mobileFilters = document.getElementById('mobile-filters');
+        const closeBtn      = document.getElementById('close-filtro');
+        const pesquisarBtn  = document.getElementById('pesquisar-btn');
 
-      availDesktop.forEach(r => {
-        r.addEventListener('change', () => {
-          if (document.getElementById('filter-aluguer').checked) {
-            periodDesktopDiv.style.display = 'block';
-          } else {
-            periodDesktopDiv.style.display = 'none';
-            rentDesktop.forEach(p=>p.checked=false);
-          }
-          autoApply();
-        });
-      });
-      catDesktop.concat(rentDesktop).forEach(i=>i.addEventListener('change', autoApply));
-      function autoApply(){
-        const cats  = catDesktop.filter(c=>c.checked).map(c=>c.value);
-        const av    = document.querySelector('.sidebar input[name="availability"]:checked')?.value;  
-        const rents = rentDesktop.filter(p=>p.checked).map(p=>p.value);
-        applyFilters(cats,av,rents,false);
-      }
-
-      availMobile.forEach(r => {
-        r.addEventListener('change', () => {
-          if (document.getElementById('filter-aluguer-mob').checked) {
-            periodMobileDiv.style.display = 'block';
-          } else {
-            periodMobileDiv.style.display = 'none';
-            rentMobile.forEach(p=>p.checked=false);
-          }
-        });
-      });
-      filtroBtn.addEventListener('click', ()=>{
-        mobileFilters.classList.add('open');
-        document.body.classList.add('no-scroll');
-      });
-      closeBtn.addEventListener('click', ()=>{
-        mobileFilters.classList.remove('open');
-        document.body.classList.remove('no-scroll');
-      });
-      pesquisarBtn.addEventListener('click', ()=>{
-        const cats  = catMobile.filter(c=>c.checked).map(c=>c.value);
-        const av    = document.querySelector('input[name="availability-mob"]:checked')?.value;
-        const rents = rentMobile.filter(p=>p.checked).map(p=>p.value);
-        applyFilters(cats,av,rents,true);
-        mobileFilters.classList.remove('open');
-        document.body.classList.remove('no-scroll');
-      });
-
-      function applyFilters(cats, av, rents, showChips){
-        currentPage = 1;
-        // se não há filtros e veio do botão "Pesquisar", mostra tudo
-        if (showChips && !cats.length && !av && !rents.length) {
-          filteredEq = [...allEquipamentos];
-        } else {
-          filteredEq = allEquipamentos.filter(eq=>{
-            if (cats.length && !cats.includes(eq.category)) return false;
-            if (av==='Venda') return eq.sale;
-            if (av==='Aluguer') {
-              if (rents.length) return rents.some(r=>eq.rental[r.toLowerCase()]);
-              return Object.values(eq.rental).some(v=>v);
+        availDesktop.forEach(r => {
+          r.addEventListener('change', () => {
+            if (document.getElementById('filter-aluguer').checked) {
+              periodDesktopDiv.style.display = 'block';
+            } else {
+              periodDesktopDiv.style.display = 'none';
+              rentDesktop.forEach(p => p.checked = false);
             }
-            return true;
+            autoApply();
+          });
+        });
+        catDesktop.concat(rentDesktop).forEach(i => i.addEventListener('change', autoApply));
+
+        function autoApply() {
+          const cats = catDesktop.filter(c => c.checked).map(c => c.value);
+          const av = document.querySelector('.sidebar input[name="availability"]:checked')?.value;
+          const rents = rentDesktop.filter(p => p.checked).map(p => p.value);
+          applyFilters(cats, av, rents, false);
+        }
+
+        availMobile.forEach(r => {
+          r.addEventListener('change', () => {
+            if (document.getElementById('filter-aluguer-mob').checked) {
+              periodMobileDiv.style.display = 'block';
+            } else {
+              periodMobileDiv.style.display = 'none';
+              rentMobile.forEach(p => p.checked = false);
+            }
+          });
+        });
+        filtroBtn.addEventListener('click', () => {
+          mobileFilters.classList.add('open');
+          document.body.classList.add('no-scroll');
+        });
+        closeBtn.addEventListener('click', () => {
+          mobileFilters.classList.remove('open');
+          document.body.classList.remove('no-scroll');
+        });
+        pesquisarBtn.addEventListener('click', () => {
+          const cats = catMobile.filter(c => c.checked).map(c => c.value);
+          const av = document.querySelector('input[name="availability-mob"]:checked')?.value;
+          const rents = rentMobile.filter(p => p.checked).map(p => p.value);
+          applyFilters(cats, av, rents, true);
+          mobileFilters.classList.remove('open');
+          document.body.classList.remove('no-scroll');
+        });
+
+        function applyFilters(cats, av, rents, showChips) {
+          currentPage = 1;
+          if (showChips && !cats.length && !av && !rents.length) {
+            filteredEq = [...allEquipamentos];
+          } else {
+            filteredEq = allEquipamentos.filter(eq => {
+              if (cats.length && !cats.includes(eq.category)) return false;
+              if (av === 'Venda') return eq.sale;
+              if (av === 'Aluguer') {
+                if (rents.length) return rents.some(r => eq.rental[r.toLowerCase()]);
+                return Object.values(eq.rental).some(v => v);
+              }
+              return true;
+            });
+          }
+          renderPagination();
+          renderPage();
+          if (showChips) renderActiveMobile(cats, av, rents);
+        }
+
+        function renderActiveMobile(cats, av, rents) {
+          activeMobile.innerHTML = '';
+          const labels = [
+            ...cats.map(v => ({ t: 'cat', value: v })),
+            ...(av ? [{ t: 'avail', value: av }] : []),
+            ...rents.map(v => ({ t: 'rent', value: v }))
+          ];
+          if (!labels.length) {
+            activeMobile.classList.add('d-none');
+            return;
+          }
+          activeMobile.classList.remove('d-none');
+          labels.forEach(item => {
+            const span = document.createElement('span');
+            span.className = 'active-filter-chip';
+            span.textContent = item.value;
+            const btn = document.createElement('button');
+            btn.className = 'chip-close';
+            btn.innerHTML = '&times;';
+            btn.addEventListener('click', () => removeFilter(item));
+            span.appendChild(btn);
+            activeMobile.appendChild(span);
           });
         }
 
-        renderPagination();
-        renderPage();
-        if (showChips) renderActiveMobile(cats,av,rents);
-      }
-
-      function renderActiveMobile(cats,av,rents){
-        activeMobile.innerHTML = '';
-        const labels = [
-          ...cats.map(v=>({t:'cat',value:v})),
-          ...(av? [{t:'avail',value:av}]:[]),
-          ...rents.map(v=>({t:'rent',value:v}))
-        ];
-        if (!labels.length) {
-          activeMobile.classList.add('d-none');
-          return;
-        }
-        activeMobile.classList.remove('d-none');
-        labels.forEach(item=>{
-          const span = document.createElement('span');
-          span.className = 'active-filter-chip';
-          span.textContent = item.value;
-          const btn = document.createElement('button');
-          btn.className = 'chip-close';
-          btn.innerHTML = '&times;';
-          btn.addEventListener('click', ()=> removeFilter(item));
-          span.appendChild(btn);
-          activeMobile.appendChild(span);
-        });
-      }
-
-      function removeFilter(item){
-        document.querySelectorAll(`input[value="${item.value}"]`).forEach(inp=>{
-          if ((item.t==='cat'&&inp.type==='checkbox')
-           ||(item.t==='avail'&&inp.name.startsWith('availability'))
-           ||(item.t==='rent'&&inp.name.startsWith('rental-period'))
-          ) inp.checked = false;
-        });
-        if (item.t==='avail') {
-          periodDesktopDiv.style.display='none';
-          periodMobileDiv.style.display='none';
-          rentDesktop.concat(rentMobile).forEach(p=>p.checked=false);
-        }
-        const cats  = Array.from(document.querySelectorAll('input[id^="cat-"]:checked')).map(i=>i.value);
-        const av    = document.querySelector('input[name="availability"]:checked, input[name="availability-mob"]:checked')?.value;
-        const rents = Array.from(document.querySelectorAll('input[name="rental-period"]:checked, input[name="rental-period-mob"]:checked')).map(i=>i.value);
-        applyFilters(cats,av,rents,true);
-      }
-
-      function renderPage(){
-        container.innerHTML = '';
-        const start = (currentPage-1)*itemsPerPage;
-        filteredEq.slice(start,start+itemsPerPage).forEach((eq,i)=>{
-          const div = document.createElement('div');
-          div.className='col-12 col-sm-6 col-lg-4';
-          div.innerHTML=`
-            <div class="card equipamento-card h-100" data-aos="zoom-in" data-aos-delay="${i*100}">
-              <img src="${eq.image}" class="card-img-top" alt="${eq.name}">
-              <div class="card-category">${eq.category}</div>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">${eq.name}</h5>
-                <a href="detalhes.html?id=${eq.id}" class="btn btn-primary mt-auto">Mais detalhes</a>
-              </div>
-            </div>`;
-          container.appendChild(div);
-        });
-      }
-
-      function renderPagination(){
-        paginationEl.innerHTML='';
-        const pageCount = Math.ceil(filteredEq.length/itemsPerPage);
-
-        const mk = (disabled,html,fn)=>{ const li=document.createElement('li'); li.className=`page-item ${disabled?'disabled':''}`; li.innerHTML=html; if(!disabled) li.onclick=fn; return li; };
-
-        paginationEl.appendChild(mk(currentPage===1, `<a class="page-link" href="#"><span>&laquo;</span></a>`,
-          e=>{e.preventDefault(); currentPage--; renderPagination(); renderPage();}
-        ));
-
-        for(let i=1;i<=pageCount;i++){
-          const li=document.createElement('li');
-          li.className=`page-item${i===currentPage?' active':''}`;
-          li.innerHTML=`<a class="page-link" href="#">${i}</a>`;
-          li.onclick=e=>{e.preventDefault(); currentPage=i; renderPagination(); renderPage();};
-          paginationEl.appendChild(li);
+        function removeFilter(item) {
+          document.querySelectorAll(`input[value="${item.value}"]`).forEach(inp => {
+            if ((item.t === 'cat' && inp.type === 'checkbox')
+              || (item.t === 'avail' && inp.name.startsWith('availability'))
+              || (item.t === 'rent' && inp.name.startsWith('rental-period'))
+            ) inp.checked = false;
+          });
+          if (item.t === 'avail') {
+            periodDesktopDiv.style.display = 'none';
+            periodMobileDiv.style.display = 'none';
+            rentDesktop.concat(rentMobile).forEach(p => p.checked = false);
+          }
+          const cats = Array.from(document.querySelectorAll('input[id^="cat-"]:checked')).map(i => i.value);
+          const av = document.querySelector('input[name="availability"]:checked, input[name="availability-mob"]:checked')?.value;
+          const rents = Array.from(document.querySelectorAll('input[name="rental-period"]:checked, input[name="rental-period-mob"]:checked')).map(i => i.value);
+          applyFilters(cats, av, rents, true);
         }
 
-        paginationEl.appendChild(mk(currentPage===pageCount, `<a class="page-link" href="#"><span>&raquo;</span></a>`,
-          e=>{e.preventDefault(); currentPage++; renderPagination(); renderPage();}
-        ));
-      }
+        function renderPage() {
+          container.innerHTML = '';
+          const start = (currentPage - 1) * itemsPerPage;
+          filteredEq.slice(start, start + itemsPerPage).forEach((eq, i) => {
+            const div = document.createElement('div');
+            div.className = 'col-12 col-sm-6 col-lg-4';
+            div.innerHTML = `
+              <div class="card equipamento-card h-100" data-aos="zoom-in" data-aos-delay="${i * 100}">
+                <img src="${eq.image}" class="card-img-top" alt="${eq.name}">
+                <div class="card-category">${eq.category}</div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">${eq.name}</h5>
+                  <a href="detalhes.html?id=${eq.id}" class="btn btn-primary mt-auto">Mais detalhes</a>
+                </div>
+              </div>`;
+            container.appendChild(div);
+          });
+        }
 
-      // Inicia logo com todos os equipamentos visíveis
-      applyFilters([], null, [], false);
-    });
-  </script>
-</main>
+        function renderPagination() {
+          paginationEl.innerHTML = '';
+          const pageCount = Math.ceil(filteredEq.length / itemsPerPage);
+
+          const mk = (disabled, html, fn) => {
+            const li = document.createElement('li');
+            li.className = `page-item ${disabled ? 'disabled' : ''}`;
+            li.innerHTML = html;
+            if (!disabled) li.onclick = fn;
+            return li;
+          };
+
+          paginationEl.appendChild(mk(currentPage === 1, `<a class="page-link" href="#"><span>&laquo;</span></a>`,
+            e => { e.preventDefault(); currentPage--; renderPagination(); renderPage(); }
+          ));
+
+          for (let i = 1; i <= pageCount; i++) {
+            const li = document.createElement('li');
+            li.className = `page-item${i === currentPage ? ' active' : ''}`;
+            li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+            li.onclick = e => { e.preventDefault(); currentPage = i; renderPagination(); renderPage(); };
+            paginationEl.appendChild(li);
+          }
+
+          paginationEl.appendChild(mk(currentPage === pageCount, `<a class="page-link" href="#"><span>&raquo;</span></a>`,
+            e => { e.preventDefault(); currentPage++; renderPagination(); renderPage(); }
+          ));
+        }
+
+        // Inicializa tudo visível
+        applyFilters([], null, [], false);
+      });
+    </script>
+  </main>
 
 
 

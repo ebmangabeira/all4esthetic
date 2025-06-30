@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
     <!-- Ícones do Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    
     <!-- AOS (Animações ao Rolagem) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
     <!-- GLightbox (Galeria de Imagens) -->
@@ -51,25 +52,24 @@
           <div class="position-relative">
             <div class="d-flex align-items-center justify-content-between">
               <!-- Logótipo para computador -->
-              <a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
+              <a
+                class="logo d-flex align-items-center me-4 d-none d-xl-flex"
+                href="index.html"
+              >
                 <img alt="Logo" src="assets/img/logo-header.png" />
               </a>
-              <nav class="navmenu mx-auto justify-content-center" id="navmenu">
+              <nav
+                class="navmenu mx-auto justify-content-center"
+                id="navmenu"
+              >
                 <ul>
                   <li class="navmenu-close">
                     <i class="mobile-nav-close d-xl-none bi bi-x"></i>
                   </li>
-                    <a href="index.html">Início</a>
-                  </li>
-                  <li>
-                    <a href="quem-somos.html">Quem Somos</a>
-                  </li>
-                  <li>
-                    <a href="equipamentos.html">Equipamentos</a>
-                  </li>
-                  <li>
-                    <a href="contacto.html">Contacto</a>
-                  </li>
+                  <li><a href="index.html">Início</a></li>
+                  <li><a href="quem-somos.html">Quem Somos</a></li>
+                  <li><a href="equipamentos.html">Equipamentos</a></li>
+                  <li><a href="contacto.html">Contacto</a></li>
                 </ul>
               </nav>
             </div>
@@ -81,7 +81,11 @@
         <div class="container">
           <form class="search-form">
             <div class="input-group">
-              <input class="form-control" placeholder="Pesquisar produtos" type="text" />
+              <input
+                class="form-control"
+                placeholder="Pesquisar produtos"
+                type="text"
+              />
               <button class="btn" type="submit">
                 <i class="bi bi-search"></i>
               </button>
@@ -90,146 +94,185 @@
         </div>
       </div>
     </header>
-    <main class="main">
-    <!-- Page Title -->
-    <div class="page-title light-background" data-aos="fade-down">
-        <div class="breadcrumbs container d-lg-flex justify-content-between align-items-center">
-            <h1 class="mb-2 mb-lg-0">Detalhes</h1>
-            <nav class="breadcrumbs">
-                <ol>
-                  <li><a href="index.html">Início</a></li>
-                  <li><a href="equipamentos.html">Equipamentos</a></li>
-                  <li class="current">Detalhes</li>
-                </ol>
-            </nav>
+    
+<main class="pd-main">
+  <div class="pd-page-title pd-light-bg">
+    <div class="pd-breadcrumbs pd-container">
+      <h1 class="pd-title-text">Detalhes</h1>
+      <nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="equipamentos.html">Equipamentos</a></li>
+          <li class="current" aria-current="page">Detalhes</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <section id="pd-product-section" class="pd-details-section pd-container section">
+    <!-- Logo só no PDF -->
+    <div class="pd-pdf-logo only-print">
+      <img src="assets/img/logo-header.png" alt="Logo" class="pd-logo-image">
+    </div>
+
+    <div class="pd-row">
+      <!-- coluna da imagem e categoria -->
+      <div class="pd-col pd-col-half">
+        <div class="pd-img-container">
+          <span id="pd-category-text" class="pd-category-label"></span>
+          <img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal">
         </div>
-    </div><!-- End Page Title -->
-
-    <!-- Product Details Section -->
-    <section id="product-details" class="product-details section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row">
-                <!-- Product Image -->
-                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
-                    <div class="product-images">
-                        <div class="category-tag">
-                            <span id="product-category"></span>
-                        </div>
-                        <img id="main-product-image" src="" alt="Product Image" class="img-fluid main-image" />
-                    </div>
-                    <div class="small-images mt-3">
-                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
-                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
-                        <img src="" alt="Product Image Small" class="img-fluid small-image" />
-                    </div>
-                </div>
-
-                <!-- Product Info -->
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                    <div class="product-info">
-                        <h1 id="product-title" class="product-title"></h1>
-                        <p id="product-description" class="product-text"></p>
-
-                        <div class="product-features">
-                            <h5>Características:</h5>
-                            <ul id="product-features"></ul>
-                        </div>
-
-                        <!-- Availability -->
-                        <div class="product-availability">
-                            <h5>Disponibilidade:</h5>
-                            <ul id="availability-list"></ul>
-                        </div>
-
-                        <div class="product-actions">
-                            <a href="equipamentos.html" class="btn btn-primary">Voltar para os Equipamentos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="thumbs-wrapper">
+          <button class="thumb-btn prev" aria-label="Anterior">&lt;</button>
+          <div class="thumbs-viewport">
+            <ul class="thumbs-track"></ul>
+          </div>
+          <button class="thumb-btn next" aria-label="Próximo">&gt;</button>
         </div>
-    </section>
+      </div>
+
+      <!-- coluna de texto -->
+      <div class="pd-col pd-col-half">
+        <h2 id="pd-title-text" class="pd-product-title"></h2>
+        <p id="pd-desc-text" class="pd-product-desc"></p>
+
+        <div class="pd-box pd-features-box">
+          <h5>Características</h5>
+          <ul id="pd-features-list"></ul>
+        </div>
+
+        <div class="pd-box pd-availability-box">
+          <h5>Disponibilidade</h5>
+          <ul id="pd-availability-list" class="list-unstyled"></ul>
+        </div>
+
+        <div class="pd-actions">
+          <button id="btn-pdf" class="pd-btn pd-btn-outline">Gerar PDF</button>
+          <button id="btn-quote" class="pd-btn pd-btn-outline">Solicitar Orçamento</button>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const equipmentId = urlParams.get('id');
+  document.addEventListener('DOMContentLoaded', () => {
+    const params   = new URLSearchParams(location.search);
+    const eqId     = params.get('id');
+    const availUL  = document.getElementById('pd-availability-list');
+    const section  = document.getElementById('pd-product-section');
+    const mainImg  = document.getElementById('pd-main-img');
 
-        fetch('assets/data/equipamentos.json')
-            .then(response => response.json())
-            .then(data => {
-                const equipamento = data.find(eq => eq.id === equipmentId);
-                if (equipamento) {
-                    // Set main image
-                    document.getElementById('main-product-image').src = equipamento.image;
-                    // Set product title and description
-                    document.getElementById('product-title').textContent = equipamento.name;
-                    document.getElementById('product-description').textContent = equipamento.description;
+    fetch('assets/data/equipamentos.json')
+      .then(res => res.json())
+      .then(data => {
+        const eq = data.find(item => item.id === eqId);
+        if (!eq) return;
 
-                    // Set product category in the corner of the large image
-                    document.getElementById('product-category').textContent = equipamento.category;
+        // Preenche a página
+        mainImg.src = eq.image;
+        document.getElementById('pd-category-text').textContent = eq.category;
+        document.getElementById('pd-title-text').textContent    = eq.name;
+        document.getElementById('pd-desc-text').textContent     = eq.description;
 
-                    // Add small images below the main image
-                    const smallImages = document.querySelectorAll('.small-image');
-                    smallImages[0].src = equipamento.images[0];
-                    smallImages[1].src = equipamento.images[1];
-                    smallImages[2].src = equipamento.images[2];
+        eq.features.forEach(f => {
+          const li = document.createElement('li');
+          li.textContent = f;
+          document.getElementById('pd-features-list').appendChild(li);
+        });
 
-                    // Add features to the product info
-                    const featuresContainer = document.getElementById('product-features');
-                    equipamento.features.forEach(feature => {
-                        const li = document.createElement('li');
-                        li.textContent = feature;
-                        featuresContainer.appendChild(li);
-                    });
+        function appendCheck(text) {
+          const li = document.createElement('li');
+          li.classList.add('d-flex','align-items-center','py-1');
+          li.innerHTML = `<i class="bi bi-check-circle-fill me-2" style="color:#EA4595;font-size:12px;"></i><span>${text}</span>`;
+          availUL.appendChild(li);
+        }
+        if (eq.sale) appendCheck('Disponível para venda');
+        Object.entries(eq.rental)
+          .filter(([, ok]) => ok)
+          .forEach(([p]) => {
+            appendCheck({
+              diario:   'Diário',
+              bidiario: 'Bidiário',
+              semanal:  'Semanal',
+              mensal:   'Mensal'
+            }[p]);
+          });
 
-                    // Add availability with markers
-                    const availabilityContainer = document.getElementById('availability-list');
-                    let availabilityText = '';
-
-                    // Venda
-                    const vendaItem = document.createElement('li');
-                    vendaItem.textContent = equipamento.sale ? 'Disponível para venda' : 'Não disponível para venda';
-                    availabilityContainer.appendChild(vendaItem);
-
-                    // Aluguel
-                    const aluguelItem = document.createElement('li');
-                    aluguelItem.textContent = equipamento.rental ? 'Disponível para aluguel' : 'Não disponível para aluguel';
-                    availabilityContainer.appendChild(aluguelItem);
-
-                    // Rent Types (Diário, Bid diário, Semanal, Mensal)
-                    if (equipamento.rental) {
-                        const rentTypesContainer = document.createElement('ul');
-                        if (equipamento.rental.diario) {
-                            const diarioItem = document.createElement('li');
-                            diarioItem.textContent = 'Aluguel Diário: Disponível';
-                            rentTypesContainer.appendChild(diarioItem);
-                        }
-                        if (equipamento.rental.bidiario) {
-                            const bidiarioItem = document.createElement('li');
-                            bidiarioItem.textContent = 'Aluguel Bid diário: Disponível';
-                            rentTypesContainer.appendChild(bidiarioItem);
-                        }
-                        if (equipamento.rental.semanal) {
-                            const semanalItem = document.createElement('li');
-                            semanalItem.textContent = 'Aluguel Semanal: Disponível';
-                            rentTypesContainer.appendChild(semanalItem);
-                        }
-                        if (equipamento.rental.mensal) {
-                            const mensalItem = document.createElement('li');
-                            mensalItem.textContent = 'Aluguel Mensal: Disponível';
-                            rentTypesContainer.appendChild(mensalItem);
-                        }
-                        availabilityContainer.appendChild(rentTypesContainer);
-                    }
-                } else {
-                    document.getElementById('product-details').innerHTML = '<p>Equipamento não encontrado.</p>';
-                }
+        // função suave para trocar imagem principal
+        function swapImageSmooth(newSrc) {
+          mainImg.style.transition = 'opacity 0.3s';
+          mainImg.style.opacity = 0;
+          mainImg.addEventListener('transitionend', function handler(e) {
+            if (e.propertyName !== 'opacity') return;
+            mainImg.removeEventListener('transitionend', handler);
+            mainImg.src = newSrc;
+            requestAnimationFrame(() => {
+              mainImg.style.opacity = 1;
             });
-    });
+          });
+        }
+
+        // Carrossel de miniaturas
+        const track = document.querySelector('.thumbs-track');
+        const images = eq.images.slice(0,6);
+        let currentIndex = 0;
+
+        function visibleCount() {
+          const w = window.innerWidth;
+          if (w < 768) return 1;
+          if (w < 992) return 2;
+          return 3;
+        }
+
+        function updateCarousel() {
+          const count = visibleCount();
+          const slide = document.querySelector('.thumb-slide');
+          if (!slide) return;
+          const style = getComputedStyle(slide);
+          const w = slide.getBoundingClientRect().width + parseFloat(style.marginRight);
+          track.style.transform = `translateX(${-currentIndex * w}px)`;
+          prevBtn.disabled = currentIndex === 0;
+          nextBtn.disabled = currentIndex >= images.length - count;
+        }
+
+        images.forEach((src, idx) => {
+          const li = document.createElement('li');
+          li.className = 'thumb-slide' + (idx === 0 ? ' active' : '');
+          li.innerHTML = `<img src="${src}" alt="Miniatura ${idx+1}">`;
+          li.addEventListener('click', () => {
+            swapImageSmooth(src);
+            document.querySelectorAll('.thumb-slide').forEach(s => s.classList.remove('active'));
+            li.classList.add('active');
+          });
+          track.appendChild(li);
+        });
+
+        const prevBtn = document.querySelector('.thumb-btn.prev');
+        const nextBtn = document.querySelector('.thumb-btn.next');
+        prevBtn.addEventListener('click', () => {
+          if (currentIndex > 0) currentIndex--;
+          updateCarousel();
+        });
+        nextBtn.addEventListener('click', () => {
+          if (currentIndex < images.length - visibleCount()) currentIndex++;
+          updateCarousel();
+        });
+        window.addEventListener('resize', updateCarousel);
+        updateCarousel();
+
+        // Gerar PDF via print
+        document.getElementById('btn-pdf').addEventListener('click', () => {
+          window.print();
+        });
+        // Solicitar orçamento
+        document.getElementById('btn-quote').addEventListener('click', () => {
+          window.location.href = 'contacto.html';
+        });
+      });
+  });
 </script>
 
 
@@ -344,7 +387,10 @@
     <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
-    <!-- Ficheiro JS -->
+    <!-- dependências -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

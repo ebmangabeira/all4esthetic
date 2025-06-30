@@ -2,14 +2,17 @@
   {
     "id": "E007",
     "name": "Electroestimulação",
-    "description": "A Electroestimulação é um tratamento avançado utilizado para modelagem corporal e tonificação muscular. Este equipamento ajuda a reduzir a gordura localizada, melhora a firmeza e a definição muscular, e estimula a circulação sanguínea.",
+    "description": "A electroestimulação é um tratamento avançado utilizado para modelagem corporal e tonificação muscular. Este equipamento ajuda a reduzir a gordura localizada, melhora a firmeza e a definição muscular e estimula a circulação sanguínea.",
     "image": "assets/img/equipments/equipamento.png",
     "images": [
+      "assets/img/equipments/equipamento.png",
+      "assets/img/equipments/E169V4_1.png",
+      "assets/img/equipments/equipamento.png",
       "assets/img/equipments/equipamento.png",
       "assets/img/equipments/equipamento.png",
       "assets/img/equipments/equipamento.png"
     ],
-    "image_extra": "assets/img/equipments/equipamento_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Modelagem",
     "sale": true,
     "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false },
@@ -21,35 +24,35 @@
   },
   {
     "id": "E012V1",
-    "name": "Emsculpt Machine com 2 Manipulos",
-    "description": "A Emsculpt Machine com 2 Manipulos é um equipamento inovador utilizado para tonificação muscular e redução de gordura localizada.",
+    "name": "Máquina Emsculpt com 2 Manipuladores",
+    "description": "A máquina Emsculpt com 2 manipuladores é um equipamento inovador utilizado para tonificação muscular e redução de gordura localizada.",
     "image": "assets/img/equipments/emsulpt.png",
     "images": [
       "assets/img/equipments/emsulpt1.png",
       "assets/img/equipments/emsulpt2.png",
       "assets/img/equipments/emsulpt3.png"
     ],
-    "image_extra": "assets/img/equipments/emsulpt_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Modelagem",
     "sale": true,
     "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": true },
     "features": [
       "Aumenta a massa muscular",
-      "Reduz gordura localizada",
-      "Eficaz em áreas como abdômen e coxas"
+      "Reduz a gordura localizada",
+      "Eficaz em áreas como abdómen e coxas"
     ]
   },
   {
     "id": "E025",
     "name": "Microdermoabrasão",
-    "description": "A Microdermoabrasão é um tratamento estético utilizado para esfoliação da pele, promovendo renovação celular e melhoria na textura da pele.",
+    "description": "A microdermoabrasão é um tratamento estético utilizado para esfoliação da pele, promovendo a renovação celular e melhorando a textura da pele.",
     "image": "assets/img/equipments/microdermoabrasao.png",
     "images": [
       "assets/img/equipments/microdermoabrasao1.png",
       "assets/img/equipments/microdermoabrasao2.png",
       "assets/img/equipments/microdermoabrasao3.png"
     ],
-    "image_extra": "assets/img/equipments/microdermoabrasao_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Rejuvenescimento",
     "sale": true,
     "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false },
@@ -62,14 +65,14 @@
   {
     "id": "E048V1",
     "name": "Pressoterapia 3 em 1",
-    "description": "A Pressoterapia 3 em 1 é um equipamento para drenagem linfática e redução de celulite.",
+    "description": "A pressoterapia 3 em 1 é um equipamento para drenagem linfática e redução de celulite.",
     "image": "assets/img/equipments/pressoterapia.png",
     "images": [
       "assets/img/equipments/pressoterapia1.png",
       "assets/img/equipments/pressoterapia2.png",
       "assets/img/equipments/pressoterapia3.png"
     ],
-    "image_extra": "assets/img/equipments/pressoterapia_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Multifuncional",
     "sale": false,
     "rental": { "diario": true, "bidiario": false, "semanal": true, "mensal": false },
@@ -82,79 +85,79 @@
   {
     "id": "E049V1",
     "name": "Pressoterapia",
-    "description": "A Pressoterapia auxilia na drenagem linfática e redução da celulite.",
+    "description": "A pressoterapia auxilia na drenagem linfática e redução da celulite.",
     "image": "assets/img/equipments/pressoterapia1.png",
     "images": [
       "assets/img/equipments/pressoterapia11.png",
       "assets/img/equipments/pressoterapia12.png",
       "assets/img/equipments/pressoterapia13.png"
     ],
-    "image_extra": "assets/img/equipments/pressoterapia_extra.png",
+    "image_extra": "assets/img/logo-header.pngg",
     "category": "Multifuncional",
     "sale": false,
     "rental": { "diario": true, "bidiario": false, "semanal": false, "mensal": false },
     "features": [
       "Melhora a circulação sanguínea",
-      "Auxilia na redução de celulite",
+      "Auxilia na redução da celulite",
       "Design compacto e fácil de usar"
     ]
   },
   {
     "id": "E055",
-    "name": "Multifuncões 5 em 1",
-    "description": "Combina várias funções em um só equipamento estético.",
+    "name": "Multifunções 5 em 1",
+    "description": "Combina várias funções num único equipamento estético.",
     "image": "assets/img/equipments/multifuncao.png",
     "images": [
       "assets/img/equipments/multifuncao1.png",
       "assets/img/equipments/multifuncao2.png",
       "assets/img/equipments/multifuncao3.png"
     ],
-    "image_extra": "assets/img/equipments/multifuncao_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Multifuncional",
     "sale": true,
     "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": true },
     "features": [
-      "5 funções em um único aparelho",
+      "5 funções num único aparelho",
       "Versátil e eficiente",
-      "Fácil de usar e armazenar"
+      "Fácil de usar e de armazenar"
     ]
   },
   {
     "id": "E058V2",
-    "name": "Criolipolise 360° com 2 Manipulos",
-    "description": "Reduz gordura localizada através de resfriamento controlado.",
+    "name": "Criolipólise 360° com 2 Manipuladores",
+    "description": "Reduz gordura localizada através de arrefecimento controlado.",
     "image": "assets/img/equipments/criolipolise.png",
     "images": [
       "assets/img/equipments/criolipolise1.png",
       "assets/img/equipments/criolipolise2.png",
       "assets/img/equipments/criolipolise3.png"
     ],
-    "image_extra": "assets/img/equipments/criolipolise_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Modelagem",
     "sale": true,
     "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false },
     "features": [
-      "Tecnologia de resfriamento controlado",
+      "Tecnologia de arrefecimento controlado",
       "Resultados rápidos e eficazes",
-      "Indicado para áreas específicas como abdômen e coxas"
+      "Indicado para áreas específicas como abdómen e coxas"
     ]
   },
   {
     "id": "E058V3",
-    "name": "Criolipolise de Placas",
-    "description": "Método de redução de gordura localizada com placas de resfriamento.",
+    "name": "Criolipólise de Placas",
+    "description": "Método de redução de gordura localizada com placas de arrefecimento.",
     "image": "assets/img/equipments/criolipoliseplacas.png",
     "images": [
       "assets/img/equipments/criolipoliseplacas1.png",
       "assets/img/equipments/criolipoliseplacas2.png",
       "assets/img/equipments/criolipoliseplacas3.png"
     ],
-    "image_extra": "assets/img/equipments/criolipoliseplacas_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Modelagem",
     "sale": false,
     "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": false },
     "features": [
-      "Tecnologia de placas de resfriamento",
+      "Tecnologia de placas de arrefecimento",
       "Eficaz na redução de gordura localizada",
       "Ideal para tratamentos direcionados"
     ]
@@ -162,14 +165,14 @@
   {
     "id": "E059",
     "name": "Radiofrequência",
-    "description": "Rejuvenesce a pele estimulando produção de colágeno e elastina.",
+    "description": "Rejuvenesce a pele, estimulando a produção de colágeno e elastina.",
     "image": "assets/img/equipments/radiofrequencia.png",
     "images": [
       "assets/img/equipments/radiofrequencia1.png",
       "assets/img/equipments/radiofrequencia2.png",
       "assets/img/equipments/radiofrequencia3.png"
     ],
-    "image_extra": "assets/img/equipments/radiofrequencia_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Rejuvenescimento",
     "sale": true,
     "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false },
@@ -182,14 +185,14 @@
   {
     "id": "E060",
     "name": "SHR / IPL",
-    "description": "Tecnologia de luz pulsada intensa para depilação e rejuvenescimento.",
+    "description": "Tecnologia de luz intensa pulsada para depilação e rejuvenescimento.",
     "image": "assets/img/equipments/shr.png",
     "images": [
       "assets/img/equipments/shr1.png",
       "assets/img/equipments/shr2.png",
       "assets/img/equipments/shr3.png"
     ],
-    "image_extra": "assets/img/equipments/shr_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Depilação",
     "sale": false,
     "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false },
@@ -201,7 +204,7 @@
   },
   {
     "id": "E061V1",
-    "name": "V-Shape com 4 manipuladores",
+    "name": "V-Shape com 4 Aplicadores",
     "description": "Modelagem corporal com 4 aplicadores simultâneos.",
     "image": "assets/img/equipments/vshape.png",
     "images": [
@@ -209,47 +212,47 @@
       "assets/img/equipments/vshape2.png",
       "assets/img/equipments/vshape3.png"
     ],
-    "image_extra": "assets/img/equipments/vshape_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Modelagem",
     "sale": false,
     "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false },
     "features": [
-      "4 manipuladores para tratamento simultâneo",
+      "4 aplicadores para tratamento simultâneo",
       "Reduz gordura localizada",
       "Aprimora a firmeza da pele"
     ]
   },
   {
     "id": "E069V1",
-    "name": "Laser Diodo 1 onda",
-    "description": "O Laser Diodo 1 onda é utilizado para depilação de longo prazo, proporcionando um resultado eficaz e seguro.",
+    "name": "Laser Diodo 1 Onda",
+    "description": "O laser de diodo de 1 onda é utilizado para depilação de longo prazo, proporcionando um resultado eficaz e seguro.",
     "image": "assets/img/equipments/laser.png",
     "images": [
       "assets/img/equipments/laser1.png",
       "assets/img/equipments/laser2.png",
       "assets/img/equipments/laser3.png"
     ],
-    "image_extra": "assets/img/equipments/laser_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Depilação",
     "sale": false,
     "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false },
     "features": [
-      "Tecnologia de laser diodo",
-      "Resultados de longo prazo",
+      "Tecnologia de laser de diodo",
+      "Resultados a longo prazo",
       "Eficaz na remoção de pelos"
     ]
   },
   {
     "id": "E169V1",
-    "name": "Laser Diodo 3 ondas",
-    "description": "Laser de 3 ondas para depilação avançada, resultados rápidos e eficazes.",
+    "name": "Laser Diodo 3 Ondas",
+    "description": "Laser de 3 ondas para depilação avançada, com resultados rápidos e eficazes.",
     "image": "assets/img/equipments/laser3.png",
     "images": [
       "assets/img/equipments/laser3a.png",
       "assets/img/equipments/laser3b.png",
       "assets/img/equipments/laser3c.png"
     ],
-    "image_extra": "assets/img/equipments/laser3_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Depilação",
     "sale": true,
     "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": true },
@@ -261,7 +264,7 @@
   },
   {
     "id": "E169V3",
-    "name": "Laser Diodo 3 ondas",
+    "name": "Laser Diodo 3 Ondas",
     "description": "Laser de 3 ondas para depilação duradoura, indicado para todos os tipos de pele.",
     "image": "assets/img/equipments/laser3b.png",
     "images": [
@@ -269,7 +272,7 @@
       "assets/img/equipments/laser3b2.png",
       "assets/img/equipments/laser3b3.png"
     ],
-    "image_extra": "assets/img/equipments/laser3b_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Depilação",
     "sale": true,
     "rental": { "diario": false, "bidiario": false, "semanal": true, "mensal": true },
@@ -282,8 +285,8 @@
   {
     "id": "E169V4",
     "name": "Laser Diodo Eos Ice",
-    "description": "Laser com tecnologia de resfriamento para depilação mais confortável.",
-    "image": "assets/img/equipments/laser_eos.png",
+    "description": "Laser com tecnologia de arrefecimento para uma depilação mais confortável.",
+    "image": "assets/img/logo-header.png",
     "images": [
       "assets/img/equipments/laser_eos1.png",
       "assets/img/equipments/laser_eos2.png",
@@ -294,22 +297,22 @@
     "sale": true,
     "rental": { "diario": false, "bidiario": true, "semanal": true, "mensal": true },
     "features": [
-      "Tecnologia de resfriamento para maior conforto",
+      "Tecnologia de arrefecimento para maior conforto",
       "Resultados rápidos e eficazes",
-      "Ideal para tratamentos contínuos"
+      "Ideal para tratamentos continuados"
     ]
   },
   {
     "id": "E174",
-    "name": "Laser Derrames e Micoses",
-    "description": "Equipamento para tratamento de vasos e micoses, melhorando a aparência estética.",
+    "name": "Laser para vasos e micoses",
+    "description": "Equipamento para tratamento de vasos sanguíneos e micoses, melhorando a aparência estética.",
     "image": "assets/img/equipments/laser_derrame.png",
     "images": [
       "assets/img/equipments/laser_derrame1.png",
       "assets/img/equipments/laser_derrame2.png",
       "assets/img/equipments/laser_derrame3.png"
     ],
-    "image_extra": "assets/img/equipments/laser_derrame_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Multifuncional",
     "sale": true,
     "rental": { "diario": true, "bidiario": false, "semanal": true, "mensal": false },
@@ -321,7 +324,7 @@
   },
   {
     "id": "E176V2",
-    "name": "Hifu e Liposonix",
+    "name": "HIFU e Liposonix",
     "description": "Redução de gordura localizada e rejuvenescimento através de ultrassom.",
     "image": "assets/img/equipments/hifu_liposonix.png",
     "images": [
@@ -329,12 +332,12 @@
       "assets/img/equipments/hifu_liposonix2.png",
       "assets/img/equipments/hifu_liposonix3.png"
     ],
-    "image_extra": "assets/img/equipments/hifu_liposonix_extra.png",
+    "image_extra": "assets/img/logo-header.png",
     "category": "Modelagem",
     "sale": true,
     "rental": { "diario": false, "bidiario": false, "semanal": true, "mensal": true },
     "features": [
-      "Tecnologia Hifu para redução de gordura",
+      "Tecnologia HIFU para redução de gordura",
       "Rejuvenescimento eficaz da pele",
       "Ideal para tratamentos corporais e faciais"
     ]
