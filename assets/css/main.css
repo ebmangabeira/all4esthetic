@@ -30,10 +30,14 @@
   --font-size-paragraph-desktop: 16px;
 
   /* Espaçamento dos Contentores (horizontal) */
+    /* Spacing Utilities */
+  --bs-spacing-desktop-left: 120px;
+  --bs-spacing-desktop-right: 120px;
   --bs-spacing-tablet-left: 80px;
   --bs-spacing-tablet-right: 80px;
   --bs-spacing-mobile-left: 40px;
   --bs-spacing-mobile-right: 40px;
+
 }
 
 
@@ -53,7 +57,7 @@
   }
 }
 .widgets-container {
-  margin-top: 1.5rem;
+  margin-top: 0px;
 }
 
 .widget-item:hover {
@@ -389,8 +393,6 @@ body.no-scroll { overflow: hidden; }
  color-mix(in srgb, var(--heading-color), transparent 25%);
     background-color: white;
     border-radius: 12px;
-    
-    margin-top: 54px;
     margin-bottom: 16px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     padding: 35px;
@@ -756,10 +758,6 @@ body.no-scroll { overflow: hidden; }
   .page-title.light-background {
     padding: 32px 0;
   }
-  .row>* {
-        margin-top: 16px;
-        display: inline;
-    }
   .page-title.light-background h1 {
     font-size: 20px;
   }
@@ -1544,7 +1542,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Tablet - Entre 768px e 1199px */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .header .header-nav {
-    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 25%) !important;
     padding-top: 120px !important;
     background: var(--background-color) !important;
   }
@@ -1828,8 +1825,8 @@ h1, h2, h3, h4, h5, h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 85%);
-  padding: 60px 0;
+  background-color: color-mix(in srgb, var(--background-color), transparent 95%);
+  padding: 60px 0 107px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -1867,7 +1864,8 @@ section,
     width: 100%;
     z-index: 9999;
     background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid
+ color-mix(in srgb, var(--default-color), transparent 25%);
   }
   .main-header > .container-fluid > .d-flex {
     flex-wrap: nowrap;
@@ -2354,6 +2352,7 @@ section,
     margin-right: -300px;
     color: var(--heading-color);
   }
+
 }
 
 /* Estilos Tablet (768px ≤ largura ≤ 1199px) */
@@ -2931,11 +2930,7 @@ section,
 
 /* Containers e grid */
 .pd-main { padding-bottom: 2rem; }
-.pd-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .pd-row {
   display: flex;
   flex-wrap: wrap;
@@ -2948,59 +2943,10 @@ section,
   .pd-col-half { width: 50%; }
 }
 
-
 /* Título e breadcrumbs */
-.pd-light-bg {
-  background-color: 
- color-mix(in srgb, var(--default-color), transparent 60%);
-  padding: 34px 0px 30px 0px;
-  border-bottom: 1px solid #e5e5e500;
-}
-.pd-breadcrumbs {
+.navmenu-flex {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .pd-breadcrumbs {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-.pd-title-text {
-  font-size: 28px;
-  font-weight: 400;
-  text-transform: capitalize;
-          color: var(--heading-color);
-  margin: 0px;
-}
-.pd-nav-breadcrumbs ol {
-  list-style: none;
-  display: flex;
-  font-size: 0.875rem;
-  margin: 0px;
-    padding-top: 10px;
-}
-.pd-nav-breadcrumbs li + li::before {
-  content: "/";
-  margin: 0 0.5rem;
-  color: #e5e5e5;
-}
-.pd-nav-breadcrumbs a {
-  color: var(--heading-color);
-  text-decoration: none;
-  transition: color 0.2s;
-  font-size: 16px;
-}
-.pd-nav-breadcrumbs a:hover {
-  color: var(--accent-color);
-}
-.pd-nav-breadcrumbs .current {
-  color: var(--accent-color);
-  font-weight: 400;
-  font-size: 16px;
+  gap: 624px
 }
 
 /* Seção de detalhes */
@@ -3216,83 +3162,194 @@ section,
   color: var(--accent-color);
 }
 
-/* logo só no PDF */
-  .only-print { display: none; }
-  .pd-pdf-logo { text-align: center; margin-bottom: 16px; }
-  .pd-logo-image { max-width: 200px; height: auto; }
+.pd-btn-outline-pdf {
+  background-color: var(--contrast-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, color 0.1s ease-out;
+}
 
-  @media print {
-    /* mostra apenas detalhes */
-    body * { visibility: hidden; }
-    #pd-product-section, #pd-product-section * { visibility: visible; }
-    #pd-product-section {
-      position: absolute; top:0; left:0;
-      width:100%; padding:20px; box-sizing:border-box;
-      background:#fff;
-    }
+.pd-btn-outline-pdf:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
 
-    /* exibe logo */
-    .only-print { display: block; }
-    .pd-logo-image { margin-bottom: 20px; }
+/* ==============================
+   Print / PDF Styles (completo com títulos de seção maiores)
+============================== */
+.only-print {
+  display: none;
+  text-align: center;
+}
+.pd-logo-image {
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
-    /* layout flex em duas colunas */
-    .pd-row { display: flex !important; }
-    .pd-col-half {
-      width:50% !important; float:none !important; box-sizing:border-box;
-    }
-
-    /* oculta categoria no PDF */
-    #pd-category-text { display: none !important; }
-
-    /* aumenta imagem */
-    .pd-img-container { text-align:left !important; }
-    .pd-main-image {
-      display: block !important;
-      margin: 16px 0 24px 0 !important;
-      max-width: 400px !important;
-      height: auto !important;
-    }
-
-    /* oculta carrossel e botões */
-    .thumbs-wrapper,
-    .pd-actions { display: none !important; }
-
-    /* limpa bullets */
-    .pd-features-box ul,
-    .pd-availability-box ul { list-style: none !important; margin:0; padding:0; }
-
-    /* estilo caixas */
-    .pd-box {
-      border:1px solid #EA4595 !important;
-      border-radius:8px;
-      margin-bottom:16px;
-      padding:12px 16px;
-    }
-    .pd-box h5 {
-      color:#EA4595 !important; margin-bottom:8px; font-size:16px;
-    }
-
-    /* bullets rosa */
-    .pd-features-box li {
-      position:relative; padding-left:1.2em; font-size:13px; margin-bottom:4px;
-    }
-    .pd-features-box li::before {
-      content:"•"; position:absolute; left:0; top:50%;
-      transform:translateY(-50%); color:#EA4595; font-size:12px; line-height:1;
-    }
-
-    /* disponibilidade */
-    .pd-availability-box li {
-      display:flex; align-items:center; font-size:13px; margin-bottom:4px;
-    }
-    .pd-availability-box li i.bi-check-circle-fill {
-      color:#EA4595 !important; font-size:12px; margin-right:6px;
-    }
-    .pd-availability-box li span:first-child {
-      display:inline-block; width:1em; font-size:12px; color:#4a4a4a;
-      margin-right:6px; text-align:center;
-    }
+@media print {
+  /* 0) Força A4 e margens apertadas */
+  @page {
+    size: A4 portrait;
+    margin: 1cm;
   }
+  html {
+    zoom: 0.75;              
+    transform-origin: top left;
+  }
+
+  /* 1) Oculta cabeçalho, rodapé e botões */
+  header, .header,
+  footer, .footer,
+  #scroll-top, #preloader {
+    display: none !important;
+  }
+
+  /* 2) Remove margens do body */
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 3) Exibe logo no topo, centralizada */
+  .only-print {
+    display: block !important;
+    visibility: visible !important;
+    margin-bottom: 20px !important;
+  }
+  .pd-logo-image {
+    display: inline-block !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  /* 4) Oculta tudo, reexibe somente logo + detalhes */
+  body * {
+    visibility: hidden !important;
+  }
+  .only-print,
+  .only-print *,
+  #pd-product-section,
+  #pd-product-section * {
+    visibility: visible !important;
+  }
+
+  /* 5) Impede quebra de página dentro da seção */
+  #pd-product-section {
+    page-break-inside: avoid !important;
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* 6) Layout em duas colunas */
+  .pd-row {
+    display: flex !important;
+  }
+  .pd-col-half {
+    width: 50% !important;
+    float: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 7) Ajustes gerais de fonte */
+  body, body * {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+  }
+  p {
+    font-size: 22px !important;
+  }
+
+  /* 8) Títulos ainda maiores */
+  
+
+  /* 9) Títulos de Características e Disponibilidade */
+  .pd-box h5 {
+    font-size: 40px !important;
+    color: #EA4595 !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* 10) Descrição do produto */
+  .pd-product-desc,
+  #pd-desc-text {
+    font-size: 26px !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+  }
+
+  /* 11) Oculta categoria duplicada */
+  #pd-category-text {
+    display: none !important;
+  }
+
+  /* 12) Imagem principal */
+  .pd-img-container {
+    text-align: left !important;
+  }
+  .pd-main-image {
+    display: block !important;
+    max-width: 400px !important;
+    height: auto !important;
+    margin: 16px 0 24px 0 !important;
+  }
+
+  /* 13) Oculta carrossel e botões */
+  .thumbs-wrapper,
+  .pd-actions {
+    display: none !important;
+  }
+
+  /* 14) Caixas e listas customizadas */
+  .pd-box {
+    border: 1px solid #EA4595 !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    margin-bottom: 16px !important;
+  }
+  .pd-features-box ul,
+  .pd-availability-box ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .pd-features-box li {
+    position: relative !important;
+    padding-left: 1.5em !important;
+    margin-bottom: 8px !important;
+    font-size: 20px !important;
+  }
+  .pd-features-box li::before {
+    content: "•" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #EA4595 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+  .pd-availability-box li {
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 8px !important;
+    font-size: 24px !important;
+  }
+  .pd-availability-box li i.bi-check-circle-fill {
+    color: #EA4595 !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+  }
+  .pd-availability-box li span:first-child {
+    display: inline-block !important;
+    font-size: 20px !important;
+    margin-right: 8px !important;
+  }
+}
+
+
+
 
 /* Responsividade */
 @media (max-width: 767px) {
@@ -3300,49 +3357,10 @@ section,
   .pd-product-desc {font-size: var(--font-size-paragraph-mobile) !important; }
   .thumb-slide { flex: 0 0 90%; }
   .pd-actions { flex-direction: column; }
-  .pd-light-bg {
-    background-color: color-mix(in srgb, var(--default-color), transparent 75%);
-    padding: 130px 0px 28px 0px;
-    border-bottom: 1px solid #e5e5e500;
-  }
-  .pd-title-text {
-    font-size: 20px !important;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin: -2px 0px 0px 0px;
-    color: var(--heading-color);
-}
+  
 
-.pd-breadcrumbs {
-    display: flex
-;
-    flex-direction: row;
-    gap: 0;
-    align-items: flex-start;
-}
-.pd-nav-breadcrumbs li + li::before {
-    content: "/";
-    margin: 4px;
-    color:  color-mix(in srgb, var(--heading-color), transparent 75%);
-}
-.pd-nav-breadcrumbs a {
-    color: var(--heading-color);
-    text-decoration: none;
-    transition: color 0.2s;
-    font-size: 14px;
-}
-.pd-nav-breadcrumbs ol {
-  list-style: none;
-  display: flex;
-  font-size: 0.875rem;
-  margin: 0px;
-    padding-top: 0px;
-}
-.pd-nav-breadcrumbs .current {
-    color: var(--accent-color);
-    font-weight: 400;
-    font-size: 14px;
-}
+
+
 .pd-actions {
   gap:8px;
 }
@@ -3395,32 +3413,11 @@ section,
   .pd-product-desc { font-size: 0.875rem; }
   .thumb-slide { flex: 0 0 50%; }
   .pd-actions { flex-direction: column; }
-  .pd-light-bg {
-    background-color: color-mix(in srgb, var(--default-color), transparent 75%);
-    padding: 60px 0px 30px 0px;
-    border-bottom: 1px solid #e5e5e500;
-  }
-  .pd-title-text {
-    font-size: 24px !important;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin: 0px;
-    padding-top: 8px;
-    color: var(--heading-color);
-}
+  
+  
 
-.pd-breadcrumbs {
-    display: flex
-;
-    flex-direction: row;
-    gap: 0;
-    align-items: flex-start;
-}
-.pd-nav-breadcrumbs li + li::before {
-    content: "/";
-    margin: 4px;
-    color: #e5e5e5;
-}
+
+
 .pd-actions {
   display: flex;
   gap: 1rem;
@@ -3744,4 +3741,139 @@ section,
 @media (max-width: 767px) {
   .cp-form-row { grid-template-columns: 1fr; }
   .cp-contact-info { grid-template-columns: 1fr; }
+}
+
+
+
+/* ========================================================================
+   Page Title & Breadcrumbs (100% flush left/right, responsive in px)
+   ======================================================================== */
+
+/* ------------------------------------------------------------------------
+   Base (Mobile: up to 767px)
+   ------------------------------------------------------------------------ */
+.pd-page-title {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 123px 0 28px 0;          
+}
+
+.pd-page-title .pd-container {
+  display: flex;
+  justify-content: space-between; /* Título à esquerda, breadcrumbs à direita */
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px 0 20px;
+}
+
+.pd-title-text {
+  font-size: 20px !important;           /* Texto do título */
+  font-weight: 400;
+  color: var(--heading-color);
+  margin: 0;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.pd-nav-breadcrumbs ol {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;                  /* 4px entre elementos */
+}
+
+.pd-nav-breadcrumbs li + li::before {
+  content: "/";
+  margin: 0 8px;             /* 8px espaço ao redor da barra */
+  color: #999999;
+}
+
+.pd-nav-breadcrumbs a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--heading-color);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.pd-nav-breadcrumbs a:hover {
+  color: #ea4595;
+}
+
+.pd-nav-breadcrumbs .current {
+  font-size: 14px;
+  color: #ea4595;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+
+
+/* ------------------------------------------------------------------------
+   Tablet (768px to 1199px)
+   ------------------------------------------------------------------------ */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .pd-page-title {
+    padding: 56px 0 30px 0;
+  }
+
+  .pd-title-text {
+    font-size: 24px !important;  
+    font-weight: 400 !important;       /* Título maior em tablets */
+  }
+
+  .pd-nav-breadcrumbs a,
+  .pd-nav-breadcrumbs .current {
+    font-size: 16px;         /* Breadcrumbs um pouco maiores */
+  }
+
+  .pd-nav-breadcrumbs ol {
+    gap: 6px;                /* Espaçamento levemente maior */
+  }
+
+  .pd-nav-breadcrumbs li + li::before {
+    margin: 0 10px;
+  }
+  .pd-page-title .pd-container {
+    padding: 0 40px 0 40px;
+}
+}
+
+
+/* ------------------------------------------------------------------------
+   Desktop (1200px and above)
+   ------------------------------------------------------------------------ */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .navmenu-flex {
+    display: flex;
+    gap: 446px;
+  }
+  .pd-page-title .pd-container {
+    padding: 0 82px 0 82px;
+}
+}
+
+@media (min-width: 1200px) {
+  .pd-page-title {
+    padding: 32px 0;         /* 48px top/bottom */
+  }
+
+  .pd-title-text {
+    font-size: 40px;         /* Título bem destacado */
+  }
+
+  .pd-nav-breadcrumbs a,
+  .pd-nav-breadcrumbs .current {
+    font-size: 16px;         /* Breadcrumbs maiores */
+  }
+
+  .pd-nav-breadcrumbs ol {
+    gap: 8px;
+  }
+
+  .pd-nav-breadcrumbs li + li::before {
+    margin: 0 12px;
+  }
 }
