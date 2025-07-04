@@ -1,27 +1,50 @@
 [
   {
-    "id": "E007",
-    "name": "Electroestimulação",
-    "description": "A electroestimulação é um tratamento avançado utilizado para modelagem corporal e tonificação muscular. Este equipamento ajuda a reduzir a gordura localizada, melhora a firmeza e a definição muscular e estimula a circulação sanguínea.",
-    "image": "assets/img/equipments/equipamento.png",
-    "images": [
-      "assets/img/equipments/equipamento.png",
-      "assets/img/equipments/E169V4_1.png",
-      "assets/img/equipments/equipamento.png",
-      "assets/img/equipments/equipamento.png",
-      "assets/img/equipments/equipamento.png",
-      "assets/img/equipments/equipamento.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Modelagem",
-    "sale": true,
-    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false },
-    "features": [
-      "Tecnologia de última geração para resultados rápidos e eficazes",
-      "Ideal para tratamentos musculares de tonificação",
-      "Design compacto, fácil de armazenar e utilizar"
-    ]
+  "id": "E007",
+  "name": "Electroestimulação",
+  "designation": "Laser Diodo Eos Ice",
+  "ref": "E169V4",
+  "code_rev": "FTE169V4.01",
+  "functions": "Equipamento inovador com possibilidade de trabalhar com os 2 manipulos em simultâneo. Possui sistema Android para a programação automática de acordo com a zona, tipo de pelo e fotótipo, podendo este ser ajustado até ao VI. Actua em 3 níveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Este sistema de programação possibilita a criação de fichas de cliente sendo que pode gravar nomes, contatos e os tratamentos já efectuados para uma melhor gestão/evolução dos resultados. Laser equipado com sonda de leitura que permite programação automática do equipamento. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da \"Main Machine\" e sensores de temperatura da água.",
+  "technical_data": {
+    "ecran": "Sistema Andorid com 15,6 polegadas e a resolução é 1920X1080",
+    "programacao": "Automática e através de sonda",
+    "potencia": "1 Manipulo com 2000w + 1 Manipulo com 1000w",
+    "espectro_laser": "755nm, 808nm e 1064nm",
+    "energia_regulavel": "2 a 95J/cm2 + 2 a 50J/cm2",
+    "fonte_alimentacao": "1 fonte de 1000W + 1 fonte de 2000W",
+    "refrigeracao": "Cooler e água com sistema ITEC incorporado",
+    "corrente_electrica": "100-240VAC, 20A max., 50/60Hz"
   },
+  "logistics": {
+    "dimensoes": "47,5cm x 55cm x 183cm",
+    "peso": "56,600 kgs"
+  },
+  "legislation": [
+    "LVD 2014/35/EU",
+    "ROSH 2011/65/EU",
+    "EMC 2014/30/EU"
+  ],
+  "application": "Apenas para uso estético.",
+  "image": "assets/img/equipments/equipamento.png",
+  "images": [
+    "assets/img/equipments/equipamento.png",
+    "assets/img/equipments/E169V4_1.png",
+    "assets/img/equipments/equipamento.png",
+    "assets/img/equipments/equipamento.png",
+    "assets/img/equipments/equipamento.png",
+    "assets/img/equipments/equipamento.png"
+  ],
+  "category": "Modelagem",
+  "sale": true,
+  "rental": {
+    "diario": false,
+    "bidiario": false,
+    "semanal": false,
+    "mensal": false
+  }
+}
+,
   {
     "id": "E012V1",
     "name": "Máquina Emsculpt com 2 Manipuladores",

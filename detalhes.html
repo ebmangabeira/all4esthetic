@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
     <!-- Ícones do Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-    
     <!-- AOS (Animações ao Rolagem) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
     <!-- GLightbox (Galeria de Imagens) -->
@@ -50,55 +49,46 @@
       <div class="header-nav">
         <div class="container-fluid container-xl">
           <div class="position-relative">
-            <div class="d-flex align-items-center justify-content-between">
+            <div class="navmenu-flex align-items-center justify-content-between">
               <!-- Logótipo para computador -->
-              <a
-                class="logo d-flex align-items-center me-4 d-none d-xl-flex"
-                href="index.html"
-              >
+              <a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
                 <img alt="Logo" src="assets/img/logo-header.png" />
               </a>
-              <nav
-                class="navmenu mx-auto justify-content-center"
-                id="navmenu"
-              >
+              <nav class="navmenu mx-auto justify-content-center" id="navmenu">
                 <ul>
                   <li class="navmenu-close">
                     <i class="mobile-nav-close d-xl-none bi bi-x"></i>
                   </li>
-                  <li><a href="index.html">Início</a></li>
-                  <li><a href="quem-somos.html">Quem Somos</a></li>
-                  <li><a href="equipamentos.html">Equipamentos</a></li>
-                  <li><a href="contacto.html">Contacto</a></li>
+                  <li>
+                    <a href="index.html">Início</a>
+                    
+                  </li>
+                  <li>
+                    <a href="quem-somos.html">Quem Somos</a>
+                  </li>
+                  <li>
+                    <a href="equipamentos.html">Equipamentos</a>
+                  </li>
+                  <li>
+                    <a href="contacto.html">Contacto</a>
+                  </li>
                 </ul>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      <!-- Pesquisa móvel (colapsável) -->
-      <div class="collapse" id="mobileSearch">
-        <div class="container">
-          <form class="search-form">
-            <div class="input-group">
-              <input
-                class="form-control"
-                placeholder="Pesquisar produtos"
-                type="text"
-              />
-              <button class="btn" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
     </header>
+
+  
     
 <main class="pd-main">
+  <!-- Título e breadcrumbs -->
+   <!-- Título da Página -->
   <div class="pd-page-title pd-light-bg">
-    <div class="pd-breadcrumbs pd-container">
-      <h1 class="pd-title-text">Detalhes</h1>
+    <div class="container-fluid container-xl pd-breadcrumbs pd-container">
+      <h1 class="pd-title-text">Detalhes
+      </h1>
       <nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
         <ol>
           <li><a href="index.html">Início</a></li>
@@ -110,14 +100,12 @@
   </div>
 
   <section id="pd-product-section" class="pd-details-section pd-container section">
-    <!-- Logo só no PDF -->
-    <div class="pd-pdf-logo only-print">
-      <img src="assets/img/logo-header.png" alt="Logo" class="pd-logo-image">
-    </div>
+    <div class="container py-5">
+    <div class="row">
 
-    <div class="pd-row">
-      <!-- coluna da imagem e categoria -->
-      <div class="pd-col pd-col-half">
+      <div class="grid-product">
+      <!-- Linha 1, Coluna 1: Imagem + carrossel -->
+      <div class="image-column">
         <div class="pd-img-container">
           <span id="pd-category-text" class="pd-category-label"></span>
           <img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal">
@@ -131,149 +119,234 @@
         </div>
       </div>
 
-      <!-- coluna de texto -->
-      <div class="pd-col pd-col-half">
+      <!-- Linha 1, Coluna 2: Título + abas -->
+      <div class="info-column">
         <h2 id="pd-title-text" class="pd-product-title"></h2>
-        <p id="pd-desc-text" class="pd-product-desc"></p>
-
-        <div class="pd-box pd-features-box">
-          <h5>Características</h5>
-          <ul id="pd-features-list"></ul>
+        <div class="tab-buttons">
+          <button id="btn-funcao" class="pd-btn-funcao active">Função</button>
+          <button id="btn-tecnica" class="pd-btn-tecnica">Ficha Técnica</button>
         </div>
 
+        <div id="tab-content">
+          <div id="content-funcao" class="tab-panel active">
+            <h5 class="content-funcao">Funções</h5>
+            <p class="functions-text" id="pd-functions-text"></p>
+          </div>
+          <div id="content-tecnica" class="tab-panel">
+            <div class="pd-box">
+              <h5>Dados Técnicos</h5>
+              <table id="pd-tech-table" class="table"></table>
+            </div>
+            <div class="pd-box">
+              <h5>Logística</h5>
+              <table id="pd-logistics-table" class="table"></table>
+            </div>
+            <div class="pd-box">
+              <h5>Aplicação</h5>
+              <p id="pd-application-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linha 2, Coluna 1–2: Disponibilidade + botões -->
+      <div class="availability-column">
         <div class="pd-box pd-availability-box">
           <h5>Disponibilidade</h5>
           <ul id="pd-availability-list" class="list-unstyled"></ul>
         </div>
-
         <div class="pd-actions">
           <button id="btn-pdf" class="pd-btn pd-btn-outline-pdf">Gerar PDF</button>
           <button id="btn-quote" class="pd-btn pd-btn-outline">Solicitar Orçamento</button>
         </div>
       </div>
     </div>
+
+    </div>
+    
   </section>
 </main>
 
-
-
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const params   = new URLSearchParams(location.search);
-    const eqId     = params.get('id');
-    const availUL  = document.getElementById('pd-availability-list');
-    const section  = document.getElementById('pd-product-section');
-    const mainImg  = document.getElementById('pd-main-img');
+document.addEventListener('DOMContentLoaded', () => {
+  const params   = new URLSearchParams(location.search);
+  const eqId     = params.get('id');
+  const mainImg  = document.getElementById('pd-main-img');
+  const availUL  = document.getElementById('pd-availability-list');
 
-    fetch('assets/data/equipamentos.json')
-      .then(res => res.json())
-      .then(data => {
-        const eq = data.find(item => item.id === eqId);
-        if (!eq) return;
+  // JSON embutido
+  const data = [
+    {
+      "id": "E007",
+      "name": "Electroestimulação",
+      "designation": "Laser Diodo Eos Ice",
+      "ref": "E169V4",
+      "code_rev": "FTE169V4.01",
+      "functions": "Equipamento inovador com possibilidade de trabalhar com os 2 manipulos em simultâneo. Possui sistema Android para a programação automática de acordo com a zona, tipo de pelo e fotótipo, podendo este ser ajustado até ao VI. Actua em 3 níveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Este sistema de programação possibilita a criação de fichas de cliente sendo que pode gravar nomes, contatos e os tratamentos já efectuados para uma melhor gestão/evolução dos resultados. Laser equipado com sonda de leitura que permite programação automática do equipamento. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da \"Main Machine\" e sensores de temperatura da água.",
+      "technical_data": {
+        "ecran": "Sistema Android com 15,6 polegadas e a resolução é 1920X1080",
+        "programacao": "Automática e através de sonda",
+        "potencia": "1 Manipulo com 2000w + 1 Manipulo com 1000w",
+        "espectro_laser": "755nm, 808nm e 1064nm",
+        "energia_regulavel": "2 a 95J/cm2 + 2 a 50J/cm2",
+        "fonte_alimentacao": "1 fonte de 1000W + 1 fonte de 2000W",
+        "refrigeracao": "Cooler e água com sistema ITEC incorporado",
+        "corrente_electrica": "100-240VAC, 20A max., 50/60Hz"
+      },
+      "logistics": {
+        "dimensoes": "47,5cm x 55cm x 183cm",
+        "peso": "56,600 kgs"
+      },
+      "application": "Apenas para uso estético.",
+      "image": "assets/img/equipments/equipamento.png",
+      "images": [
+        "assets/img/equipments/equipamento.png",
+        "assets/img/equipments/E169V4_1.png",
+        "assets/img/equipments/equipamento.png",
+        "assets/img/equipments/equipamento.png",
+        "assets/img/equipments/equipamento.png"
+      ],
+      "category": "Modelagem",
+      "sale": true,
+      "rental": {
+        "diario": false,
+        "bidiario": false,
+        "semanal": false,
+        "mensal": false
+      }
+    }
+  ];
 
-        // Preenche a página
-        mainImg.src = eq.image;
-        document.getElementById('pd-category-text').textContent = eq.category;
-        document.getElementById('pd-title-text').textContent    = eq.name;
-        document.getElementById('pd-desc-text').textContent     = eq.description;
+  const eq = data.find(item => item.id === eqId);
+  if (!eq) return;
 
-        eq.features.forEach(f => {
-          const li = document.createElement('li');
-          li.textContent = f;
-          document.getElementById('pd-features-list').appendChild(li);
-        });
+  // Preenche campos
+  mainImg.src = eq.image;
+  document.getElementById('pd-category-text').textContent = eq.category;
+  document.getElementById('pd-title-text').textContent    = eq.name;
+  document.getElementById('pd-functions-text').textContent = eq.functions;
+  document.getElementById('pd-application-text').textContent = eq.application;
 
-        function appendCheck(text) {
-          const li = document.createElement('li');
-          li.classList.add('d-flex','align-items-center','py-1');
-          li.innerHTML = `<i class="bi bi-check-circle-fill me-2" style="color:#EA4595;font-size:12px;"></i><span>${text}</span>`;
-          availUL.appendChild(li);
-        }
-        if (eq.sale) appendCheck('Disponível para venda');
-        Object.entries(eq.rental)
-          .filter(([, ok]) => ok)
-          .forEach(([p]) => {
-            appendCheck({
-              diario:   'Diário',
-              bidiario: 'Bidiário',
-              semanal:  'Semanal',
-              mensal:   'Mensal'
-            }[p]);
-          });
+  // Abas com transição suave
+  const btnFunc = document.getElementById('btn-funcao');
+  const btnTech = document.getElementById('btn-tecnica');
+  const panelFunc = document.getElementById('content-funcao');
+  const panelTech = document.getElementById('content-tecnica');
 
-        // função suave para trocar imagem principal
-        function swapImageSmooth(newSrc) {
-          mainImg.style.transition = 'opacity 0.3s';
-          mainImg.style.opacity = 0;
-          mainImg.addEventListener('transitionend', function handler(e) {
-            if (e.propertyName !== 'opacity') return;
-            mainImg.removeEventListener('transitionend', handler);
-            mainImg.src = newSrc;
-            requestAnimationFrame(() => {
-              mainImg.style.opacity = 1;
-            });
-          });
-        }
+  function activateTab(btnToActivate, btnToDeactivate, panelToShow, panelToHide) {
+    btnToActivate.classList.add('active');
+    btnToDeactivate.classList.remove('active');
+    panelHide = panelToHide;
+    panelToHide.classList.remove('active');
+    panelToShow.classList.add('active');
+  }
 
-        // Carrossel de miniaturas
-        const track = document.querySelector('.thumbs-track');
-        const images = eq.images.slice(0,6);
-        let currentIndex = 0;
-
-        function visibleCount() {
-          const w = window.innerWidth;
-          if (w < 768) return 1;
-          if (w < 992) return 2;
-          return 3;
-        }
-
-        function updateCarousel() {
-          const count = visibleCount();
-          const slide = document.querySelector('.thumb-slide');
-          if (!slide) return;
-          const style = getComputedStyle(slide);
-          const w = slide.getBoundingClientRect().width + parseFloat(style.marginRight);
-          track.style.transform = `translateX(${-currentIndex * w}px)`;
-          prevBtn.disabled = currentIndex === 0;
-          nextBtn.disabled = currentIndex >= images.length - count;
-        }
-
-        images.forEach((src, idx) => {
-          const li = document.createElement('li');
-          li.className = 'thumb-slide' + (idx === 0 ? ' active' : '');
-          li.innerHTML = `<img src="${src}" alt="Miniatura ${idx+1}">`;
-          li.addEventListener('click', () => {
-            swapImageSmooth(src);
-            document.querySelectorAll('.thumb-slide').forEach(s => s.classList.remove('active'));
-            li.classList.add('active');
-          });
-          track.appendChild(li);
-        });
-
-        const prevBtn = document.querySelector('.thumb-btn.prev');
-        const nextBtn = document.querySelector('.thumb-btn.next');
-        prevBtn.addEventListener('click', () => {
-          if (currentIndex > 0) currentIndex--;
-          updateCarousel();
-        });
-        nextBtn.addEventListener('click', () => {
-          if (currentIndex < images.length - visibleCount()) currentIndex++;
-          updateCarousel();
-        });
-        window.addEventListener('resize', updateCarousel);
-        updateCarousel();
-
-        // Gerar PDF via print
-        document.getElementById('btn-pdf').addEventListener('click', () => {
-          window.print();
-        });
-        // Solicitar orçamento
-        document.getElementById('btn-quote').addEventListener('click', () => {
-          window.location.href = 'contacto.html';
-        });
-      });
+  btnFunc.addEventListener('click', () => {
+    activateTab(btnFunc, btnTech, panelFunc, panelTech);
   });
+  btnTech.addEventListener('click', () => {
+    activateTab(btnTech, btnFunc, panelTech, panelFunc);
+  });
+
+  // Dados Técnicos
+  const techTable = document.getElementById('pd-tech-table');
+  const techLabels = {
+    ecran: "Ecrã",
+    programacao: "Programação",
+    potencia: "Potência",
+    espectro_laser: "Espectro Laser",
+    energia_regulavel: "Energia Regulável",
+    fonte_alimentacao: "Fonte de Alimentação",
+    refrigeracao: "Refrigeração",
+    corrente_electrica: "Corrente Eléctrica"
+  };
+  Object.entries(eq.technical_data).forEach(([key, val]) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `<th scope="row">${techLabels[key]}</th><td>${val}</td>`;
+    techTable.appendChild(row);
+  });
+
+  // Logística
+  const logTable = document.getElementById('pd-logistics-table');
+  const logLabels = { dimensoes: "Dimensões", peso: "Peso" };
+  Object.entries(eq.logistics).forEach(([key, val]) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `<th scope="row">${logLabels[key]}</th><td>${val}</td>`;
+    logTable.appendChild(row);
+  });
+
+  // Disponibilidade
+  function appendCheck(text) {
+    const li = document.createElement('li');
+    li.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i><span>${text}</span>`;
+    availUL.appendChild(li);
+  }
+  if (eq.sale) appendCheck('Disponível para venda');
+  Object.entries(eq.rental)
+    .filter(([, ok]) => ok)
+    .forEach(([p]) => {
+      appendCheck({ diario:'Diário', bidiario:'Bidiário', semanal:'Semanal', mensal:'Mensal' }[p]);
+    });
+
+  // Carrossel
+  function swapImageSmooth(newSrc) {
+    mainImg.style.opacity = 0;
+    mainImg.addEventListener('transitionend', function h(e) {
+      if (e.propertyName !== 'opacity') return;
+      mainImg.removeEventListener('transitionend', h);
+      mainImg.src = newSrc;
+      requestAnimationFrame(() => mainImg.style.opacity = 1);
+    });
+  }
+  const track = document.querySelector('.thumbs-track');
+  let currentIndex = 0;
+  function visibleCount() {
+    const w = window.innerWidth;
+    if (w < 768) return 1;
+    if (w < 992) return 2;
+    return 3;
+  }
+  function updateCarousel() {
+    const count = visibleCount();
+    const slide = document.querySelector('.thumb-slide');
+    if (!slide) return;
+    const style = getComputedStyle(slide);
+    const w = slide.getBoundingClientRect().width + parseFloat(style.marginRight);
+    track.style.transform = `translateX(${-currentIndex * w}px)`;
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= eq.images.length - count;
+  }
+  eq.images.slice(0, 6).forEach((src, idx) => {
+    const li = document.createElement('li');
+    li.className = 'thumb-slide' + (idx === 0 ? ' active' : '');
+    li.innerHTML = `<img src="${src}" alt="Miniatura ${idx+1}">`;
+    li.addEventListener('click', () => {
+      swapImageSmooth(src);
+      document.querySelectorAll('.thumb-slide').forEach(el => el.classList.remove('active'));
+      li.classList.add('active');
+    });
+    track.appendChild(li);
+  });
+  const prevBtn = document.querySelector('.thumb-btn.prev');
+  const nextBtn = document.querySelector('.thumb-btn.next');
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) currentIndex--;
+    updateCarousel();
+  });
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < eq.images.length - visibleCount()) currentIndex++;
+    updateCarousel();
+  });
+  window.addEventListener('resize', updateCarousel);
+  updateCarousel();
+
+  // Ações
+  document.getElementById('btn-pdf').addEventListener('click', () => window.print());
+  document.getElementById('btn-quote').addEventListener('click', () => location.href = 'contacto.html');
+});
 </script>
+
+
 
 
 
