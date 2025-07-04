@@ -2545,7 +2545,7 @@ section,
   overflow: hidden;
   background: var(--background-color);
   padding: 50px 0 0 0;
-  border: 2px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 .pd-category-label {
   position: absolute;
@@ -2556,7 +2556,7 @@ section,
   color: var(--background-color);
   padding: 8px 16px;
   border-radius: 50px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
 .pd-main-image {
@@ -2663,13 +2663,13 @@ section,
   background: var(--background-color);
   color: var(--accent-color);
   padding: 4px 12px;
-  border-radius: 4px;
+  border-radius: 25px;
   font-size: 14px;
 }
 .tab-buttons button.active {
   background: var(--accent-color);
   color: #fff;
-  border-radius: 4px;
+  border-radius: 25px;
 }
 .tab-panel {
   opacity: 0;
