@@ -278,6 +278,9 @@ body.modal-open {
     margin-top: -280px;
     width: 0%;
   }
+  .btn-close-history {
+    right: 16px !important;
+}
  
 }
 
@@ -516,30 +519,6 @@ body.modal-open {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Responsividade modal história */
-@media (max-width: 575.98px) {
-  .history-modal .modal-dialog {
-    margin: 1rem;
-  }
-  .history-card {
-    padding: 2rem 1.5rem 3rem;
-  }
-  .history-quote {
-    padding-top: 2rem;
-  }
-  .history-quote i.bi-quote {
-    font-size: 2rem;
-  }
-  .history-avatar {
-    width: 60px;
-    height: 60px;
-  }
-  .btn-close-history {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.2rem;
-  }
-}
 
 /* Modal Equipa: Fotos da Equipa (horizontalmente) */
 .team-photos {
@@ -641,6 +620,7 @@ body.modal-open {
   font-weight: 500;
   margin: 0;
   color: var(--surface-color);
+  text-align: left;
 }
 .history-info .history-role {
   font-size: 14px;
@@ -676,7 +656,7 @@ body.modal-open {
 }
 @media (max-width: 576px) {
   .history-card {
-    padding: 1.5rem 1rem;
+    padding: 40px 20px;
   }
   .history-avatar {
     width: 48px;
@@ -2787,7 +2767,6 @@ section,
   border: none;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -2884,7 +2863,7 @@ section,
   }
   .pd-details-section {
     
-    padding: 60px 0;
+    padding: 60px 0 !important;
     
 }
    
@@ -2909,7 +2888,7 @@ section,
     gap: 1rem;
   }
   .pd-details-section {
-    padding: 60px 24px;
+    padding: 60px 0px !important;
   }
  
   .pd-box {
