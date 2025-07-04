@@ -535,6 +535,34 @@ body {
   }
 }
 
+/* Modal Equipa: Fotos da Equipa (horizontalmente) */
+.team-photos {
+  display: flex;
+  justify-content: center; /* Alinha as imagens horizontalmente no centro */
+  gap: 2px; /* Espaçamento entre as imagens */
+}
+
+.team-photo {
+    width: 65px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+  transform: scale(1.1); /* Aumenta um pouco a imagem ao passar o mouse */
+}
+
+.history-info h5 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
 /* ==========================================================================
    FEATURES (CARDS EXTERNOS)
    ========================================================================== */
@@ -2514,6 +2542,13 @@ section,
   font-weight: 400;
   margin-top: 2px;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .pd-page-title {
+    background-color: color-mix(in srgb, var(--default-color), transparent 55%);
+    padding: 55px 0 32px;
+  }
+}
+
 
 /* ============================= */
 /*       Imagem e Carrossel      */
