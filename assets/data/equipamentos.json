@@ -1,24 +1,410 @@
 [
   {
-  "id": "E007",
-  "name": "Electroestimulação",
-  "designation": "Laser Diodo Eos Ice",
-  "ref": "E169V4",
-  "code_rev": "FTE169V4.01",
-  "functions": "Equipamento inovador com possibilidade de trabalhar com os 2 manipulos em simultâneo. Possui sistema Android para a programação automática de acordo com a zona, tipo de pelo e fotótipo, podendo este ser ajustado até ao VI. Actua em 3 níveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Este sistema de programação possibilita a criação de fichas de cliente sendo que pode gravar nomes, contatos e os tratamentos já efectuados para uma melhor gestão/evolução dos resultados. Laser equipado com sonda de leitura que permite programação automática do equipamento. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da \"Main Machine\" e sensores de temperatura da água.",
+    "id": "E007",
+    "name": "Electroestimulação",
+    "designation": "Equipamento que utiliza corrente alternada de média frequência em kHz para gerar ondas diferenciadas e moduladas em pulsos de curta duração.",
+    "ref": "E007",
+    "code_rev": "FTE007.05",
+    "functions": "Electroestimulação é uma corrente alternada de média frequência em kHz com formas de ondas diferenciadas e moduladas em pulsos de curta duração, o que a torna eficiente na força de contração muscular. Equipamento com 9 programas, como emagrecimento, drenagem, ginástica passiva, tonificação muscular e fisioterapia.",
+    "technical_data": {
+      "potencia": "35 W",
+      "voltagem": "110V/220V 50/60Hz"
+    },
+    "logistics": {
+      "dimensoes": "48cm x 32cm x 12,5cm",
+      "peso": "7 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/equipamento.png",
+    "images": [
+      "assets/img/equipments/equipamento.png",
+      "assets/img/equipments/equipamento.png",
+      "assets/img/equipments/equipamento.png"
+    ],
+    "category": "Modelagem",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": false
+    }
+  },
+  {
+    "id": "E012V1",
+    "name": "Máquina Emsculpt com 2 Manipuladores",
+    "designation": "Equipamento para tonificação muscular e redução de gordura localizada, utilizando ondas eletromagnéticas localizadas.",
+    "ref": "E012V1",
+    "code_rev": "FTE012V1.01",
+    "functions": "A tecnologia Emsculpt utiliza ondas eletromagnéticas localizadas de alta intensidade, responsáveis por produzir ações musculares involuntárias com intensidades que naturalmente o músculo, por si só, não é capaz de efetuar. Indicado para tonificação muscular, em específico para abdômen e nádegas.",
+    "technical_data": {
+      "frequencia": "5-100 Hz",
+      "potencia": "2000 W",
+      "corrente_electrica": "220V - 50Hz"
+    },
+    "logistics": {
+      "dimensoes": "61,0 cm x 48,5 cm x 38,5 cm",
+      "peso": "18 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/emsulpt.png",
+    "images": [
+      "assets/img/equipments/emsulpt1.png",
+      "assets/img/equipments/emsulpt2.png",
+      "assets/img/equipments/emsulpt3.png"
+    ],
+    "category": "Modelagem",
+    "sale": true,
+    "rental": {
+      "diario": true,
+      "bidiario": true,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E025",
+    "name": "Microdermoabrasão",
+    "designation": "Equipamento com circuito de vácuo que promove uma esfoliação mecânica progressiva e controlada através da aplicação de uma caneta promovendo a sucção da epiderme.",
+    "ref": "E025",
+    "code_rev": "FTE025.03",
+    "functions": "Equipamento com circuito de vácuo que promove uma esfoliação mecânica progressiva e controlada, proporcionando regeneração celular e melhorando a qualidade da pele.",
+    "technical_data": {
+      "programacao": "Manual",
+      "potencia": "50W",
+      "modo_trabalho": "Continuo",
+      "refrigeracao": "Cooler",
+      "corrente_electrica": "Voltagem: 110V/220V 50/60Hz"
+    },
+    "logistics": {
+      "dimensoes": "50cm x 40cm x 30cm",
+      "peso": "5 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/microdermoabrasao.png",
+    "images": [
+      "assets/img/equipments/microdermoabrasao1.png",
+      "assets/img/equipments/microdermoabrasao2.png",
+      "assets/img/equipments/microdermoabrasao3.png"
+    ],
+    "category": "Estética",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": false
+    }
+  },
+  {
+    "id": "E048V1",
+    "name": "Pressoterapia 3 em 1",
+    "designation": "Equipamento para tratamento anti-celulite, emagrecimento, retenção de líquidos e desintoxicação corporal.",
+    "ref": "E048V1",
+    "code_rev": "FTE048V1.03",
+    "functions": "A Pressoterapia promove uma eficaz drenagem linfática, ajuda a revitalizar o corpo, oxigenando o tecido magro, contribuindo para a redução da gordura localizada, melhora o contorno corporal e alivia dores e inchaços. Auxilia também na aceleração da cicatrização e melhora o fluxo de oxigênio pelo corpo, reduzindo a inflamação e o edema.",
+    "technical_data": {
+      "potencia": "300W",
+      "pressao": "100/160/200/240",
+      "n_entradas_de_ar": "36",
+      "corrente_electrica": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "dimensoes": "60cm x 43cm x 57cm",
+      "peso": "28 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/pressoterapia.png",
+    "images": [
+      "assets/img/equipments/pressoterapia1.png",
+      "assets/img/equipments/pressoterapia2.png",
+      "assets/img/equipments/pressoterapia3.png"
+    ],
+    "category": "Estética",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E049V1",
+    "name": "Pressoterapia",
+    "designation": "Equipamento para tratamento anti-celulite, emagrecimento, retenção de líquidos e desintoxicação corporal.",
+    "ref": "E049V1",
+    "code_rev": "FTE049V1.01",
+    "functions": "A Pressoterapia é recomendada para tratamento anti-celulite, emagrecimento, retenção de líquidos e desintoxicação corporal. Através de uma eficaz drenagem linfática, ajuda a promover as funções do corpo fazendo uma revitalização e oxigenação do tecido magro, que contribui para redefinir as pernas, abdômen e braços e que consiste em melhorar o perfil e contorno corporal. Alivia a dor e inchaço, reduz a inflamação e edema, alivia a fadiga nas pernas, acelera a cicatrização e melhora o fluxo de oxigênio pelo corpo.",
+    "technical_data": {
+      "potencia": "100W",
+      "pressao": "0,4kg/cm2",
+      "n_entradas_de_ar": "16",
+      "corrente_electrica": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "dimensoes": "48cm x 32cm x 13cm",
+      "peso": "12 kgs"
+    },
+    "legislation": [
+      "LVD 2006/95/EC",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/pressoterapia.png",
+    "images": [
+      "assets/img/equipments/pressoterapia1.png",
+      "assets/img/equipments/pressoterapia2.png",
+      "assets/img/equipments/pressoterapia3.png"
+    ],
+    "category": "Estética",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E055",
+    "name": "Multifunções para Estética Rosto e Corpo",
+    "designation": "Equipamento multifuncional que combina Cavitação, Radiofrequência e Vácuo para tratamento estético.",
+    "ref": "E055",
+    "code_rev": "FTE055.03",
+    "functions": "Cavitação: Lipoaspiração não invasiva, técnica ultrassônica capaz de destruir a gordura localizada sem recorrer à cirurgia e sem correr riscos, sem cortes e sem tempo de recuperação. Radiofrequência: Técnica mais eficaz no combate à flacidez, celulite e rugas. Neste equipamento tem disponível os 2 tipos de radiofrequência que permite atuar em várias profundidades e de forma adequada para cada tipo de cliente. Num só equipamento dispõe de Radiofrequência Monopolar (corpo), Radiofrequencia Tripolar (Rosto e corpo). Vácuo: Técnica usada para favorecer a circulação sanguínea e o encaminhamento de líquidos, sendo por isso eficaz no combate à retenção de líquidos.",
+    "technical_data": {
+        "cavitacao": {
+            "potencia": "300W",
+            "frequencia": "40Khz"
+        },
+        "radiofrequencia": {
+            "potencia": "100W",
+            "frequencia": "1-10 Mhz (Tripolar)",
+            "frequencia_monopolar": "1-10 Mhz (Monopolar)"
+        },
+        "vacuoterapia": {
+            "potencia": "100W",
+            "pressao": "1000 Kpa"
+        },
+        "corrente_electrica": "110/220V±10% 60Hz 6A"
+    },
+    "logistics": {
+        "dimensoes": "40,0 cm x 35,0 cm x 40,0 cm",
+        "peso": "15 Kg"
+    },
+    "legislation": [
+        "LVD 2014/35/EU",
+        "ROSH 2011/65/EU",
+        "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/multifuncao.png",
+    "images": [
+        "assets/img/equipments/multifuncao1.png",
+        "assets/img/equipments/multifuncao2.png",
+        "assets/img/equipments/multifuncao3.png"
+    ],
+    "category": "Estética",
+    "sale": true,
+    "rental": {
+        "diario": false,
+        "bidiario": false,
+        "semanal": false,
+        "mensal": true
+    }
+  },
+  {
+  "id": "E058V2",  
+  "name": "Criolipólise 360º com 2 Manipulos",  
+  "designation": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura.",  
+  "ref": "E058V2",  
+  "code_rev": "FTE058V2.02",  
+  "functions": "A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo.",  
   "technical_data": {
-    "ecran": "Sistema Andorid com 15,6 polegadas e a resolução é 1920X1080",
-    "programacao": "Automática e através de sonda",
-    "potencia": "1 Manipulo com 2000w + 1 Manipulo com 1000w",
-    "espectro_laser": "755nm, 808nm e 1064nm",
-    "energia_regulavel": "2 a 95J/cm2 + 2 a 50J/cm2",
-    "fonte_alimentacao": "1 fonte de 1000W + 1 fonte de 2000W",
-    "refrigeracao": "Cooler e água com sistema ITEC incorporado",
-    "corrente_electrica": "100-240VAC, 20A max., 50/60Hz"
+    "programacao": "Manual",  
+    "potencia": "1000W",  
+    "pressao_vacuo": "0-50KPA",  
+    "corrente_electrica": "110-220VAC, 20A max., 50/60Hz"
   },
   "logistics": {
-    "dimensoes": "47,5cm x 55cm x 183cm",
-    "peso": "56,600 kgs"
+    "dimensoes": "57cm x 34,5cm x 41,5cm",  
+    "peso": "16,700 kgs"
+  },
+  "legislation": [
+    "LVD 2014/35/EU",  
+    "ROSH 2011/65/EU"
+  ],
+  "application": "Apenas para uso estético.",  
+  "image": "assets/img/equipments/criolipolise360.png",  
+  "images": [
+    "assets/img/equipments/criolipolise360_1.png",  
+    "assets/img/equipments/criolipolise360_2.png",  
+    "assets/img/equipments/criolipolise360_3.png"
+  ],  
+  "category": "Estética",  
+  "sale": true,  
+  "rental": {
+    "diario": false,  
+    "bidiario":false,  
+    "semanal": false,  
+    "mensal": true
+  }
+},
+ {
+    "id": "E058V3",  
+    "name": "Criolipólise de Placas",  
+    "designation": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura. A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo.",  
+    "ref": "E058V3",  
+    "code_rev": "FTE058V3.02",  
+    "functions": "Criolipólise: Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura. A destruição do tecido adiposo é feito através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo.",  
+    "technical_data": {  
+      "potencia": "1000W",  
+      "corrente_electrica": "110-220VAC, 20A max., 50/60Hz"  
+    },  
+    "logistics": {  
+      "dimensoes": "57cm x 34,5cm x 41,5cm",  
+      "peso": "16,700 kgs"  
+    },  
+    "legislation": [  
+      "LVD 2014/35/EU",  
+      "ROSH 2011/65/EU"  
+    ],  
+    "application": "Apenas para uso estético.",  
+    "image": "assets/img/equipments/criolipolise_placas.png",  
+    "images": [  
+      "assets/img/equipments/criolipolise_placas1.png",  
+      "assets/img/equipments/criolipolise_placas2.png",  
+      "assets/img/equipments/criolipolise_placas3.png"  
+    ],  
+    "category": "Estética",  
+    "sale": true,  
+    "rental": {  
+      "diario": true,  
+      "bidiario": false,  
+      "semanal": false,  
+      "mensal": true  
+    }  
+  },
+  {
+    "id": "E059",
+    "name": "Radiofrequência Bipolar e Tripolar (Rosto e Corpo)",
+    "designation": "Técnica mais eficaz no combate à flacidez, celulite e rugas.",
+    "ref": "E059",
+    "code_rev": "FTE059.02",
+    "functions": "O tratamento pode ser realizado na face e no corpo porque possui diferentes manipulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia leva a possibilidade o profissional de trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura e celulite e tonificação e firmeza da pele.",
+    "technical_data": {
+      "radiofrequencia": {
+        "potencia": "150 Watts",
+        "frequencia": "1-10 Mhz"
+      },
+      "corrente_electrica": "110/220V+10% 60Hz 6A"
+    },
+    "logistics": {
+      "dimensoes": "25,0 cm x 15,0 cm x 20,0 cm",
+      "peso": "10 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/radiofrequencia.png",
+    "images": [
+      "assets/img/equipments/radiofrequencia1.png",
+      "assets/img/equipments/radiofrequencia2.png",
+      "assets/img/equipments/radiofrequencia3.png"
+    ],
+    "category": "Estética",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": false
+    }
+  },
+  {
+    "id": "E060",
+    "name": "IPL SHR",
+    "designation": "Equipamento ultra-moderno usando a tecnologia SHR 'Super Hair Removal', que combina a eficiência da Luz Pulsada com 'In Motion' - tecnologia de laser, resultando em tratamentos mais eficientes e sem dor.",
+    "ref": "E060",
+    "code_rev": "FTE060.05",
+    "functions": "IPL - SHR: Equipamento ultra-moderno usando a tecnologia SHR 'Super Hair Removal', que combina a eficiência da Luz Pulsada com 'In Motion' - tecnologia de laser, resultando em tratamentos mais eficientes e sem dor. A IPL convencional aplica impulsos curtos de aproximadamente 2-300 ms com aplicação de grande quantidade de energia 12-120 J/cm2, energia essa que é transportada para raiz do cabelo através da melanina onde normalmente chega atingir 65-72 °C, provocando desconforto, dor e por vezes queimaduras irreversíveis. A tecnologia SHR, usa apenas 50% da energia dos tradicionais equipamentos de foto depilação, mas com uma alta taxa de repetição (até 10 Hz, ou seja, 10 vezes por segundo). O resultado é um tratamento mais eficaz e com uma redução significativa da temperatura na área de atuação que ronda os 45°C. Eliminando praticamente o desconforto durante o tratamento.",
+    "technical_data": {
+      "potencia": "2000W",
+      "espectro": "430-1200nm",
+      "duracao_do_impulso": "1-30 ms Ajustável",
+      "intervalo_entre_impulso": "1-50ms Ajustável",
+      "corrente_electrica": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "dimensoes": "65cm x 50cm x 50cm",
+      "peso": "41 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/ipl_shr.png",
+    "images": [
+      "assets/img/equipments/ipl_shr_1.png",
+      "assets/img/equipments/ipl_shr_2.png",
+      "assets/img/equipments/ipl_shr_3.png"
+    ],
+    "category": "Estética",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  }
+
+,
+  {
+  "id": "E061V1",
+  "name": "V-Shape com 4 Aplicadores",
+  "designation": "V-Shape com 4 Aplicadores",
+  "ref": "E061V1",
+  "code_rev": "FTE061V1.01",
+  "functions": "Modelagem corporal com 4 aplicadores simultâneos, para redução de gordura localizada.",
+  "technical_data": {
+    "ecran": "Tela de 12 polegadas",
+    "programacao": "Automática com ajuste de intensidade",
+    "potencia": "400W",
+    "espectro_laser": "Não aplicável",
+    "energia_regulavel": "Não aplicável",
+    "fonte_alimentacao": "Fonte de 220V",
+    "refrigeracao": "Não aplicável",
+    "corrente_electrica": "100-240VAC, 10A max., 50/60Hz"
+  },
+  "logistics": {
+    "dimensoes": "35cm x 50cm x 70cm",
+    "peso": "14,000 kgs"
   },
   "legislation": [
     "LVD 2014/35/EU",
@@ -26,343 +412,278 @@
     "EMC 2014/30/EU"
   ],
   "application": "Apenas para uso estético.",
-  "image": "assets/img/equipments/equipamento.png",
+  "image": "assets/img/equipments/vshape.png",
   "images": [
-    "assets/img/equipments/equipamento.png",
-    "assets/img/equipments/E169V4_1.png",
-    "assets/img/equipments/equipamento.png",
-    "assets/img/equipments/equipamento.png",
-    "assets/img/equipments/equipamento.png",
-    "assets/img/equipments/equipamento.png"
+    "assets/img/equipments/vshape1.png",
+    "assets/img/equipments/vshape2.png",
+    "assets/img/equipments/vshape3.png"
   ],
   "category": "Modelagem",
-  "sale": true,
+  "sale": false,
   "rental": {
-    "diario": false,
-    "bidiario": false,
+    "diario": true,
+    "bidiario": true,
     "semanal": false,
     "mensal": false
   }
 }
 ,
   {
-    "id": "E012V1",
-    "name": "Máquina Emsculpt com 2 Manipuladores",
-    "description": "A máquina Emsculpt com 2 manipuladores é um equipamento inovador utilizado para tonificação muscular e redução de gordura localizada.",
-    "image": "assets/img/equipments/emsulpt.png",
-    "images": [
-      "assets/img/equipments/emsulpt1.png",
-      "assets/img/equipments/emsulpt2.png",
-      "assets/img/equipments/emsulpt3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Modelagem",
-    "sale": true,
-    "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": true },
-    "features": [
-      "Aumenta a massa muscular",
-      "Reduz a gordura localizada",
-      "Eficaz em áreas como abdómen e coxas"
-    ]
+  "id": "E069V1",
+  "name": "Laser Diodo 1 Onda",
+  "designation": "Laser Diodo 1 Onda",
+  "ref": "E069V1",
+  "code_rev": "FTE069V1.01",
+  "functions": "Laser de diodo de 1 onda utilizado para depilação de longo prazo, proporcionando resultados eficazes e seguros.",
+  "technical_data": {
+    "ecran": "Tela de 7 polegadas",
+    "programacao": "Manual e automático",
+    "potencia": "150W",
+    "espectro_laser": "755nm",
+    "energia_regulavel": "Não aplicável",
+    "fonte_alimentacao": "Fonte de 220V",
+    "refrigeracao": "Não aplicável",
+    "corrente_electrica": "100-240VAC, 10A max., 50/60Hz"
   },
-  {
-    "id": "E025",
-    "name": "Microdermoabrasão",
-    "description": "A microdermoabrasão é um tratamento estético utilizado para esfoliação da pele, promovendo a renovação celular e melhorando a textura da pele.",
-    "image": "assets/img/equipments/microdermoabrasao.png",
-    "images": [
-      "assets/img/equipments/microdermoabrasao1.png",
-      "assets/img/equipments/microdermoabrasao2.png",
-      "assets/img/equipments/microdermoabrasao3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Rejuvenescimento",
-    "sale": true,
-    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false },
-    "features": [
-      "Melhora a textura da pele",
-      "Reduz manchas e cicatrizes",
-      "Tecnologia suave e eficaz"
-    ]
+  "logistics": {
+    "dimensoes": "30cm x 40cm x 50cm",
+    "peso": "10,000 kgs"
   },
-  {
-    "id": "E048V1",
-    "name": "Pressoterapia 3 em 1",
-    "description": "A pressoterapia 3 em 1 é um equipamento para drenagem linfática e redução de celulite.",
-    "image": "assets/img/equipments/pressoterapia.png",
-    "images": [
-      "assets/img/equipments/pressoterapia1.png",
-      "assets/img/equipments/pressoterapia2.png",
-      "assets/img/equipments/pressoterapia3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Multifuncional",
-    "sale": false,
-    "rental": { "diario": true, "bidiario": false, "semanal": true, "mensal": false },
-    "features": [
-      "Melhora a circulação sanguínea",
-      "Auxilia na eliminação de toxinas",
-      "Tratamento eficaz para celulite"
-    ]
-  },
-  {
-    "id": "E049V1",
-    "name": "Pressoterapia",
-    "description": "A pressoterapia auxilia na drenagem linfática e redução da celulite.",
-    "image": "assets/img/equipments/pressoterapia1.png",
-    "images": [
-      "assets/img/equipments/pressoterapia11.png",
-      "assets/img/equipments/pressoterapia12.png",
-      "assets/img/equipments/pressoterapia13.png"
-    ],
-    "image_extra": "assets/img/logo-header.pngg",
-    "category": "Multifuncional",
-    "sale": false,
-    "rental": { "diario": true, "bidiario": false, "semanal": false, "mensal": false },
-    "features": [
-      "Melhora a circulação sanguínea",
-      "Auxilia na redução da celulite",
-      "Design compacto e fácil de usar"
-    ]
-  },
-  {
-    "id": "E055",
-    "name": "Multifunções 5 em 1",
-    "description": "Combina várias funções num único equipamento estético.",
-    "image": "assets/img/equipments/multifuncao.png",
-    "images": [
-      "assets/img/equipments/multifuncao1.png",
-      "assets/img/equipments/multifuncao2.png",
-      "assets/img/equipments/multifuncao3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Multifuncional",
-    "sale": true,
-    "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": true },
-    "features": [
-      "5 funções num único aparelho",
-      "Versátil e eficiente",
-      "Fácil de usar e de armazenar"
-    ]
-  },
-  {
-    "id": "E058V2",
-    "name": "Criolipólise 360° com 2 Manipuladores",
-    "description": "Reduz gordura localizada através de arrefecimento controlado.",
-    "image": "assets/img/equipments/criolipolise.png",
-    "images": [
-      "assets/img/equipments/criolipolise1.png",
-      "assets/img/equipments/criolipolise2.png",
-      "assets/img/equipments/criolipolise3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Modelagem",
-    "sale": true,
-    "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false },
-    "features": [
-      "Tecnologia de arrefecimento controlado",
-      "Resultados rápidos e eficazes",
-      "Indicado para áreas específicas como abdómen e coxas"
-    ]
-  },
-  {
-    "id": "E058V3",
-    "name": "Criolipólise de Placas",
-    "description": "Método de redução de gordura localizada com placas de arrefecimento.",
-    "image": "assets/img/equipments/criolipoliseplacas.png",
-    "images": [
-      "assets/img/equipments/criolipoliseplacas1.png",
-      "assets/img/equipments/criolipoliseplacas2.png",
-      "assets/img/equipments/criolipoliseplacas3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Modelagem",
-    "sale": false,
-    "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": false },
-    "features": [
-      "Tecnologia de placas de arrefecimento",
-      "Eficaz na redução de gordura localizada",
-      "Ideal para tratamentos direcionados"
-    ]
-  },
-  {
-    "id": "E059",
-    "name": "Radiofrequência",
-    "description": "Rejuvenesce a pele, estimulando a produção de colágeno e elastina.",
-    "image": "assets/img/equipments/radiofrequencia.png",
-    "images": [
-      "assets/img/equipments/radiofrequencia1.png",
-      "assets/img/equipments/radiofrequencia2.png",
-      "assets/img/equipments/radiofrequencia3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Rejuvenescimento",
-    "sale": true,
-    "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false },
-    "features": [
-      "Estimula a produção de colágeno e elastina",
-      "Melhora a elasticidade da pele",
-      "Ideal para tratamentos faciais"
-    ]
-  },
-  {
-    "id": "E060",
-    "name": "SHR / IPL",
-    "description": "Tecnologia de luz intensa pulsada para depilação e rejuvenescimento.",
-    "image": "assets/img/equipments/shr.png",
-    "images": [
-      "assets/img/equipments/shr1.png",
-      "assets/img/equipments/shr2.png",
-      "assets/img/equipments/shr3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Depilação",
-    "sale": false,
-    "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false },
-    "features": [
-      "Tecnologia de luz intensa pulsada",
-      "Eficaz na redução de pelos",
-      "Indicado também para rejuvenescimento facial"
-    ]
-  },
-  {
-    "id": "E061V1",
-    "name": "V-Shape com 4 Aplicadores",
-    "description": "Modelagem corporal com 4 aplicadores simultâneos.",
-    "image": "assets/img/equipments/vshape.png",
-    "images": [
-      "assets/img/equipments/vshape1.png",
-      "assets/img/equipments/vshape2.png",
-      "assets/img/equipments/vshape3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Modelagem",
-    "sale": false,
-    "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false },
-    "features": [
-      "4 aplicadores para tratamento simultâneo",
-      "Reduz gordura localizada",
-      "Aprimora a firmeza da pele"
-    ]
-  },
-  {
-    "id": "E069V1",
-    "name": "Laser Diodo 1 Onda",
-    "description": "O laser de diodo de 1 onda é utilizado para depilação de longo prazo, proporcionando um resultado eficaz e seguro.",
-    "image": "assets/img/equipments/laser.png",
-    "images": [
-      "assets/img/equipments/laser1.png",
-      "assets/img/equipments/laser2.png",
-      "assets/img/equipments/laser3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Depilação",
-    "sale": false,
-    "rental": { "diario": true, "bidiario": true, "semanal": false, "mensal": false },
-    "features": [
-      "Tecnologia de laser de diodo",
-      "Resultados a longo prazo",
-      "Eficaz na remoção de pelos"
-    ]
-  },
-  {
-    "id": "E169V1",
-    "name": "Laser Diodo 3 Ondas",
-    "description": "Laser de 3 ondas para depilação avançada, com resultados rápidos e eficazes.",
-    "image": "assets/img/equipments/laser3.png",
-    "images": [
-      "assets/img/equipments/laser3a.png",
-      "assets/img/equipments/laser3b.png",
-      "assets/img/equipments/laser3c.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Depilação",
-    "sale": true,
-    "rental": { "diario": true, "bidiario": true, "semanal": true, "mensal": true },
-    "features": [
-      "Tecnologia de 3 ondas para resultados rápidos",
-      "Remoção eficaz de pelos",
-      "Ideal para áreas grandes e pequenas"
-    ]
-  },
-  {
-    "id": "E169V3",
-    "name": "Laser Diodo 3 Ondas",
-    "description": "Laser de 3 ondas para depilação duradoura, indicado para todos os tipos de pele.",
-    "image": "assets/img/equipments/laser3b.png",
-    "images": [
-      "assets/img/equipments/laser3b1.png",
-      "assets/img/equipments/laser3b2.png",
-      "assets/img/equipments/laser3b3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Depilação",
-    "sale": true,
-    "rental": { "diario": false, "bidiario": false, "semanal": true, "mensal": true },
-    "features": [
-      "Tecnologia avançada para resultados duradouros",
-      "Excelente para depilação em peles sensíveis",
-      "Eficaz em várias sessões"
-    ]
-  },
-  {
-    "id": "E169V4",
-    "name": "Laser Diodo Eos Ice",
-    "description": "Laser com tecnologia de arrefecimento para uma depilação mais confortável.",
-    "image": "assets/img/logo-header.png",
-    "images": [
-      "assets/img/equipments/laser_eos1.png",
-      "assets/img/equipments/laser_eos2.png",
-      "assets/img/equipments/laser_eos3.png"
-    ],
-    "image_extra": "assets/img/equipments/laser_eos_extra.png",
-    "category": "Depilação",
-    "sale": true,
-    "rental": { "diario": false, "bidiario": true, "semanal": true, "mensal": true },
-    "features": [
-      "Tecnologia de arrefecimento para maior conforto",
-      "Resultados rápidos e eficazes",
-      "Ideal para tratamentos continuados"
-    ]
-  },
-  {
-    "id": "E174",
-    "name": "Laser para vasos e micoses",
-    "description": "Equipamento para tratamento de vasos sanguíneos e micoses, melhorando a aparência estética.",
-    "image": "assets/img/equipments/laser_derrame.png",
-    "images": [
-      "assets/img/equipments/laser_derrame1.png",
-      "assets/img/equipments/laser_derrame2.png",
-      "assets/img/equipments/laser_derrame3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Multifuncional",
-    "sale": true,
-    "rental": { "diario": true, "bidiario": false, "semanal": true, "mensal": false },
-    "features": [
-      "Eficaz em tratamentos de circulação e micoses",
-      "Tecnologia de ponta para resultados rápidos",
-      "Ideal para clínicas estéticas"
-    ]
-  },
-  {
-    "id": "E176V2",
-    "name": "HIFU e Liposonix",
-    "description": "Redução de gordura localizada e rejuvenescimento através de ultrassom.",
-    "image": "assets/img/equipments/hifu_liposonix.png",
-    "images": [
-      "assets/img/equipments/hifu_liposonix1.png",
-      "assets/img/equipments/hifu_liposonix2.png",
-      "assets/img/equipments/hifu_liposonix3.png"
-    ],
-    "image_extra": "assets/img/logo-header.png",
-    "category": "Modelagem",
-    "sale": true,
-    "rental": { "diario": false, "bidiario": false, "semanal": true, "mensal": true },
-    "features": [
-      "Tecnologia HIFU para redução de gordura",
-      "Rejuvenescimento eficaz da pele",
-      "Ideal para tratamentos corporais e faciais"
-    ]
+  "legislation": [
+    "LVD 2014/35/EU",
+    "ROSH 2011/65/EU",
+    "EMC 2014/30/EU"
+  ],
+  "application": "Apenas para uso estético.",
+  "image": "assets/img/equipments/laser.png",
+  "images": [
+    "assets/img/equipments/laser1.png",
+    "assets/img/equipments/laser2.png",
+    "assets/img/equipments/laser3.png"
+  ],
+  "category": "Depilação",
+  "sale": false,
+  "rental": {
+    "diario": true,
+    "bidiario": true,
+    "semanal": false,
+    "mensal": false
   }
+}
+,
+  {
+  "id": "E169V1",
+  "name": "Laser Diodo 3 Ondas",
+  "designation": "Laser Diodo 3 Ondas",
+  "ref": "E169V1",
+  "code_rev": "FTE169V1.01",
+  "functions": "Laser de 3 ondas para depilação avançada, com resultados rápidos e eficazes.",
+  "technical_data": {
+    "ecran": "Tela de 8 polegadas",
+    "programacao": "Manual e automático",
+    "potencia": "300W",
+    "espectro_laser": "755nm, 808nm, 1064nm",
+    "energia_regulavel": "Não aplicável",
+    "fonte_alimentacao": "Fonte de 220V",
+    "refrigeracao": "Não aplicável",
+    "corrente_electrica": "100-240VAC, 10A max., 50/60Hz"
+  },
+  "logistics": {
+    "dimensoes": "40cm x 55cm x 70cm",
+    "peso": "12,000 kgs"
+  },
+  "legislation": [
+    "LVD 2014/35/EU",
+    "ROSH 2011/65/EU",
+    "EMC 2014/30/EU"
+  ],
+  "application": "Apenas para uso estético.",
+  "image": "assets/img/equipments/laser3.png",
+  "images": [
+    "assets/img/equipments/laser3a.png",
+    "assets/img/equipments/laser3b.png",
+    "assets/img/equipments/laser3c.png"
+  ],
+  "category": "Depilação",
+  "sale": true,
+  "rental": {
+    "diario": true,
+    "bidiario": true,
+    "semanal": true,
+    "mensal": true
+  }
+}
+,
+  {
+  "id": "E169V3",
+  "name": "Laser Diodo 3 Ondas",
+  "designation": "Laser Diodo 3 Ondas",
+  "ref": "E169V3",
+  "code_rev": "FTE169V3.01",
+  "functions": "Laser de 3 ondas para depilação duradoura, indicado para todos os tipos de pele.",
+  "technical_data": {
+    "ecran": "Tela de 9 polegadas",
+    "programacao": "Automática e programável",
+    "potencia": "350W",
+    "espectro_laser": "755nm, 808nm, 1064nm",
+    "energia_regulavel": "Não aplicável",
+    "fonte_alimentacao": "Fonte de 220V",
+    "refrigeracao": "Não aplicável",
+    "corrente_electrica": "100-240VAC, 10A max., 50/60Hz"
+  },
+  "logistics": {
+    "dimensoes": "45cm x 60cm x 80cm",
+    "peso": "14,500 kgs"
+  },
+  "legislation": [
+    "LVD 2014/35/EU",
+    "ROSH 2011/65/EU",
+    "EMC 2014/30/EU"
+  ],
+  "application": "Apenas para uso estético.",
+  "image": "assets/img/equipments/laser3b.png",
+  "images": [
+    "assets/img/equipments/laser3b1.png",
+    "assets/img/equipments/laser3b2.png",
+    "assets/img/equipments/laser3b3.png"
+  ],
+  "category": "Depilação",
+  "sale": true,
+  "rental": {
+    "diario": false,
+    "bidiario": false,
+    "semanal": true,
+    "mensal": true
+  }
+}
+,
+  {
+  "id": "E169V4",
+  "name": "Laser Diodo Eos Ice",
+  "designation": "Laser Diodo Eos Ice",
+  "ref": "E169V4",
+  "code_rev": "FTE169V4.01",
+  "functions": "Laser com tecnologia de arrefecimento para uma depilação mais confortável.",
+  "technical_data": {
+    "ecran": "Tela de 12 polegadas",
+    "programacao": "Automática e programada",
+    "potencia": "400W",
+    "espectro_laser": "755nm, 808nm, 1064nm",
+    "energia_regulavel": "Não aplicável",
+    "fonte_alimentacao": "Fonte de 220V",
+    "refrigeracao": "Sistema de arrefecimento integrado",
+    "corrente_electrica": "100-240VAC, 10A max., 50/60Hz"
+  },
+  "logistics": {
+    "dimensoes": "50cm x 60cm x 80cm",
+    "peso": "16,000 kgs"
+  },
+  "legislation": [
+    "LVD 2014/35/EU",
+    "ROSH 2011/65/EU",
+    "EMC 2014/30/EU"
+  ],
+  "application": "Apenas para uso estético.",
+  "image": "assets/img/equipments/laser_eos1.png",
+  "images": [
+    "assets/img/equipments/laser_eos1.png",
+    "assets/img/equipments/laser_eos2.png",
+    "assets/img/equipments/laser_eos3.png"
+  ],
+  "category": "Depilação",
+  "sale": true,
+  "rental": {
+    "diario": false,
+    "bidiario": true,
+    "semanal": true,
+    "mensal": true
+  }
+}
+,
+  {
+  "id": "E174",
+  "name": "Laser para vasos e micoses",
+  "designation": "Laser para vasos e micoses",
+  "ref": "E174",
+  "code_rev": "FTE174.01",
+  "functions": "Equipamento para tratamento de vasos sanguíneos e micoses, melhorando a aparência estética.",
+  "technical_data": {
+    "ecran": "Tela de 8 polegadas",
+    "programacao": "Manual e programada",
+    "potencia": "250W",
+    "espectro_laser": "1064nm",
+    "energia_regulavel": "Não aplicável",
+    "fonte_alimentacao": "Fonte de 220V",
+    "refrigeracao": "Não aplicável",
+    "corrente_electrica": "100-240VAC, 10A max., 50/60Hz"
+  },
+  "logistics": {
+    "dimensoes": "35cm x 50cm x 60cm",
+    "peso": "10,500 kgs"
+  },
+  "legislation": [
+    "LVD 2014/35/EU",
+    "ROSH 2011/65/EU",
+    "EMC 2014/30/EU"
+  ],
+  "application": "Apenas para uso estético.",
+  "image": "assets/img/equipments/laser_derrame.png",
+  "images": [
+    "assets/img/equipments/laser_derrame1.png",
+    "assets/img/equipments/laser_derrame2.png",
+    "assets/img/equipments/laser_derrame3.png"
+  ],
+  "category": "Multifuncional",
+  "sale": true,
+  "rental": {
+    "diario": true,
+    "bidiario": false,
+    "semanal": true,
+    "mensal": false
+  }
+}
+,
+ {
+  "id": "E176V2",
+  "name": "HIFU e Liposonix",
+  "designation": "HIFU e Liposonix",
+  "ref": "E176V2",
+  "code_rev": "FTE176V2.01",
+  "functions": "Redução de gordura localizada e rejuvenescimento através de ultrassom.",
+  "technical_data": {
+    "ecran": "Tela de 12 polegadas",
+    "programacao": "Automática e ajustável",
+    "potencia": "500W",
+    "espectro_laser": "Não aplicável",
+    "energia_regulavel": "Não aplicável",
+    "fonte_alimentacao": "Fonte de 220V",
+    "refrigeracao": "Não aplicável",
+    "corrente_electrica": "100-240VAC, 10A max., 50/60Hz"
+  },
+  "logistics": {
+    "dimensoes": "55cm x 70cm x 90cm",
+    "peso": "18,000 kgs"
+  },
+  "legislation": [
+    "LVD 2014/35/EU",
+    "ROSH 2011/65/EU",
+    "EMC 2014/30/EU"
+  ],
+  "application": "Apenas para uso estético.",
+  "image": "assets/img/equipments/hifu_liposonix.png",
+  "images": [
+    "assets/img/equipments/hifu_liposonix1.png",
+    "assets/img/equipments/hifu_liposonix2.png",
+    "assets/img/equipments/hifu_liposonix3.png"
+  ],
+  "category": "Modelagem",
+  "sale": true,
+  "rental": {
+    "diario": false,
+    "bidiario": false,
+    "semanal": true,
+    "mensal": true
+  }
+}
+
 ]

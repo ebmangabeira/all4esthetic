@@ -2912,6 +2912,7 @@ section,
 }
 .pd-box h5 {
     font-size: 24px !important;
+    margin-top: 20px;
   
 }
 
@@ -3127,4 +3128,140 @@ section,
 
 
 
+
+
+
+
+
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.search-form .input-group {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 50px;
+  border: 1px solid var(--default-color);
+  background-color: var(--surface-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-form .input-group .form-control {
+  border: none;
+  padding: 12px 15px;
+  font-size: 14px;
+  background-color: transparent;
+  color: var(--default-color);
+}
+
+.search-form .input-group .form-control::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 14px;
+}
+
+.search-form .input-group .btn {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 0 25px;
+  border: none;
+  border-radius: 50px;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.widget-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.form-check input {
+  margin-right: 10px;
+}
+
+.form-check label {
+  font-size: 14px;
+  color: var(--heading-color);
+  font-weight: 400;
+}
+
+.card {
+  background-color: var(--background-color);
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-body h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.card-body .card-category {
+  font-size: 14px;
+  color: var(--heading-color);
+}
+
+.card-body .btn {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.card-body .btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination .page-item {
+  background-color: transparent;
+  border: 1px solid var(--default-color);
+  border-radius: 50px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.page-link {
+  color: var(--heading-color);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  text-decoration: none;
+}
 
