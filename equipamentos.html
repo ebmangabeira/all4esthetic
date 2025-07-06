@@ -92,191 +92,305 @@
 </div>
 
 </header>
-
-<section id="equipamentos" data-aos="fade-up">
-    <div class="container py-5">
-        <div class="row">
-            <!-- Sidebar de Filtros -->
-            <div class="widget sidebar widgets-container d-none d-md-block col-md-4">
-                <div class="widget-item">
-                    <h3 class="widget-title">Categorias</h3>
-                    <!-- Filtro de Categorias -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Modelagem" id="cat-modelagem">
-                        <label class="form-check-label" for="cat-modelagem">Modelagem</label>
-                    </div>
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento">
-                        <label class="form-check-label" for="cat-rejuvenescimento">Rejuvenescimento</label>
-                    </div>
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" value="Depilação" id="cat-depilacao">
-                        <label class="form-check-label" for="cat-depilacao">Depilação</label>
-                    </div>
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="checkbox" value="Multifuncional" id="cat-multifuncional">
-                        <label class="form-check-label" for="cat-multifuncional">Multifuncional</label>
-                    </div>
-                </div>
-
-                <div class="widget-item mt-4">
-                    <h3 class="widget-title">Disponibilidade</h3>
-                    <!-- Filtro de Disponibilidade -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="availability" value="Venda" id="filter-venda">
-                        <label class="form-check-label" for="filter-venda">Venda</label>
-                    </div>
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="radio" name="availability" value="Aluguer" id="filter-aluguer">
-                        <label class="form-check-label" for="filter-aluguer">Aluguer</label>
-                    </div>
-                </div>
-
-                <div class="widget-item mt-3" id="aluguer-periodos" style="display:none;">
-                    <h3 class="widget-title">Períodos de Aluguer</h3>
-                    <!-- Filtro de Períodos de Aluguer -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rental-period" value="Diário" id="filter-diario">
-                        <label class="form-check-label" for="filter-diario">Diário</label>
-                    </div>
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="radio" name="rental-period" value="Bidiário" id="filter-bidiario">
-                        <label class="form-check-label" for="filter-bidiario">Bidiário</label>
-                    </div>
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="radio" name="rental-period" value="Semanal" id="filter-semanal">
-                        <label class="form-check-label" for="filter-semanal">Semanal</label>
-                    </div>
-                    <div class="form-check mt-2">
-                        <input class="form-check-input" type="radio" name="rental-period" value="Mensal" id="filter-mensal">
-                        <label class="form-check-label" for="filter-mensal">Mensal</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Conteúdo Principal (Equipamentos) -->
-            <div class="col-lg-8">
-                <div id="active-filters-mobile" class="active-filters-mobile d-none"></div>
-                <div class="row g-4" id="equipamentos-container">
-                    <!-- Equipamentos dinâmicos serão injetados aqui -->
-                </div>
-                <nav aria-label="Page navigation" class="mt-4">
-                    <ul class="pagination justify-content-center" id="pagination"></ul>
-                </nav>
-            </div>
+    <main class="main">
+    <!-- Page Title -->
+    <div class="pd-page-title pd-light-bg">
+        <div class="container-fluid container-xl pd-breadcrumbs pd-container">
+          <h1 class="pd-title-text">Equipamentos</h1>
+          <nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Início</a></li>
+              <li class="current" aria-current="page">Equipamentos</li>
+            </ol>
+          </nav>
         </div>
+      </div>
+    <!-- End Page Title -->
+     <section id="equipamentos" data-aos="fade-up">
+    <div class="container-fluid container-xl">
+      <div class="row">
+        <!-- SIDEBAR DESKTOP -->
+        <aside class="col-lg-3 sidebar d-none d-md-block">
+          <div class="filter-section">
+            <h3 class="filter-title">Categorias</h3>
+            <ul class="list-unstyled">
+              <li class="form-check">
+                <input class="form-check-input desktop-cat" type="checkbox" value="Modelagem" id="cat-modelagem">
+                <label class="form-check-label" for="cat-modelagem">Modelagem</label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input desktop-cat" type="checkbox" value="Estética" id="cat-estetica">
+                <label class="form-check-label" for="cat-estetica">Estética</label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input desktop-cat" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento">
+                <label class="form-check-label" for="cat-rejuvenescimento">Rejuvenescimento</label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input desktop-cat" type="checkbox" value="Depilação" id="cat-depilacao">
+                <label class="form-check-label" for="cat-depilacao">Depilação</label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-section">
+            <h3 class="filter-title">Disponibilidade</h3>
+            <ul class="list-unstyled">
+              <li class="form-check">
+                <input class="form-check-input desktop-avail" type="radio" name="availability" value="Venda" id="filter-venda">
+                <label class="form-check-label" for="filter-venda">Venda</label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input desktop-avail" type="radio" name="availability" value="Aluguer" id="filter-aluguer">
+                <label class="form-check-label" for="filter-aluguer">Aluguer</label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-section" id="aluguer-periodos" hidden>
+            <h3 class="filter-title">Períodos de Aluguer</h3>
+            <ul class="list-unstyled">
+              <li class="form-check">
+                <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="diario" id="filter-diario">
+                <label class="form-check-label" for="filter-diario">Diário</label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="bidiario" id="filter-bidiario">
+                <label class="form-check-label" for="filter-bidiario">Bidiário</label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="semanal" id="filter-semanal">
+                <label class="form-check-label" for="filter-semanal">Semanal</label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="mensal" id="filter-mensal">
+                <label class="form-check-label" for="filter-mensal">Mensal</label>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- SIDEBAR MOBILE -->
+        <div class="col-12 d-md-none mb-3">
+          <button id="filtro-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3">
+            <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="5" x2="17" y2="5"/>
+              <circle cx="19" cy="5" r="2" fill="currentColor"/>
+              <line x1="7" y1="12" x2="21" y2="12"/>
+              <circle cx="5" cy="12" r="2" fill="currentColor"/>
+              <line x1="3" y1="19" x2="15" y2="19"/>
+              <circle cx="17" cy="19" r="2" fill="currentColor"/>
+            </svg>
+            Filtro
+          </button>
+          <div id="mobile-filters">
+            <div class="mobile-filters-header">
+              <h3 class="filter-title m-0">Filtros</h3>
+              <button id="close-filtro" class="btn-close" aria-label="Fechar"></button>
+            </div>
+            <div class="mobile-filters-content">
+              <div class="filter-section">
+                <h4 class="filter-title">Categorias</h4>
+                <ul class="list-unstyled">
+                  <li class="form-check">
+                    <input class="form-check-input mobile-cat" type="checkbox" value="Modelagem" id="cat-modelagem-mob">
+                    <label class="form-check-label" for="cat-modelagem-mob">Modelagem</label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input mobile-cat" type="checkbox" value="Estética" id="cat-estetica-mob">
+                    <label class="form-check-label" for="cat-estetica-mob">Estética</label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input mobile-cat" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento-mob">
+                    <label class="form-check-label" for="cat-rejuvenescimento-mob">Rejuvenescimento</label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input mobile-cat" type="checkbox" value="Depilação" id="cat-depilacao-mob">
+                    <label class="form-check-label" for="cat-depilacao-mob">Depilação</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-section">
+                <h4 class="filter-title">Disponibilidade</h4>
+                <ul class="list-unstyled">
+                  <li class="form-check">
+                    <input class="form-check-input mobile-avail" type="radio" name="availability-mob" value="Venda" id="filter-venda-mob">
+                    <label class="form-check-label" for="filter-venda-mob">Venda</label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input mobile-avail" type="radio" name="availability-mob" value="Aluguer" id="filter-aluguer-mob">
+                    <label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter-section" id="aluguer-periodos-mob" hidden>
+                <h4 class="filter-title">Períodos de Aluguer</h4>
+                <ul class="list-unstyled">
+                  <li class="form-check">
+                    <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="diario" id="filter-diario-mob">
+                    <label class="form-check-label" for="filter-diario-mob">Diário</label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="bidiario" id="filter-bidiario-mob">
+                    <label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="semanal" id="filter-semanal-mob">
+                    <label class="form-check-label" for="filter-semanal-mob">Semanal</label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="mensal" id="filter-mensal-mob">
+                    <label class="form-check-label" for="filter-mensal-mob">Mensal</label>
+                  </li>
+                </ul>
+              </div>
+              <button id="pesquisar-btn" class="btn btn-primary w-100">Aplicar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="col-lg-9">
+          <div id="active-filters-mobile" class="active-filters-mobile d-none mb-3"></div>
+          <div id="equipamentos-container" class="row g-4"></div>
+          <nav aria-label="Page navigation" class="mt-4">
+            <ul id="pagination" class="pagination justify-content-center custom-pagination"></ul>
+          </nav>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+</main>
 
+<!-- Bootstrap JS (Bundle com Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-        const res = await fetch('assets/data/equipamentos.json');
-        const allEquipamentos = await res.json();
-        const container = document.getElementById('equipamentos-container');
-        const paginationEl = document.getElementById('pagination');
-        const itemsPerPage = 6;
-        let currentPage = 1;
-        let filteredEq = [...allEquipamentos];
+document.addEventListener('DOMContentLoaded', async () => {
+  const allEquip = await (await fetch('assets/data/equipamentos.json')).json();
+  const ctn = document.getElementById('equipamentos-container');
+  const pg  = document.getElementById('pagination');
+  const am  = document.getElementById('active-filters-mobile');
+  const btnFiltro = document.getElementById('filtro-btn');
+  const btnClose  = document.getElementById('close-filtro');
+  const btnSearch = document.getElementById('pesquisar-btn');
+  const mobFilt   = document.getElementById('mobile-filters');
+  const catD = [...document.querySelectorAll('.desktop-cat')];
+  const avD  = [...document.querySelectorAll('.desktop-avail')];
+  const reD  = [...document.querySelectorAll('.desktop-rent')];
+  const pd   = document.getElementById('aluguer-periodos');
+  const catM = [...document.querySelectorAll('.mobile-cat')];
+  const avM  = [...document.querySelectorAll('.mobile-avail')];
+  const reM  = [...document.querySelectorAll('.mobile-rent')];
+  const pm   = document.getElementById('aluguer-periodos-mob');
 
-        const filterVenda = document.getElementById('filter-venda');
-        const filterAluguer = document.getElementById('filter-aluguer');
-        const aluguerPeriodos = document.getElementById('aluguer-periodos');
+  let page=1, perPage=6, filtered=[...allEquip];
 
-        // Função para aplicar os filtros
-        function applyFilters() {
-            // Coleta as categorias selecionadas
-            const categories = Array.from(document.querySelectorAll('.sidebar input[id^="cat-"]:checked')).map(i => i.value);
-            const availability = document.querySelector('input[name="availability"]:checked')?.value;
-            const rentalPeriods = Array.from(document.querySelectorAll('input[name="rental-period"]:checked')).map(i => i.value);
+  function toggle(div, arrA, arrR){
+    arrA.forEach(i=>i.addEventListener('change', ()=>{
+      div.hidden = i.value==='Aluguer'?false:true;
+      if(i.value!=='Aluguer') arrR.forEach(r=>r.checked=false);
+    }));
+  }
+  toggle(pd,avD,reD);
+  toggle(pm,avM,reM);
 
-            currentPage = 1;  // Reset para a página 1 quando os filtros são aplicados
-
-            // Filtrando os equipamentos com base nas categorias, disponibilidade e período de aluguel
-            filteredEq = allEquipamentos.filter(eq => {
-                // Verifica se a categoria está no filtro
-                if (categories.length && !categories.includes(eq.category)) return false;
-
-                // Verifica se a disponibilidade está de acordo com o filtro (Venda ou Aluguer)
-                if (availability === 'Venda' && !eq.sale) return false;
-                if (availability === 'Aluguer' && !Object.values(eq.rental).some(v => v)) return false;
-
-                // Verifica se o período de aluguel está de acordo com o filtro
-                if (rentalPeriods.length) {
-                    const isRentalPeriodValid = rentalPeriods.some(r => eq.rental[r.toLowerCase()]);
-                    if (!isRentalPeriodValid) return false;
-                }
-
-                return true;
-            });
-
-            // Renderizar a página filtrada
-            renderPagination();
-            renderPage();
-        }
-
-        // Atualiza a exibição dos equipamentos
-        function renderPage() {
-            container.innerHTML = '';  // Limpa os equipamentos anteriores
-            const start = (currentPage - 1) * itemsPerPage;
-            filteredEq.slice(start, start + itemsPerPage).forEach(eq => {
-                const div = document.createElement('div');
-                div.className = 'col-12 col-sm-6 col-lg-4';
-                div.innerHTML = `
-                    <div class="card equipamento-card h-100">
-                        <img src="${eq.image}" class="card-img-top" alt="${eq.name}">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${eq.name}</h5>
-                            <p class="card-category">${eq.category}</p>
-                            <a href="detalhes.html?id=${eq.id}" class="btn btn-primary mt-auto">Mais detalhes</a>
-                        </div>
-                    </div>`;
-                container.appendChild(div);
-            });
-        }
-
-        // Renderiza a paginação
-        function renderPagination() {
-            paginationEl.innerHTML = '';
-            const pageCount = Math.ceil(filteredEq.length / itemsPerPage);
-            for (let i = 1; i <= pageCount; i++) {
-                const li = document.createElement('li');
-                li.className = `page-item ${i === currentPage ? 'active' : ''}`;
-                li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
-                li.onclick = e => { 
-                    e.preventDefault(); 
-                    currentPage = i; 
-                    renderPagination(); 
-                    renderPage(); 
-                };
-                paginationEl.appendChild(li);
-            }
-        }
-
-        // Aplica os filtros de disponibilidade (Venda ou Aluguer)
-        filterVenda.addEventListener('change', () => {
-            aluguerPeriodos.style.display = 'none';
-            applyFilters();
-        });
-
-        filterAluguer.addEventListener('change', () => {
-            aluguerPeriodos.style.display = 'block';
-            applyFilters();
-        });
-
-        // Aplica filtros de categoria ao selecionar/deselecionar checkboxes
-        document.querySelectorAll('.sidebar input[id^="cat-"]').forEach(checkbox => {
-            checkbox.addEventListener('change', applyFilters);
-        });
-
-        // Aplica filtros de período de aluguel ao selecionar/deselecionar
-        document.querySelectorAll('input[name="rental-period"]').forEach(radio => {
-            radio.addEventListener('change', applyFilters);
-        });
-
-        // Inicializa os filtros aplicados
-        applyFilters();
+  function apply({cats,av,rents,showChips}){
+    page=1;
+    filtered = allEquip.filter(e=>{
+      if(cats.length && !cats.includes(e.category)) return false;
+      if(av==='Venda') return e.sale;
+      if(av==='Aluguer'){
+        return rents.length
+          ? rents.some(r=>e.rental[r])
+          : Object.values(e.rental).some(v=>v);
+      }
+      return true;
     });
+    renderPage(); renderPagination();
+    if(showChips) renderChips(cats,av,rents);
+    else am.classList.add('d-none');
+  }
+
+  function vals(selC,selA,selR){
+    const cats = selC.filter(i=>i.checked).map(i=>i.value);
+    const av   = document.querySelector(selA)?.value;
+    const rents= selR.filter(i=>i.checked).map(i=>i.value.toLowerCase());
+    return {cats,av,rents};
+  }
+
+  catD.concat(avD,reD).forEach(i=>i.addEventListener('change',()=>apply({...vals(catD,'.desktop-avail:checked',reD),showChips:false})));
+  catM.concat(avM,reM).forEach(i=>i.addEventListener('change',()=>apply({...vals(catM,'.mobile-avail:checked',reM),showChips:true})));
+
+  btnFiltro.addEventListener('click', ()=>{
+    mobFilt.classList.add('open');
+    document.body.classList.add('no-scroll');
+  });
+  btnClose.addEventListener('click', ()=>{
+    mobFilt.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  });
+  btnSearch.addEventListener('click', ()=>{
+    apply({...vals(catM,'.mobile-avail:checked',reM),showChips:true});
+    mobFilt.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  });
+
+  function renderPage(){
+    ctn.innerHTML='';
+    const start=(page-1)*perPage;
+    filtered.slice(start,start+perPage).forEach((e,i)=>{
+      const col=document.createElement('div');
+      // abaixo de 768px: uma coluna; ≥768 e <992: duas; ≥992: três
+      col.className='col-12 col-md-6 col-lg-4';
+      col.innerHTML=`
+        <div class="card equipamento-card" data-aos="zoom-in" data-aos-delay="${i*100}">
+          <div class="card-category-top">${e.category}</div>
+          <img src="${e.image}" class="card-img-top" alt="${e.name}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${e.name}</h5>
+            <a href="detalhes.html?id=${e.id}" class="btn btn-primary mt-auto">Mais detalhes</a>
+          </div>
+        </div>`;
+      ctn.appendChild(col);
+    });
+  }
+
+  function renderPagination(){
+    pg.innerHTML='';
+    const cnt=Math.ceil(filtered.length/perPage);
+    const mk=(disabled,label,fn,extraClass='')=>{
+      const li=document.createElement('li');
+      li.className=`page-item ${extraClass}` + (disabled?' disabled':'');
+      li.innerHTML=`<a class="page-link" href="#">${label}</a>`;
+      if(!disabled) li.onclick=e=>{e.preventDefault(); fn();};
+      return li;
+    };
+    pg.appendChild(mk(page===1,'«',()=>{page--; renderPage(); renderPagination()}, 'prev'));
+    for(let i=1;i<=cnt;i++){
+      pg.appendChild(mk(false,i,()=>{page=i; renderPage(); renderPagination()}, i===page?'active':''));
+    }
+    pg.appendChild(mk(page===cnt,'»',()=>{page++; renderPage(); renderPagination()}, 'next'));
+  }
+
+  function renderChips(cats,av,rents){
+    am.innerHTML='';
+    const labs=[...cats, ...(av?[av]:[]), ...rents];
+    if(!labs.length) return;
+    am.classList.remove('d-none');
+    labs.forEach(v=>{
+      const span=document.createElement('span');
+      span.className='active-filter-chip d-inline-flex align-items-center';
+      span.textContent=v;
+      const btn=document.createElement('button');
+      btn.className='btn-close  ms-2';
+      btn.onclick=()=>{ document.querySelectorAll(`input[value="${v}"]`).forEach(i=>i.checked=false); pd.hidden=pm.hidden=true; apply({cats:[],av:null,rents:[],showChips:true}); };
+      span.appendChild(btn);
+      am.appendChild(span);
+    });
+  }
+
+  apply({cats:[],av:null,rents:[],showChips:false});
+});
 </script>
+
 
 
 
