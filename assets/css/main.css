@@ -2944,17 +2944,16 @@ p {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+/* Efeito de mover para cima */
 .cp-info-item:hover {
-  transform: translateY(-6px);
-
-  border-color: var(--accent-color);
+  transform: translateY(-10px);  /* Ajustei o valor para um efeito mais visível */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .cp-info-item::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(234, 69, 149, 0.1);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -3075,10 +3074,10 @@ p {
   height: 200px;
   transition: 0s;
 }
+
 .contact-2 {
   text-align: center;
 }
-
 
 /* Responsive Design */
 @media (max-width: 991px) {
@@ -3125,6 +3124,7 @@ p {
     font-size: 1rem;
   }
 }
+
 
 
 
@@ -3242,7 +3242,7 @@ label {
   max-width: 85%;
   height: 100%;
   background-color: var(--background-color);
-  border-right: 1px solid var(--accent-color);
+  
   padding: 1rem;
   transition: left 0.3s ease-in-out;
   z-index: 1050;
@@ -3286,6 +3286,34 @@ label {
     
     border-radius: 50px;
 }
+.selected-tag {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    border: 1px solid var(--accent-color);
+    padding: 4px 8px;
+    margin: 5px;
+    border-radius: 20px;
+    
+    font-size: 10px;
+  }
+  .close-btn {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    color: var(--contrast-color);
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid var(--contrast-color);
+    border-radius: 25px;
+    margin-left: 13px;
+    height: 20px;
+    width: 20px;
+  }
+  .close-btn:hover {
+    color: var(--nav-hover-color);
+  }
+
 
 /* ============================
    ACTIVE FILTER CHIPS
@@ -3396,9 +3424,15 @@ label {
   #equipamentos-container .col-lg-4 {
     flex: 0 0 100% !important;
     max-width: 100% !important;
+    margin-top: 40px;
   }
   .sidebar {
     display: none;
   }
 }
+
+
+
+
+
 

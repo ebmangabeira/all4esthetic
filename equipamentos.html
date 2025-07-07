@@ -107,158 +107,157 @@
       </div>
     <!-- End Page Title -->
      <section id="equipamentos" data-aos="fade-up">
-    <div class="container-fluid container-xl">
-      <div class="row">
-        <!-- SIDEBAR DESKTOP -->
-        <aside class="col-lg-3 sidebar d-none d-md-block">
-          <div class="filter-section">
-            <h3 class="filter-title">Categorias</h3>
-            <ul class="list-unstyled">
-              <li class="form-check">
-                <input class="form-check-input desktop-cat" type="checkbox" value="Modelagem" id="cat-modelagem">
-                <label class="form-check-label" for="cat-modelagem">Modelagem</label>
-              </li>
-              <li class="form-check">
-                <input class="form-check-input desktop-cat" type="checkbox" value="Estética" id="cat-estetica">
-                <label class="form-check-label" for="cat-estetica">Estética</label>
-              </li>
-              <li class="form-check">
-                <input class="form-check-input desktop-cat" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento">
-                <label class="form-check-label" for="cat-rejuvenescimento">Rejuvenescimento</label>
-              </li>
-              <li class="form-check">
-                <input class="form-check-input desktop-cat" type="checkbox" value="Depilação" id="cat-depilacao">
-                <label class="form-check-label" for="cat-depilacao">Depilação</label>
-              </li>
-            </ul>
-          </div>
-          <div class="filter-section">
-            <h3 class="filter-title">Disponibilidade</h3>
-            <ul class="list-unstyled">
-              <li class="form-check">
-                <input class="form-check-input desktop-avail" type="radio" name="availability" value="Venda" id="filter-venda">
-                <label class="form-check-label" for="filter-venda">Venda</label>
-              </li>
-              <li class="form-check">
-                <input class="form-check-input desktop-avail" type="radio" name="availability" value="Aluguer" id="filter-aluguer">
-                <label class="form-check-label" for="filter-aluguer">Aluguer</label>
-              </li>
-            </ul>
-          </div>
-          <div class="filter-section" id="aluguer-periodos" hidden>
-            <h3 class="filter-title">Períodos de Aluguer</h3>
-            <ul class="list-unstyled">
-              <li class="form-check">
-                <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="diario" id="filter-diario">
-                <label class="form-check-label" for="filter-diario">Diário</label>
-              </li>
-              <li class="form-check">
-                <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="bidiario" id="filter-bidiario">
-                <label class="form-check-label" for="filter-bidiario">Bidiário</label>
-              </li>
-              <li class="form-check">
-                <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="semanal" id="filter-semanal">
-                <label class="form-check-label" for="filter-semanal">Semanal</label>
-              </li>
-              <li class="form-check">
-                <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="mensal" id="filter-mensal">
-                <label class="form-check-label" for="filter-mensal">Mensal</label>
-              </li>
-            </ul>
-          </div>
-        </aside>
-
-        <!-- SIDEBAR MOBILE -->
-        <div class="col-12 d-md-none mb-3">
-          <button id="filtro-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3">
-            <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="5" x2="17" y2="5"/>
-              <circle cx="19" cy="5" r="2" fill="currentColor"/>
-              <line x1="7" y1="12" x2="21" y2="12"/>
-              <circle cx="5" cy="12" r="2" fill="currentColor"/>
-              <line x1="3" y1="19" x2="15" y2="19"/>
-              <circle cx="17" cy="19" r="2" fill="currentColor"/>
-            </svg>
-            Filtro
-          </button>
-          <div id="mobile-filters">
-            <div class="mobile-filters-header">
-              <h3 class="filter-title m-0">Filtros</h3>
-              <button id="close-filtro" class="btn-close" aria-label="Fechar"></button>
-            </div>
-            <div class="mobile-filters-content">
-              <div class="filter-section">
-                <h4 class="filter-title">Categorias</h4>
-                <ul class="list-unstyled">
-                  <li class="form-check">
-                    <input class="form-check-input mobile-cat" type="checkbox" value="Modelagem" id="cat-modelagem-mob">
-                    <label class="form-check-label" for="cat-modelagem-mob">Modelagem</label>
-                  </li>
-                  <li class="form-check">
-                    <input class="form-check-input mobile-cat" type="checkbox" value="Estética" id="cat-estetica-mob">
-                    <label class="form-check-label" for="cat-estetica-mob">Estética</label>
-                  </li>
-                  <li class="form-check">
-                    <input class="form-check-input mobile-cat" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento-mob">
-                    <label class="form-check-label" for="cat-rejuvenescimento-mob">Rejuvenescimento</label>
-                  </li>
-                  <li class="form-check">
-                    <input class="form-check-input mobile-cat" type="checkbox" value="Depilação" id="cat-depilacao-mob">
-                    <label class="form-check-label" for="cat-depilacao-mob">Depilação</label>
-                  </li>
-                </ul>
-              </div>
-              <div class="filter-section">
-                <h4 class="filter-title">Disponibilidade</h4>
-                <ul class="list-unstyled">
-                  <li class="form-check">
-                    <input class="form-check-input mobile-avail" type="radio" name="availability-mob" value="Venda" id="filter-venda-mob">
-                    <label class="form-check-label" for="filter-venda-mob">Venda</label>
-                  </li>
-                  <li class="form-check">
-                    <input class="form-check-input mobile-avail" type="radio" name="availability-mob" value="Aluguer" id="filter-aluguer-mob">
-                    <label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
-                  </li>
-                </ul>
-              </div>
-              <div class="filter-section" id="aluguer-periodos-mob" hidden>
-                <h4 class="filter-title">Períodos de Aluguer</h4>
-                <ul class="list-unstyled">
-                  <li class="form-check">
-                    <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="diario" id="filter-diario-mob">
-                    <label class="form-check-label" for="filter-diario-mob">Diário</label>
-                  </li>
-                  <li class="form-check">
-                    <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="bidiario" id="filter-bidiario-mob">
-                    <label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
-                  </li>
-                  <li class="form-check">
-                    <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="semanal" id="filter-semanal-mob">
-                    <label class="form-check-label" for="filter-semanal-mob">Semanal</label>
-                  </li>
-                  <li class="form-check">
-                    <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="mensal" id="filter-mensal-mob">
-                    <label class="form-check-label" for="filter-mensal-mob">Mensal</label>
-                  </li>
-                </ul>
-              </div>
-              <button id="pesquisar-btn" class="btn btn-primary w-100">Aplicar</button>
-            </div>
-          </div>
+  <div class="container-fluid container-xl">
+    <div class="row">
+      <!-- SIDEBAR DESKTOP -->
+      <aside class="col-lg-3 sidebar d-none d-md-block">
+        <div class="filter-section">
+          <h3 class="filter-title">Categorias</h3>
+          <ul class="list-unstyled">
+            <li class="form-check">
+              <input class="form-check-input desktop-cat" type="checkbox" value="Modelagem" id="cat-modelagem">
+              <label class="form-check-label" for="cat-modelagem">Modelagem</label>
+            </li>
+            <li class="form-check">
+              <input class="form-check-input desktop-cat" type="checkbox" value="Estética" id="cat-estetica">
+              <label class="form-check-label" for="cat-estetica">Estética</label>
+            </li>
+            <li class="form-check">
+              <input class="form-check-input desktop-cat" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento">
+              <label class="form-check-label" for="cat-rejuvenescimento">Rejuvenescimento</label>
+            </li>
+            <li class="form-check">
+              <input class="form-check-input desktop-cat" type="checkbox" value="Depilação" id="cat-depilacao">
+              <label class="form-check-label" for="cat-depilacao">Depilação</label>
+            </li>
+          </ul>
         </div>
+        <div class="filter-section">
+          <h3 class="filter-title">Disponibilidade</h3>
+          <ul class="list-unstyled">
+            <li class="form-check">
+              <input class="form-check-input desktop-avail" type="radio" name="availability" value="Venda" id="filter-venda">
+              <label class="form-check-label" for="filter-venda">Venda</label>
+            </li>
+            <li class="form-check">
+              <input class="form-check-input desktop-avail" type="radio" name="availability" value="Aluguer" id="filter-aluguer">
+              <label class="form-check-label" for="filter-aluguer">Aluguer</label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter-section" id="aluguer-periodos" hidden>
+          <h3 class="filter-title">Períodos de Aluguer</h3>
+          <ul class="list-unstyled">
+            <li class="form-check">
+              <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="diario" id="filter-diario">
+              <label class="form-check-label" for="filter-diario">Diário</label>
+            </li>
+            <li class="form-check">
+              <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="bidiario" id="filter-bidiario">
+              <label class="form-check-label" for="filter-bidiario">Bidiário</label>
+            </li>
+            <li class="form-check">
+              <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="semanal" id="filter-semanal">
+              <label class="form-check-label" for="filter-semanal">Semanal</label>
+            </li>
+            <li class="form-check">
+              <input class="form-check-input desktop-rent" type="radio" name="rental-period" value="mensal" id="filter-mensal">
+              <label class="form-check-label" for="filter-mensal">Mensal</label>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-        <!-- CONTEÚDO -->
-        <div class="col-lg-9">
-          <div id="active-filters-mobile" class="active-filters-mobile d-none mb-3"></div>
-          <div id="equipamentos-container" class="row g-4"></div>
-          <nav aria-label="Page navigation" class="mt-4">
-            <ul id="pagination" class="pagination justify-content-center custom-pagination"></ul>
-          </nav>
+      <!-- SIDEBAR MOBILE -->
+      <div class="col-12 d-md-none mb-3">
+        <button id="filtro-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3">
+          <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="5" x2="17" y2="5"/>
+            <circle cx="19" cy="5" r="2" fill="currentColor"/>
+            <line x1="7" y1="12" x2="21" y2="12"/>
+            <circle cx="5" cy="12" r="2" fill="currentColor"/>
+            <line x1="3" y1="19" x2="15" y2="19"/>
+            <circle cx="17" cy="19" r="2" fill="currentColor"/>
+          </svg>
+          Filtro
+        </button>
+        <div id="mobile-filters">
+          <div class="mobile-filters-header">
+            <h3 class="filter-title m-0">Filtros</h3>
+            <button id="close-filtro" class="btn-close" aria-label="Fechar"></button>
+          </div>
+          <div class="mobile-filters-content">
+            <div class="filter-section">
+              <h4 class="filter-title">Categorias</h4>
+              <ul class="list-unstyled">
+                <li class="form-check">
+                  <input class="form-check-input mobile-cat" type="checkbox" value="Modelagem" id="cat-modelagem-mob">
+                  <label class="form-check-label" for="cat-modelagem-mob">Modelagem</label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input mobile-cat" type="checkbox" value="Estética" id="cat-estetica-mob">
+                  <label class="form-check-label" for="cat-estetica-mob">Estética</label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input mobile-cat" type="checkbox" value="Rejuvenescimento" id="cat-rejuvenescimento-mob">
+                  <label class="form-check-label" for="cat-rejuvenescimento-mob">Rejuvenescimento</label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input mobile-cat" type="checkbox" value="Depilação" id="cat-depilacao-mob">
+                  <label class="form-check-label" for="cat-depilacao-mob">Depilação</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-section">
+              <h4 class="filter-title">Disponibilidade</h4>
+              <ul class="list-unstyled">
+                <li class="form-check">
+                  <input class="form-check-input mobile-avail" type="radio" name="availability-mob" value="Venda" id="filter-venda-mob">
+                  <label class="form-check-label" for="filter-venda-mob">Venda</label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input mobile-avail" type="radio" name="availability-mob" value="Aluguer" id="filter-aluguer-mob">
+                  <label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-section" id="aluguer-periodos-mob" hidden>
+              <h4 class="filter-title">Períodos de Aluguer</h4>
+              <ul class="list-unstyled">
+                <li class="form-check">
+                  <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="diario" id="filter-diario-mob">
+                  <label class="form-check-label" for="filter-diario-mob">Diário</label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="bidiario" id="filter-bidiario-mob">
+                  <label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="semanal" id="filter-semanal-mob">
+                  <label class="form-check-label" for="filter-semanal-mob">Semanal</label>
+                </li>
+                <li class="form-check">
+                  <input class="form-check-input mobile-rent" type="radio" name="rental-period-mob" value="mensal" id="filter-mensal-mob">
+                  <label class="form-check-label" for="filter-mensal-mob">Mensal</label>
+                </li>
+              </ul>
+            </div>
+            <button id="pesquisar-btn" class="btn btn-primary w-100">Aplicar</button>
+          </div>
         </div>
       </div>
+
+      <!-- CONTEÚDO -->
+      <div class="col-lg-9">
+        <div id="selected-tags-container" class="d-none"></div>
+        <div id="equipamentos-container" class="row g-4"></div>
+        <nav aria-label="Page navigation" class="mt-4">
+          <ul id="pagination" class="pagination justify-content-center custom-pagination"></ul>
+        </nav>
+      </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <!-- Bootstrap JS (Bundle com Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -267,7 +266,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const allEquip = await (await fetch('assets/data/equipamentos.json')).json();
   const ctn = document.getElementById('equipamentos-container');
   const pg  = document.getElementById('pagination');
-  const am  = document.getElementById('active-filters-mobile');
   const btnFiltro = document.getElementById('filtro-btn');
   const btnClose  = document.getElementById('close-filtro');
   const btnSearch = document.getElementById('pesquisar-btn');
@@ -277,71 +275,81 @@ document.addEventListener('DOMContentLoaded', async () => {
   const reD  = [...document.querySelectorAll('.desktop-rent')];
   const pd   = document.getElementById('aluguer-periodos');
   const catM = [...document.querySelectorAll('.mobile-cat')];
-  const avM  = [...document.querySelectorAll('.mobile-avail')];
+  const avM  = [...(document.querySelectorAll('.mobile-avail'))];
   const reM  = [...document.querySelectorAll('.mobile-rent')];
   const pm   = document.getElementById('aluguer-periodos-mob');
 
-  let page=1, perPage=6, filtered=[...allEquip];
+  let page = 1, perPage = 6, filtered = [...allEquip];
 
-  function toggle(div, arrA, arrR){
-    arrA.forEach(i=>i.addEventListener('change', ()=>{
-      div.hidden = i.value==='Aluguer'?false:true;
-      if(i.value!=='Aluguer') arrR.forEach(r=>r.checked=false);
-    }));
+  // Função para alternar a visibilidade das seções de filtro (individualmente)
+  function toggle(div, arrA, arrR) {
+    arrA.forEach(i => {
+      i.addEventListener('change', () => {
+        div.hidden = i.value === 'Aluguer' ? false : true;
+        if (i.value !== 'Aluguer') arrR.forEach(r => r.checked = false);
+      });
+    });
   }
-  toggle(pd,avD,reD);
-  toggle(pm,avM,reM);
 
-  function apply({cats,av,rents,showChips}){
-    page=1;
-    filtered = allEquip.filter(e=>{
-      if(cats.length && !cats.includes(e.category)) return false;
-      if(av==='Venda') return e.sale;
-      if(av==='Aluguer'){
-        return rents.length
-          ? rents.some(r=>e.rental[r])
-          : Object.values(e.rental).some(v=>v);
+  toggle(pd, avD, reD);
+  toggle(pm, avM, reM);
+
+  // Função de aplicação dos filtros
+  function apply({ cats, av, rents }) {
+    page = 1;
+    filtered = allEquip.filter(e => {
+      if (cats.length && !cats.includes(e.category)) return false;
+      if (av === 'Venda') return e.sale;
+      if (av === 'Aluguer') {
+        return rents.length ? rents.some(r => e.rental[r]) : Object.values(e.rental).some(v => v);
       }
       return true;
     });
-    renderPage(); renderPagination();
-    if(showChips) renderChips(cats,av,rents);
-    else am.classList.add('d-none');
+    renderPage();
+    renderPagination();
+    updateTags();
   }
 
-  function vals(selC,selA,selR){
-    const cats = selC.filter(i=>i.checked).map(i=>i.value);
-    const av   = document.querySelector(selA)?.value;
-    const rents= selR.filter(i=>i.checked).map(i=>i.value.toLowerCase());
-    return {cats,av,rents};
+  // Função para pegar os valores dos filtros
+  function vals(selC, selA, selR) {
+    const cats = selC.filter(i => i.checked).map(i => i.value);
+    const av = document.querySelector(selA)?.value;
+    const rents = selR.filter(i => i.checked).map(i => i.value.toLowerCase());
+    return { cats, av, rents };
   }
 
-  catD.concat(avD,reD).forEach(i=>i.addEventListener('change',()=>apply({...vals(catD,'.desktop-avail:checked',reD),showChips:false})));
-  catM.concat(avM,reM).forEach(i=>i.addEventListener('change',()=>apply({...vals(catM,'.mobile-avail:checked',reM),showChips:true})));
+  // Adicionando eventos para os filtros
+  catD.concat(avD, reD).forEach(i => i.addEventListener('change', () => apply({ ...vals(catD, '.desktop-avail:checked', reD) })));
+  catM.concat(avM, reM).forEach(i => i.addEventListener('change', () => apply({ ...vals(catM, '.mobile-avail:checked', reM) })));
 
-  btnFiltro.addEventListener('click', ()=>{
+  // Função para abrir o filtro no mobile
+  btnFiltro.addEventListener('click', () => {
     mobFilt.classList.add('open');
     document.body.classList.add('no-scroll');
   });
-  btnClose.addEventListener('click', ()=>{
-    mobFilt.classList.remove('open');
-    document.body.classList.remove('no-scroll');
-  });
-  btnSearch.addEventListener('click', ()=>{
-    apply({...vals(catM,'.mobile-avail:checked',reM),showChips:true});
+
+  // Fechar o filtro no mobile
+  btnClose.addEventListener('click', () => {
     mobFilt.classList.remove('open');
     document.body.classList.remove('no-scroll');
   });
 
-  function renderPage(){
-    ctn.innerHTML='';
-    const start=(page-1)*perPage;
-    filtered.slice(start,start+perPage).forEach((e,i)=>{
-      const col=document.createElement('div');
-      // abaixo de 768px: uma coluna; ≥768 e <992: duas; ≥992: três
-      col.className='col-12 col-md-6 col-lg-4';
-      col.innerHTML=`
-        <div class="card equipamento-card" data-aos="zoom-in" data-aos-delay="${i*100}">
+  // Aplicar filtro no mobile
+  btnSearch.addEventListener('click', () => {
+    apply({ ...vals(catM, '.mobile-avail:checked', reM) });
+    mobFilt.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  });
+
+  // Função para renderizar a página de produtos
+  function renderPage() {
+    ctn.innerHTML = '';
+    const start = (page - 1) * perPage;
+    filtered.slice(start, start + perPage).forEach((e, i) => {
+      const col = document.createElement('div');
+      col.className = 'col-12 col-md-6 col-lg-4';
+      col.innerHTML = `
+        <div class="card equipamento-card" data-aos="zoom-in" data-aos-delay="${i * 100}">
           <div class="card-category-top">${e.category}</div>
           <img src="${e.image}" class="card-img-top" alt="${e.name}">
           <div class="card-body d-flex flex-column">
@@ -353,43 +361,72 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  function renderPagination(){
-    pg.innerHTML='';
-    const cnt=Math.ceil(filtered.length/perPage);
-    const mk=(disabled,label,fn,extraClass='')=>{
-      const li=document.createElement('li');
-      li.className=`page-item ${extraClass}` + (disabled?' disabled':'');
-      li.innerHTML=`<a class="page-link" href="#">${label}</a>`;
-      if(!disabled) li.onclick=e=>{e.preventDefault(); fn();};
+  // Função para exibir tags selecionadas no topo
+  function updateTags() {
+    const tagsContainer = document.getElementById('selected-tags-container');
+    tagsContainer.innerHTML = '';
+    const selectedCats = document.querySelectorAll('.mobile-cat:checked');
+    const selectedAvail = document.querySelector('.mobile-avail:checked');
+
+    if (selectedCats.length > 0 || selectedAvail) {
+      tagsContainer.classList.remove('d-none');
+    } else {
+      tagsContainer.classList.add('d-none');
+    }
+
+    selectedCats.forEach(cat => {
+      const tag = document.createElement('span');
+      tag.className = 'selected-tag';
+      tag.innerText = cat.value;
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'close-btn';
+      closeBtn.innerHTML = 'X';
+      closeBtn.onclick = () => {
+        cat.checked = false;
+        apply({ cats: [...document.querySelectorAll('.mobile-cat:checked')].map(c => c.value), av: selectedAvail ? selectedAvail.value : null, rents: [] });
+      };
+      tag.appendChild(closeBtn);
+      tagsContainer.appendChild(tag);
+    });
+
+    if (selectedAvail) {
+      const tag = document.createElement('span');
+      tag.className = 'selected-tag';
+      tag.innerText = selectedAvail.value;
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'close-btn';
+      closeBtn.innerHTML = 'X';
+      closeBtn.onclick = () => {
+        selectedAvail.checked = false;
+        apply({ cats: [...document.querySelectorAll('.mobile-cat:checked')].map(c => c.value), av: null, rents: [] });
+      };
+      tag.appendChild(closeBtn);
+      tagsContainer.appendChild(tag);
+    }
+  }
+
+  // Função para renderizar a paginação
+  function renderPagination() {
+    pg.innerHTML = '';
+    const cnt = Math.ceil(filtered.length / perPage);
+    const mk = (disabled, label, fn, extraClass = '') => {
+      const li = document.createElement('li');
+      li.className = `page-item ${extraClass}` + (disabled ? ' disabled' : '');
+      li.innerHTML = `<a class="page-link" href="#">${label}</a>`;
+      if (!disabled) li.onclick = e => { e.preventDefault(); fn(); };
       return li;
     };
-    pg.appendChild(mk(page===1,'«',()=>{page--; renderPage(); renderPagination()}, 'prev'));
-    for(let i=1;i<=cnt;i++){
-      pg.appendChild(mk(false,i,()=>{page=i; renderPage(); renderPagination()}, i===page?'active':''));
+    pg.appendChild(mk(page === 1, '«', () => { page--; renderPage(); renderPagination(); }, 'prev'));
+    for (let i = 1; i <= cnt; i++) {
+      pg.appendChild(mk(false, i, () => { page = i; renderPage(); renderPagination(); }, i === page ? 'active' : ''));
     }
-    pg.appendChild(mk(page===cnt,'»',()=>{page++; renderPage(); renderPagination()}, 'next'));
+    pg.appendChild(mk(page === cnt, '»', () => { page++; renderPage(); renderPagination(); }, 'next'));
   }
 
-  function renderChips(cats,av,rents){
-    am.innerHTML='';
-    const labs=[...cats, ...(av?[av]:[]), ...rents];
-    if(!labs.length) return;
-    am.classList.remove('d-none');
-    labs.forEach(v=>{
-      const span=document.createElement('span');
-      span.className='active-filter-chip d-inline-flex align-items-center';
-      span.textContent=v;
-      const btn=document.createElement('button');
-      btn.className='btn-close  ms-2';
-      btn.onclick=()=>{ document.querySelectorAll(`input[value="${v}"]`).forEach(i=>i.checked=false); pd.hidden=pm.hidden=true; apply({cats:[],av:null,rents:[],showChips:true}); };
-      span.appendChild(btn);
-      am.appendChild(span);
-    });
-  }
-
-  apply({cats:[],av:null,rents:[],showChips:false});
+  apply({ cats: [], av: null, rents: [] });
 });
 </script>
+
 
 
 
