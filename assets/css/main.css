@@ -1739,6 +1739,9 @@ section,
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
 }
+.row {
+    justify-content: center;
+}
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -2587,7 +2590,7 @@ section,
   margin: 20px 0px 12px 0px;
 }
 p {
-  color: var(--heading-color);
+  color: var(--default-color);
   margin-top: 1rem;
   text-align: left;
   font-size: var(--font-size-paragraph-desktop);
@@ -2744,6 +2747,11 @@ p {
 
 
 
+
+
+/* ============================= */
+/*      Impressão                */
+/* ============================= */
 .pd-btn-outline-pdf {
   background-color: var(--contrast-color);
   color: var(--accent-color);
@@ -2755,10 +2763,6 @@ p {
   background-color: var(--accent-color);
   color: var(--contrast-color);
 }
-
-/* ============================= */
-/*      Impressão                */
-/* ============================= */
 .only-print {
   display: none;
   text-align: center;
@@ -3166,7 +3170,7 @@ p {
 
 .equipamento-card img {
     width: 78%;
-    height: 398px;
+    height: 220px;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     padding: 46px 0px 0px 0px;
