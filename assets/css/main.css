@@ -2590,7 +2590,7 @@ section,
   margin: 20px 0px 12px 0px;
 }
 p {
-  color: var(--default-color);
+  color: var(--heading-color);
   margin-top: 1rem;
   text-align: left;
   font-size: var(--font-size-paragraph-desktop);
