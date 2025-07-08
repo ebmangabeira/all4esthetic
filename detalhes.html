@@ -29,6 +29,8 @@
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
   <body class="index-page">
+    <!-- logo, visível apenas no PDF -->
+  
     <header class="header position-fixed top-0 w-100" id="header">
       <!-- Cabeçalho Principal -->
       <div class="main-header">
@@ -90,9 +92,12 @@
         </form>
     </div>
 </div>
+  
 
 </header>
 
+  <!-- informações de contato, visíveis apenas no PDF -->
+  
     <main class="pd-main">
       <div class="pd-page-title pd-light-bg">
         <div class="container-fluid container-xl pd-breadcrumbs pd-container">
@@ -108,225 +113,218 @@
         </div>
       </div>
 
-      <section id="pd-product-section" class="pd-details-section pd-container section">
-  <div class="container py-5">
-    <div class="row">
-      <div class="grid-product">
-        <!-- Coluna 1: imagem + carrossel -->
-        <div class="image-column">
-          <div class="pd-img-container">
-            <span id="pd-category-text" class="pd-category-label"></span>
-            <img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal">
-          </div>
-          <div class="thumbs-wrapper">
-            <button class="thumb-btn prev" aria-label="Anterior">&lt;</button>
-            <div class="thumbs-viewport">
-              <ul class="thumbs-track"></ul>
-            </div>
-            <button class="thumb-btn next" aria-label="Próximo">&gt;</button>
-          </div>
-        </div>
+      
 
-        <!-- Coluna 2: título + tabs + disponibilidade e ações -->
-        <div class="info-column">
-          <h2 id="pd-title-text" class="pd-product-title"></h2>
-          <div class="tab-buttons">
-            <button id="btn-funcao" class="pd-btn-funcao active">Função</button>
-            <button id="btn-tecnica" class="pd-btn-tecnica">Ficha Técnica</button>
-          </div>
-          <div id="tab-content">
-            <div id="content-funcao" class="tab-panel active">
-              <div id="pd-functions-list"></div>
-            </div>
-            <div id="content-tecnica" class="tab-panel">
-              <div class="pd-box">
-                <h5>Dados Técnicos</h5>
-                <table id="pd-tech-table" class="table"></table>
-              </div>
-              <div class="pd-box">
-                <h5>Logística</h5>
-                <table id="pd-logistics-table" class="table"></table>
-              </div>
-              <div class="pd-box">
-                <h5>Aplicação</h5>
-                <p id="pd-application-text"></p>
-              </div>
-            </div>
-          </div>
-          <!-- Disponibilidade + botões sempre visíveis abaixo das tabs -->
-          <div class="pd-box pd-availability-box mt-4">
-            <h5>Disponibilidade</h5>
-            <ul id="pd-availability-list" class="list-unstyled"></ul>
-          </div>
-          <div class="pd-actions mb-4">
-            <button id="btn-pdf" class="pd-btn pd-btn-outline-pdf">Gerar PDF</button>
-            <button id="btn-quote" class="pd-btn pd-btn-outline">Solicitar Orçamento</button>
-          </div>
-        </div>
-
-        <!-- Coluna 3: (vazia, removida disponibilidade) -->
+  <!-- logo, visível apenas no PDF -->
+      <div id="pdf-logo-container">
+        <img src="assets/img/logo-header.png" alt="Logo" id="pdf-logo">
       </div>
-    </div>
+
+      <!-- seção de produto -->
+      <section id="pd-product-section" class="pd-details-section pd-container section">
+        <div class="container py-5">
+          <div class="row">
+            <div class="grid-product">
+              <!-- Coluna 1: imagem + carrossel -->
+              <div class="image-column">
+                <div class="pd-img-container">
+                  <span id="pd-category-text" class="pd-category-label"></span>
+                  <img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal">
+                </div>
+                <div class="thumbs-wrapper">
+                  <button class="thumb-btn prev" aria-label="Anterior">&lt;</button>
+                  <div class="thumbs-viewport"><ul class="thumbs-track"></ul></div>
+                  <button class="thumb-btn next" aria-label="Próximo">&gt;</button>
+                </div>
+              </div>
+
+              <!-- Coluna 2 -->
+              <div class="info-column">
+                <h2 id="pd-title-text" class="pd-product-title"></h2>
+                <div class="tab-buttons">
+                  <button id="btn-funcao" class="pd-btn-funcao active">Função</button>
+                  <button id="btn-tecnica" class="pd-btn-tecnica">Ficha Técnica</button>
+                </div>
+                <div id="tab-content">
+                  <div id="content-funcao" class="tab-panel active"><div id="pd-functions-list"></div></div>
+                  <div id="content-tecnica" class="tab-panel">
+                    <div class="pd-box"><h5>Dados Técnicos</h5><table id="pd-tech-table" class="table"></table></div>
+                    <div class="pd-box"><h5>Logística</h5><table id="pd-logistics-table" class="table"></table></div>
+                    <div class="pd-box"><h5>Aplicação</h5><p id="pd-application-text"></p></div>
+                  </div>
+                </div>
+                <!-- ... dentro de <main> e antes de .pd-actions ... -->
+
+  <div class="pd-box pd-availability-box mt-4">
+    <h5>Disponibilidade</h5>
+    <ul id="pd-availability-list" class="list-unstyled"></ul>
   </div>
-</section>
-<script>
-  document.addEventListener('DOMContentLoaded', async () => {
-    const params = new URLSearchParams(location.search);
-    const eqId = params.get('id');
-    const mainImg = document.getElementById('pd-main-img');
-    const availUL = document.getElementById('pd-availability-list');
 
-    try {
-      const res = await fetch('assets/data/equipamentos.json');
-      const data = await res.json();
-      const eq = data.find(item => item.id === eqId);
-      if (!eq) {
-        document.getElementById('pd-title-text').textContent = "Equipamento não encontrado";
-        return;
-      }
+  <!-- informações de contato, visíveis apenas no PDF, com classe pd-box -->
+                  <div id="pdf-contact-info" class="pd-box">
+                  <h5>All4Esthetic — Venda e Aluguer de Equipamentos</h5>
+                  <p><strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia</p>
+                  <p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
+                  <p><strong>E-mail:</strong> geral@all4esthetic.com</p>
+                  <p><strong>Site:</strong> <a>www.all4esthetic.com</a></p>
+                </div>
 
-      // Preencher dados básicos
-      mainImg.src = eq.image;
-      document.getElementById('pd-category-text').textContent = eq.category;
-      document.getElementById('pd-title-text').textContent = eq.name;
+                  <div class="pd-actions mb-4">
+                    <button id="btn-pdf" class="pd-btn pd-btn-outline-pdf">Gerar PDF</button>
+                    <button id="btn-quote" class="pd-btn pd-btn-outline">Solicitar Orçamento</button>
+                  </div>
 
-      // Funções
-      const funcList = document.getElementById('pd-functions-list');
-      funcList.innerHTML = '';
-      eq.functions.forEach((f, idx) => {
-        const itemDiv = document.createElement('div');
-        itemDiv.classList.add('pd-function-item');
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        const title = document.createElement('h6');
-        title.id = `pd-function-name-${idx+1}`;
-        title.textContent = f.nome;
-        itemDiv.appendChild(title);
+    <script>
+      document.addEventListener('DOMContentLoaded', async () => {
+        const params = new URLSearchParams(location.search);
+        const eqId = params.get('id');
+        const mainImg = document.getElementById('pd-main-img');
+        const availUL = document.getElementById('pd-availability-list');
+        const btnPdf = document.getElementById('btn-pdf');
+        const btnFunc = document.getElementById('btn-funcao');
+        const btnTech = document.getElementById('btn-tecnica');
+        const panelF = document.getElementById('content-funcao');
+        const panelT = document.getElementById('content-tecnica');
 
-        const desc = document.createElement('p');
-        desc.id = `pd-function-desc-${idx+1}`;
-        desc.textContent = f.descricao;
-        itemDiv.appendChild(desc);
+        window.addEventListener('beforeprint', () => {
+          panelF.classList.add('active');
+          panelT.classList.add('active');
+        });
 
-        funcList.appendChild(itemDiv);
-      });
+        btnPdf.addEventListener('click', () => window.print());
 
-      // Aplicação
-      document.getElementById('pd-application-text').textContent = eq.application;
+        try {
+          const res = await fetch('assets/data/equipamentos.json');
+          const data = await res.json();
+          const eq = data.find(item => item.id === eqId);
+          if (!eq) {
+            document.getElementById('pd-title-text').textContent = "Equipamento não encontrado";
+            return;
+          }
 
-      // Tabs
-      const btnFunc = document.getElementById('btn-funcao');
-      const btnTech = document.getElementById('btn-tecnica');
-      const panelFunc = document.getElementById('content-funcao');
-      const panelTech = document.getElementById('content-tecnica');
+          mainImg.src = eq.image;
+          document.getElementById('pd-category-text').textContent = eq.category;
+          document.getElementById('pd-title-text').textContent = eq.name;
 
-      btnFunc.addEventListener('click', () => {
-        btnFunc.classList.add('active');
-        btnTech.classList.remove('active');
-        panelFunc.classList.add('active');
-        panelTech.classList.remove('active');
-      });
-      btnTech.addEventListener('click', () => {
-        btnTech.classList.add('active');
-        btnFunc.classList.remove('active');
-        panelTech.classList.add('active');
-        panelFunc.classList.remove('active');
-      });
-
-      // Tabela Técnica e Logística
-      const techTable = document.getElementById('pd-tech-table');
-      const logTable = document.getElementById('pd-logistics-table');
-      techTable.innerHTML = '';
-      logTable.innerHTML = '';
-      Object.entries(eq.technical_data).forEach(([key,val]) => {
-        if (typeof val === 'object') {
-          Object.entries(val).forEach(([subk,subv]) => {
-            const row = document.createElement('tr');
-            row.innerHTML = `<th>${subk.replace(/_/g,' ')}</th><td>${subv}</td>`;
-            techTable.appendChild(row);
+          const funcList = document.getElementById('pd-functions-list');
+          funcList.innerHTML = '';
+          eq.functions.forEach(f => {
+            const div = document.createElement('div');
+            div.classList.add('pd-function-item');
+            div.innerHTML = `<h6>${f.nome}</h6><p>${f.descricao}</p>`;
+            funcList.appendChild(div);
           });
-        } else {
-          const row = document.createElement('tr');
-          row.innerHTML = `<th>${key.replace(/_/g,' ')}</th><td>${val}</td>`;
-          techTable.appendChild(row);
+
+          document.getElementById('pd-application-text').textContent = eq.application;
+
+          btnFunc.addEventListener('click', () => {
+            btnFunc.classList.add('active');
+            btnTech.classList.remove('active');
+            panelF.classList.add('active');
+            panelT.classList.remove('active');
+          });
+          btnTech.addEventListener('click', () => {
+            btnTech.classList.add('active');
+            btnFunc.classList.remove('active');
+            panelT.classList.add('active');
+            panelF.classList.remove('active');
+          });
+
+          const techTable = document.getElementById('pd-tech-table');
+          const logTable = document.getElementById('pd-logistics-table');
+          techTable.innerHTML = '';
+          logTable.innerHTML = '';
+          Object.entries(eq.technical_data).forEach(([k,v]) => {
+            if (typeof v === 'object') {
+              Object.entries(v).forEach(([sk,sv]) => {
+                techTable.insertAdjacentHTML('beforeend',
+                  `<tr><th>${sk.replace(/_/g,' ')}</th><td>${sv}</td></tr>`
+                );
+              });
+            } else {
+              techTable.insertAdjacentHTML('beforeend',
+                `<tr><th>${k.replace(/_/g,' ')}</th><td>${v}</td></tr>`
+              );
+            }
+          });
+          Object.entries(eq.logistics).forEach(([k,v]) => {
+            logTable.insertAdjacentHTML('beforeend',
+              `<tr><th>${k.replace(/_/g,' ')}</th><td>${v}</td></tr>`
+            );
+          });
+
+          availUL.innerHTML = '';
+          if (eq.sale) {
+            availUL.insertAdjacentHTML('beforeend',
+              `<li><i class="bi bi-check-circle-fill me-2"></i>Para venda</li>`
+            );
+          }
+          Object.entries(eq.rental)
+            .filter(([,ok]) => ok)
+            .forEach(([periodo]) => {
+              const labels = { diario:'Diário', bidiario:'Bidiário', semanal:'Semanal', mensal:'Mensal' };
+              const text = labels[periodo] || periodo;
+              availUL.insertAdjacentHTML('beforeend',
+                `<li><i class="bi bi-check-circle-fill me-2"></i>Para aluguer ${text}</li>`
+              );
+            });
+
+          document.getElementById('btn-quote')
+            .addEventListener('click', () => location.href = 'contacto.html');
+
+          const track = document.querySelector('.thumbs-track');
+          eq.images.forEach((src, idx) => {
+            const li = document.createElement('li');
+            li.className = 'thumb-slide' + (idx === 0 ? ' active' : '');
+            li.innerHTML = `<img src="${src}" alt="Miniatura ${idx+1}">`;
+            li.addEventListener('click', () => {
+              mainImg.style.opacity = 0;
+              mainImg.addEventListener('transitionend', function h(e) {
+                if (e.propertyName !== 'opacity') return;
+                mainImg.removeEventListener('transitionend', h);
+                mainImg.src = src;
+                requestAnimationFrame(() => mainImg.style.opacity = 1);
+              });
+              document.querySelectorAll('.thumb-slide').forEach(s => s.classList.remove('active'));
+              li.classList.add('active');
+            });
+            track.appendChild(li);
+          });
+          let currentIndex = 0;
+          const prevBtn = document.querySelector('.thumb-btn.prev');
+          const nextBtn = document.querySelector('.thumb-btn.next');
+          function updateCarousel() {
+            const visible = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
+            const slide = document.querySelector('.thumb-slide');
+            if (!slide) return;
+            const style = getComputedStyle(slide);
+            const w = slide.offsetWidth + parseFloat(style.marginRight);
+            track.style.transform = `translateX(-${currentIndex * w}px)`;
+            prevBtn.disabled = currentIndex <= 0;
+            nextBtn.disabled = currentIndex >= eq.images.length - visible;
+          }
+          prevBtn.addEventListener('click', () => { if (currentIndex > 0) currentIndex--; updateCarousel(); });
+          nextBtn.addEventListener('click', () => {
+            const vis = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
+            if (currentIndex < eq.images.length - vis) currentIndex++;
+            updateCarousel();
+          });
+          window.addEventListener('resize', updateCarousel);
+          updateCarousel();
+
+        } catch(err) {
+          console.error('Erro ao carregar dados:', err);
         }
       });
-      Object.entries(eq.logistics).forEach(([key,val]) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `<th>${key.replace(/_/g,' ')}</th><td>${val}</td>`;
-        logTable.appendChild(row);
-      });
-
-      // Disponibilidade
-      availUL.innerHTML = '';
-      if(eq.sale) {
-        const li = document.createElement('li');
-        li.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i>Para venda`;
-        availUL.appendChild(li);
-      }
-      Object.entries(eq.rental).filter(([,ok])=>ok).forEach(([periodo]) => {
-        const labels = {diario:'Diário',bidiario:'Bidiário',semanal:'Semanal',mensal:'Mensal'};
-        const li = document.createElement('li');
-        li.innerHTML = `<i class="bi bi-check-circle-fill me-2"></i>Para aluguer ${labels[periodo]||periodo}`;
-        availUL.appendChild(li);
-      });
-
-      // Ações
-      document.getElementById('btn-pdf').addEventListener('click',()=>window.print());
-      document.getElementById('btn-quote').addEventListener('click',()=>location.href='contacto.html');
-
-      // Carrossel
-      const track = document.querySelector('.thumbs-track');
-      eq.images.forEach((src, idx) => {
-        const li = document.createElement('li');
-        li.className = 'thumb-slide' + (idx === 0 ? ' active' : '');
-        li.innerHTML = `<img src="${src}" alt="Miniatura ${idx+1}">`;
-        li.addEventListener('click', () => {
-          mainImg.style.opacity = 0;
-          mainImg.addEventListener('transitionend', function h(e) {
-            if (e.propertyName !== 'opacity') return;
-            mainImg.removeEventListener('transitionend', h);
-            mainImg.src = src;
-            requestAnimationFrame(() => mainImg.style.opacity = 1);
-          });
-          document.querySelectorAll('.thumb-slide').forEach(slide => slide.classList.remove('active'));
-          li.classList.add('active');
-        });
-        track.appendChild(li);
-      });
-
-      // Navegação do carrossel
-      let currentIndex = 0;
-      const prevBtn = document.querySelector('.thumb-btn.prev');
-      const nextBtn = document.querySelector('.thumb-btn.next');
-
-      function updateCarousel() {
-        const visible = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
-        const slide = document.querySelector('.thumb-slide');
-        if (!slide) return;
-        const style = getComputedStyle(slide);
-        const w = slide.offsetWidth + parseFloat(style.marginRight);
-        track.style.transform = `translateX(-${currentIndex * w}px)`;
-        prevBtn.disabled = currentIndex <= 0;
-        nextBtn.disabled = currentIndex >= eq.images.length - visible;
-      }
-
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) currentIndex--;
-        updateCarousel();
-      });
-      nextBtn.addEventListener('click', () => {
-        const visible = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
-        if (currentIndex < eq.images.length - visible) currentIndex++;
-        updateCarousel();
-      });
-      window.addEventListener('resize', updateCarousel);
-      updateCarousel();
-    } catch(err) {
-      console.error('Erro ao carregar dados:',err);
-    }
-  });
-</script>
-
+    </script>
+  
 
     <footer class="footer" id="footer">
       <div class="footer-main">
@@ -438,7 +436,7 @@
     <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
     <!-- dependências -->
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="assets/js/main.js"></script>
