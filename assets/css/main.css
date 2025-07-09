@@ -2565,9 +2565,9 @@ section,
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background-color: var(--accent-color);
-  border: 1px solid var(--contrast-color);
-  color: var(--background-color);
+  background-color: var(--contrast-color);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
   padding: 8px 16px;
   border-radius: 50px;
   font-size: 14px;
@@ -2666,6 +2666,28 @@ p {
   line-height: 28px;
   font-weight: 300;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  p {
+    
+    font-size: var(--font-size-paragraph-tablet);
+    
+  }
+  .pd-availability-box li {
+  font-size: var(--font-size-paragraph-tablet);
+  
+}
+}
+@media (max-width: 767px) {
+  p {
+    
+    font-size: var(--font-size-paragraph-mobile);
+  }
+  .pd-availability-box li {
+  font-size: var(--font-size-paragraph-mobile);
+  
+}
+}
+
 
 
 /* ============================= */
@@ -3319,12 +3341,12 @@ label {
    MEDIA QUERIES
    ============================ */
 /* Muito pequeno: <576px */
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   #mobile-filters {
     max-width: 100%;
   }
   .equipamento-card .card-title {
-    font-size: 1rem;
+    font-size: 24px;
   }
   .custom-pagination {
     gap: 0.4rem;
