@@ -1594,6 +1594,10 @@ section,
     padding-right: calc(var(--bs-spacing-mobile-right) * 0.5);
     padding-left: calc(var(--bs-spacing-mobile-left) * 0.5);
   }
+  .py-5 {
+    padding-top: 0px !important;
+    padding-bottom: 3rem !important;
+}
   .hero-main-custom {
     position: relative;
     background: color-mix(in srgb, var(--surface-color), transparent 0%);
