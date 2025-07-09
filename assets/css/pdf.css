@@ -1,52 +1,128 @@
-/* pdf.css */
+/* ==================== RESPONSIVIDADE NA TELA ==================== */
+
+/* Mobile até 767px */
+@media (max-width: 767px) {
+  p {
+    color: var(--heading-color);
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 15px; /* ou var(--font-size-paragraph-mobile) se preferir */
+    line-height: 1.5;
+    font-weight: 300;
+  }
+  .grid-product {
+    flex-direction: column !important;
+  }
+  .image-column, .info-column {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  #pdf-logo {
+    width: 90vw !important;
+    max-width: 90vw !important;
+  }
+}
+
+/* Tablet entre 768px e 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  p {
+    color: var(--heading-color);
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 16px; /* ou var(--font-size-paragraph-desktop) */
+    line-height: 28px;
+    font-weight: 300;
+  }
+  .grid-product {
+    flex-direction: row !important;
+  }
+  .image-column {
+    width: 45% !important;
+    max-width: none !important;
+  }
+  .info-column {
+    width: 55% !important;
+    max-width: none !important;
+  }
+  #pdf-logo {
+    width: 60vw !important;
+    max-width: 60vw !important;
+  }
+}
+
+/* Desktop acima de 1200px */
+@media (min-width: 1200px) {
+  p {
+    color: var(--heading-color);
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 18px; /* ou var(--font-size-paragraph-desktop) */
+    line-height: 28px;
+    font-weight: 300;
+  }
+  .grid-product {
+    flex-direction: row !important;
+  }
+  .image-column {
+    width: 40% !important;
+    max-width: 60mm !important;
+  }
+  .info-column {
+    width: 60% !important;
+    max-width: none !important;
+  }
+  #pdf-logo {
+    width: 100mm !important;
+    max-width: 100mm !important;
+  }
+}
+
+/* ==================== IMPRESSÃO/PDF ==================== */
+
 @page {
   size: A4 portrait;
   margin: 10mm;
 }
 
 @media print {
-  /* força só a .pdf-wrapper apareça */
   body * {
     visibility: hidden !important;
     margin: 0 !important;
     padding: 0 !important;
   }
- #pdf-logo-container {
+  #pdf-logo-container {
     display: block !important;
     position: absolute !important;
     top: 0 !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    z-index: 10 !important;        /* garante estar sobre o header */
+    z-index: 10 !important;
     margin-bottom: 1rem !important;
     page-break-inside: avoid !important;
     page-break-after: avoid !important;
     width: 150% !important;
     text-align: center !important;
-}
-
+  }
   #pdf-logo {
-  max-width: 100mm !important;   /* Aumente para o tamanho desejado, ex: 80mm, 100mm, 120mm */
-  width: 100mm !important;       /* Use junto para garantir que ocupe o tamanho */
-  height: auto !important;
-  display: inline-block !important;
-  margin-bottom: 4mm !important;
-  margin-top: 0 !important;
-}
+    max-width: 100mm !important;
+    width: 100mm !important;
+    height: auto !important;
+    display: inline-block !important;
+    margin-bottom: 4mm !important;
+    margin-top: 0 !important;
+  }
 
   .pdf-wrapper,
   .pdf-wrapper * {
     visibility: visible !important;
   }
 
-  /* remove qualquer zoom extra da interface */
   html, body {
     width: auto !important;
     height: auto !important;
     overflow: visible !important;
   }
 
-  /* centraliza o conteúdo no papel */
   .pdf-wrapper {
     position: absolute !important;
     top: 10mm !important;
@@ -55,10 +131,9 @@
     bottom: 10mm !important;
     transform: scale(0.90) !important;
     transform-origin: top left !important;
-    padding-top: 60mm !important; /* ajuste conforme desejar */
+    padding-top: 60mm !important;
   }
 
-  /* grid com imagem e função lado a lado */
   #pd-product-section .grid-product {
     display: flex !important;
     flex-direction: row !important;
@@ -76,7 +151,6 @@
     flex-direction: column !important;
   }
 
-  /* imagem responsiva e centralizada na coluna dela */
   #pd-main-img {
     max-width: 100% !important;
     height: auto !important;
@@ -86,20 +160,16 @@
     margin-bottom: 3mm !important;
   }
 
-  /* Esconde os botões de abas */
   .tab-buttons {
     display: none !important;
   }
 
-  /* Deixa só o primeiro bloco (função) ao lado da imagem */
   #content-funcao {
-    /* permanece ao lado da imagem */
     margin-bottom: 0 !important;
   }
 
-  /* Todo o resto da info-column (ficha técnica, logística, aplicação, disponibilidade, contato) fica 100% largura, abaixo */
-  #content-tecnica, 
-  .pd-availability-box, 
+  #content-tecnica,
+  .pd-availability-box,
   #pdf-contact-info {
     width: 100% !important;
     margin-top: 8mm !important;
@@ -107,13 +177,11 @@
     align-self: flex-start !important;
   }
 
-  /* mostra todas as abas */
   .tab-panel {
     display: block !important;
     visibility: visible !important;
   }
 
-  /* evita quebra dentro de cada bloco */
   h2.pd-product-title,
   .pd-box,
   .pd-function-item,
@@ -125,56 +193,51 @@
     padding-bottom: 16px !important;
   }
 
-  /* bloco de contatos no fim */
   #pdf-contact-info {
     margin-top: 8mm !important;
     page-break-inside: avoid !important;
-    
   }
 
-  /* Esconde controles que não interessam */
   .thumb-btn, .pd-actions {
     display: none !important;
   }
-  /* Mostra o pdf-contact-info com o estilo de pd-box */
+
   #pdf-contact-info.pd-box {
     display: block !important;
     margin: 0!important;
     page-break-inside: avoid !important;
   }
+
   .pd-box {
-  margin-top: 0px !important;
-  margin-bottom: 8px !important; /* Ajuste este valor para o espaçamento desejado */
-}
+    margin-top: 0px !important;
+    margin-bottom: 8px !important;
+  }
 
-.pd-box:last-child {
-  
-  margin-bottom: 8px !important; /* Remove espaço extra no último */
-}
-.pd-product-title, 
-h2.pd-product-title {
-  font-size: 22pt !important;
-}
+  .pd-box:last-child {
+    margin-bottom: 8px !important;
+  }
 
-.pd-box h5 {
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  margin-bottom: 2mm !important;
-}
+  .pd-product-title,
+  h2.pd-product-title {
+    font-size: 22pt !important;
+  }
 
-.pd-box, 
-.pd-availability-box, 
-#pdf-contact-info {
-  font-size: 8px !important; /* Ajuste para o corpo dos cards */
-}
-.pdf-wrapper p,
-.pdf-wrapper .pd-box p,
-.pdf-wrapper #pdf-contact-info p {
-  font-size: 20px !important; /* ou o valor que quiser: 15pt, 18pt, etc. */
-  line-height: 1.5 !important;
-}
+  .pd-box h5 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin-bottom: 2mm !important;
+  }
 
+  .pd-box,
+  .pd-availability-box,
+  #pdf-contact-info {
+    font-size: 8px !important;
+  }
 
-
-  
+  .pdf-wrapper p,
+  .pdf-wrapper .pd-box p,
+  .pdf-wrapper #pdf-contact-info p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
 }
