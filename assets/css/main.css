@@ -2673,23 +2673,47 @@ p {
 @media (min-width: 768px) and (max-width: 1199px) {
   p {
     
-    font-size: var(--font-size-paragraph-tablet);
+    font-size: var(--font-size-paragraph-tablet) !important;
     
   }
   .pd-availability-box li {
-  font-size: var(--font-size-paragraph-tablet);
+  font-size: var(--font-size-paragraph-tablet) !important;
   
+  }
+  .pd-box table td {
+    
+    font-size: var(--font-size-paragraph-tablet) !important;
+    
+  }
+  .pd-box table td {
+    
+    font-size: var(--font-size-paragraph-tablet) !important;
+    
+  }
+  .pd-box table th {
+    
+    font-size: var(--font-size-paragraph-tablet) !important;
 }
 }
 @media (max-width: 767px) {
   p {
     
-    font-size: var(--font-size-paragraph-mobile);
+    font-size: var(--font-size-paragraph-mobile) !important;
   }
   .pd-availability-box li {
-  font-size: var(--font-size-paragraph-mobile);
+  font-size: var(--font-size-paragraph-mobile) !important;
   
+  }
+  .pd-box table td {
+    
+    font-size: var(--font-size-paragraph-mobile) !important;
+    
+  }
+  .pd-box table th {
+    
+    font-size: var(--font-size-paragraph-mobile) !important;
 }
+
 }
 
 
@@ -2745,7 +2769,7 @@ p {
   color: var(--heading-color);
   margin-top: 1rem;
     text-align: left;
-  font-size: var(--font-size-paragraph-desktop) !important;
+  font-size: var(--font-size-paragraph-desktop);
   margin-bottom: 1rem;
 }
 .pd-box table {
