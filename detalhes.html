@@ -26,7 +26,9 @@
     <!-- Ficheiros do Carrossel Swiper -->
     <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <!-- Ficheiro CSS Principal -->
-    <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet">
+<link href="assets/css/pdf.css" rel="stylesheet" media="print">
+
   </head>
   <body class="index-page">
     <!-- logo, visível apenas no PDF -->
@@ -115,70 +117,71 @@
 
       
 
+      
+
   <!-- logo, visível apenas no PDF -->
-      <div id="pdf-logo-container">
-        <img src="assets/img/logo-header.png" alt="Logo" id="pdf-logo">
-      </div>
+      
 
       <!-- seção de produto -->
       <section id="pd-product-section" class="pd-details-section pd-container section">
-        <div class="container py-5">
-          <div class="row">
-            <div class="grid-product">
-              <!-- Coluna 1: imagem + carrossel -->
-              <div class="image-column">
-                <div class="pd-img-container">
-                  <span id="pd-category-text" class="pd-category-label"></span>
-                  <img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal">
-                </div>
-                <div class="thumbs-wrapper">
-                  <button class="thumb-btn prev" aria-label="Anterior">&lt;</button>
-                  <div class="thumbs-viewport"><ul class="thumbs-track"></ul></div>
-                  <button class="thumb-btn next" aria-label="Próximo">&gt;</button>
-                </div>
+  <div class="pdf-wrapper">
+    <!-- LOGO NO TOPO, UMA ÚNICA VEZ -->
+    <div id="pdf-logo-container">
+      <img src="assets/img/logo-header.png" alt="Logo" id="pdf-logo">
+    </div>
+    <div class="container py-5">
+      <div class="row">
+        <div class="grid-product">
+          <!-- Coluna 1: imagem + carrossel -->
+          <div class="image-column">
+            <div class="pd-img-container">
+              <span id="pd-category-text" class="pd-category-label"></span>
+              <img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal">
+            </div>
+            <div class="thumbs-wrapper">
+              <button class="thumb-btn prev" aria-label="Anterior">&lt;</button>
+              <div class="thumbs-viewport"><ul class="thumbs-track"></ul></div>
+              <button class="thumb-btn next" aria-label="Próximo">&gt;</button>
+            </div>
+          </div>
+          <!-- Coluna 2 -->
+          <div class="info-column">
+            <h2 id="pd-title-text" class="pd-product-title"></h2>
+            <div class="tab-buttons">
+              <button id="btn-funcao" class="pd-btn-funcao active">Função</button>
+              <button id="btn-tecnica" class="pd-btn-tecnica">Ficha Técnica</button>
+            </div>
+            <div id="tab-content">
+              <div id="content-funcao" class="tab-panel active"><div id="pd-functions-list"></div></div>
+              <div id="content-tecnica" class="tab-panel">
+                <div class="pd-box"><h5>Dados Técnicos</h5><table id="pd-tech-table" class="table"></table></div>
+                <div class="pd-box"><h5>Logística</h5><table id="pd-logistics-table" class="table"></table></div>
+                <div class="pd-box"><h5>Aplicação</h5><p id="pd-application-text"></p></div>
               </div>
-
-              <!-- Coluna 2 -->
-              <div class="info-column">
-                <h2 id="pd-title-text" class="pd-product-title"></h2>
-                <div class="tab-buttons">
-                  <button id="btn-funcao" class="pd-btn-funcao active">Função</button>
-                  <button id="btn-tecnica" class="pd-btn-tecnica">Ficha Técnica</button>
-                </div>
-                <div id="tab-content">
-                  <div id="content-funcao" class="tab-panel active"><div id="pd-functions-list"></div></div>
-                  <div id="content-tecnica" class="tab-panel">
-                    <div class="pd-box"><h5>Dados Técnicos</h5><table id="pd-tech-table" class="table"></table></div>
-                    <div class="pd-box"><h5>Logística</h5><table id="pd-logistics-table" class="table"></table></div>
-                    <div class="pd-box"><h5>Aplicação</h5><p id="pd-application-text"></p></div>
-                  </div>
-                </div>
-                <!-- ... dentro de <main> e antes de .pd-actions ... -->
-
-  <div class="pd-box pd-availability-box mt-4">
-    <h5>Disponibilidade</h5>
-    <ul id="pd-availability-list" class="list-unstyled"></ul>
-  </div>
-
-  <!-- informações de contato, visíveis apenas no PDF, com classe pd-box -->
-                  <div id="pdf-contact-info" class="pd-box">
-                  <h5>All4Esthetic — Venda e Aluguer de Equipamentos</h5>
-                  <p><strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia</p>
-                  <p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
-                  <p><strong>E-mail:</strong> geral@all4esthetic.com</p>
-                  <p><strong>Site:</strong> <a>www.all4esthetic.com</a></p>
-                </div>
-
-                  <div class="pd-actions mb-4">
-                    <button id="btn-pdf" class="pd-btn pd-btn-outline-pdf">Gerar PDF</button>
-                    <button id="btn-quote" class="pd-btn pd-btn-outline">Solicitar Orçamento</button>
-                  </div>
-
-              </div>
+            </div>
+            <div class="pd-box pd-availability-box mt-4">
+              <h5>Disponibilidade</h5>
+              <ul id="pd-availability-list" class="list-unstyled"></ul>
+            </div>
+            <!-- informações de contato, visíveis apenas no PDF, com classe pd-box -->
+            <div id="pdf-contact-info" class="pd-box">
+              <h5>All4Esthetic — innovating beauty</h5>
+              <p><strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia</p>
+              <p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
+              <p><strong>E-mail:</strong> geral@all4esthetic.com</p>
+              <p><strong>Site:</strong> <a>www.all4esthetic.com</a></p>
+            </div>
+            <div class="pd-actions mb-4">
+              <button id="btn-pdf" class="pd-btn pd-btn-outline-pdf">Gerar PDF</button>
+              <button id="btn-quote" class="pd-btn pd-btn-outline">Solicitar Orçamento</button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <script>

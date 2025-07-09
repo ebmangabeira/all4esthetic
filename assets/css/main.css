@@ -2846,93 +2846,7 @@ p {
   display: none;
 }
 
-@media print {
-  /* 3. Oculta tudo, exceto logo, contato e seção de produto */
-  body * {
-    visibility: hidden !important;
-  }
-  #pdf-logo-container,
-  #pdf-logo-container *,
-  #pdf-contact-info,
-  #pdf-contact-info *,
-  #pd-product-section,
-  #pd-product-section * {
-    visibility: visible !important;
-  }
 
-  /* Logo no topo, acima de tudo */
-  #pdf-logo-container {
-    display: block !important;
-    position: fixed !important;     /* fixa na página */
-    top: 1rem !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 9999 !important;        /* garante estar sobre o header */
-    margin-bottom: 1rem !important;
-    page-break-inside: avoid !important;
-    page-break-after: avoid !important;
-  }
-  #pdf-logo {
-    max-width: 250px !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-  }
-
-  /* Ajusta a seção de produto para aparecer abaixo do logo fixo */
-  #pd-product-section {
-    display: block !important;
-    position: relative !important;
-    top: 5rem !important;           /* deixa espaço para o logo */
-    left: 0 !important;
-    width: 100% !important;
-  }
-
-  /* Uma única coluna */
-  .grid-product,
-  .image-column,
-  .info-column {
-    display: block !important;
-    width: 100% !important;
-    float: none !important;
-    margin: 0 !important;
-    
-  }
-
-  /* Oculta controles e abas */
-  .thumb-btn,
-  .pd-actions,
-  .tab-buttons {
-    display: none !important;
-  }
-
-  /* Exibe conteúdo de abas */
-  .tab-panel {
-    display: block !important;
-    visibility: visible !important;
-    overflow: visible !important;
-  }
-
-  /* Mostra o pdf-contact-info com o estilo de pd-box */
-  #pdf-contact-info.pd-box {
-    display: block !important;
-    margin: 1rem 0 2rem !important;
-    page-break-inside: avoid !important;
-  }
-
-  /* Evita cortes no meio dos blocos e tabelas */
-  h2.pd-product-title,
-  .pd-box,
-  .pd-function-item,
-  .pd-availability-box,
-  .pd-box h5,
-  #pdf-contact-info {
-    page-break-inside: avoid !important;
-  }
-  table {
-    page-break-inside: avoid !important;
-  }
-}
 
 
 /* ============================= */
@@ -3447,9 +3361,3 @@ label {
     display: none;
   }
 }
-
-
-
-
-
-
