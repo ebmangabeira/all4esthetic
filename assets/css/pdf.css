@@ -6,7 +6,7 @@
     color: var(--heading-color);
     margin-top: 1rem;
     text-align: left;
-    font-size: 15px; /* ou var(--font-size-paragraph-mobile) se preferir */
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 300;
   }
@@ -29,7 +29,7 @@
     color: var(--heading-color);
     margin-top: 1rem;
     text-align: left;
-    font-size: 16px; /* ou var(--font-size-paragraph-desktop) */
+    font-size: 16px;
     line-height: 28px;
     font-weight: 300;
   }
@@ -56,7 +56,7 @@
     color: var(--heading-color);
     margin-top: 1rem;
     text-align: left;
-    font-size: 18px; /* ou var(--font-size-paragraph-desktop) */
+    font-size: 18px;
     line-height: 28px;
     font-weight: 300;
   }
@@ -81,7 +81,7 @@
 
 @page {
   size: A4 portrait;
-  margin: 10mm;
+  margin: 15mm;
 }
 
 @media print {
@@ -90,26 +90,13 @@
     margin: 0 !important;
     padding: 0 !important;
   }
-  #pdf-logo-container {
-    display: block !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 10 !important;
-    margin-bottom: 1rem !important;
-    page-break-inside: avoid !important;
-    page-break-after: avoid !important;
-    width: 150% !important;
-    text-align: center !important;
-  }
-  #pdf-logo {
-    max-width: 100mm !important;
-    width: 100mm !important;
+
+  html, body {
+    zoom: 1;
+    transform-origin: top left;
+    width: auto !important;
     height: auto !important;
-    display: inline-block !important;
-    margin-bottom: 4mm !important;
-    margin-top: 0 !important;
+    overflow: visible !important;
   }
 
   .pdf-wrapper,
@@ -117,51 +104,82 @@
     visibility: visible !important;
   }
 
-  html, body {
-    width: auto !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-
   .pdf-wrapper {
     position: absolute !important;
-    top: 10mm !important;
-    left: 10mm !important;
-    right: 10mm !important;
-    bottom: 10mm !important;
-    transform: scale(0.90) !important;
-    transform-origin: top left !important;
+    top: 15mm !important;
+    left: 15mm !important;
+    right: 15mm !important;
+    bottom: 15mm !important;
+    transform: none !important;
     padding-top: 60mm !important;
+    box-sizing: border-box;
+  }
+
+  #pdf-logo-container {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    z-index: 10 !important;
+    margin-bottom: 10mm !important;
+    page-break-inside: avoid !important;
+  }
+
+  #pdf-logo {
+    max-width: 90mm !important;
+    width: 90mm !important;
+    height: auto !important;
+    display: inline-block !important;
+    margin-top: 0 !important;
+    margin-bottom: 5mm !important;
+  }
+
+  #pd-category-text,
+  .thumbs-wrapper,
+  .tab-buttons,
+  .thumb-btn,
+  .pd-actions {
+    display: none !important;
   }
 
   #pd-product-section .grid-product {
     display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    gap: 8mm !important;
-  }
-  .image-column {
-    width: 40% !important;
-    max-width: 60mm !important;
-  }
-  .info-column {
-    width: 60% !important;
-    max-width: none !important;
-    display: flex !important;
     flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 8mm !important;
+    text-align: center !important;
+  }
+
+  .image-column {
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
   }
 
   #pd-main-img {
+    display: block !important;
+    margin: 0 auto 5mm auto !important;
     max-width: 100% !important;
     height: auto !important;
-    display: block !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-bottom: 3mm !important;
   }
 
-  .tab-buttons {
-    display: none !important;
+  .info-column {
+    width: 100% !important;
+    max-width: 170mm !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: left !important;
+    margin-top: 8mm !important;
+    gap: 6mm;
+  }
+
+  .tab-panel {
+    display: block !important;
+    visibility: visible !important;
   }
 
   #content-funcao {
@@ -172,14 +190,9 @@
   .pd-availability-box,
   #pdf-contact-info {
     width: 100% !important;
-    margin-top: 8mm !important;
-    margin-bottom: 0 !important;
     align-self: flex-start !important;
-  }
-
-  .tab-panel {
-    display: block !important;
-    visibility: visible !important;
+    margin-top: 6mm !important;
+    margin-bottom: 0 !important;
   }
 
   h2.pd-product-title,
@@ -189,8 +202,34 @@
   table {
     page-break-inside: avoid !important;
     font-weight: 600 !important;
-    font-size: 30px !important;
-    padding-bottom: 16px !important;
+    font-size: 22pt !important;
+    padding-bottom: 4mm !important;
+  }
+
+  .pd-box h5 {
+    font-size: 16pt !important;
+    font-weight: 600 !important;
+    margin-bottom: 3mm !important;
+  }
+
+  .pd-box,
+  .pd-availability-box,
+  #pdf-contact-info {
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin-bottom: 4mm !important;
+  }
+
+  .pd-box:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .pdf-wrapper p,
+  .pdf-wrapper .pd-box p,
+  .pdf-wrapper #pdf-contact-info p {
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    margin-bottom: 3mm;
   }
 
   #pdf-contact-info {
@@ -198,46 +237,9 @@
     page-break-inside: avoid !important;
   }
 
-  .thumb-btn, .pd-actions {
-    display: none !important;
-  }
-
   #pdf-contact-info.pd-box {
     display: block !important;
-    margin: 0!important;
+    margin: 0 !important;
     page-break-inside: avoid !important;
-  }
-
-  .pd-box {
-    margin-top: 0px !important;
-    margin-bottom: 8px !important;
-  }
-
-  .pd-box:last-child {
-    margin-bottom: 8px !important;
-  }
-
-  .pd-product-title,
-  h2.pd-product-title {
-    font-size: 22pt !important;
-  }
-
-  .pd-box h5 {
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    margin-bottom: 2mm !important;
-  }
-
-  .pd-box,
-  .pd-availability-box,
-  #pdf-contact-info {
-    font-size: 8px !important;
-  }
-
-  .pdf-wrapper p,
-  .pdf-wrapper .pd-box p,
-  .pdf-wrapper #pdf-contact-info p {
-    font-size: 20px !important;
-    line-height: 1.5 !important;
   }
 }

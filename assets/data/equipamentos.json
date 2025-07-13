@@ -32,7 +32,9 @@
       "assets/img/equipments/E007/E007-3.png",
       "assets/img/equipments/E007/E007-4.png",
       "assets/img/equipments/E007/E007-5.png",
-      "assets/img/equipments/E007/E007_6.png"
+      "assets/img/equipments/E007/E007-6.png",
+      "assets/img/equipments/E007/E007-7.png",
+      "assets/img/equipments/E007/E007-8.png"
     ],
     "category": "Estética",
     "sale": true,
@@ -70,14 +72,14 @@
       "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/E012V1/E012V1_1.jpg",
+    "image": "assets/img/equipments/E012V1/E012V1-1.png",
     "images": [
-      "assets/img/equipments/E012V1/E012V1_1.jpg",
-      "assets/img/equipments/E012V1/E012V1_3.jpg",
-      "assets/img/equipments/E012V1/E012V1_2.jpg",
-      "assets/img/equipments/E012V1/E012V1_4.jpg",
-      "assets/img/equipments/E012V1/E012V1_6.jpg",
-      "assets/img/equipments/E012V1/E012V1_5.jpg"
+      "assets/img/equipments/E012V1/E012V1-1.png",
+      "assets/img/equipments/E012V1/E012V1-2.png",
+      "assets/img/equipments/E012V1/E012V1-3.png",
+      "assets/img/equipments/E012V1/E012V1-4.png",
+      "assets/img/equipments/E012V1/E012V1-5.png",
+      "assets/img/equipments/E012V1/E012V1-6.png"
     ],
     "category": "Modelagem",
     "sale": true,
@@ -116,11 +118,12 @@
       "ROSH 2011/65/EU"
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/microdermoabrasao.png",
+    "image": "assets/img/equipments/ E025/E025-1.png",
     "images": [
-      "assets/img/equipments/microdermoabrasao1.png",
-      "assets/img/equipments/microdermoabrasao2.png",
-      "assets/img/equipments/microdermoabrasao3.png"
+      "assets/img/equipments/ E025/E025-1.png",
+      "assets/img/equipments/ E025/E025-2.png",
+      "assets/img/equipments/ E025/E025-3.png",
+      "assets/img/equipments/ E025/E025-4.png"
     ],
     "category": "Estética",
     "sale": true,
@@ -167,11 +170,16 @@
       "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/pressoterapia.png",
+    "image": "assets/img/equipments/E048V1/E048V1-1.png",
     "images": [
-      "assets/img/equipments/pressoterapia1.png",
-      "assets/img/equipments/pressoterapia2.png",
-      "assets/img/equipments/pressoterapia3.png"
+      "assets/img/equipments/E048V1/E048V1-1.png",
+      "assets/img/equipments/E048V1/E048V1-2.png",
+      "assets/img/equipments/E048V1/E048V1-3.png",
+      "assets/img/equipments/E048V1/E048V1-4.png",
+      "assets/img/equipments/E048V1/E048V1-5.png",
+      "assets/img/equipments/E048V1/E048V1-6.png",
+      "assets/img/equipments/E048V1/E048V1-7.png",
+      "assets/img/equipments/E048V1/E048V1-8.png"
     ],
     "category": "Estética",
     "sale": true,

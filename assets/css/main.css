@@ -711,95 +711,6 @@ body.modal-open {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   DETALHES DO PRODUTO
-   ========================================================================== */
-#product-details {
-    background-color: #ffffff;
-    padding: 50px 0;
-}
-.product-info h1 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-.product-info .product-text {
-    font-size: 16px;
-    color: #666;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-.product-category {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 5px 15px;
-    font-size: 18px;
-    border-radius: 5px;
-}
-.product-features ul {
-    list-style-type: square;
-    padding-left: 20px;
-    margin-top: 15px;
-}
-.product-availability ul {
-    list-style-type: none;
-    padding-left: 20px;
-    margin-top: 15px;
-}
-.product-actions {
-    margin-top: 30px;
-}
-.product-actions h5 {
-    font-size: 18px;
-    color: #333;
-}
-.product-actions .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    border-radius: 4px;
-}
-.product-actions .btn:hover {
-    background-color: #0056b3;
-}
-
-/* ==========================================================================
-   IMAGENS DO PRODUTO
-   ========================================================================== */
-.main-image {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-.product-images {
-    position: relative;
-}
-.small-images {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-.small-image {
-    width: 30%;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-.small-image:hover {
-    transform: scale(1.05);
-}
-.main-image:hover {
-    transform: scale(1.05);
-}
 
 
 
@@ -863,7 +774,7 @@ body.modal-open {
 }
 .position-relative .logo img {
      height: auto;
-    width: 25%;
+    width: 35%;
 }
 .header .main-header .logo h1 {
   font-size: 26px;
@@ -2228,239 +2139,18 @@ section,
   bottom: 15px;
 }
 
-/* Título e breadcrumbs */
-.navmenu-flex {
-  display: flex;
-  padding: 0;
-  gap: 600px;
-}
 
 
-.pd-product-desc {
-  font-size: 1rem;
-  color: var(--heading-color);
-  margin-bottom: 1.5rem;
-}
 
-#pd-features-list,
-#pd-availability-list {
-  list-style: disc inside;
-  color: var(--heading-color);
+
+
+
+
+
+
+
+
   
-}
-
-
-
-
-
-/* ==============================
-   Print / PDF Styles (completo com títulos de seção maiores)
-============================== */
-
-@media print {
-  /* 0) Força A4 e margens apertadas */
-  @page {
-    size: A4 portrait;
-    margin: 1cm;
-  }
-  html {
-    zoom: 0.75;
-    transform-origin: top left;
-  }
-
-  /* 1) Oculta cabeçalho, rodapé e botões */
-  header, .header,
-  footer, .footer,
-  #scroll-top, #preloader {
-    display: none !important;
-  }
-
-  /* 2) Remove margens do body */
-  body {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* 4) Oculta tudo, reexibe somente logo + detalhes */
-  body * {
-    visibility: hidden !important;
-  }
-
-  /* 5) Impede quebra de página dentro da seção */
-  #pd-product-section {
-    page-break-inside: avoid !important;
-    page-break-before: avoid !important;
-    page-break-after: avoid !important;
-  }
-
-  /* 10) Descrição do produto */
-  .pd-product-desc,
-  #pd-desc-text {
-    font-size: 26px !important;
-    font-weight: 600 !important;
-    line-height: 1.5 !important;
-  }
-
-  /* 11) Oculta categoria duplicada */
-  #pd-category-text {
-    display: none !important;
-  }
-
-  /* 12) Imagem principal */
-  .pd-img-container {
-    text-align: left !important;
-  }
-
-  /* 13) Oculta carrossel e botões */
-  .thumbs-wrapper,
-  .pd-actions {
-    display: none !important;
-  }
-
-  /* 14) Caixas e listas customizadas */
-  .pd-box {
-    border: 1px solid #EA4595 !important;
-    border-radius: 8px !important;
-    padding: 12px 16px !important;
-    margin-bottom: 16px !important;
-  }
-
-  .pd-features-box ul,
-  .pd-availability-box ul {
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .pd-features-box li {
-    position: relative !important;
-    padding-left: 1.5em !important;
-    margin-bottom: 8px !important;
-    font-size: 20px !important;
-  }
-
-  .pd-features-box li::before {
-    content: "•" !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    color: #EA4595 !important;
-    font-size: 18px !important;
-    line-height: 1 !important;
-  }
-
-  .pd-availability-box li {
-    display: flex !important;
-    align-items: center !important;
-    margin-bottom: 8px !important;
-    font-size: 24px !important;
-  }
-
-  .pd-availability-box li i.bi-check-circle-fill {
-    color: #EA4595 !important;
-    font-size: 14px !important;
-    margin-right: 8px !important;
-  }
-
-  .pd-availability-box li span:first-child {
-    display: inline-block !important;
-    font-size: 20px !important;
-    margin-right: 8px !important;
-  }
-}
-
-/* Responsividade */
-@media (max-width: 767px) {
-  .pd-product-title { font-size: var(--font-size-title-mobile) !important; }
-  .pd-product-desc { font-size: var(--font-size-paragraph-mobile) !important; }
-  .thumb-slide { flex: 0 0 90%; }
-  .pd-actions { flex-direction: column; }
-  .pd-btn { font-size: 12px; }
-}
-
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .pd-product-title { font-size: 1.5rem; }
-  .pd-product-desc { font-size: 0.875rem; }
-  .thumb-slide { flex: 0 0 50%; }
-  .pd-actions { flex-direction: column; }
-
-
-
-  .pd-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    border: none;
-    background-color: #EA4595;
-    color: #fff;
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-    will-change: transform, box-shadow;
-  }
-
-  .pd-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .pd-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .pd-btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(234, 69, 149, 0.4);
-  }
-
-  .pd-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-  }
-
-  .pd-btn-outline {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    border: 2px solid #EA4595;
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, color 0.1s ease-out;
-  }
-
-  .pd-btn-outline:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    background-color: var(--contrast-color);
-    color: var(--accent-color);
-  }
-
-  .pd-btn-outline:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    background-color: #d2337a;
-    border-color: #d2337a;
-  }
-
-  .pd-btn-outline:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(234, 69, 149, 0.4);
-  }
-
-  .cp-map-container {
-    border: 1px solid var(--cp-accent);
-    border-radius: 12px;
-    overflow: hidden;
-    height: 100%;
-    margin-bottom: 2rem;
-  }
-}
 
 /* ============================= */
 /*   Página Detalhes */
@@ -2480,17 +2170,7 @@ section,
 .info-column  { grid-column: 2; grid-row: 1; }
 .availability-column { grid-column: 1 / span 2; grid-row: 2; }
 
-/* Borda transparente por padrão */
-.thumb-slide {
-  border: 1px solid transparent;
-  border-radius: 4px;
-  transition: border-color 0.2s;
-}
 
-/* Borda para o thumbnail ativo */
-.thumb-slide.active {
-  border: 1px solid var(--accent-color);
-}
 @media (max-width: 992px) {
   .grid-product {
     display: flex;
@@ -2592,7 +2272,7 @@ section,
   align-items: center;
   justify-content: center;
   margin: 1.5rem 0;
-  gap: 1rem;
+  gap: 16px;
 }
 .thumbs-viewport {
   overflow: hidden;
@@ -2611,7 +2291,8 @@ section,
   overflow: hidden;
   cursor: pointer;
   transition: box-shadow 0.2s, opacity 0.2s, transform 0.3s;
-  margin-right: 1rem;
+  margin-right: 14px !important;
+  margin-left: 2px;
 }
 .thumb-slide:last-child {
   margin-right: 0;
@@ -2627,6 +2308,13 @@ section,
   opacity: 1;
 }
 
+
+/* Borda para o thumbnail ativo */
+.thumb-slide.active {
+  border: 1px solid var(--accent-color);
+  margin-bottom: 24px;
+}
+
 .thumb-btn {
   background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
   border: none;
@@ -2638,6 +2326,7 @@ section,
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
+  margin-bottom: 24px;
 }
 .thumb-btn:disabled {
   opacity: 0.4;
@@ -2645,6 +2334,13 @@ section,
 }
 .thumb-btn:hover:not(:disabled) {
   background-color: color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+@media (max-width: 767px) {
+  .thumb-btn  {
+    width: 30px;
+    height: 30px;
+    
+  }
 }
 
 /* ============================= */
@@ -2699,6 +2395,7 @@ p {
   p {
     
     font-size: var(--font-size-paragraph-mobile) !important;
+    color: var(--heading-color) !important;
   }
   .pd-availability-box li {
   font-size: var(--font-size-paragraph-mobile) !important;
@@ -2902,211 +2599,117 @@ p {
 /* ============================= */
 /*   Secção de Contacto */
 /* ============================= */
-/* ----- Contact Section Styling ----- */
-.cp-contact-section {
-  padding: 145px 0;
-  color: var(--heading-color);
+
+
+
+/* CSS COMPLETO */
+
+/* 1. Container da secção */
+#contact-section.contact-section {
+  padding: 160px 0; /* 2rem em px */
 }
 
-.cp-contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2.5rem;
+/* 2. Flex container para cards */
+.contact-cards-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.cp-info-item {
-  position: relative;
-  background: #fff;
+/* 3. Card */
+.contact-card {
+  background-color: var(--background-color);
   border: 1px solid var(--accent-color);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  padding: 32px 24px;
   text-align: center;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-/* Efeito de mover para cima */
-.cp-info-item:hover {
-  transform: translateY(-10px);  /* Ajustei o valor para um efeito mais visível */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.cp-info-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-
-.cp-info-item:hover::before {
-  transform: scaleX(1);
-}
-
-.cp-icon {
-  font-size: 36px;
-  color: var(--accent-color);
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.cp-info-item:hover .cp-icon {
-  transform: scale(1.2);
-}
-
-.cp-info-item h3 {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
-  color: var(--accent-color);
-  font-weight: 300;
-  transition: color 0.3s ease;
-}
-
-.cp-info-item:hover h3 {
-  color: var(--accent-color);
-}
-
-.cp-info-item p {
-  color: var(--heading-color);
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  transition: color 0.3s ease;
-}
-
-.cp-info-item:hover p {
-  color: var(--surface-color);
-}
-
-/* Links styling */
-.cp-info-item a {
-  color: var(--accent-color);
-  font-size: 16px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-  font-weight: 600;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.cp-info-item a:hover {
-  color: var(--surface-color);
-  text-decoration: underline;
-  transform: translateX(5px);
-}
-
-/* Button Styling */
-.cp-btn-submit {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--accent-color);
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 1rem 2.4rem;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.cp-btn-submit span {
-  position: relative;
-  z-index: 2;
+/* Hover */
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.cp-btn-icon {
-  font-size: 1.4rem;
-  transition: transform 0.3s;
-}
-
-.cp-btn-submit:hover {
-  background: #d63c85;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.cp-btn-submit:hover .cp-btn-icon {
-  transform: translateX(6px);
-}
-
-/* Ripple Effect for button */
-.cp-btn-submit:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.3);
+/* 4. Ícone */
+.contact-icon {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.5s ease-out, height 0.5s ease-out;
-  z-index: 1;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--accent-color);
+  margin-bottom: 16px;
 }
 
-.cp-btn-submit:active:after {
-  width: 200px;
-  height: 200px;
-  transition: 0s;
+/* 5. Título */
+.contact-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 
-.contact-2 {
-  text-align: center;
+/* 6. Link estendido */
+.contact-link {
+  color: var(--heading-color);
+  text-decoration: none;
+  position: relative;
+  font-weight: 400;
 }
 
-/* Responsive Design */
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 10%;
+  width: 0;
+  height: 2px;
+  
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover::after {
+  width: 80%;
+}
+
+/* 7. Texto */
+.contact-text {
+  font-size: 16px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* 8. Responsividade */
+/* Abaixo de 992px: flex-direction column (já é padrão acima) */
+/* A partir de 992px: cards lado a lado */
+@media (min-width: 992px) {
+  .contact-cards-row {
+    flex-direction: row;
+  }
+  .contact-card {
+    flex: 1;           /* iguala largura */
+    max-width: none;   /* remove qualquer restrição */
+  }
+  #contact-section.contact-section {
+  padding: 160px 0; /* 2rem em px */
+}
+}
 @media (max-width: 991px) {
-  .cp-contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .cp-info-item {
-    padding: 1.5rem 1.2rem;
-  }
-
-  .cp-icon {
-    font-size: 40px;
-  }
-
-  .cp-info-item h3 {
-    font-size: 1.25rem;
-  }
-
-  .cp-info-item p {
-    font-size: 14px;
-  }
-
-  .cp-btn-submit {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-  }
+  
+  #contact-section.contact-section {
+  padding: 60px 0; /* 2rem em px */
 }
-
-@media (max-width: 767px) {
-  .cp-info-item h3 {
-    font-size: 1.2rem;
-  }
-
-  .cp-info-item p {
-    font-size: 14px;
-  }
-
-  .cp-btn-submit {
-    padding: 0.8rem 1.6rem;
-    font-size: 1rem;
-  }
 }
-
 
 
 
@@ -3363,6 +2966,19 @@ label {
     
     color: var(--accent-color);
   
+}
+.page-item:first-child .page-link {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.page-item:last-child .page-link {
+
+
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    
 }
 
 /* ============================
