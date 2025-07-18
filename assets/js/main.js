@@ -46,7 +46,6 @@
 		closeToggle.addEventListener('click', closeMobileNav);
 	}
 
-	// Fechar menu ao clicar em links do menu móvel
 	document.querySelectorAll('#navmenu a').forEach(navmenu => {
 		navmenu.addEventListener('click', () => {
 			if (document.body.classList.contains('mobile-nav-active')) {
@@ -303,7 +302,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 			if (!disabled) li.onclick = e => { e.preventDefault(); fn(); };
 			return li;
 		};
-		// Botão Prev
 		pg.appendChild(mk(page === 1, '«', () => {
 			page--;
 			renderPage();
@@ -313,7 +311,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 				firstCard.scrollIntoView({ behavior: "smooth", block: "start" });
 			}
 		}, 'prev'));
-		// Números
 		for (let i = 1; i <= cnt; i++) {
 			pg.appendChild(mk(false, i, () => {
 				page = i;
@@ -325,7 +322,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 				}
 			}, i === page ? 'active' : ''));
 		}
-		// Botão Next
 		pg.appendChild(mk(page === cnt, '»', () => {
 			page++;
 			renderPage();
