@@ -1141,6 +1141,9 @@ body.modal-open {
 		font-size: 12px;
 		margin-bottom: -1px !important;
 	}
+	.pd-page-title {
+    padding: 130px 0 30px;
+}
 }
 
 /* ====== TABLET (768px a 1199px) ====== */
