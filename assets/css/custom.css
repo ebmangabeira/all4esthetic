@@ -70,7 +70,7 @@ body {
 
 .position-relative .logo img {
 	height: auto;
-	width: 45%;
+	width: 40%;
 }
 
 .header .main-header .logo h1 {
@@ -2404,7 +2404,7 @@ h6 {
 		font-size: 15px;
 	}
 	.footer .logo img {
-    width: 73% !important;
+    width: 70% !important;
    }
 }
 
@@ -2740,7 +2740,7 @@ h6 {
 
 .footer .logo img {
 	height: auto;
-	width: 50%;
+	width: 70%;
 }
 
 .footer .footer-main .footer-widget.footer-about {
