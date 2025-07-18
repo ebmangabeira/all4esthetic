@@ -1092,7 +1092,6 @@ body.modal-open {
 	color: var(--accent-color);
 }
 
-/* ====== MOBILE (≤767px) ====== */
 @media (max-width: 767px) {
 	body.modal-open {
 		margin-right: 0;
@@ -1149,7 +1148,6 @@ body.modal-open {
    }
 }
 
-/* ====== TABLET (768px a 1199px) ====== */
 @media (min-width: 768px) and (max-width: 1199px) {
 	.pd-page-title {
 		padding: 110px 0 30px;
@@ -1190,22 +1188,20 @@ body.modal-open {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    justify-items: center; /* centraliza os cards na grid horizontalmente */
+    justify-items: center;
 	}
 
 	.features-boxes .feature-box {
 		max-width: 100%;
 	}
 
-	/* Para garantir que o terceiro card (index 3) fique na segunda linha e centralizado */
 	.features-boxes > div:nth-child(3) {
-		grid-column: 1 / span 2; /* Ocupa as duas colunas */
-		justify-self: center; /* Centraliza na grid */
-		max-width: 50%; /* opcional para limitar largura */
+		grid-column: 1 / span 2; 
+		justify-self: center; 
+		max-width: 50%;/
 	}
 }
 
-/* ====== DESKTOP (≥1200px) ====== */
 @media (min-width: 1200px) {
 	.about .row.align-items-center {
 		text-align: left;
@@ -1228,7 +1224,6 @@ body.modal-open {
 	}
 }
 
-/* ====== Estilos gerais ====== */
 .about .section-badge {
 	font-size: 0.9rem;
 	color: var(--primary-color);
@@ -1252,7 +1247,6 @@ body.modal-open {
 	font-size: var(--font-size-paragraph-desktop);
 }
 
-/* ====== Feature boxes ====== */
 .about .feature-box {
 	position: relative;
 	background: #fff;
@@ -1338,7 +1332,6 @@ body.modal-open {
 	left: 10%;
 }
 
-/* ====== Modal História ====== */
 .history-modal {
 	background: transparent;
 	border: none;
