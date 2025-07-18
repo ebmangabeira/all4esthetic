@@ -1143,7 +1143,10 @@ body.modal-open {
 	}
 	.pd-page-title {
     padding: 130px 0 30px;
-}
+   }
+   .sobre ul li i {
+    margin-bottom: 24px;
+   }
 }
 
 /* ====== TABLET (768px a 1199px) ====== */
