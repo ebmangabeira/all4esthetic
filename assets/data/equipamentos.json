@@ -2,7 +2,7 @@
   {
     "id": "E007",
     "name": "Electroestimulação",
-    "designação": "Electroestimulação",
+    "designação": "",
     "ref": "E007",
     "code_rev": "FTE007.05",
     "functions": [
@@ -25,16 +25,16 @@
       "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/E007/E007-1.png",
+    "image": "assets/img/equipments/E007/E007-1.webp",
     "images": [
-      "assets/img/equipments/E007/E007-1.png",
-      "assets/img/equipments/E007/E007-2.png",
-      "assets/img/equipments/E007/E007-3.png",
-      "assets/img/equipments/E007/E007-4.png",
-      "assets/img/equipments/E007/E007-5.png",
-      "assets/img/equipments/E007/E007-6.png",
-      "assets/img/equipments/E007/E007-7.png",
-      "assets/img/equipments/E007/E007-8.png"
+      "assets/img/equipments/E007/E007-1.webp",
+      "assets/img/equipments/E007/E007-2.webp",
+      "assets/img/equipments/E007/E007-3.webp",
+      "assets/img/equipments/E007/E007-4.webp",
+      "assets/img/equipments/E007/E007-5.webp",
+      "assets/img/equipments/E007/E007-6.webp",
+      "assets/img/equipments/E007/E007-7.webp",
+      "assets/img/equipments/E007/E007-8.webp"
     ],
     "category": "Estética",
     "sale": true,
@@ -47,8 +47,8 @@
   },
   {
     "id": "E012V1",
-    "name": "Emsculpt com 2 Manipuladores",
-    "designação": "Máquina Emsculpt com 2 Manipuladores",
+    "name": "Emsculpt com",
+    "designação": "2 Manipuladores",
     "ref": "E012V1",
     "code_rev": "FTE012V1.01",
     "functions": [
@@ -93,7 +93,7 @@
   {
     "id": "E025",
     "name": "Microdermoabrasão",
-    "designação": "Microdermoabrasão",
+    "designação": "",
     "ref": "E025",
     "code_rev": "FTE025.03",
     "functions": [
@@ -137,7 +137,7 @@
   {
     "id": "E048V1",
     "name": "Pressoterapia 3 em 1",
-    "designation": "Equipamento para tratamento anti-celulite, emagrecimento, retenção de líquidos e desintoxicação corporal.",
+    "designação": "",
     "ref": "E048V1",
     "code_rev": "FTE048V1.03",
     "functions": [
@@ -193,7 +193,7 @@
   {
     "id": "E049V1",
     "name": "Pressoterapia",
-    "designation": "Equipamento para tratamento anti-celulite, emagrecimento, retenção de líquidos e desintoxicação corporal.",
+    "designação": "",
     "ref": "E049V1",
     "code_rev": "FTE049V1.01",
     "functions": [
@@ -236,7 +236,7 @@
   {
     "id": "E055",
     "name": "Multifunções 5 em 1",
-    "designation": "Equipamento multifuncional para tratamentos de estética facial e corporal, incluindo cavitação, radiofrequência e vácuo.",
+    "designação": "",
     "ref": "E055",
     "code_rev": "FTE055.03",
     "functions": [
@@ -290,8 +290,8 @@
   },
   {
   "id": "E058V2",  
-  "name": "Criolipólise 360º com 2 Manipulos",  
-  "designation": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura.",  
+  "name": "Criolipólise 360º",  
+  "designação": "com 2 Manipulos",  
   "ref": "E058V2",  
   "code_rev": "FTE058V2.02",  
   "functions": [
@@ -333,7 +333,7 @@
   {
     "id": "E058V3",  
     "name": "Criolipólise de Placas",  
-    "designation": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura. A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo.",  
+    "designação": "",  
     "ref": "E058V3",  
     "code_rev": "FTE058V3.02",  
     "functions": [
@@ -372,8 +372,8 @@
   },
   {
     "id": "E059",
-    "name": "Radiofrequência Bipolar e Tripolar (Rosto e Corpo)",
-    "designation": "Técnica mais eficaz no combate à flacidez, celulite e rugas.",
+    "name": "Radiofrequência Bi e",
+    "designação": "Tripolar (Rosto e Corpo)",
     "ref": "E059",
     "code_rev": "FTE059.02",
     "functions": [
@@ -417,7 +417,7 @@
   {
     "id": "E060",
     "name": "IPL SHR",
-    "designation": "Equipamento ultra-moderno usando a tecnologia SHR 'Super Hair Removal', que combina a eficiência da Luz Pulsada com 'In Motion' - tecnologia de laser, resultando em tratamentos mais eficientes e sem dor.",
+    "designação": "",
     "ref": "E060",
     "code_rev": "FTE060.05",
     "functions": [
@@ -459,8 +459,8 @@
   },
   {
     "id": "E061V1",
-    "name": "V-Shape com 4 Manípulos",
-    "designation": "Equipamento de radiofrequência bipolar com movimentos modeladores, vácuo, infravermelhos e ultrassom para modelagem corporal e facial.",
+    "name": "V-Shape",
+    "designação": "com 4 Manípulos",
     "ref": "E061V1",
     "code_rev": "FTE061V1.02",
     "functions": [
@@ -508,7 +508,7 @@
   {
     "id": "E069V1",
     "name": "Laser Diodo 808nm",
-    "designation": "Equipamento de foco unidirecional com 12 barras emissoras de laser para aplicações estéticas.",
+    "designação": "",
     "ref": "E069V1",
     "code_rev": "FTE069V1.02",
     "functions": [
@@ -553,8 +553,8 @@
   },
   {
     "id": "E169V1",
-    "name": "Laser Diodo 755, 808 e 1064nm",
-    "designation": "Equipamento de foco unidirecional com 12 barras emissoras de laser para aplicações estéticas.",
+    "name": "Laser Diodo 755, 808 e",
+    "designação": "1064nm",
     "ref": "E169V1",
     "code_rev": "FTE169V1.03",
     "functions": [
@@ -599,8 +599,8 @@
   },
   {
     "id": "E169V3",
-    "name": "Laser Diodo 755, 808 e 1064nm",
-    "designation": "Equipamento de foco unidirecional com 9 barras emissoras de laser para aplicações estéticas.",
+    "name": "Laser Diodo 755, 808 e",
+    "designação": "1064nm",
     "ref": "E169V3",
     "code_rev": "FTE169V3.03",
     "functions": [
@@ -647,7 +647,7 @@
   {
     "id": "E169V4",
     "name": "Laser Diodo Eos Ice",
-    "designation": "Equipamento inovador com possibilidade de trabalhar com os 2 manipulos em simultâneo. Possui sistema Android para a programação automática de acordo com a zona, tipo de pelo e fotótipo, podendo este ser ajustado até ao VI. Actua em 3 niveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Este sistema de programação possibilita a criação das fichas de cliente sendo que pode gravar nomes, contatos e os tratamentos já efectuados para uma melhor gestão/evolução dos resultados. Laser equipado com sonda de leitura que permite programação automática do equipamento. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água.",
+    "designação": "",
     "ref": "E169V4",
     "code_rev": "FTE169V4.01",
     "functions": [
@@ -693,8 +693,8 @@
   },
   {
     "id": "E174",
-    "name": "Laser Remoção de Derrames",
-    "designation": "Equipamento de laser para remoção de derrames com controle de energia preciso.",
+    "name": "Laser Remoção de",
+    "designação": "Derrames",
     "ref": "E174",
     "code_rev": "FTE174.04",
     "functions": [

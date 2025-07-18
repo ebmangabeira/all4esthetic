@@ -1,447 +1,245 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>all4esthetic</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-    <!-- Ícones de favorito -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-    <!-- Fontes -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet"/>
-    <!-- CSS do Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
-    <!-- Ícones do Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-    <!-- AOS (Animações ao Rolagem) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
-    <!-- GLightbox (Galeria de Imagens) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css"/>
-    <!-- Drift Zoom (Zoom de Imagem) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css"/>
-    <!-- Ficheiros do Carrossel Swiper -->
-    <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <!-- Ficheiro CSS Principal -->
-    <link href="assets/css/main.css" rel="stylesheet">
-<link href="assets/css/pdf.css" rel="stylesheet" media="print">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>all4esthetic</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" href="assets/img/favicon.png" />
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+	</head>
+	<body class="index-page">
+		<header id="header" class="header position-fixed top-0 w-100">
+			<div class="main-header">
+				<div class="container-fluid container-xl">
+					<div class="d-flex align-items-center justify-content-between">
+						<a href="index.html" class="logo d-flex align-items-center d-xl-none">
+							<img src="assets/img/logo-header.png" alt="Logo" />
+						</a>
+						<div class="header-actions d-flex align-items-center justify-content-end">
+							<i class="mobile-nav-open bi bi-list me-0 mobile-nav-toggle d-xl-none" role="button" tabindex="0" aria-label="Abrir menu"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-nav">
+				<div class="container-fluid container-xl">
+					<div class="position-relative">
+						<div class="d-flex align-items-center justify-content-between">
+							<a href="index.html" class="logo d-flex align-items-center me-4 d-none d-xl-flex">
+								<img src="assets/img/logo-header.png" alt="Logo" />
+							</a>
+							<nav id="navmenu" class="navmenu mx-auto justify-content-center" aria-label="Menu principal">
+								<ul>
+									<li class="navmenu-close d-xl-none" role="button" tabindex="0" aria-label="Fechar menu">
+										<span class="mobile-nav-close">X</span>
+									</li>
+									<li><a href="index.html">Início</a></li>
+									<li><a href="quem-somos.html">Quem Somos</a></li>
+									<li><a href="equipamentos.html">Equipamentos</a></li>
+									<li><a href="contacto.html">Contacto</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="pd-page-title pd-light-bg">
+				<div class="container-xl pd-breadcrumbs pd-container">
+					<h1 class="pd-title-text">Detalhes</h1>
+					<nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
+						<ol>
+							<li><a href="index.html">Início</a></li>
+							<li><a href="equipamentos.html">Equipamentos</a></li>
+							<li class="current" aria-current="page">Detalhes</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+			<section id="pd-product-section" class="pd-details-section pd-container section">
+				<div class="pdf-wrapper">
+					<div id="pdf-logo-container">
+						<img src="assets/img/logo-header.png" alt="Logo" id="pdf-logo" />
+					</div>
+					<div class="container">
+						<div class="row">
+							<div class="grid-product">
+								<div class="image-column">
+									<div class="pd-img-container">
+										<span id="pd-category-text" class="pd-category-label"></span>
+										<img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal" loading="lazy" />
+									</div>
+									<div class="thumbs-wrapper">
+										<button class="thumb-btn prev" aria-label="Anterior" type="button">&lt;</button>
+										<div class="thumbs-viewport">
+											<ul class="thumbs-track"></ul>
+										</div>
+										<button class="thumb-btn next" aria-label="Próximo" type="button">&gt;</button>
+									</div>
+								</div>
+								<div class="info-column">
+									<h2 id="pd-title-text" class="pd-product-title"></h2>
+									<div class="tab-buttons" role="tablist" aria-label="Seções do produto">
+										<button id="btn-funcao" class="pd-btn-funcao active" role="tab" aria-selected="true" aria-controls="content-funcao" type="button">
+											Função
+										</button>
+										<button id="btn-tecnica" class="pd-btn-tecnica" role="tab" aria-selected="false" aria-controls="content-tecnica" type="button">
+											Ficha Técnica
+										</button>
+									</div>
+									<div id="tab-content">
+										<div id="content-funcao" class="tab-panel active" role="tabpanel" aria-labelledby="btn-funcao">
+											<div id="pd-functions-list"></div>
+										</div>
+										<div
+											id="content-tecnica"
+											class="tab-panel"
+											role="tabpanel"
+											aria-labelledby="btn-tecnica"
+											hidden
+										>
+											<div class="pd-box">
+												<h5>Dados Técnicos</h5>
+												<table id="pd-tech-table" class="table"></table>
+											</div>
+											<div class="pd-box">
+												<h5>Logística</h5>
+												<table id="pd-logistics-table" class="table"></table>
+											</div>
+											<div class="pd-box">
+												<h5>Aplicação</h5>
+												<p id="pd-application-text"></p>
+											</div>
+										</div>
+									</div>
+									<div class="pd-box pd-availability-box mt-4">
+										<h5>Disponibilidade</h5>
+										<ul id="pd-availability-list" class="list-unstyled"></ul>
+									</div>
+									<div id="pdf-contact-info" class="pd-box">
+										<h5>All4Esthetic — innovating beauty</h5>
+										<p>
+											<strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia
+										</p>
+										<p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
+										<p><strong>E-mail:</strong> geral@all4esthetic.com</p>
+										<p><strong>Site:</strong> <a href="https://www.all4esthetic.com" target="_blank" rel="noopener">www.all4esthetic.com</a></p>
+									</div>
+									<div class="pd-actions mb-4">
+										<button id="btn-pdf" class="pd-btn pd-btn-outline-pdf" type="button">Gerar PDF</button>
+										<button id="btn-quote" class="pd-btn pd-btn-outline" type="button">Solicitar Orçamento</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-  </head>
-  <body class="index-page">
-    <!-- logo, visível apenas no PDF -->
-  
-    <header class="header position-fixed top-0 w-100" id="header">
-      <!-- Cabeçalho Principal -->
-      <div class="main-header">
-        <div class="container-fluid container-xl">
-          <div class="d-flex py-3 align-items-center justify-content-between">
-            <!-- Logótipo para telemóvel -->
-            <a class="logo d-flex align-items-center d-xl-none" href="index.html">
-              <img alt="Logo" src="assets/img/logo-header.png" />
-            </a>
-            <!-- Botão de abrir menu (hambúrguer) no cabeçalho -->
-            <div class="header-actions d-flex align-items-center justify-content-end">
-              <i class="mobile-nav-open d-xl-none bi bi-list me-0"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Navegação -->
-      <div class="header-nav">
-        <div class="container-fluid container-xl">
-          <div class="position-relative">
-            <div class="d-flex align-items-center justify-content-between">
-              <!-- Logótipo para computador -->
-              <a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
-                <img alt="Logo" src="assets/img/logo-header.png" />
-              </a>
-              <nav class="navmenu mx-auto justify-content-center" id="navmenu">
-                <ul>
-                  <li class="navmenu-close">
-                    <i class="mobile-nav-close d-xl-none bi bi-x"></i>
-                  </li>
-                  <li>
-                    <a href="index.html">Início</a>
-                  </li>
-                  <li>
-                    <a href="quem-somos.html">Quem Somos</a>
-                  </li>
-                  <li>
-                    <a href="equipamentos.html">Equipamentos</a>
-                  </li>
-                  <li>
-                    <a href="contacto.html">Contacto</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Pesquisa móvel (colapsável) -->
-      <div class="collapse" id="mobileSearch">
-    <div class="container">
-        <form class="search-form">
-            <div class="input-group">
-                <input class="form-control" placeholder="Pesquisar produtos" type="text" />
-                <button class="btn" type="submit">
-                    <i class="bi bi-search"></i>
-                </button>
-            </div>
-        </form>
-    </div>
-</div>
-  
+		<footer id="footer" class="footer">
+			<div class="footer-main">
+				<div class="container">
+					<div class="row gy-4">
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="footer-widget footer-about">
+								<a href="index.html" class="logo"><img src="assets/img/logo-footer.png" alt="Logo all4esthetic" /></a>
+								<p>Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.</p>
+								<div class="social-links mt-4">
+									<h5>Siga-nos:</h5>
+									<div class="social-icons">
+										<a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+										<a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+										<a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+										<a href="#" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Quem Somos</h4>
+								<ul class="footer-links">
+									<li><a href="#">Historia</a></li>
+									<li><a href="#">Equipe</a></li>
+									<li><a href="#">Visão</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Equipamentos</h4>
+								<ul class="footer-links">
+									<li><a href="#">Venda</a></li>
+									<li><a href="#">Aluguer</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Informações</h4>
+								<ul class="footer-links">
+									<li><a href="#">Termos de Uso</a></li>
+									<li><a href="#">Aviso Legal</a></li>
+									<li><a href="#">Política de Privacidade</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Contacto</h4>
+								<div class="footer-contact mt-4">
+									<div class="contact-item">
+										<i class="bi bi-geo-alt"></i>
+										<a href="https://www.google.com/maps/search/?q=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+PT+2870-607" target="_blank">R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607</a>
+									</div>
+									<div class="contact-item">
+										<i class="bi bi-telephone"></i>
+										<a href="https://wa.me/351214095469" target="_blank">(+351) 21 409 5469</a>
+									</div>
+									<div class="contact-item">
+										<i class="bi bi-envelope"></i>
+										<a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div>
+					<div class="copyright text-center mt-4">
+						<p class="footer-p">© <span>Copyright 2025</span> <strong class="px-1 sitename">all4esthetic.</strong> <span>Todos os Direitos Reservados.</span></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+		<div id="preloader"></div>
 
-</header>
-
-  <!-- informações de contato, visíveis apenas no PDF -->
-  
-    <main class="pd-main">
-      <div class="pd-page-title pd-light-bg">
-        <div class="container-fluid container-xl pd-breadcrumbs pd-container">
-          <h1 class="pd-title-text">Detalhes
-          </h1>
-          <nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
-            <ol>
-              <li><a href="index.html">Início</a></li>
-              <li><a href="equipamentos.html">Equipamentos</a></li>
-              <li class="current" aria-current="page">Detalhes</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-
-      
-
-      
-
-  <!-- logo, visível apenas no PDF -->
-      
-
-      <!-- seção de produto -->
-      <section id="pd-product-section" class="pd-details-section pd-container section">
-  <div class="pdf-wrapper">
-    <!-- LOGO NO TOPO, UMA ÚNICA VEZ -->
-    <div id="pdf-logo-container">
-      <img src="assets/img/logo-header.png" alt="Logo" id="pdf-logo">
-    </div>
-    <div class="container py-5">
-      <div class="row">
-        <div class="grid-product">
-          <!-- Coluna 1: imagem + carrossel -->
-          <div class="image-column">
-            <div class="pd-img-container">
-              <span id="pd-category-text" class="pd-category-label"></span>
-              <img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal">
-            </div>
-            <div class="thumbs-wrapper">
-              <button class="thumb-btn prev" aria-label="Anterior">&lt;</button>
-              <div class="thumbs-viewport"><ul class="thumbs-track"></ul></div>
-              <button class="thumb-btn next" aria-label="Próximo">&gt;</button>
-            </div>
-          </div>
-          <!-- Coluna 2 -->
-          <div class="info-column">
-            <h2 id="pd-title-text" class="pd-product-title"></h2>
-            <div class="tab-buttons">
-              <button id="btn-funcao" class="pd-btn-funcao active">Função</button>
-              <button id="btn-tecnica" class="pd-btn-tecnica">Ficha Técnica</button>
-            </div>
-            <div id="tab-content">
-              <div id="content-funcao" class="tab-panel active"><div id="pd-functions-list"></div></div>
-              <div id="content-tecnica" class="tab-panel">
-                <div class="pd-box"><h5>Dados Técnicos</h5><table id="pd-tech-table" class="table"></table></div>
-                <div class="pd-box"><h5>Logística</h5><table id="pd-logistics-table" class="table"></table></div>
-                <div class="pd-box"><h5>Aplicação</h5><p id="pd-application-text"></p></div>
-              </div>
-            </div>
-            <div class="pd-box pd-availability-box mt-4">
-              <h5>Disponibilidade</h5>
-              <ul id="pd-availability-list" class="list-unstyled"></ul>
-            </div>
-            <!-- informações de contato, visíveis apenas no PDF, com classe pd-box -->
-            <div id="pdf-contact-info" class="pd-box">
-              <h5>All4Esthetic — innovating beauty</h5>
-              <p><strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia</p>
-              <p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
-              <p><strong>E-mail:</strong> geral@all4esthetic.com</p>
-              <p><strong>Site:</strong> <a>www.all4esthetic.com</a></p>
-            </div>
-            <div class="pd-actions mb-4">
-              <button id="btn-pdf" class="pd-btn pd-btn-outline-pdf">Gerar PDF</button>
-              <button id="btn-quote" class="pd-btn pd-btn-outline">Solicitar Orçamento</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    </main>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', async () => {
-        const params = new URLSearchParams(location.search);
-        const eqId = params.get('id');
-        const mainImg = document.getElementById('pd-main-img');
-        const availUL = document.getElementById('pd-availability-list');
-        const btnPdf = document.getElementById('btn-pdf');
-        const btnFunc = document.getElementById('btn-funcao');
-        const btnTech = document.getElementById('btn-tecnica');
-        const panelF = document.getElementById('content-funcao');
-        const panelT = document.getElementById('content-tecnica');
-
-        window.addEventListener('beforeprint', () => {
-          panelF.classList.add('active');
-          panelT.classList.add('active');
-        });
-
-        btnPdf.addEventListener('click', () => window.print());
-
-        try {
-          const res = await fetch('assets/data/equipamentos.json');
-          const data = await res.json();
-          const eq = data.find(item => item.id === eqId);
-          if (!eq) {
-            document.getElementById('pd-title-text').textContent = "Equipamento não encontrado";
-            return;
-          }
-
-          mainImg.src = eq.image;
-          document.getElementById('pd-category-text').textContent = eq.category;
-          document.getElementById('pd-title-text').textContent = eq.name;
-
-          const funcList = document.getElementById('pd-functions-list');
-          funcList.innerHTML = '';
-          eq.functions.forEach(f => {
-            const div = document.createElement('div');
-            div.classList.add('pd-function-item');
-            div.innerHTML = `<h6>${f.nome}</h6><p>${f.descricao}</p>`;
-            funcList.appendChild(div);
-          });
-
-          document.getElementById('pd-application-text').textContent = eq.application;
-
-          btnFunc.addEventListener('click', () => {
-            btnFunc.classList.add('active');
-            btnTech.classList.remove('active');
-            panelF.classList.add('active');
-            panelT.classList.remove('active');
-          });
-          btnTech.addEventListener('click', () => {
-            btnTech.classList.add('active');
-            btnFunc.classList.remove('active');
-            panelT.classList.add('active');
-            panelF.classList.remove('active');
-          });
-
-          const techTable = document.getElementById('pd-tech-table');
-          const logTable = document.getElementById('pd-logistics-table');
-          techTable.innerHTML = '';
-          logTable.innerHTML = '';
-          Object.entries(eq.technical_data).forEach(([k,v]) => {
-            if (typeof v === 'object') {
-              Object.entries(v).forEach(([sk,sv]) => {
-                techTable.insertAdjacentHTML('beforeend',
-                  `<tr><th>${sk.replace(/_/g,' ')}</th><td>${sv}</td></tr>`
-                );
-              });
-            } else {
-              techTable.insertAdjacentHTML('beforeend',
-                `<tr><th>${k.replace(/_/g,' ')}</th><td>${v}</td></tr>`
-              );
-            }
-          });
-          Object.entries(eq.logistics).forEach(([k,v]) => {
-            logTable.insertAdjacentHTML('beforeend',
-              `<tr><th>${k.replace(/_/g,' ')}</th><td>${v}</td></tr>`
-            );
-          });
-
-          availUL.innerHTML = '';
-          if (eq.sale) {
-            availUL.insertAdjacentHTML('beforeend',
-              `<li><i class="bi bi-check-circle-fill me-2"></i>Para venda</li>`
-            );
-          }
-          Object.entries(eq.rental)
-            .filter(([,ok]) => ok)
-            .forEach(([periodo]) => {
-              const labels = { diario:'Diário', bidiario:'Bidiário', semanal:'Semanal', mensal:'Mensal' };
-              const text = labels[periodo] || periodo;
-              availUL.insertAdjacentHTML('beforeend',
-                `<li><i class="bi bi-check-circle-fill me-2"></i>Para aluguer ${text}</li>`
-              );
-            });
-
-          document.getElementById('btn-quote')
-            .addEventListener('click', () => location.href = 'contacto.html');
-
-          const track = document.querySelector('.thumbs-track');
-          eq.images.forEach((src, idx) => {
-            const li = document.createElement('li');
-            li.className = 'thumb-slide' + (idx === 0 ? ' active' : '');
-            li.innerHTML = `<img src="${src}" alt="Miniatura ${idx+1}">`;
-            li.addEventListener('click', () => {
-              mainImg.style.opacity = 0;
-              mainImg.addEventListener('transitionend', function h(e) {
-                if (e.propertyName !== 'opacity') return;
-                mainImg.removeEventListener('transitionend', h);
-                mainImg.src = src;
-                requestAnimationFrame(() => mainImg.style.opacity = 1);
-              });
-              document.querySelectorAll('.thumb-slide').forEach(s => s.classList.remove('active'));
-              li.classList.add('active');
-            });
-            track.appendChild(li);
-          });
-          let currentIndex = 0;
-          const prevBtn = document.querySelector('.thumb-btn.prev');
-          const nextBtn = document.querySelector('.thumb-btn.next');
-          function updateCarousel() {
-            const visible = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
-            const slide = document.querySelector('.thumb-slide');
-            if (!slide) return;
-            const style = getComputedStyle(slide);
-            const w = slide.offsetWidth + parseFloat(style.marginRight);
-            track.style.transform = `translateX(-${currentIndex * w}px)`;
-            prevBtn.disabled = currentIndex <= 0;
-            nextBtn.disabled = currentIndex >= eq.images.length - visible;
-          }
-          prevBtn.addEventListener('click', () => { if (currentIndex > 0) currentIndex--; updateCarousel(); });
-          nextBtn.addEventListener('click', () => {
-            const vis = window.innerWidth < 768 ? 1 : (window.innerWidth < 992 ? 2 : 3);
-            if (currentIndex < eq.images.length - vis) currentIndex++;
-            updateCarousel();
-          });
-          window.addEventListener('resize', updateCarousel);
-          updateCarousel();
-
-        } catch(err) {
-          console.error('Erro ao carregar dados:', err);
-        }
-      });
-    </script>
-  
-
-    <footer class="footer" id="footer">
-      <div class="footer-main">
-        <div class="container">
-          <div class="row gy-4">
-            <!-- Coluna 1: Sobre a all4esthetic -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="footer-widget footer-about">
-                <a class="logo" href="index.html">
-                  <img alt="Logo all4esthetic" src="assets/img/logo-footer.png" />
-                </a>
-                <p>
-                  Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.
-                </p>
-                <div class="social-links mt-4">
-                  <h5>Siga-nos:</h5>
-                  <div class="social-icons">
-                    <a aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
-                    <a aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
-                    <a aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a>
-                    <a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Coluna 2: Institucional -->
-            <div class="col-lg col-md-6 col-sm-6">
-              <div class="footer-widget">
-                <h4>Quem Somos</h4>
-                <ul class="footer-links">
-                  <li><a href="#">Historia</a></li>
-                  <li><a href="#">Equipe</a></li>
-                  <li><a href="#">Visão</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Coluna 3: Catálogo -->
-            <div class="col-lg col-md-6 col-sm-6">
-              <div class="footer-widget">
-                <h4>Equipamentos</h4>
-                <ul class="footer-links">
-                  <li><a href="#">Venda</a></li>
-                  <li><a href="#">Aluguer</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Coluna 4: Política e Termos -->
-            <div class="col-lg col-md-6 col-sm-6">
-              <div class="footer-widget">
-                <h4>Informações</h4>
-                <ul class="footer-links">
-                  <li><a href="#">Termos de Uso</a></li>
-                  <li><a href="#">Aviso Legal</a></li>
-                  <li><a href="#">Política de Privacidade</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Coluna 5: Contacto -->
-            <div class="col-lg col-md-6 col-sm-6">
-              <div class="footer-widget">
-                <h4>Contacto</h4>
-                <div class="footer-contact mt-4">
-                  <div class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607</span>
-                  </div>
-                  <div class="contact-item">
-                    <i class="bi bi-telephone"></i>
-                    <span>(+351) 21 409 5469</span>
-                  </div>
-                  <div class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    <span>geral@all4esthetic.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- Fim da linha -->
-        </div> <!-- Fim do container -->
-      </div> <!-- Fim do footer-main -->
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="container copyright text-center mt-4">
-            <p>
-              © <span>Copyright</span>
-              <strong class="px-1 sitename">2025 all4esthetic.</strong>
-              <span>Todos os Direitos Reservados.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Botão de scroll para topo -->
-    <a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top">
-      <i class="bi bi-arrow-up-short"></i>
-    </a>
-    <!-- Pré-carregador -->
-    <div id="preloader"></div>
-    <!-- Ficheiros SWIPER -->
-    <script src="assets/swiper/swiper-bundle.min.js"></script>
-    <!-- JS via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/dist/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js"></script>
-    <!-- Opcional (caso utilize filtros/carrosséis etc) -->
-    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
-    <!-- dependências -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+		<script src="assets/swiper/swiper-bundle.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js" defer></script>
+		<script src="assets/js/main.js" defer></script>
+		<script></script>
+	</body>
 </html>

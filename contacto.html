@@ -1,287 +1,227 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>all4esthetic</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-    <!-- Ícones de favorito -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-    <!-- Fontes -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet"/>
-    <!-- CSS do Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
-    <!-- Ícones do Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-    <!-- AOS (Animações ao Rolagem) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
-    <!-- GLightbox (Galeria de Imagens) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css"/>
-    <!-- Drift Zoom (Zoom de Imagem) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css"/>
-    <!-- Ficheiros do Carrossel Swiper -->
-    <link href="assets/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <!-- Ficheiro CSS Principal -->
-    <link href="assets/css/main.css" rel="stylesheet" />
-  </head>
-  <body class="index-page">
-    <header class="header position-fixed top-0 w-100" id="header">
-      <!-- Cabeçalho Principal -->
-      <div class="main-header">
-        <div class="container-fluid container-xl">
-          <div class="d-flex py-3 align-items-center justify-content-between">
-            <!-- Logótipo para telemóvel -->
-            <a class="logo d-flex align-items-center d-xl-none" href="index.html">
-              <img alt="Logo" src="assets/img/logo-header.png" />
-            </a>
-            <!-- Botão de abrir menu (hambúrguer) no cabeçalho -->
-            <div class="header-actions d-flex align-items-center justify-content-end">
-              <i class="mobile-nav-open d-xl-none bi bi-list me-0"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Navegação -->
-      <div class="header-nav">
-        <div class="container-fluid container-xl">
-          <div class="position-relative">
-            <div class="d-flex align-items-center justify-content-between">
-              <!-- Logótipo para computador -->
-              <a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
-                <img alt="Logo" src="assets/img/logo-header.png" />
-              </a>
-              <nav class="navmenu mx-auto justify-content-center" id="navmenu">
-                <ul>
-                  <li class="navmenu-close">
-                    <i class="mobile-nav-close d-xl-none bi bi-x"></i>
-                  </li>
-                  <li>
-                    <a href="index.html">Início</a>
-                  </li>
-                  <li>
-                    <a href="quem-somos.html">Quem Somos</a>
-                  </li>
-                  <li>
-                    <a  href="equipamentos.html">Equipamentos</a>
-                  </li>
-                  <li>
-                    <a class="active" href="#">Contacto</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Pesquisa móvel (colapsável) -->
-      <div class="collapse" id="mobileSearch">
-    <div class="container">
-        <form class="search-form">
-            <div class="input-group">
-                <input class="form-control" placeholder="Pesquisar produtos" type="text" />
-                <button class="btn" type="submit">
-                    <i class="bi bi-search"></i>
-                </button>
-            </div>
-        </form>
-    </div>
-</div>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>all4esthetic</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="icon" href="assets/img/favicon.png" />
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+	</head>
+	<body class="index-page">
+		<header id="header" class="header position-fixed top-0 w-100">
+			<div class="main-header">
+				<div class="container-fluid container-xl">
+					<div class="d-flex align-items-center justify-content-between">
+						<a href="index.html" class="logo d-flex align-items-center d-xl-none">
+							<img src="assets/img/logo-header.png" alt="Logo" />
+						</a>
+						<div class="header-actions d-flex align-items-center justify-content-end">
+							<i class="mobile-nav-open bi bi-list me-0 mobile-nav-toggle d-xl-none" role="button" tabindex="0" aria-label="Abrir menu"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-nav">
+				<div class="container-fluid container-xl">
+					<div class="position-relative">
+						<div class="d-flex align-items-center justify-content-between">
+							<a href="index.html" class="logo d-flex align-items-center me-4 d-none d-xl-flex">
+								<img src="assets/img/logo-header.png" alt="Logo" />
+							</a>
+							<nav id="navmenu" class="navmenu mx-auto justify-content-center" aria-label="Menu principal">
+								<ul>
+									<li class="navmenu-close d-xl-none" role="button" tabindex="0" aria-label="Fechar menu">
+										<span class="mobile-nav-close">X</span>
+									</li>
+									<li><a href="index.html">Início</a></li>
+									<li><a href="quem-somos.html">Quem Somos</a></li>
+									<li><a href="equipamentos.html">Equipamentos</a></li>
+									<li><a class="active" href="#">Contacto</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-</header>
-    
+		<main class="main">
+	<div class="pd-page-title pd-light-bg">
+		<div class="container-xl pd-breadcrumbs pd-container">
+			<h1 class="pd-title-text">Contacto</h1>
+			<nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
+				<ol>
+					<li><a href="index.html">Início</a></li>
+					<li class="current" aria-current="page">Contacto</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+	<section class="about section" aria-labelledby="about-heading">
+		<div class="container" data-aos="fade-up" data-aos-delay="100">
+			<div class="about">
+				<div class="row align-items-center">
+					<div>
+						<h2 class="about-title">Inovação e qualidade para transformar a estética</h2>
+						<p class="about-description">
+							Comprometidos em oferecer tecnologias avançadas e serviços personalizados, trabalhamos para elevar o padrão de beleza e cuidado, sempre com segurança e confiança.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contact-cards-row">
+				<!-- Endereço -->
+				<div class="contact-card">
+					<a
+						href="https://www.google.com/maps/search/?api=1&query=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+2870-607"
+						class="contact-link-wrapper"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div class="contact-icon">
+							<i class="bi bi-geo-alt"></i>
+						</div>
+						<h3 class="contact-title">Endereço</h3>
+						<p class="contact-text">
+							R. dos Tractores 506, Armazém AE,<br />
+							Lisboa, 2870-607
+						</p>
+					</a>
+				</div>
 
+				<!-- Contacto -->
+				<div class="contact-card">
+					<a
+						href="https://wa.me/351214095469"
+						class="contact-link-wrapper"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div class="contact-icon">
+							<i class="bi bi-telephone-fill"></i>
+						</div>
+						<h3 class="contact-title">Contacto</h3>
+						<p class="contact-text">+351 21 409 5469</p>
+					</a>
+				</div>
 
-<main>
-
-  <!-- Título da Página -->
-   <div class="pd-page-title pd-light-bg">
-    <div class="container-fluid container-xl pd-breadcrumbs pd-container">
-      <h1 class="pd-title-text">Contacto
-      </h1>
-      <nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="index.html">Início</a></li>
-          <li class="current" aria-current="page">Contacto</li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-
- <!-- HTML -->
-<section id="contact-section" class="contact-section">
-  <div class="container mt-3" data-aos="fade-up" data-aos-delay="100">
-    <div class="contact-cards-row">
-      <!-- Endereço -->
-      <div id="address-card" class="contact-card">
-        <div class="contact-icon">
-          <i class="bi bi-geo-alt"></i>
-        </div>
-        <h3 class="contact-title">
-          <a href="https://goo.gl/maps/EXEMPLO" class="contact-link" target="_blank" rel="noopener">
-            Endereço
-          </a>
-        </h3>
-        <p class="contact-text">
-          R. Marquês de Pombal 12,<br>
-          1250-162 Lisboa, Portugal
-        </p>
-      </div>
-
-      <!-- Contacto -->
-      <div id="phone-card" class="contact-card">
-        <div class="contact-icon">
-          <i class="bi bi-telephone-fill"></i>
-        </div>
-        <h3 class="contact-title">
-          <a href="tel:+351210123456" class="contact-link">
-            Contacto
-          </a>
-        </h3>
-        <p class="contact-text">
-          +351 210 123 456
-        </p>
-      </div>
-
-      <!-- Email -->
-      <div id="email-card" class="contact-card">
-        <div class="contact-icon">
-          <i class="bi bi-envelope-fill"></i>
-        </div>
-        <h3 class="contact-title">
-          <a href="mailto:contacto@all4esthetic.pt" class="contact-link">
-            Email
-          </a>
-        </h3>
-        <p class="contact-text">
-          contacto@all4esthetic.pt
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
+				<!-- Email -->
+				<div class="contact-card">
+					<a href="mailto:geral@all4esthetic.com" class="contact-link-wrapper">
+						<div class="contact-icon">
+							<i class="bi bi-envelope-fill"></i>
+						</div>
+						<h3 class="contact-title">Email</h3>
+						<p class="contact-text">geral@all4esthetic.com</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 
 
-
-
-    <footer class="footer" id="footer">
-      <div class="footer-main">
-        <div class="container">
-          <div class="row gy-4">
-            <!-- Coluna 1: Sobre a all4esthetic -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="footer-widget footer-about">
-                <a class="logo" href="index.html">
-                  <img alt="Logo all4esthetic" src="assets/img/logo-footer.png" />
-                </a>
-                <p>
-                  Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.
-                </p>
-                <div class="social-links mt-4">
-                  <h5>Siga-nos:</h5>
-                  <div class="social-icons">
-                    <a aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
-                    <a aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
-                    <a aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a>
-                    <a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Coluna 2: Institucional -->
-            <div class="col-lg col-md-6 col-sm-6">
-              <div class="footer-widget">
-                <h4>Quem Somos</h4>
-                <ul class="footer-links">
-                  <li><a href="#">Historia</a></li>
-                  <li><a href="#">Equipe</a></li>
-                  <li><a href="#">Visão</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Coluna 3: Catálogo -->
-            <div class="col-lg col-md-6 col-sm-6">
-              <div class="footer-widget">
-                <h4>Equipamentos</h4>
-                <ul class="footer-links">
-                  <li><a href="#">Venda</a></li>
-                  <li><a href="#">Aluguer</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Coluna 4: Política e Termos -->
-            <div class="col-lg col-md-6 col-sm-6">
-              <div class="footer-widget">
-                <h4>Informações</h4>
-                <ul class="footer-links">
-                  <li><a href="#">Termos de Uso</a></li>
-                  <li><a href="#">Aviso Legal</a></li>
-                  <li><a href="#">Política de Privacidade</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- Coluna 5: Contacto -->
-            <div class="col-lg col-md-6 col-sm-6">
-              <div class="footer-widget">
-                <h4>Contacto</h4>
-                <div class="footer-contact mt-4">
-                  <div class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607</span>
-                  </div>
-                  <div class="contact-item">
-                    <i class="bi bi-telephone"></i>
-                    <span>(+351) 21 409 5469</span>
-                  </div>
-                  <div class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    <span>geral@all4esthetic.com</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- Fim da linha -->
-        </div> <!-- Fim do container -->
-      </div> <!-- Fim do footer-main -->
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="container copyright text-center mt-4">
-            <p>
-              © <span>Copyright</span>
-              <strong class="px-1 sitename">2025 all4esthetic.</strong>
-              <span>Todos os Direitos Reservados.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Botão de scroll para topo -->
-    <a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top">
-      <i class="bi bi-arrow-up-short"></i>
-    </a>
-    <!-- Pré-carregador -->
-    <div id="preloader"></div>
-    <!-- Ficheiros SWIPER -->
-    <script src="assets/swiper/swiper-bundle.min.js"></script>
-    <!-- JS via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/dist/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js"></script>
-    <!-- Opcional (caso utilize filtros/carrosséis etc) -->
-    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
-    <!-- Ficheiro JS -->
-    <script src="assets/js/main.js"></script>
-  </body>
+		<footer id="footer" class="footer">
+			<div class="footer-main">
+				<div class="container">
+					<div class="row gy-4">
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="footer-widget footer-about">
+								<a href="index.html" class="logo"><img src="assets/img/logo-footer.png" alt="Logo all4esthetic" /></a>
+								<p>Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.</p>
+								<div class="social-links mt-4">
+									<h5>Siga-nos:</h5>
+									<div class="social-icons">
+										<a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+										<a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+										<a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+										<a href="#" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Quem Somos</h4>
+								<ul class="footer-links">
+									<li><a href="#">Historia</a></li>
+									<li><a href="#">Equipe</a></li>
+									<li><a href="#">Visão</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Equipamentos</h4>
+								<ul class="footer-links">
+									<li><a href="#">Venda</a></li>
+									<li><a href="#">Aluguer</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Informações</h4>
+								<ul class="footer-links">
+									<li><a href="#">Termos de Uso</a></li>
+									<li><a href="#">Aviso Legal</a></li>
+									<li><a href="#">Política de Privacidade</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Contacto</h4>
+								<div class="footer-contact mt-4">
+									<div class="contact-item">
+										<i class="bi bi-geo-alt"></i>
+										<a href="https://www.google.com/maps/search/?q=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+PT+2870-607" target="_blank">R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607</a>
+									</div>
+									<div class="contact-item">
+										<i class="bi bi-telephone"></i>
+										<a href="https://wa.me/351214095469" target="_blank">(+351) 21 409 5469</a>
+									</div>
+									<div class="contact-item">
+										<i class="bi bi-envelope"></i>
+										<a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div>
+					<div class="copyright text-center mt-4">
+						<p class="footer-p">© <span>Copyright 2025</span> <strong class="px-1 sitename">all4esthetic.</strong> <span>Todos os Direitos Reservados.</span></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+		<div id="preloader"></div>
+		<script src="assets/swiper/swiper-bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
 </html>
