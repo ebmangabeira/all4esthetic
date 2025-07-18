@@ -2295,14 +2295,12 @@ h6 {
 	background-color: var(--background-color);
 	border: 1px solid var(--accent-color);
 	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 	cursor: pointer;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-card:hover {
 	transform: translateY(-6px);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 
