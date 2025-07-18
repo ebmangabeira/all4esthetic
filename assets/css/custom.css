@@ -1292,7 +1292,6 @@ body.modal-open {
 	border-radius: 12px;
 	padding: 32px 24px !important;
 	text-align: center;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	border: 1px solid var(--accent-color);
 	cursor: pointer;
@@ -1304,7 +1303,6 @@ body.modal-open {
 
 .features-boxes .feature-box:hover {
 	transform: translateY(-6px);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .features-boxes .icon-box {
