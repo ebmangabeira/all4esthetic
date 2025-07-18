@@ -2355,7 +2355,6 @@ h6 {
 @media (max-width: 767px) {
 	.contact-cards-row {
 		flex-direction: column;
-		gap: 16px;
 	}
 	.contact-link-wrapper {
 		padding: 32px 24px;
