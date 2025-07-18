@@ -2142,7 +2142,7 @@ h6 {
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Link que envolve todo o card */
+
 .contact-link-wrapper {
 	display: block;
 	color: inherit;
@@ -2182,16 +2182,13 @@ h6 {
 	margin: 0;
 }
 
-/* Remove underline e cor padrão dos links */
+
 .contact-link-wrapper:hover,
 .contact-link-wrapper:focus {
 	color: var(--accent-color);
 	text-decoration: none;
 }
 
-/* RESPONSIVIDADE */
-
-/* Mobile - até 767px */
 @media (max-width: 767px) {
 	.contact-cards-row {
 		flex-direction: column;
@@ -2217,7 +2214,7 @@ h6 {
 	}
 }
 
-/* Tablet - entre 768px e 1199px */
+
 @media (min-width: 768px) and (max-width: 1199px) {
 	.contact-cards-row {
 		flex-direction: row;
@@ -2249,7 +2246,6 @@ h6 {
 	}
 }
 
-/* Desktop - acima de 1200px */
 @media (min-width: 1200px) {
 	.contact-cards-row {
 		flex-direction: row;

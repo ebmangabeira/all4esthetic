@@ -1,83 +1,5 @@
-/* ==================== RESPONSIVIDADE NA TELA ==================== */
 
-/* Mobile até 767px */
-@media (max-width: 767px) {
-  p {
-    color: var(--heading-color);
-    margin-top: 1rem;
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 300;
-  }
-  .grid-product {
-    flex-direction: column !important;
-  }
-  .image-column, .info-column {
-    width: 100% !important;
-    max-width: none !important;
-  }
-  #pdf-logo {
-    width: 90vw !important;
-    max-width: 90vw !important;
-  }
-}
-
-/* Tablet entre 768px e 1199px */
-@media (min-width: 768px) and (max-width: 1199px) {
-  p {
-    color: var(--heading-color);
-    margin-top: 1rem;
-    text-align: left;
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 300;
-  }
-  .grid-product {
-    flex-direction: row !important;
-  }
-  .image-column {
-    width: 45% !important;
-    max-width: none !important;
-  }
-  .info-column {
-    width: 55% !important;
-    max-width: none !important;
-  }
-  #pdf-logo {
-    width: 60vw !important;
-    max-width: 60vw !important;
-  }
-}
-
-/* Desktop acima de 1200px */
-@media (min-width: 1200px) {
-  p {
-    color: var(--heading-color);
-    margin-top: 1rem;
-    text-align: left;
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 300;
-  }
-  .grid-product {
-    flex-direction: row !important;
-  }
-  .image-column {
-    width: 40% !important;
-    max-width: 60mm !important;
-  }
-  .info-column {
-    width: 60% !important;
-    max-width: none !important;
-  }
-  #pdf-logo {
-    width: 100mm !important;
-    max-width: 100mm !important;
-  }
-}
-
-/* ==================== IMPRESSÃO/PDF ==================== */
+/* ==================== IMPRESSÃO / PDF ==================== */
 
 @page {
   size: A4 portrait;
@@ -85,34 +7,31 @@
 }
 
 @media print {
+  /* Esconder tudo fora da .pdf-wrapper */
   body * {
     visibility: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
   }
-
-  html, body {
-    zoom: 1;
-    transform-origin: top left;
-    width: auto !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-
   .pdf-wrapper,
   .pdf-wrapper * {
     visibility: visible !important;
   }
-
+  /* Reset margens e padding para print */
+  body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
   .pdf-wrapper {
     position: absolute !important;
     top: 15mm !important;
     left: 15mm !important;
     right: 15mm !important;
     bottom: 15mm !important;
-    transform: none !important;
     padding-top: 60mm !important;
     box-sizing: border-box;
+    background: white !important;
   }
 
   #pdf-logo-container {
@@ -126,7 +45,6 @@
     margin-bottom: 10mm !important;
     page-break-inside: avoid !important;
   }
-
   #pdf-logo {
     max-width: 90mm !important;
     width: 90mm !important;
@@ -136,15 +54,17 @@
     margin-bottom: 5mm !important;
   }
 
-  #pd-category-text,
-  .thumbs-wrapper,
-  .tab-buttons,
-  .thumb-btn,
-  .pd-actions {
+  /* Esconde elementos que não devem aparecer no PDF */
+  .pdf-wrapper #pd-category-text,
+  .pdf-wrapper .thumbs-wrapper,
+  .pdf-wrapper .tab-buttons,
+  .pdf-wrapper .thumb-btn,
+  .pdf-wrapper .pd-actions {
     display: none !important;
   }
 
-  #pd-product-section .grid-product {
+  /* Layout flex vertical para o produto */
+  .pdf-wrapper #pd-product-section .grid-product {
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
@@ -153,20 +73,21 @@
     text-align: center !important;
   }
 
-  .image-column {
+  /* Imagem centralizada e responsiva */
+  .pdf-wrapper .image-column {
     width: auto !important;
     max-width: 100% !important;
     margin: 0 auto !important;
   }
-
-  #pd-main-img {
+  .pdf-wrapper #pd-main-img {
     display: block !important;
     margin: 0 auto 5mm auto !important;
     max-width: 100% !important;
     height: auto !important;
   }
 
-  .info-column {
+  /* Informações do produto */
+  .pdf-wrapper .info-column {
     width: 100% !important;
     max-width: 170mm !important;
     margin: 0 auto !important;
@@ -174,70 +95,66 @@
     flex-direction: column !important;
     text-align: left !important;
     margin-top: 8mm !important;
-    gap: 6mm;
+    gap: 6mm !important;
   }
 
-  .tab-panel {
+  /* Mostrar abas e conteúdos */
+  .pdf-wrapper .tab-panel {
     display: block !important;
     visibility: visible !important;
   }
 
-  #content-funcao {
+  /* Ajustes margens e quebras */
+  .pdf-wrapper #content-funcao {
     margin-bottom: 0 !important;
   }
-
-  #content-tecnica,
-  .pd-availability-box,
-  #pdf-contact-info {
+  .pdf-wrapper #content-tecnica,
+  .pdf-wrapper .pd-availability-box,
+  .pdf-wrapper #pdf-contact-info {
     width: 100% !important;
     align-self: flex-start !important;
     margin-top: 6mm !important;
     margin-bottom: 0 !important;
   }
 
-  h2.pd-product-title,
-  .pd-box,
-  .pd-function-item,
-  .pd-availability-box,
-  table {
+  /* Evitar quebra interna */
+  .pdf-wrapper h2.pd-product-title,
+  .pdf-wrapper .pd-box,
+  .pdf-wrapper .pd-function-item,
+  .pdf-wrapper .pd-availability-box,
+  .pdf-wrapper table {
     page-break-inside: avoid !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     font-size: 22pt !important;
     padding-bottom: 4mm !important;
   }
-
-  .pd-box h5 {
+  .pdf-wrapper .pd-box h5 {
     font-size: 16pt !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     margin-bottom: 3mm !important;
   }
-
-  .pd-box,
-  .pd-availability-box,
-  #pdf-contact-info {
+  .pdf-wrapper .pd-box,
+  .pdf-wrapper .pd-availability-box,
+  .pdf-wrapper #pdf-contact-info {
     font-size: 11pt !important;
     line-height: 1.4 !important;
     margin-bottom: 4mm !important;
   }
-
-  .pd-box:last-child {
+  .pdf-wrapper .pd-box:last-child {
     margin-bottom: 0 !important;
   }
-
   .pdf-wrapper p,
   .pdf-wrapper .pd-box p,
   .pdf-wrapper #pdf-contact-info p {
     font-size: 12pt !important;
     line-height: 1.5 !important;
-    margin-bottom: 3mm;
+    margin-bottom: 3mm !important;
   }
-
-  #pdf-contact-info {
+  .pdf-wrapper #pdf-contact-info {
     margin-top: 8mm !important;
     page-break-inside: avoid !important;
   }
-
-  #pdf-contact-info.pd-box {
+  .pdf-wrapper #pdf-contact-info.pd-box {
     display: block !important;
     margin: 0 !important;
     page-break-inside: avoid !important;
