@@ -9,6 +9,7 @@
 	--background-color: #ffffff;
 	--default-color: #EDECED;
 	--heading-color: #757880;
+	--description-color: #757880db;
 	--accent-color: #EA4595;
 	--surface-color: #3B3D43;
 	--contrast-color: #ffffff;
@@ -1122,7 +1123,7 @@ body.modal-open {
 		margin: 0 !important;
 		flex: 0 0 auto !important;
 		max-width: 50% !important; 
-		font-size: 22px;
+		font-size: 0;
 		padding-top: 2px;
 	}
 
@@ -1482,8 +1483,8 @@ body.modal-open {
 }
 
 .card-designacao {
-	font-size: 22px;
-	color: var(--heading-color);
+	font-size: 18px;
+	color: var(--description-color);
 	font-weight: 300;
 	min-height: 1.5em;
 	margin-top: -10px;

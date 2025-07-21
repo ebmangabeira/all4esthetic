@@ -25,7 +25,7 @@
       "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/E007/E007-1.webp",
+    "image": "assets/img/equipments/E007/E007-thumb.webp",
     "images": [
       "assets/img/equipments/E007/E007-1.webp",
       "assets/img/equipments/E007/E007-2.webp",
@@ -47,14 +47,14 @@
   },
   {
     "id": "E012V1",
-    "name": "Emsculpt com",
-    "designação": "2 Manipuladores",
+    "name": "EMSculpt",
+    "designação": "Incl. 2 Manípulos",
     "ref": "E012V1",
     "code_rev": "FTE012V1.01",
     "functions": [
       {
         "nome": "EMS",
-        "descricao": "A tecnologia Emsculpt utiliza ondas electromagnéticas localizadas de alta intensidade. Estas são responsáveis por produzir acções musculares involuntárias e com intensidades que naturalmente o músculo, por si só, não é capaz de efectuar. É indicado para tonificação muscular, em específico para abdómen e nádegas."
+        "descricao": "A tecnologia EMSCulpt utiliza ondas electromagnéticas localizadas de alta intensidade. Estas são responsáveis por produzir acções musculares involuntárias e com intensidades que naturalmente o músculo, por si só, não é capaz de efectuar. É indicado para tonificação muscular, em específico para abdómen e nádegas."
       }
     ],
     "technical_data": {
@@ -72,7 +72,7 @@
       "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/E012V1/E012V1-1.png",
+    "image": "assets/img/equipments/E012V1/E012V1-thumb.png",
     "images": [
       "assets/img/equipments/E012V1/E012V1-1.png",
       "assets/img/equipments/E012V1/E012V1-2.png",
@@ -118,12 +118,12 @@
       "ROSH 2011/65/EU"
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/ E025/E025-1.png",
+    "image": "assets/img/equipments/E025/E025-thumb.png",
     "images": [
-      "assets/img/equipments/ E025/E025-1.png",
-      "assets/img/equipments/ E025/E025-2.png",
-      "assets/img/equipments/ E025/E025-3.png",
-      "assets/img/equipments/ E025/E025-4.png"
+      "assets/img/equipments/E025/E025-1.png",
+      "assets/img/equipments/E025/E025-2.png",
+      "assets/img/equipments/E025/E025-3.png",
+      "assets/img/equipments/E025/E025-4.png"
     ],
     "category": "Estética",
     "sale": true,
@@ -136,8 +136,8 @@
   },
   {
     "id": "E048V1",
-    "name": "Pressoterapia 3 em 1",
-    "designação": "",
+    "name": "Pressoterapia",
+    "designação": "3 em 1",
     "ref": "E048V1",
     "code_rev": "FTE048V1.03",
     "functions": [
@@ -170,7 +170,7 @@
       "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/E048V1/E048V1-1.png",
+    "image": "assets/img/equipments/E048V1/E048V1-thumb.png",
     "images": [
       "assets/img/equipments/E048V1/E048V1-1.png",
       "assets/img/equipments/E048V1/E048V1-2.png",
@@ -235,8 +235,8 @@
   },
   {
     "id": "E055",
-    "name": "Multifunções 5 em 1",
-    "designação": "",
+    "name": "Multifunções",
+    "designação": "5 em 1",
     "ref": "E055",
     "code_rev": "FTE055.03",
     "functions": [
@@ -291,7 +291,7 @@
   {
   "id": "E058V2",  
   "name": "Criolipólise 360º",  
-  "designação": "com 2 Manipulos",  
+  "designação": "Incl. 2 Manípulos",  
   "ref": "E058V2",  
   "code_rev": "FTE058V2.02",  
   "functions": [
@@ -372,14 +372,14 @@
   },
   {
     "id": "E059",
-    "name": "Radiofrequência Bi e",
-    "designação": "Tripolar (Rosto e Corpo)",
+    "name": "Radiofrequência",
+    "designação": "Bi e Tripolar - Rosto e Corpo",
     "ref": "E059",
     "code_rev": "FTE059.02",
     "functions": [
     {
       "nome": "Lipoescultura a frio",
-      "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes manipulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia leva a possibilitar o profissional de trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura e celulite e tonificação e firmeza da pele."
+      "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes Manípulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia leva a possibilitar o profissional de trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura e celulite e tonificação e firmeza da pele."
     }
   ],
     "technical_data": {
@@ -460,13 +460,13 @@
   {
     "id": "E061V1",
     "name": "V-Shape",
-    "designação": "com 4 Manípulos",
+    "designação": "Incl. 4 Manípulos",
     "ref": "E061V1",
     "code_rev": "FTE061V1.02",
     "functions": [
     {
       "nome": "V-Shape",
-      "descricao": "combina a tecnologia de Radiofrequência Bipolar, com movimentos modeladores executados pelos cilindros circulantes, vacuoterapia, infravermelhos e ultrassom. A combinação perfeita para a modelação corporal, com resultados totalmente eficazes na redução de volume corporal e uma ferramenta extremamente útil no combate à celulite. Possui 4 manipulos, sendo que o de rosto ainda contem 3 cabeçotes ajustáveis de tamanhos diferentes."
+      "descricao": "combina a tecnologia de Radiofrequência Bipolar, com movimentos modeladores executados pelos cilindros circulantes, vacuoterapia, infravermelhos e ultrassom. A combinação perfeita para a modelação corporal, com resultados totalmente eficazes na redução de volume corporal e uma ferramenta extremamente útil no combate à celulite. Possui 4 Manípulos, sendo que o de rosto ainda contem 3 cabeçotes ajustáveis de tamanhos diferentes."
     }
   ],
     "technical_data": {
@@ -478,7 +478,7 @@
       "Espectro_infravermelhos:": "940 nm",
       "Potência_infravermelhos:": "20 W",
       "Pressão_vácuo:": "0-90KPA",
-      "N.º_manipulos:": "4",
+      "N.º_Manípulos:": "4",
       "Corrente_eléctrica:": "AC220V ± 10%, 50Hz ± 1Hz / AC110V ± 10%, 60Hz ± 1Hz (opcional)"
     },
     "logistics": {
@@ -507,8 +507,8 @@
   },
   {
     "id": "E069V1",
-    "name": "Laser Diodo 808nm",
-    "designação": "",
+    "name": "Laser Diodo",
+    "designação": "808nm",
     "ref": "E069V1",
     "code_rev": "FTE069V1.02",
     "functions": [
@@ -553,8 +553,8 @@
   },
   {
     "id": "E169V1",
-    "name": "Laser Diodo 755, 808 e",
-    "designação": "1064nm",
+    "name": "Laser Diodo V1",
+    "designação": "755, 808 e 1064nm",
     "ref": "E169V1",
     "code_rev": "FTE169V1.03",
     "functions": [
@@ -599,8 +599,8 @@
   },
   {
     "id": "E169V3",
-    "name": "Laser Diodo 755, 808 e",
-    "designação": "1064nm",
+    "name": "Laser Diodo V3",
+    "designação": "755, 808 e 1064nm",
     "ref": "E169V3",
     "code_rev": "FTE169V3.03",
     "functions": [
@@ -646,8 +646,8 @@
   },
   {
     "id": "E169V4",
-    "name": "Laser Diodo Eos Ice",
-    "designação": "",
+    "name": "Laser Diodo V4",
+    "designação": "EOS-ICE",
     "ref": "E169V4",
     "code_rev": "FTE169V4.01",
     "functions": [
@@ -693,8 +693,8 @@
   },
   {
     "id": "E174",
-    "name": "Laser Remoção de",
-    "designação": "Derrames",
+    "name": "Laser Derrames",
+    "designação": "",
     "ref": "E174",
     "code_rev": "FTE174.04",
     "functions": [

@@ -29,13 +29,46 @@
 
 	const openToggle = document.querySelector('.mobile-nav-open'); 
 	const closeToggle = document.querySelector('.navmenu-close'); 
+	let toggleController;
+	let observer;
 
 	function openMobileNav() {
 		document.body.classList.add('mobile-nav-active');
+
+		observer = new IntersectionObserver(([entry]) => {
+			// Only add the listener if not already added
+			if (!toggleController) {
+				toggleController = new AbortController();
+
+				document.addEventListener('click', clickOnBackdrop, {
+					signal: toggleController.signal
+				});
+			}
+		}, {
+			threshold: 1,
+		});
+
+		observer.observe(navmenu);
 	}
 
 	function closeMobileNav() {
 		document.body.classList.remove('mobile-nav-active');
+
+		if (toggleController) {
+			toggleController.abort();
+			toggleController = null;
+		}
+
+		if (observer) {
+			observer.disconnect();
+			observer = null;
+		}
+	}
+
+	function clickOnBackdrop(event) {
+		if (event.target === navmenu) return;
+
+		closeMobileNav();
 	}
 
 	if (openToggle) {
@@ -125,7 +158,6 @@
 				}
 			}, false);
 		});
-
 	});
 	window.addEventListener("scroll", function () {
 		const header = document.getElementById("header");
@@ -199,6 +231,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 		renderPagination();
 		updateTags();
 	}
+	
+	function handleFilter(query) {
+		if (!query) return;
+
+		if (['venda', 'aluguer'].some(category => query.includes(category))) {
+			document.querySelector(`[id*=${query}]`)?.click();
+		}
+		
+		window.history.replaceState({}, document.title, window.location.origin + window.location.pathname);
+	}
 
 	function vals(selC, selA, selR) {
 		const cats = selC.filter(i => i.checked).map(i => i.value);
@@ -210,7 +252,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	catD.concat(avD, reD).forEach(i => i.addEventListener('change', () => apply({ ...vals(catD, '.desktop-avail:checked', reD) })));
 	catM.concat(avM, reM).forEach(i => i.addEventListener('change', () => apply({ ...vals(catM, '.mobile-avail:checked', reM) })));
 
-	btnFiltro.addEventListener('click', () => {
+	btnFiltro?.addEventListener('click', () => {
 		mobFilt.classList.add('open');
 		document.body.classList.add('no-scroll');
 		const filtrosContent = mobFilt.querySelector('.mobile-filters-content');
@@ -218,12 +260,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 		window.scrollTo({ top: 0, behavior: 'auto' });
 	});
 
-	btnClose.addEventListener('click', () => {
+	btnClose?.addEventListener('click', () => {
 		mobFilt.classList.remove('open');
 		document.body.classList.remove('no-scroll');
 	});
 
-	btnSearch.addEventListener('click', () => {
+	btnSearch?.addEventListener('click', () => {
 		apply({ ...vals(catM, '.mobile-avail:checked', reM) });
 		mobFilt.classList.remove('open');
 		document.body.classList.remove('no-scroll');
@@ -332,7 +374,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 			}
 		}, 'next'));
 	}
+
 	apply({ cats: [], av: null, rents: [] });
+	handleFilter(window.location.search.split('?')[1])
+
 });
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -364,12 +409,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 		btnTech.setAttribute('aria-selected', 'false');
 	});
 
-	btnPdf.addEventListener('click', () => window.print());
+	btnPdf?.addEventListener('click', () => window.print());
 
 	try {
 		const res = await fetch('assets/data/equipamentos.json');
-		const data = await res.json();
-		const eq = data.find((item) => item.id === eqId);
+		this.data = await res.json();
+		const eq = this.data.find((item) => item.id === eqId);
 		if (!eq) {
 			document.getElementById('pd-title-text').textContent = 'Equipamento não encontrado';
 			return;
@@ -447,7 +492,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 		if (eq.sale) {
 			availUL.insertAdjacentHTML(
 				'beforeend',
-				`<li><i class="bi bi-check-circle-fill me-2"></i>Para venda</li>`
+				`<li><i class="bi bi-check-circle-fill me-2"></i>Venda</li>`
 			);
 		}
 		Object.entries(eq.rental)
@@ -457,12 +502,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 				const text = labels[periodo] || periodo;
 				availUL.insertAdjacentHTML(
 					'beforeend',
-					`<li><i class="bi bi-check-circle-fill me-2"></i>Para aluguer ${text}</li>`
+					`<li><i class="bi bi-check-circle-fill me-2"></i>Aluguer ${text}</li>`
 				);
 			});
 
 		document.getElementById('btn-quote').addEventListener('click', () => {
-			location.href = 'contacto.html';
+			const equipment = `${this.data.find((item) => item.id === eqId).name} - ${this.data.find((item) => item.id === eqId).ref}`;
+			const text = encodeURIComponent(`Boa tarde, gostava de saber valores sobre o equipamento: ${equipment}`)
+
+			window.open(`https://api.whatsapp.com/send/?phone=966613991&text=${text}`)
 		});
 
 		const track = document.querySelector('.thumbs-track');
