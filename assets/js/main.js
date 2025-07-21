@@ -36,7 +36,6 @@
 		document.body.classList.add('mobile-nav-active');
 
 		observer = new IntersectionObserver(([entry]) => {
-			// Only add the listener if not already added
 			if (!toggleController) {
 				toggleController = new AbortController();
 
