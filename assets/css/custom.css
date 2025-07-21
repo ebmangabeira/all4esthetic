@@ -1108,6 +1108,9 @@ body.modal-open {
 		flex: 0 !important;
 		max-width: 100% !important;
 		font-size: 22px;
+		flex: 0 0 auto !important;
+		max-width: 50% !important; 
+		font-size: 0;
 		padding-top: 2px;
 	}
 

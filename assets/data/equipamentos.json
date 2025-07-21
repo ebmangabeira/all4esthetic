@@ -328,6 +328,45 @@
       "bidiario": false,
       "semanal": false,
       "mensal": true
+  "id": "E058V2",  
+  "name": "Criolipólise 360º",  
+  "designação": "Incl. 2 Manípulos",  
+  "ref": "E058V2",  
+  "code_rev": "FTE058V2.02",  
+  "functions": [
+    {
+      "nome": "Lipoescultura a frio",
+      "descricao": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura. A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo."
+    }
+  ],
+  "technical_data": {
+    "Programação:": "Manual",  
+    "Potência:": "1000W",  
+    "Pressão_vácuo:": "0-50KPA",  
+    "Corrente_eléctrica:": "110-220VAC, 20A max., 50/60Hz"
+  },
+  "logistics": {
+    "Dimensões:": "57cm x 34,5cm x 41,5cm",  
+    "Peso:": "16,700 kgs"
+  },
+  "legislation": [
+    "LVD 2014/35/EU",  
+    "ROSH 2011/65/EU"
+  ],
+  "application": "Apenas para uso estético.",  
+  "image": "assets/img/equipments/criolipolise360.png",  
+  "images": [
+    "assets/img/equipments/criolipolise360_1.png",  
+    "assets/img/equipments/criolipolise360_2.png",  
+    "assets/img/equipments/criolipolise360_3.png"
+  ],  
+  "category": "Modelagem",  
+  "sale": true,  
+  "rental": {
+    "diario": false,  
+    "bidiario":false,  
+    "semanal": false,  
+    "mensal": true
     }
   },
   {
@@ -382,6 +421,11 @@
         "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes manipulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia leva a possibilitar o profissional de trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura e celulite e tonificação e firmeza da pele."
       }
     ],
+    {
+      "nome": "Lipoescultura a frio",
+      "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes Manípulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia leva a possibilitar o profissional de trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura e celulite e tonificação e firmeza da pele."
+    }
+  ],
     "technical_data": {
       "Radiofrêquencia:": {
         "Potência:": "150 Watts",
@@ -469,6 +513,11 @@
         "descricao": "combina a tecnologia de Radiofrequência Bipolar, com movimentos modeladores executados pelos cilindros circulantes, vacuoterapia, infravermelhos e ultrassom. A combinação perfeita para a modelação corporal, com resultados totalmente eficazes na redução de volume corporal e uma ferramenta extremamente útil no combate à celulite. Possui 4 manipulos, sendo que o de rosto ainda contem 3 cabeçotes ajustáveis de tamanhos diferentes."
       }
     ],
+    {
+      "nome": "V-Shape",
+      "descricao": "combina a tecnologia de Radiofrequência Bipolar, com movimentos modeladores executados pelos cilindros circulantes, vacuoterapia, infravermelhos e ultrassom. A combinação perfeita para a modelação corporal, com resultados totalmente eficazes na redução de volume corporal e uma ferramenta extremamente útil no combate à celulite. Possui 4 Manípulos, sendo que o de rosto ainda contem 3 cabeçotes ajustáveis de tamanhos diferentes."
+    }
+  ],
     "technical_data": {
       "Programação:": "Touch Screen pelo Monitor e através dos Manípulos",
       "Modo_de_operação:": "Pulsado",

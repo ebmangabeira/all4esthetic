@@ -31,11 +31,14 @@
 	const closeToggle = document.querySelector('.navmenu-close'); 
 	let toggleController;
 	let observer;
+	let toggleController;
+	let observer;
 
 	function openMobileNav() {
 		document.body.classList.add('mobile-nav-active');
 
 		observer = new IntersectionObserver(([entry]) => {
+			// Only add the listener if not already added
 			if (!toggleController) {
 				toggleController = new AbortController();
 
@@ -52,6 +55,22 @@
 
 	function closeMobileNav() {
 		document.body.classList.remove('mobile-nav-active');
+
+		if (toggleController) {
+			toggleController.abort();
+			toggleController = null;
+		}
+
+		if (observer) {
+			observer.disconnect();
+			observer = null;
+		}
+	}
+
+	function clickOnBackdrop(event) {
+		if (event.target === navmenu) return;
+
+		closeMobileNav();
 
 		if (toggleController) {
 			toggleController.abort();
@@ -240,6 +259,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 		
 		window.history.replaceState({}, document.title, window.location.origin + window.location.pathname);
 	}
+	
+	function handleFilter(query) {
+		if (!query) return;
+
+		if (['venda', 'aluguer'].some(category => query.includes(category))) {
+			document.querySelector(`[id*=${query}]`)?.click();
+		}
+		
+		window.history.replaceState({}, document.title, window.location.origin + window.location.pathname);
+	}
 
 	function vals(selC, selA, selR) {
 		const cats = selC.filter(i => i.checked).map(i => i.value);
@@ -252,6 +281,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	catM.concat(avM, reM).forEach(i => i.addEventListener('change', () => apply({ ...vals(catM, '.mobile-avail:checked', reM) })));
 
 	btnFiltro?.addEventListener('click', () => {
+	btnFiltro?.addEventListener('click', () => {
 		mobFilt.classList.add('open');
 		document.body.style.overflow = 'hidden';  // bloqueia scroll da página
 		const filtrosContent = mobFilt.querySelector('.mobile-filters-content');
@@ -260,10 +290,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 	});
 
 	btnClose?.addEventListener('click', () => {
+	btnClose?.addEventListener('click', () => {
 		mobFilt.classList.remove('open');
 		document.body.style.overflow = '';  // libera scroll da página
 	});
 
+	btnSearch?.addEventListener('click', () => {
 	btnSearch?.addEventListener('click', () => {
 		apply({ ...vals(catM, '.mobile-avail:checked', reM) });
 		mobFilt.classList.remove('open');
@@ -374,7 +406,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 		}, 'next'));
 	}
 
+
 	apply({ cats: [], av: null, rents: [] });
+	handleFilter(window.location.search.split('?')[1])
+
 	handleFilter(window.location.search.split('?')[1])
 
 });
@@ -409,9 +444,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 	});
 
 	btnPdf?.addEventListener('click', () => window.print());
+	btnPdf?.addEventListener('click', () => window.print());
 
 	try {
 		const res = await fetch('assets/data/equipamentos.json');
+		this.data = await res.json();
+		const eq = this.data.find((item) => item.id === eqId);
 		this.data = await res.json();
 		const eq = this.data.find((item) => item.id === eqId);
 		if (!eq) {
@@ -492,6 +530,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 			availUL.insertAdjacentHTML(
 				'beforeend',
 				`<li><i class="bi bi-check-circle-fill me-2"></i>Venda</li>`
+				`<li><i class="bi bi-check-circle-fill me-2"></i>Venda</li>`
 			);
 		}
 		Object.entries(eq.rental)
@@ -502,10 +541,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 				availUL.insertAdjacentHTML(
 					'beforeend',
 					`<li><i class="bi bi-check-circle-fill me-2"></i>Aluguer ${text}</li>`
+					`<li><i class="bi bi-check-circle-fill me-2"></i>Aluguer ${text}</li>`
 				);
 			});
 
 		document.getElementById('btn-quote').addEventListener('click', () => {
+			const equipment = `${this.data.find((item) => item.id === eqId).name} - ${this.data.find((item) => item.id === eqId).ref}`;
+			const text = encodeURIComponent(`Boa tarde, gostava de saber valores sobre o equipamento: ${equipment}`)
+
+			window.open(`https://api.whatsapp.com/send/?phone=966613991&text=${text}`)
 			const equipment = `${this.data.find((item) => item.id === eqId).name} - ${this.data.find((item) => item.id === eqId).ref}`;
 			const text = encodeURIComponent(`Boa tarde, gostava de saber valores sobre o equipamento: ${equipment}`)
 
