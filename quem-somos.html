@@ -2,33 +2,38 @@
 <html lang="pt">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 		<title>all4esthetic</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="icon" href="assets/img/favicon.png" />
-		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" />
+		<meta content="" name="description" />
+		<meta content="" name="keywords" />
+		<link href="assets/img/favicon.png" rel="icon" />
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+		<link href="https://fonts.googleapis.com" rel="preconnect" />
+		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link href="assets/css/custom.css" rel="stylesheet" />
 	</head>
 	<body class="index-page">
-		<header id="header" class="header position-fixed top-0 w-100">
+		<header class="header position-fixed top-0 w-100" id="header" role="banner">
 			<div class="main-header">
-				<div class="container-fluid container-xl">
+				<div class="container-fluid container-xl header-container">
 					<div class="d-flex align-items-center justify-content-between">
-						<a href="index.html" class="logo d-flex align-items-center d-xl-none">
-							<img src="assets/img/logo-header.png" alt="Logo" />
+						<a class="logo d-flex align-items-center d-xl-none" href="index.html" aria-label="Página inicial">
+							<img alt="Logo" src="assets/img/logo-header.png" />
 						</a>
 						<div class="header-actions d-flex align-items-center justify-content-end">
-							<i class="mobile-nav-open bi bi-list me-0 mobile-nav-toggle d-xl-none" role="button" tabindex="0" aria-label="Abrir menu"></i>
+							<i
+								class="mobile-nav-open d-xl-none bi bi-list me-0 mobile-nav-toggle"
+								aria-label="Abrir menu"
+								role="button"
+								tabindex="0"
+							></i>
 						</div>
 					</div>
 				</div>
@@ -37,16 +42,21 @@
 				<div class="container-fluid container-xl">
 					<div class="position-relative">
 						<div class="d-flex align-items-center justify-content-between">
-							<a href="index.html" class="logo d-flex align-items-center me-4 d-none d-xl-flex">
-								<img src="assets/img/logo-header.png" alt="Logo" />
+							<a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html" aria-label="Página inicial">
+								<img alt="Logo" src="assets/img/logo-header.png" />
 							</a>
-							<nav id="navmenu" class="navmenu mx-auto justify-content-center" aria-label="Menu principal">
+							<nav class="navmenu mx-auto justify-content-center" id="navmenu" aria-label="Menu principal" role="navigation">
 								<ul>
-									<li class="navmenu-close d-xl-none" role="button" tabindex="0" aria-label="Fechar menu">
+									<li
+										class="navmenu-close d-xl-none"
+										tabindex="0"
+										role="button"
+										aria-label="Fechar menu"
+									>
 										<span class="mobile-nav-close">X</span>
 									</li>
 									<li><a href="index.html">Início</a></li>
-									<li><a class="active" href="#">Quem Somos</a></li>
+									<li><a class="active" href="#" aria-current="page">Quem Somos</a></li>
 									<li><a href="equipamentos.html">Equipamentos</a></li>
 									<li><a href="contacto.html">Contacto</a></li>
 								</ul>
@@ -56,15 +66,14 @@
 				</div>
 			</div>
 		</header>
-		
-		<main class="main">
+		<main class="main" role="main">
 			<div class="pd-page-title pd-light-bg">
 				<div class="container-xl pd-breadcrumbs pd-container">
-					<h1 class="pd-title-text">Equipamentos</h1>
-					<nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
+					<h1 class="pd-title-text" id="main-heading">Quem<span class="detalhes-title">_</span>Somos</h1>
+					<nav class="pd-nav-breadcrumbs" aria-label="Caminho de navegação">
 						<ol>
 							<li><a href="index.html">Início</a></li>
-							<li class="current" aria-current="page">Equipamentos</li>
+							<li class="current" aria-current="page">Quem Somos</li>
 						</ol>
 					</nav>
 				</div>
@@ -74,12 +83,14 @@
 					<div class="about">
 						<div class="row align-items-center">
 							<div>
-								<h2 class="about-title">Inovação e qualidade para transformar a estética</h2>
-								<p class="about-description">Comprometidos em oferecer tecnologias avançadas e serviços personalizados, trabalhamos para elevar o padrão de beleza e cuidado, sempre com segurança e confiança.</p>
+								<h2 class="about-title" id="about-heading">Inovação e qualidade para transformar a estética</h2>
+								<p class="about-description">
+									Comprometidos em oferecer tecnologias avançadas e serviços personalizados, trabalhamos para elevar o padrão de beleza e cuidado, sempre com segurança e confiança.
+								</p>
 							</div>
 						</div>
 					</div>
-					<div class="row features-boxes gy-4 gx-4">
+					<div class="row-box features-boxes gy-4 gx-4">
 						<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
 							<div
 								class="feature-box p-4 h-100"
@@ -94,7 +105,7 @@
 									<i class="bi bi-book-half"></i>
 								</div>
 								<h3 id="feature-historia" class="mb-2">
-									<a href="#" class="stretched-link" role="button" aria-label="Abrir modal História">História</a>
+									<a href="#" class="stretched-link" role="button" aria-label="Abrir modal História" tabindex="-1">História</a>
 								</h3>
 								<p class="mb-0">A All4esthetic nasce de um sonho que iniciou em 2006 e evoluiu até hoje.</p>
 							</div>
@@ -113,7 +124,7 @@
 									<i class="bi bi-people-fill"></i>
 								</div>
 								<h3 id="feature-equipa" class="mb-2">
-									<a href="#" class="stretched-link" role="button" aria-label="Abrir modal Equipa">Equipa</a>
+									<a href="#" class="stretched-link" role="button" aria-label="Abrir modal Equipa" tabindex="-1">Equipa</a>
 								</h3>
 								<p class="mb-0">Conheça os especialistas que garantem qualidade em cada equipamento.</p>
 							</div>
@@ -132,13 +143,14 @@
 									<i class="bi bi-eye-fill"></i>
 								</div>
 								<h3 id="feature-visao" class="mb-2">
-									<a href="#" class="stretched-link" role="button" aria-label="Abrir modal Visão">Visão</a>
+									<a href="#" class="stretched-link" role="button" aria-label="Abrir modal Visão" tabindex="-1">Visão</a>
 								</h3>
 								<p class="mb-0">Descubra para onde caminhamos no futuro da estética.</p>
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<div
 					class="modal fade"
 					id="modalHistoria"
@@ -267,22 +279,23 @@
 			</section>
 		</main>
 
-
-		<footer id="footer" class="footer">
+		<footer class="footer" id="footer" role="contentinfo">
 			<div class="footer-main">
 				<div class="container">
-					<div class="row gy-4">
+					<div class="row">
 						<div class="col-lg-3 col-md-6 col-sm-12">
 							<div class="footer-widget footer-about">
-								<a href="index.html" class="logo"><img src="assets/img/logo-footer.png" alt="Logo all4esthetic" /></a>
-								<p>Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.</p>
+								<a class="logo" href="index.html" aria-label="Página inicial"><img alt="Logo all4esthetic" src="assets/img/logo-footer.png" /></a>
+								<p>
+									Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.
+								</p>
 								<div class="social-links mt-4">
 									<h5>Siga-nos:</h5>
 									<div class="social-icons">
-										<a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-										<a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-										<a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-										<a href="#" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a>
+										<a aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
+										<a aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
+										<a aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a>
+										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
 									</div>
 								</div>
 							</div>
@@ -322,15 +335,27 @@
 								<div class="footer-contact mt-4">
 									<div class="contact-item">
 										<i class="bi bi-geo-alt"></i>
-										<a href="https://www.google.com/maps/search/?q=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+PT+2870-607" target="_blank">R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607</a>
+										<span>
+											<a href="https://www.google.com/maps/search/?q=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+PT+2870-607" target="_blank" rel="noopener noreferrer">
+												R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607
+											</a>
+										</span>
 									</div>
 									<div class="contact-item">
-											<i class="bi bi-telephone"></i>
-											<a href="https://wa.me/351214095469" target="_blank">(+351) 21 409 5469</a>
+										<i class="bi bi-telephone"></i>
+										<span>
+											<a href="https://wa.me/351214095469" target="_blank" rel="noopener noreferrer">
+												(+351) 21 409 5469
+											</a>
+										</span>
 									</div>
 									<div class="contact-item">
 										<i class="bi bi-envelope"></i>
-										<a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
+										<span>
+											<a href="mailto:geral@all4esthetic.com">
+												geral@all4esthetic.com
+											</a>
+										</span>
 									</div>
 								</div>
 							</div>
@@ -344,9 +369,9 @@
 						<p class="footer-p">© <span>Copyright 2025</span> <strong class="px-1 sitename">all4esthetic.</strong> <span>Todos os Direitos Reservados.</span></p>
 					</div>
 				</div>
-			</div>
+			 </div>
 		</footer>
-		<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+		<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top" aria-label="Voltar ao topo"><i class="bi bi-arrow-up-short"></i></a>
 		<div id="preloader"></div>
 		<script src="assets/swiper/swiper-bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

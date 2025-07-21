@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	btnFiltro.addEventListener('click', () => {
 		mobFilt.classList.add('open');
-		document.body.classList.add('no-scroll');
+		document.body.style.overflow = 'hidden';  // bloqueia scroll da página
 		const filtrosContent = mobFilt.querySelector('.mobile-filters-content');
 		if (filtrosContent) filtrosContent.scrollTop = 0;
 		window.scrollTo({ top: 0, behavior: 'auto' });
@@ -220,13 +220,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	btnClose.addEventListener('click', () => {
 		mobFilt.classList.remove('open');
-		document.body.classList.remove('no-scroll');
+		document.body.style.overflow = '';  // libera scroll da página
 	});
 
 	btnSearch.addEventListener('click', () => {
 		apply({ ...vals(catM, '.mobile-avail:checked', reM) });
 		mobFilt.classList.remove('open');
-		document.body.classList.remove('no-scroll');
+		document.body.style.overflow = '';  // libera scroll da página
 	});
 
 	function renderPage() {
