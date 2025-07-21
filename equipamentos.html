@@ -2,34 +2,38 @@
 <html lang="pt">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 		<title>all4esthetic</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="icon" href="assets/img/favicon.png" />
-		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" />
+		<meta content="" name="description" />
+		<meta content="" name="keywords" />
+		<link href="assets/img/favicon.png" rel="icon" />
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+		<link href="https://fonts.googleapis.com" rel="preconnect" />
+		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
-
+		<link href="assets/css/custom.css" rel="stylesheet" />
 	</head>
 	<body class="index-page">
-		<header id="header" class="header position-fixed top-0 w-100">
+		<header class="header position-fixed top-0 w-100" id="header">
 			<div class="main-header">
-				<div class="container-fluid container-xl">
+				<div class="container-fluid container-xl header-container">
 					<div class="d-flex align-items-center justify-content-between">
-						<a href="/" class="logo d-flex align-items-center d-xl-none">
-							<img src="assets/img/logo-header.png" alt="Logo" />
+						<a class="logo d-flex align-items-center d-xl-none" href="index.html">
+							<img alt="Logo" src="assets/img/logo-header.png" />
 						</a>
 						<div class="header-actions d-flex align-items-center justify-content-end">
-							<i class="mobile-nav-open bi bi-list me-0 mobile-nav-toggle d-xl-none" role="button" tabindex="0" aria-label="Abrir menu"></i>
+							<i
+								class="mobile-nav-open d-xl-none bi bi-list me-0 mobile-nav-toggle"
+								aria-label="Abrir menu"
+								role="button"
+								tabindex="0"
+								></i>
 						</div>
 					</div>
 				</div>
@@ -38,12 +42,17 @@
 				<div class="container-fluid container-xl">
 					<div class="position-relative">
 						<div class="d-flex align-items-center justify-content-between">
-							<a href="/" class="logo d-flex align-items-center me-4 d-none d-xl-flex">
-								<img src="assets/img/logo-header.png" alt="Logo" />
+							<a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
+								<img alt="Logo" src="assets/img/logo-header.png" />
 							</a>
-							<nav id="navmenu" class="navmenu mx-auto justify-content-center" aria-label="Menu principal">
+							<nav class="navmenu mx-auto justify-content-center" id="navmenu" aria-label="Menu principal">
 								<ul>
-									<li class="navmenu-close d-xl-none" role="button" tabindex="0" aria-label="Fechar menu">
+									<li
+										class="navmenu-close d-xl-none"
+										tabindex="0"
+										role="button"
+										aria-label="Fechar menu"
+										>
 										<span class="mobile-nav-close">X</span>
 									</li>
 									<li><a href="/">Início</a></li>
@@ -75,31 +84,127 @@
 						<div class="row align-items-center">
 							<div>
 								<h2 id="about-heading" class="about-title">Realçando a sua beleza com equipamentos de excelência</h2>
-								<p class="about-description">A nossa missão é fornecer soluções seguras, eficazes e adaptadas às necessidades de cada cliente ou clínica, promovendo bem-estar e confiança.</p>
+								<p class="about-description">
+									A nossa missão é fornecer soluções seguras, eficazes e adaptadas às necessidades de cada cliente ou clínica, promovendo bem-estar e confiança.
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="mt-3">
 						<div class="row">
-							<aside class="col-lg-3 sidebar d-none d-md-block">
+							<aside class="col-lg-3 sidebar d-none d-md-block" aria-label="Filtros de equipamentos">
 								<div class="filter-section">
 									<h3 class="filter-title">Categorias</h3>
 									<ul class="list-unstyled">
 										<li class="form-check">
-											<input type="checkbox" class="form-check-input desktop-cat" id="cat-modelagem" value="Modelagem" />
-											<label class="form-check-label" for="cat-modelagem">Modelagem</label>
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-electroestimulação"
+												value="Electroestimulação"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-electroestimulação">Electroestimulação</label>
 										</li>
 										<li class="form-check">
-											<input type="checkbox" class="form-check-input desktop-cat" id="cat-estetica" value="Estética" />
-											<label class="form-check-label" for="cat-estetica">Estética</label>
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-emsculpt"
+												value="Emsculpt"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-emsculpt">Emsculpt</label>
 										</li>
 										<li class="form-check">
-											<input type="checkbox" class="form-check-input desktop-cat" id="cat-rejuvenescimento" value="Rejuvenescimento" />
-											<label class="form-check-label" for="cat-rejuvenescimento">Rejuvenescimento</label>
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-microdermoabrasao"
+												value="Microdermoabrasão"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-microdermoabrasao">Microdermoabrasão</label>
 										</li>
 										<li class="form-check">
-											<input type="checkbox" class="form-check-input desktop-cat" id="cat-depilacao" value="Depilação" />
-											<label class="form-check-label" for="cat-depilacao">Depilação</label>
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-pressoterapia"
+												value="Pressoterapia"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-pressoterapia">Pressoterapia</label>
+										</li>
+										<li class="form-check">
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-multifuncoes"
+												value="Multifunções"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-multifuncoes">Multifunções</label>
+										</li>
+										<li class="form-check">
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-criolipolise"
+												value="Criolipólise"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-criolipolise">Criolipólise</label>
+										</li>
+										<li class="form-check">
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-radiofrequencia"
+												value="Radiofrequência"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-radiofrequencia">Radiofrequência</label>
+										</li>
+										<li class="form-check">
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-luz-pulsada"
+												value="Luz pulsada"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-luz-pulsada">Luz pulsada</label>
+										</li>
+										<li class="form-check">
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-endermologia"
+												value="Endermologia"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-endermologia">Endermologia</label>
+										</li>
+										<li class="form-check">
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-laser"
+												value="Laser"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-laser">Laser</label>
+										</li>
+										<li class="form-check">
+											<input
+												type="checkbox"
+												class="form-check-input desktop-cat"
+												id="cat-hifu-liposonix"
+												value="Hifu e Liposonix"
+												aria-checked="false"
+											/>
+											<label class="form-check-label" for="cat-hifu-liposonix">Hifu e Liposonix</label>
 										</li>
 									</ul>
 								</div>
@@ -107,11 +212,25 @@
 									<h3 class="filter-title">Disponibilidade</h3>
 									<ul class="list-unstyled">
 										<li class="form-check">
-											<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-venda" value="Venda" />
+											<input
+												type="radio"
+												class="form-check-input desktop-avail"
+												name="availability"
+												id="filter-venda"
+												value="Venda"
+												aria-checked="false"
+											/>
 											<label class="form-check-label" for="filter-venda">Venda</label>
 										</li>
 										<li class="form-check">
-											<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-aluguer" value="Aluguer" />
+											<input
+												type="radio"
+												class="form-check-input desktop-avail"
+												name="availability"
+												id="filter-aluguer"
+												value="Aluguer"
+												aria-checked="false"
+											/>
 											<label class="form-check-label" for="filter-aluguer">Aluguer</label>
 										</li>
 									</ul>
@@ -120,27 +239,71 @@
 									<h3 class="filter-title">Períodos de Aluguer</h3>
 									<ul class="list-unstyled">
 										<li class="form-check">
-											<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-diario" value="diario" />
+											<input
+												type="radio"
+												class="form-check-input desktop-rent"
+												name="rental-period"
+												id="filter-diario"
+												value="diario"
+												aria-checked="false"
+											/>
 											<label class="form-check-label" for="filter-diario">Diário</label>
 										</li>
 										<li class="form-check">
-											<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-bidiario" value="bidiario" />
+											<input
+												type="radio"
+												class="form-check-input desktop-rent"
+												name="rental-period"
+												id="filter-bidiario"
+												value="bidiario"
+												aria-checked="false"
+											/>
 											<label class="form-check-label" for="filter-bidiario">Bidiário</label>
 										</li>
 										<li class="form-check">
-											<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-semanal" value="semanal" />
+											<input
+												type="radio"
+												class="form-check-input desktop-rent"
+												name="rental-period"
+												id="filter-semanal"
+												value="semanal"
+												aria-checked="false"
+											/>
 											<label class="form-check-label" for="filter-semanal">Semanal</label>
 										</li>
 										<li class="form-check">
-											<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-mensal" value="mensal" />
+											<input
+												type="radio"
+												class="form-check-input desktop-rent"
+												name="rental-period"
+												id="filter-mensal"
+												value="mensal"
+												aria-checked="false"
+											/>
 											<label class="form-check-label" for="filter-mensal">Mensal</label>
 										</li>
 									</ul>
 								</div>
 							</aside>
 							<div class="col-12 d-md-none mb-3">
-								<button id="filtro-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3">
-									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2">
+								<button
+									id="filtro-btn"
+									class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3"
+									aria-haspopup="true"
+									aria-expanded="false"
+									aria-controls="mobile-filters"
+								>
+									<svg
+										width="16"
+										height="16"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										class="me-2"
+										aria-hidden="true"
+										focusable="false"
+									>
 										<line x1="3" y1="5" x2="17" y2="5" />
 										<circle cx="19" cy="5" r="2" fill="currentColor" />
 										<line x1="7" y1="12" x2="21" y2="12" />
@@ -150,9 +313,9 @@
 									</svg>
 									Filtro
 								</button>
-								<div id="mobile-filters">
+								<div id="mobile-filters" aria-modal="true" role="dialog" aria-labelledby="mobile-filters-title" aria-hidden="true">
 									<div class="mobile-filters-header">
-										<h3 class="filter-title m-0">Filtros</h3>
+										<h3 class="filter-title m-0" id="mobile-filters-title">Filtros</h3>
 										<button id="close-filtro" class="btn-close" aria-label="Fechar"></button>
 									</div>
 									<div class="mobile-filters-content">
@@ -160,20 +323,114 @@
 											<h4 class="filter-title">Categorias</h4>
 											<ul class="list-unstyled">
 												<li class="form-check">
-													<input type="checkbox" class="form-check-input mobile-cat" id="cat-modelagem-mob" value="Modelagem" />
-													<label class="form-check-label" for="cat-modelagem-mob">Modelagem</label>
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-electroestimulação-mob"
+														value="Electroestimulação"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-electroestimulação-mob">Electroestimulação</label>
 												</li>
 												<li class="form-check">
-													<input type="checkbox" class="form-check-input mobile-cat" id="cat-estetica-mob" value="Estética" />
-													<label class="form-check-label" for="cat-estetica-mob">Estética</label>
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-emsculpt-mob"
+														value="Emsculpt"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-emsculpt-mob">Emsculpt</label>
 												</li>
 												<li class="form-check">
-													<input type="checkbox" class="form-check-input mobile-cat" id="cat-rejuvenescimento-mob" value="Rejuvenescimento" />
-													<label class="form-check-label" for="cat-rejuvenescimento-mob">Rejuvenescimento</label>
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-microdermoabrasao-mob"
+														value="Microdermoabrasão"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-microdermoabrasao-mob">Microdermoabrasão</label>
 												</li>
 												<li class="form-check">
-													<input type="checkbox" class="form-check-input mobile-cat" id="cat-depilacao-mob" value="Depilação" />
-													<label class="form-check-label" for="cat-depilacao-mob">Depilação</label>
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-pressoterapia-mob"
+														value="Pressoterapia"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-pressoterapia-mob">Pressoterapia</label>
+												</li>
+												<li class="form-check">
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-multifuncoes-mob"
+														value="Multifunções"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-multifuncoes-mob">Multifunções</label>
+												</li>
+												<li class="form-check">
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-criolipolise-mob"
+														value="Criolipólise"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-criolipolise-mob">Criolipólise</label>
+												</li>
+												<li class="form-check">
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-radiofrequencia-mob"
+														value="Radiofrequência"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-radiofrequencia-mob">Radiofrequência</label>
+												</li>
+												<li class="form-check">
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-luz-pulsada-mob"
+														value="Luz pulsada"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-luz-pulsada-mob">Luz pulsada</label>
+												</li>
+												<li class="form-check">
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-endermologia-mob"
+														value="Endermologia"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-endermologia-mob">Endermologia</label>
+												</li>
+												<li class="form-check">
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-laser-mob"
+														value="Laser"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-laser-mob">Laser</label>
+												</li>
+												<li class="form-check">
+													<input
+														type="checkbox"
+														class="form-check-input mobile-cat"
+														id="cat-hifu-liposonix-mob"
+														value="Hifu e Liposonix"
+														aria-checked="false"
+													/>
+													<label class="form-check-label" for="cat-hifu-liposonix-mob">Hifu e Liposonix</label>
 												</li>
 											</ul>
 										</div>
@@ -181,11 +438,25 @@
 											<h4 class="filter-title">Disponibilidade</h4>
 											<ul class="list-unstyled">
 												<li class="form-check">
-													<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-venda-mob" value="Venda" />
+													<input
+														type="radio"
+														class="form-check-input mobile-avail"
+														name="availability-mob"
+														id="filter-venda-mob"
+														value="Venda"
+														aria-checked="false"
+													/>
 													<label class="form-check-label" for="filter-venda-mob">Venda</label>
 												</li>
 												<li class="form-check">
-													<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-aluguer-mob" value="Aluguer" />
+													<input
+														type="radio"
+														class="form-check-input mobile-avail"
+														name="availability-mob"
+														id="filter-aluguer-mob"
+														value="Aluguer"
+														aria-checked="false"
+													/>
 													<label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
 												</li>
 											</ul>
@@ -194,19 +465,47 @@
 											<h4 class="filter-title">Períodos de Aluguer</h4>
 											<ul class="list-unstyled">
 												<li class="form-check">
-													<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-diario-mob" value="diario" />
+													<input
+														type="radio"
+														class="form-check-input mobile-rent"
+														name="rental-period-mob"
+														id="filter-diario-mob"
+														value="diario"
+														aria-checked="false"
+													/>
 													<label class="form-check-label" for="filter-diario-mob">Diário</label>
 												</li>
 												<li class="form-check">
-													<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-bidiario-mob" value="bidiario" />
+													<input
+														type="radio"
+														class="form-check-input mobile-rent"
+														name="rental-period-mob"
+														id="filter-bidiario-mob"
+														value="bidiario"
+														aria-checked="false"
+													/>
 													<label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
 												</li>
 												<li class="form-check">
-													<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-semanal-mob" value="semanal" />
+													<input
+														type="radio"
+														class="form-check-input mobile-rent"
+														name="rental-period-mob"
+														id="filter-semanal-mob"
+														value="semanal"
+														aria-checked="false"
+													/>
 													<label class="form-check-label" for="filter-semanal-mob">Semanal</label>
 												</li>
 												<li class="form-check">
-													<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-mensal-mob" value="mensal" />
+													<input
+														type="radio"
+														class="form-check-input mobile-rent"
+														name="rental-period-mob"
+														id="filter-mensal-mob"
+														value="mensal"
+														aria-checked="false"
+													/>
 													<label class="form-check-label" for="filter-mensal-mob">Mensal</label>
 												</li>
 											</ul>
@@ -227,20 +526,24 @@
 				</div>
 			</section>
 		</main>
-		<footer id="footer" class="footer">
+
+		<footer class="footer" id="footer">
 			<div class="footer-main">
 				<div class="container">
-					<div class="row gy-4">
+					<div class="row">
 						<div class="col-lg-3 col-md-6 col-sm-12">
 							<div class="footer-widget footer-about">
-								<a href="/" class="logo"><img src="assets/img/logo-footer.png" alt="Logo all4esthetic" /></a>
-								<p>Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.</p>
+								<a class="logo" href="index.html"><img alt="Logo all4esthetic" src="assets/img/logo-footer.png" /></a>
+								<p>
+									Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.
+								</p>
 								<div class="social-links mt-4">
 									<h5>Siga-nos:</h5>
 									<div class="social-icons">
-										<a href="https://www.facebook.com/all4esthetic/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-										<a href="https://www.instagram.com/all4esthetic/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-										<a href="https://api.whatsapp.com/send/?phone=966613991&text=Olá All4Esthetic" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a>
+										<a aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
+										<a aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
+										<a aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a>
+										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
 									</div>
 								</div>
 							</div>
@@ -280,15 +583,25 @@
 								<div class="footer-contact mt-4">
 									<div class="contact-item">
 										<i class="bi bi-geo-alt"></i>
-										<a href="https://maps.app.goo.gl/5iLi1uoL1sW2TXUYA" target="_blank">R. dos Tractores 506, Armazém AE, Montijo, PT 2870-607</a>
+										<span>
+											<a href="https://www.google.com/maps/search/?q=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+PT+2870-607" target="_blank" rel="noopener noreferrer">
+												R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607
+											</a>
+										</span>
 									</div>
 									<div class="contact-item">
 										<i class="bi bi-telephone"></i>
-										<a href="https://wa.me/351214095469" target="_blank">(+351) 21 409 5469</a>
+										<span>
+											<a href="https://wa.me/351214095469" target="_blank" rel="noopener noreferrer">
+												(+351) 21 409 5469
+											</a>
+										</span>
 									</div>
 									<div class="contact-item">
 										<i class="bi bi-envelope"></i>
-										<a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
+										<span>
+											<a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
+										</span>
 									</div>
 								</div>
 							</div>
@@ -304,8 +617,9 @@
 				</div>
 			</div>
 		</footer>
-		<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-		<div id="preloader"></div>
+		<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top" aria-label="Voltar ao topo"><i class="bi bi-arrow-up-short"></i></a>
+		<div id="preloader" aria-hidden="true"></div>
+		<script src="assets/swiper/swiper-bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

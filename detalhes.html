@@ -10,7 +10,10 @@
 		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap"/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap"
+		/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
@@ -21,15 +24,22 @@
 		<link rel="stylesheet" href="assets/css/pdf.css" />
 	</head>
 	<body class="index-page">
-		<header id="header" class="header position-fixed top-0 w-100">
+		<header id="header" class="header position-fixed top-0 w-100" role="banner">
 			<div class="main-header">
 				<div class="container-fluid container-xl">
 					<div class="d-flex align-items-center justify-content-between">
-						<a href="/" class="logo d-flex align-items-center d-xl-none">
-							<img src="assets/img/logo-header.png" alt="Logo" />
+						<a href="index.html" class="logo d-flex align-items-center d-xl-none" aria-label="Página inicial">
+							<img src="assets/img/logo-header.png" alt="Logo all4esthetic" />
 						</a>
 						<div class="header-actions d-flex align-items-center justify-content-end">
-							<i class="mobile-nav-open bi bi-list me-0 mobile-nav-toggle d-xl-none" role="button" tabindex="0" aria-label="Abrir menu"></i>
+							<i
+								class="mobile-nav-open bi bi-list me-0 mobile-nav-toggle d-xl-none"
+								role="button"
+								tabindex="0"
+								aria-label="Abrir menu"
+								aria-expanded="false"
+								aria-controls="navmenu"
+							></i>
 						</div>
 					</div>
 				</div>
@@ -38,12 +48,18 @@
 				<div class="container-fluid container-xl">
 					<div class="position-relative">
 						<div class="d-flex align-items-center justify-content-between">
-							<a href="/" class="logo d-flex align-items-center me-4 d-none d-xl-flex">
-								<img src="assets/img/logo-header.png" alt="Logo" />
+							<a href="index.html" class="logo d-flex align-items-center me-4 d-none d-xl-flex" aria-label="Página inicial">
+								<img src="assets/img/logo-header.png" alt="Logo all4esthetic" />
 							</a>
-							<nav id="navmenu" class="navmenu mx-auto justify-content-center" aria-label="Menu principal">
+							<nav id="navmenu" class="navmenu mx-auto justify-content-center" aria-label="Menu principal" role="navigation">
 								<ul>
-									<li class="navmenu-close d-xl-none" role="button" tabindex="0" aria-label="Fechar menu">
+									<li
+										class="navmenu-close d-xl-none"
+										role="button"
+										tabindex="0"
+										aria-label="Fechar menu"
+										aria-controls="navmenu"
+									>
 										<span class="mobile-nav-close">X</span>
 									</li>
 									<li><a href="/">Início</a></li>
@@ -57,52 +73,96 @@
 				</div>
 			</div>
 		</header>
-		<main class="main">
-			<div class="pd-page-title pd-light-bg">
+		<main class="main" role="main">
+			<div class="pd-page-title pd-light-bg pd-principais">
 				<div class="container-xl pd-breadcrumbs pd-container">
 					<h1 class="pd-title-text">Detalhes</h1>
 					<nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
 						<ol>
-							<li><a href="/">Início</a></li>
+							<li><a href="index.html">Início</a></li>
+							<li><a href="equipamentos.html">Equipamentos</a></li>
 							<li class="current" aria-current="page">Detalhes</li>
 						</ol>
 					</nav>
 				</div>
 			</div>
-			<section id="pd-product-section" class="pd-details-section pd-container section">
+
+			<section id="pd-product-section" class="pd-details-section pd-container section" aria-labelledby="pd-title-text">
 				<div class="pdf-wrapper">
-					<div id="pdf-logo-container">
-						<img src="assets/img/logo-header.png" alt="Logo" id="pdf-logo" />
+					<div id="pdf-logo-container" aria-hidden="true">
+						<img src="assets/img/logo-header.png" alt="Logo all4esthetic" id="pdf-logo" />
 					</div>
 					<div class="container">
 						<div class="row">
 							<div class="grid-product">
 								<div class="image-column">
 									<div class="pd-img-container">
-										<span id="pd-category-text" class="pd-category-label"></span>
-										<img id="pd-main-img" class="pd-main-image" src="" alt="Imagem Principal" loading="lazy" />
+										<span id="pd-category-text" class="pd-category-label" aria-live="polite"></span>
+										<img
+											id="pd-main-img"
+											class="pd-main-image"
+											src=""
+											alt="Imagem Principal do produto"
+											loading="lazy"
+											tabindex="0"
+										/>
 									</div>
 									<div class="thumbs-wrapper">
-										<button class="thumb-btn prev" aria-label="Anterior" type="button">&lt;</button>
-										<div class="thumbs-viewport">
-											<ul class="thumbs-track"></ul>
+										<button
+											class="thumb-btn prev"
+											aria-label="Imagem anterior"
+											type="button"
+											tabindex="0"
+										>
+											&lt;
+										</button>
+										<div class="thumbs-viewport" role="list" aria-label="Miniaturas do produto">
+											<ul class="thumbs-track" role="list"></ul>
 										</div>
-										<button class="thumb-btn next" aria-label="Próximo" type="button">&gt;</button>
+										<button
+											class="thumb-btn next"
+											aria-label="Próxima imagem"
+											type="button"
+											tabindex="0"
+										>
+											&gt;
+										</button>
 									</div>
 								</div>
 								<div class="info-column">
-									<h2 id="pd-title-text" class="pd-product-title"></h2>
+									<h2 id="pd-title-text" class="pd-product-title" tabindex="0"></h2>
 									<div class="tab-buttons" role="tablist" aria-label="Seções do produto">
-										<button id="btn-funcao" class="pd-btn-funcao active" role="tab" aria-selected="true" aria-controls="content-funcao" type="button">
+										<button
+											id="btn-funcao"
+											class="pd-btn-funcao active"
+											role="tab"
+											aria-selected="true"
+											aria-controls="content-funcao"
+											type="button"
+											tabindex="0"
+										>
 											Função
 										</button>
-										<button id="btn-tecnica" class="pd-btn-tecnica" role="tab" aria-selected="false" aria-controls="content-tecnica" type="button">
+										<button
+											id="btn-tecnica"
+											class="pd-btn-tecnica"
+											role="tab"
+											aria-selected="false"
+											aria-controls="content-tecnica"
+											type="button"
+											tabindex="-1"
+										>
 											Ficha Técnica
 										</button>
 									</div>
 									<div id="tab-content">
-										<div id="content-funcao" class="tab-panel active" role="tabpanel" aria-labelledby="btn-funcao">
-											<div id="pd-functions-list"></div>
+										<div
+											id="content-funcao"
+											class="tab-panel active"
+											role="tabpanel"
+											aria-labelledby="btn-funcao"
+										>
+											<div id="pd-functions-list" tabindex="0"></div>
 										</div>
 										<div
 											id="content-tecnica"
@@ -110,37 +170,50 @@
 											role="tabpanel"
 											aria-labelledby="btn-tecnica"
 											hidden
+											tabindex="0"
 										>
 											<div class="pd-box">
 												<h5>Dados Técnicos</h5>
-												<table id="pd-tech-table" class="table"></table>
+												<table id="pd-tech-table" class="table" summary="Tabela com dados técnicos do produto"></table>
 											</div>
 											<div class="pd-box">
 												<h5>Logística</h5>
-												<table id="pd-logistics-table" class="table"></table>
+												<table id="pd-logistics-table" class="table" summary="Tabela com informações logísticas do produto"></table>
 											</div>
 											<div class="pd-box">
 												<h5>Aplicação</h5>
-												<p id="pd-application-text"></p>
+												<p id="pd-application-text" tabindex="0"></p>
 											</div>
 										</div>
 									</div>
 									<div class="pd-box pd-availability-box mt-4">
 										<h5>Disponibilidade</h5>
-										<ul id="pd-availability-list" class="list-unstyled"></ul>
+										<ul id="pd-availability-list" class="list-unstyled" role="list" tabindex="0"></ul>
 									</div>
-									<div id="pdf-contact-info" class="pd-box">
+									<div id="pdf-contact-info" class="pd-box" aria-hidden="true">
 										<h5>All4Esthetic — innovating beauty</h5>
 										<p>
 											<strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia
 										</p>
 										<p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
 										<p><strong>E-mail:</strong> geral@all4esthetic.com</p>
-										<p><strong>Site:</strong> <a href="https://www.all4esthetic.com" target="_blank" rel="noopener">www.all4esthetic.com</a></p>
+										<p>
+											<strong>Site:</strong>
+											<a href="https://www.all4esthetic.com" target="_blank" rel="noopener noreferrer">www.all4esthetic.com</a>
+										</p>
 									</div>
 									<div class="pd-actions mb-4">
-										<button id="btn-pdf" class="pd-btn pd-btn-outline-pdf" type="button">Gerar PDF</button>
-										<button id="btn-quote" onclick="handleRequestPricing" class="pd-btn pd-btn-outline" type="button">Solicitar Orçamento</button>
+										<button id="btn-pdf" class="pd-btn pd-btn-outline-pdf" type="button" aria-label="Gerar PDF do produto">
+											Gerar PDF
+										</button>
+										<button
+											id="btn-quote"
+											class="pd-btn pd-btn-outline"
+											type="button"
+											aria-label="Solicitar orçamento do produto"
+										>
+											Solicitar Orçamento
+										</button>
 									</div>
 								</div>
 							</div>
@@ -150,20 +223,23 @@
 			</section>
 		</main>
 
-		<footer id="footer" class="footer">
+		<footer class="footer" id="footer" role="contentinfo">
 			<div class="footer-main">
 				<div class="container">
-					<div class="row gy-4">
+					<div class="row">
 						<div class="col-lg-3 col-md-6 col-sm-12">
 							<div class="footer-widget footer-about">
-								<a href="/" class="logo"><img src="assets/img/logo-footer.png" alt="Logo all4esthetic" /></a>
+								<a class="logo" href="index.html" aria-label="Página inicial">
+									<img alt="Logo all4esthetic" src="assets/img/logo-footer.png" />
+								</a>
 								<p>Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.</p>
-								<div class="social-links mt-4">
+								<div class="social-links mt-4" aria-label="Redes sociais">
 									<h5>Siga-nos:</h5>
 									<div class="social-icons">
-										<a href="https://www.facebook.com/all4esthetic/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-										<a href="https://www.instagram.com/all4esthetic/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-										<a href="https://api.whatsapp.com/send/?phone=966613991&text=Olá All4Esthetic" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a>
+										<a aria-label="Facebook" href="#"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+										<a aria-label="Instagram" href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+										<a aria-label="YouTube" href="#"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
 									</div>
 								</div>
 							</div>
@@ -202,16 +278,28 @@
 								<h4>Contacto</h4>
 								<div class="footer-contact mt-4">
 									<div class="contact-item">
-										<i class="bi bi-geo-alt"></i>
-										<a href="https://maps.app.goo.gl/5iLi1uoL1sW2TXUYA" target="_blank">R. dos Tractores 506, Armazém AE, Montijo, PT 2870-607</a>
+										<i class="bi bi-geo-alt" aria-hidden="true"></i>
+										<span>
+											<a href="https://www.google.com/maps/search/?q=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+PT+2870-607" target="_blank" rel="noopener noreferrer">
+												R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607
+											</a>
+										</span>
 									</div>
 									<div class="contact-item">
-										<i class="bi bi-telephone"></i>
-										<a href="https://wa.me/351214095469" target="_blank">(+351) 21 409 5469</a>
+										<i class="bi bi-telephone" aria-hidden="true"></i>
+										<span>
+											<a href="https://wa.me/351214095469" target="_blank" rel="noopener noreferrer">
+												(+351) 21 409 5469
+											</a>
+										</span>
 									</div>
 									<div class="contact-item">
-										<i class="bi bi-envelope"></i>
-										<a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
+										<i class="bi bi-envelope" aria-hidden="true"></i>
+										<span>
+											<a href="mailto:geral@all4esthetic.com">
+												geral@all4esthetic.com
+											</a>
+										</span>
 									</div>
 								</div>
 							</div>
@@ -227,16 +315,29 @@
 				</div>
 			</div>
 		</footer>
-		<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-		<div id="preloader"></div>
-
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
-		<script src="assets/js/main.js" defer></script>
-		<script></script>
+		<a
+			class="scroll-top d-flex align-items-center justify-content-center"
+			href="#"
+			id="scroll-top"
+			aria-label="Voltar ao topo da página"
+			role="button"
+			tabindex="0"
+			onkeypress="if(event.key==='Enter' || event.key===' ') this.click();"
+		>
+			<i class="bi bi-arrow-up-short" aria-hidden="true"></i>
+		</a>
+		<div id="preloader" aria-hidden="true"></div>
+		<script src="assets/swiper/swiper-bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+		</script>
 	</body>
 </html>
