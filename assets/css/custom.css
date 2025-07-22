@@ -115,7 +115,7 @@ body {
 		padding-left: calc(var(--bs-spacing-mobile-left) * 0.5) !important;
 	}
 	.logo img {
-		width: 55% !important;
+		width: 75% !important;
 	}
 	
 	.navmenu {
@@ -2879,7 +2879,7 @@ h6 {
 	}
 
 	.footer .logo img {
-		width: 53% !important;
+		width: 65% !important;
 	}
 
 	.footer .footer-main .footer-links {
