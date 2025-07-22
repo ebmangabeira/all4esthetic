@@ -144,7 +144,7 @@ body {
 	
 	.navmenu a,
 	.navmenu a:focus-visible {
-		color: var(--accent-color);
+		color: var(--nav-dropdown-color);
 		padding: 16px 24px;
 		font-family: 'Quicksand', sans-serif;
 		font-size: 18px;
@@ -154,7 +154,6 @@ body {
 		transition: color 0.3s ease, background-color 0.3s ease;
 		text-decoration: none;
 		outline-offset: 2px;
-		
 	}
 
 	.navmenu a:focus-visible {
@@ -1596,7 +1595,7 @@ label {
 	border-bottom: 1px solid var(--default-color);
 	margin-bottom: 1rem;
 	padding-bottom: 0.5rem;
-	padding-bottom: 180px;
+	padding-bottom: 4px;
 }
 
 .mobile-filters-content {
