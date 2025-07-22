@@ -674,7 +674,7 @@ section,
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 550px;
+  height: 475px;
   overflow: hidden;
 }
 
@@ -828,6 +828,7 @@ section,
 
   .sobre .content h3 {
     font-size: var(--font-size-title-mobile) !important;
+	margin-top: -6px;
   }
 
   .sobre .content p,
@@ -867,6 +868,9 @@ section,
 
   .placeholder-decorativo img {
     max-width: 0;
+  }
+  .text-start {
+    margin-top: 34px;
   }
 }
 
@@ -1591,6 +1595,7 @@ label {
 	border-bottom: 1px solid var(--default-color);
 	margin-bottom: 1rem;
 	padding-bottom: 0.5rem;
+	padding-bottom: 180px;
 }
 
 .mobile-filters-content {
@@ -2812,7 +2817,7 @@ h6 {
 
 .footer .footer-widget.footer-about .social-links {
 	margin-top: 24px;
-	padding-bottom: 32px;
+	padding-bottom: 24px;
 }
 
 .footer .footer-widget.footer-about .social-links h5 {
@@ -2889,7 +2894,7 @@ h6 {
 	}
 
 	.footer .footer-widget.footer-about .social-links h5 {
-		margin-bottom: 12px !important;
+		margin-bottom: 16<px !important;
 	}
 
 	.footer .footer-main .footer-widget .logo {
