@@ -144,7 +144,7 @@ body {
 	
 	.navmenu a,
 	.navmenu a:focus-visible {
-		color: var(--nav-dropdown-color);
+		color: var(--accent-color);
 		padding: 16px 24px;
 		font-family: 'Quicksand', sans-serif;
 		font-size: 18px;
@@ -154,6 +154,7 @@ body {
 		transition: color 0.3s ease, background-color 0.3s ease;
 		text-decoration: none;
 		outline-offset: 2px;
+		
 	}
 
 	.navmenu a:focus-visible {
@@ -2894,7 +2895,7 @@ h6 {
 	}
 
 	.footer .footer-widget.footer-about .social-links h5 {
-		margin-bottom: 16<px !important;
+		margin-bottom: 16px !important;
 	}
 
 	.footer .footer-main .footer-widget .logo {
