@@ -1601,7 +1601,7 @@ label {
 	overflow-y: auto;
 	max-height: calc(100vh - 100px);
 	padding-right: 1rem;
-	padding-bottom: 240px;
+	padding-bottom: 180px;
 }
 
 .mobile-filters-content .filter-section {
