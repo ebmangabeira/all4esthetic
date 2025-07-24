@@ -328,45 +328,6 @@
       "bidiario": false,
       "semanal": false,
       "mensal": true
-  "id": "E058V2",  
-  "name": "Criolipólise 360º",  
-  "designação": "Incl. 2 Manípulos",  
-  "ref": "E058V2",  
-  "code_rev": "FTE058V2.02",  
-  "functions": [
-    {
-      "nome": "Lipoescultura a frio",
-      "descricao": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura. A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo."
-    }
-  ],
-  "technical_data": {
-    "Programação:": "Manual",  
-    "Potência:": "1000W",  
-    "Pressão_vácuo:": "0-50KPA",  
-    "Corrente_eléctrica:": "110-220VAC, 20A max., 50/60Hz"
-  },
-  "logistics": {
-    "Dimensões:": "57cm x 34,5cm x 41,5cm",  
-    "Peso:": "16,700 kgs"
-  },
-  "legislation": [
-    "LVD 2014/35/EU",  
-    "ROSH 2011/65/EU"
-  ],
-  "application": "Apenas para uso estético.",  
-  "image": "assets/img/equipments/criolipolise360.png",  
-  "images": [
-    "assets/img/equipments/criolipolise360_1.png",  
-    "assets/img/equipments/criolipolise360_2.png",  
-    "assets/img/equipments/criolipolise360_3.png"
-  ],  
-  "category": "Modelagem",  
-  "sale": true,  
-  "rental": {
-    "diario": false,  
-    "bidiario":false,  
-    "semanal": false,  
-    "mensal": true
     }
   },
   {

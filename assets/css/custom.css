@@ -118,7 +118,7 @@ body {
 	.logo img {
 		width: 65% !important;
 	}
-	
+
 	.navmenu {
 		padding: 0;
 		z-index: 9997;
@@ -142,7 +142,7 @@ body {
 		padding: 95px 0 40px 0;
 		margin: 0;
 	}
-	
+
 	.navmenu a,
 	.navmenu a:focus-visible {
 		color: var(--nav-dropdown-color);
@@ -525,7 +525,7 @@ body {
 
 
 /* ==========================================================================
-   INDEX - CSS 
+   INDEX - CSS
 ========================================================================== */
 
 section,
@@ -1110,7 +1110,7 @@ body.modal-open {
 		max-width: 100% !important;
 		font-size: 0;
 		flex: 0 0 auto !important;
-		max-width: 50% !important; 
+		max-width: 50% !important;
 		padding-top: 2px;
 	}
 

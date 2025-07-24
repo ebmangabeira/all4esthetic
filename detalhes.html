@@ -30,8 +30,6 @@
 					<div class="d-flex align-items-center justify-content-between">
 						<a href="index.html" class="logo d-flex align-items-center d-xl-none" aria-label="Página inicial">
 							<img src="assets/img/logo-header.png" alt="Logo all4esthetic" />
-						<a href="/" class="logo d-flex align-items-center d-xl-none">
-							<img src="assets/img/logo-header.png" alt="Logo" />
 						</a>
 						<div class="header-actions d-flex align-items-center justify-content-end">
 							<i
@@ -52,8 +50,6 @@
 						<div class="d-flex align-items-center justify-content-between">
 							<a href="index.html" class="logo d-flex align-items-center me-4 d-none d-xl-flex" aria-label="Página inicial">
 								<img src="assets/img/logo-header.png" alt="Logo all4esthetic" />
-							<a href="/" class="logo d-flex align-items-center me-4 d-none d-xl-flex">
-								<img src="assets/img/logo-header.png" alt="Logo" />
 							</a>
 							<nav id="navmenu" class="navmenu mx-auto justify-content-center" aria-label="Menu principal" role="navigation">
 								<ul>
@@ -85,7 +81,6 @@
 						<ol>
 							<li><a href="index.html">Início</a></li>
 							<li><a href="equipamentos.html">Equipamentos</a></li>
-							<li><a href="/">Início</a></li>
 							<li class="current" aria-current="page">Detalhes</li>
 						</ol>
 					</nav>
@@ -219,8 +214,15 @@
 										>
 											Solicitar Orçamento
 										</button>
-										<button id="btn-pdf" class="pd-btn pd-btn-outline-pdf" type="button">Gerar PDF</button>
-										<button id="btn-quote" onclick="handleRequestPricing" class="pd-btn pd-btn-outline" type="button">Solicitar Orçamento</button>
+										<button id="btn-pdf" class="pd-btn pd-btn-outline-pdf" type="button" aria-label="Gerar PDF do produto">
+											Gerar PDF
+										</button>
+										<button
+											id="btn-quote"
+											onclick="handleRequestPricing" class="pd-btn pd-btn-outline" type="button"aria-label="Solicitar orçamento do produto"
+										>
+											Solicitar Orçamento
+										</button>
 									</div>
 								</div>
 							</div>
@@ -239,18 +241,13 @@
 								<a class="logo" href="index.html" aria-label="Página inicial">
 									<img alt="Logo all4esthetic" src="assets/img/logo-footer.png" />
 								</a>
-								<a href="/" class="logo"><img src="assets/img/logo-footer.png" alt="Logo all4esthetic" /></a>
 								<p>Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.</p>
 								<div class="social-links mt-4" aria-label="Redes sociais">
 									<h5>Siga-nos:</h5>
 									<div class="social-icons">
-										<a aria-label="Facebook" href="#"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-										<a aria-label="Instagram" href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-										<a aria-label="YouTube" href="#"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
-										<a href="https://www.facebook.com/all4esthetic/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-										<a href="https://www.instagram.com/all4esthetic/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-										<a href="https://api.whatsapp.com/send/?phone=966613991&text=Olá All4Esthetic" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a>
+										<a href="https://www.facebook.com/all4esthetic/" aria-label="Facebook" aria-hidden="true"><i class="bi bi-facebook"></i></a>
+										<a href="https://www.instagram.com/all4esthetic/" aria-label="Instagram" aria-hidden="true"><i class="bi bi-instagram"></i></a>
+										<a href="https://api.whatsapp.com/send/?phone=966613991&text=Olá All4Esthetic" aria-hidden="true" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></a>
 									</div>
 								</div>
 							</div>
@@ -296,7 +293,9 @@
 											</a>
 										</span>
 										<i class="bi bi-geo-alt"></i>
-										<a href="https://maps.app.goo.gl/5iLi1uoL1sW2TXUYA" target="_blank">R. dos Tractores 506, Armazém AE, Montijo, PT 2870-607</a>
+										<a href="https://maps.app.goo.gl/5iLi1uoL1sW2TXUYA" target="_blank">R. dos Tractores 506, Armazém AE, Montijo, PT 2870-607
+											</a>
+										</span>
 									</div>
 									<div class="contact-item">
 										<i class="bi bi-telephone" aria-hidden="true"></i>
@@ -352,16 +351,5 @@
 		<script src="assets/js/main.js"></script>
 		<script>
 		</script>
-		<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-		<div id="preloader"></div>
-
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/drift-zoom@1.5.1/dist/Drift.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js" defer></script>
-		<script src="assets/js/main.js" defer></script>
-		<script></script>
 	</body>
 </html>
