@@ -66,13 +66,33 @@
 				</div>
 			</div>
 		</header>
+		<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="dialog" aria-live="polite" aria-modal="true" aria-label="Aviso de Cookies" tabindex="-1">
+			<div class="cookie-banner-content">
+				<div class="cookie-banner-header">
+				<span class="cookie-banner-icon" aria-hidden="true">
+					<svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+					<path d="M26.9 17.18a3.46 3.46 0 0 1-4.17-4.16a1 1 0 0 0-1.28-1.27a3.47 3.47 0 0 1-4.17-4.18A1 1 0 0 0 15.9 6.5A1 1 0 0 0 15 5.48V5A1 1 0 0 0 14.1 4.07A12 12 0 1 0 28 18.36a1 1 0 0 0-1.08-1.18a1 1 0 0 0-.02 0Zm-7.47 9.49a2 2 0 1 1 2-2a2 2 0 0 1-2 2ZM10 14.5a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm-1 7a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm9-10a2 2 0 1 1 2-2a2 2 0 0 1-2 2Z"/>
+					</svg>
+				</span>
+				<span class="cookie-banner-title">Cookies</span>
+				</div>
+				<span class="cookie-banner-text">
+				Utilizamos cookies para melhorar a sua experiência no site, personalizar conteúdo e analisar o nosso tráfego.
+				Ao aceitar, autoriza a utilização de cookies conforme a nossa <a href="politica-privacidade.html" target="_blank" class="cookie-link">Política de Privacidade</a>.
+				</span>
+				<div class="cookie-banner-actions">
+				<button id="cookie-accept-btn" class="cookie-btn" type="button">Aceitar</button>
+				<button id="cookie-reject-btn" class="btn-outline-light cookie-btn" type="button">Rejeitar</button>
+				</div>
+			</div>
+		</div>
 		<main class="main" role="main">
 			<div class="pd-page-title pd-light-bg">
 				<div class="container-xl pd-breadcrumbs pd-container">
 					<h1 class="pd-title-text" id="main-heading">Quem<span class="detalhes-title">_</span>Somos</h1>
 					<nav class="pd-nav-breadcrumbs" aria-label="Caminho de navegação">
 						<ol>
-							<li><a href="index.html">Início</a></li>
+							<li><a href="index.html" class="inicio-link">Início</a></li>
 							<li class="current" aria-current="page">Quem Somos</li>
 						</ol>
 					</nav>
@@ -284,18 +304,18 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-3 col-md-6 col-sm-12">
-							<div class="footer-widget footer-about">
-								<a class="logo" href="index.html" aria-label="Página inicial"><img alt="Logo all4esthetic" src="assets/img/logo-footer.png" /></a>
-								<p>
-									Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.
-								</p>
-								<div class="social-links mt-4">
+							<div class="footer-about">
+								<a class="logo" href="index.html" aria-label="Página inicial">
+									<img alt="Logo all4esthetic" src="assets/img/logo-footer.png" />
+								</a>
+								<p class="footer-infor">Conectando inovação e estética: um catálogo completo de equipamentos e produtos que elevam a beleza e promovem o bem-estar com tecnologia.</p>
+								<div class="social-links mt-4" aria-label="Redes sociais">
 									<h5>Siga-nos:</h5>
 									<div class="social-icons">
-										<a aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a>
-										<a aria-label="Instagram" href="#"><i class="bi bi-instagram"></i></a>
-										<a aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a>
-										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
+										<a aria-label="Facebook" href="#"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+										<a aria-label="Instagram" href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+										<a aria-label="YouTube" href="#"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
 									</div>
 								</div>
 							</div>
@@ -312,15 +332,6 @@
 						</div>
 						<div class="col-lg col-md-6 col-sm-6">
 							<div class="footer-widget">
-								<h4>Equipamentos</h4>
-								<ul class="footer-links">
-									<li><a href="#">Venda</a></li>
-									<li><a href="#">Aluguer</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg col-md-6 col-sm-6">
-							<div class="footer-widget">
 								<h4>Informações</h4>
 								<ul class="footer-links">
 									<li><a href="#">Termos de Uso</a></li>
@@ -329,12 +340,12 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg col-md-6 col-sm-6">
-							<div class="footer-widget">
+						<div class="footer-widget col-lg col-md-6 col-sm-6">
+							<div>
 								<h4>Contacto</h4>
 								<div class="footer-contact mt-4">
 									<div class="contact-item">
-										<i class="bi bi-geo-alt"></i>
+										<i class="bi bi-geo-alt" aria-hidden="true"></i>
 										<span>
 											<a href="https://www.google.com/maps/search/?q=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+PT+2870-607" target="_blank" rel="noopener noreferrer">
 												R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607
@@ -342,7 +353,7 @@
 										</span>
 									</div>
 									<div class="contact-item">
-										<i class="bi bi-telephone"></i>
+										<i class="bi bi-telephone" aria-hidden="true"></i>
 										<span>
 											<a href="https://wa.me/351214095469" target="_blank" rel="noopener noreferrer">
 												(+351) 21 409 5469
@@ -350,7 +361,7 @@
 										</span>
 									</div>
 									<div class="contact-item">
-										<i class="bi bi-envelope"></i>
+										<i class="bi bi-envelope" aria-hidden="true"></i>
 										<span>
 											<a href="mailto:geral@all4esthetic.com">
 												geral@all4esthetic.com
@@ -369,7 +380,7 @@
 						<p class="footer-p">© <span>Copyright 2025</span> <strong class="px-1 sitename">all4esthetic.</strong> <span>Todos os Direitos Reservados.</span></p>
 					</div>
 				</div>
-			 </div>
+			</div>
 		</footer>
 		<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top" aria-label="Voltar ao topo"><i class="bi bi-arrow-up-short"></i></a>
 		<div id="preloader"></div>

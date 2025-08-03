@@ -173,6 +173,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	let page = 1, perPage = 6, filtered = [...allEquip];
 
+	// ----------- INÍCIO DA ALTERAÇÃO (só ADICIONA ESSA FUNÇÃO!) -------------
+	function normalize(str) {
+		return (str || "")
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '')
+			.toLowerCase()
+			.trim();
+	}
+	// ----------- FIM DA ALTERAÇÃO -------------
+
 	function toggle(div, arrA, arrR) {
 		arrA.forEach(i => {
 			i.addEventListener('change', () => {
@@ -188,7 +198,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 	function apply({ cats, av, rents }) {
 		page = 1;
 		filtered = allEquip.filter(e => {
-			if (cats.length && !cats.includes(e.category)) return false;
+			// ----------- ALTERAÇÃO AQUI! -----------
+			if (cats.length && !cats.some(cat => normalize(cat) === normalize(e.category))) return false;
+			// ----------- FIM DA ALTERAÇÃO -----------
 			if (av === 'Venda') return e.sale;
 			if (av === 'Aluguer') {
 				return rents.length ? rents.some(r => e.rental[r]) : Object.values(e.rental).some(v => v);
@@ -228,7 +240,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 		mobFilt.classList.remove('open');
 		document.body.style.overflow = '';  // libera scroll da página
 	});
-
+	// ALTERAÇÃO SOMENTE AQUI: removido "ID:" e fica só o número no card
 	function renderPage() {
 		ctn.innerHTML = '';
 		const start = (page - 1) * perPage;
@@ -242,6 +254,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 					<div class="card-body d-flex flex-column">
 						<h5 class="card-title">${e.name}</h5>
 						<p class="card-designacao mb-2">${e.designação || ''}</p>
+						<p class="card-detalhe mb-2">${e.detalhe || ''}</p>
+						<p class="card-id text-muted small mb-2">${e.id}</p>
 						<a href="detalhes.html?id=${e.id}" class="btn btn-primary mt-auto">Mais detalhes</a>
 					</div>
 				</div>`;
@@ -334,7 +348,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 	}
 	apply({ cats: [], av: null, rents: [] });
 });
-
 document.addEventListener('DOMContentLoaded', async () => {
 	const params = new URLSearchParams(location.search);
 	const eqId = params.get('id');
@@ -518,3 +531,49 @@ document.addEventListener('DOMContentLoaded', async () => {
 		console.error('Erro ao carregar dados:', err);
 	}
 });
+
+(function() {
+  const banner = document.getElementById('cookie-consent-banner');
+  const acceptBtn = document.getElementById('cookie-accept-btn');
+  const rejectBtn = document.getElementById('cookie-reject-btn');
+  const consentKey = 'all4esthetic_cookie_consent_v1';
+
+  // Função para mostrar o banner se ainda não houver consentimento
+  function showCookieBanner() {
+    if (!localStorage.getItem(consentKey)) {
+      banner.classList.add('show');
+      banner.setAttribute('aria-hidden', 'false');
+      banner.focus();
+    }
+  }
+
+  // Função para ocultar o banner
+  function hideCookieBanner() {
+    banner.classList.remove('show');
+    banner.setAttribute('aria-hidden', 'true');
+  }
+
+  // Clique em ACEITAR
+  acceptBtn.addEventListener('click', function() {
+    localStorage.setItem(consentKey, 'accepted');
+    hideCookieBanner();
+    // Aqui pode ativar scripts de tracking, analytics, etc.
+  });
+
+  // Clique em REJEITAR
+  rejectBtn.addEventListener('click', function() {
+    localStorage.setItem(consentKey, 'rejected');
+    hideCookieBanner();
+    // Aqui pode bloquear scripts de tracking, analytics, etc.
+  });
+
+  // Exibe banner ao carregar, caso ainda não tenha escolhido
+  document.addEventListener('DOMContentLoaded', showCookieBanner);
+
+  // Acessibilidade: fechar no Esc
+  banner.addEventListener('keydown', function(e){
+    if(e.key === "Escape") hideCookieBanner();
+  });
+})();
+
+

@@ -46,6 +46,270 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* ======== COOKIE CONSENT BANNER - All4Esthetic =========== */
+.cookie-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 999999;
+  background: var(--surface-color);
+  color: var(--default-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(41,41,46,0.15);
+  padding: 26px 32px 22px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 280px;
+  max-width: 420px;
+  width: 92vw;
+  font-size: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s cubic-bezier(.4,0,.2,1);
+  border: 1px solid var(--accent-color);
+}
+.cookie-banner.show {
+  opacity: 1;
+  pointer-events: all;
+}
+.cookie-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+.cookie-banner-text {
+  font-size: 1rem;
+  color: var(--default-color);
+  line-height: 1.6;
+  margin-bottom: 2px;
+}
+.cookie-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color .2s;
+}
+.cookie-link:hover,
+.cookie-link:focus-visible {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  outline: 2px solid var(--accent-color);
+  border-radius: 4px;
+}
+.cookie-banner-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 3px;
+}
+
+/* Botões base */
+.cookie-btn {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 500;
+  border-radius: 50px;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border: none;
+  transition: background .3s, color .3s, outline .3s;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.cookie-btn:hover,
+.cookie-btn:active {
+  background: var(--nav-hover-color);
+  color: var(--contrast-color);
+  filter: brightness(0.93);
+}
+
+.cookie-btn:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.btn-outline-light.cookie-btn {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.btn-outline-light.cookie-btn:hover,
+.btn-outline-light.cookie-btn:focus-visible {
+  background: var(--accent-color);
+  color: var(--contrast-color, #fff);
+  border: 1.5px solid var(--accent-color);
+}
+
+.cookie-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.cookie-banner-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.cookie-banner-icon svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  color: var(--accent-color);
+}
+.cookie-banner-title {
+  font-size: 1.13rem;
+  font-weight: 600;
+  color: var(--contrast-color);
+  letter-spacing: 0.01em;
+  font-family: var(--heading-font, 'Quicksand', sans-serif);
+  margin-top: 2px;
+}
+
+.cookie-banner:focus,
+.cookie-banner:focus-visible {
+  outline: 0px solid var(--accent-color);
+  outline-offset: 0;
+}
+
+
+/* ======= MOBILE: até 767px ======= */
+@media (max-width: 767px) {
+  .cookie-banner {
+    left: 50%;
+    right: auto;
+    bottom: 10px;
+    top: auto;
+    transform: translateX(-50%);
+    min-width: 0;
+    max-width: 98vw;
+    width: 98vw;
+    padding: 14px 8px 12px 12px;
+    border-radius: 12px;
+    gap: 10px;
+    font-size: 0.97rem;
+  }
+  .cookie-banner-content {
+    gap: 10px;
+  }
+  .cookie-banner-text {
+    font-size: 14px;
+  }
+  .cookie-banner-actions {
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+  }
+  .cookie-btn,
+  .btn-outline-light.cookie-btn {
+    width: 100%;
+    min-width: 0;
+    font-size: 14px;
+    padding: 11px 0;
+    border-radius: 24px;
+    height: 44px;
+  }
+  .cookie-banner-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  .cookie-banner-header {
+    gap: 7px;
+  }
+  .cookie-banner-title {
+    font-size: 1rem;
+  }
+}
+
+/* ======= TABLET: 768px até 1199px ======= */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .cookie-banner {
+    left: 50%;
+    right: auto;
+    bottom: 18px;
+    transform: translateX(-50%);
+    min-width: 320px;
+    max-width: 410px;
+    width: 85vw;
+    padding: 20px 24px 15px 24px;
+    border-radius: 15px;
+    gap: 18px;
+    font-size: 1.02rem;
+  }
+  .cookie-banner-content {
+    gap: 13px;
+  }
+  .cookie-banner-text {
+    font-size: 1.01rem;
+  }
+  .cookie-banner-actions {
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+  }
+  .cookie-btn,
+  .btn-outline-light.cookie-btn {
+    min-width: 0;
+    flex: 1 1 0;
+    width: 100%;
+    font-size: 1.02rem;
+    padding: 12px 0;
+    border-radius: 22px;
+    box-sizing: border-box;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ======= DESKTOP: 1200px para cima ======= */
+@media (min-width: 1200px) {
+  .cookie-banner {
+    left: 50%;
+    right: auto;
+    bottom: 32px;
+    transform: translateX(-50%);
+    min-width: 380px;
+    max-width: 440px;
+    width: 420px;
+    padding: 22px;
+    border-radius: 18px;
+    gap: 28px;
+    font-size: 1.08rem;
+  }
+  .cookie-banner-content {
+    gap: 20px;
+  }
+  .cookie-banner-text {
+    font-size: 14px;
+  }
+  .cookie-banner-actions {
+    flex-direction: row;
+    gap: 14px;
+  }
+  .cookie-btn,
+  .btn-outline-light.cookie-btn {
+    min-width: 110px;
+    font-size: 14px;
+    padding: 12px 26px;
+    border-radius: 28px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
 /* ==========================================================================
    HEADER - MENU - CSS
 ========================================================================== */
@@ -60,10 +324,11 @@ body {
 	padding: 20px 0px;
 }
 
-.header :focus-visible {
+.header :focus-visible:not(.inicio-link) {
 	outline: 3px solid var(--accent-color);
 	outline-offset: 2px;
 }
+
 
 .header .main-header {
 	background: rgba(255, 255, 255, 0);
@@ -142,6 +407,7 @@ body {
 	}
 	
 	.navmenu a,
+	.navmenu a:focus,
 	.navmenu a:focus-visible {
 		color: var(--nav-dropdown-color);
 		padding: 16px 24px;
@@ -152,6 +418,7 @@ body {
 		white-space: nowrap;
 		transition: color 0.3s ease, background-color 0.3s ease;
 		text-decoration: none;
+		outline: none;
 		outline-offset: 2px;
 	}
 
@@ -226,15 +493,16 @@ body {
 		align-items: center;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
-		border: 1px solid var(--contrast-color);
+		border: none;
+		outline: none;
 	}
 
 	.navmenu-close:hover,
 	.navmenu-close:focus-visible {
 		background-color: #ffffff;
-		border: 1px solid white;
 		outline: 3px solid var(--accent-color);
 		outline-offset: 2px;
+		color: var(--accent-color);
 	}
 
 	.navmenu .navmenu-close {
@@ -285,8 +553,8 @@ body {
 	.container-sm,
 	.container-xl {
 		max-width: 1100px;
-		padding-right: calc(var(--bs-spacing-mobile-right) * 0.5) !important;
-		padding-left: calc(var(--bs-spacing-mobile-left) * 0.5) !important;
+		padding-right: calc(var(--bs-spacing-tablet-right) * 0.5) !important;
+		padding-left: calc(var(--bs-spacing-tablet-left) * 0.5) !important;
 	}
 	.logo img {
 		width: 35% !important;
@@ -315,6 +583,7 @@ body {
 		margin: 0;
 	}
 	.navmenu a,
+	.navmenu a:focus,
 	.navmenu a:focus-visible {
 		color: var(--nav-dropdown-color);
 		padding: 16px 24px;
@@ -325,6 +594,7 @@ body {
 		white-space: nowrap;
 		transition: color 0.3s ease, background-color 0.3s ease;
 		text-decoration: none;
+		outline: none;
 		outline-offset: 2px;
 	}
 	.navmenu a:focus-visible {
@@ -392,14 +662,15 @@ body {
 		align-items: center;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
-		border: 1px solid var(--contrast-color);
+		border: none;
+		outline: none;
 	}
 	.navmenu-close:hover,
 	.navmenu-close:focus-visible {
 		background-color: #ffffff;
-		border: 1px solid white;
 		outline: 3px solid var(--accent-color);
 		outline-offset: 2px;
+		color: var(--accent-color);
 	}
 	.navmenu .navmenu-close {
 		font-size: 14px;
@@ -422,7 +693,6 @@ body {
 		margin-right: 10px;
 		cursor: pointer;
 		transition: color 0.3s ease;
-
 	}
 	.header {
 		padding: 30px 0px;
@@ -457,6 +727,7 @@ body {
 		position: relative;
 	}
 	.navmenu li a,
+	.navmenu li a:focus,
 	.navmenu li a:focus-visible {
 		color: var(--nav-color);
 		padding: 18px 40px;
@@ -469,6 +740,7 @@ body {
 		white-space: nowrap;
 		transition: color 0.3s ease;
 		text-decoration: none;
+		outline: none;
 		outline-offset: 2px;
 	}
 	.navmenu li a:focus-visible {
@@ -496,6 +768,7 @@ body {
 
 @media (forced-colors: active) {
 	.navmenu a,
+	.navmenu a:focus,
 	.navmenu a:focus-visible {
 		border: 2px solid WindowText;
 		background: Window;
@@ -885,9 +1158,9 @@ section,
 
   .hero .welcome h2 {
     font-size: 40px;
-    margin: -230px 0 0 -2px;
+    margin: -260px 0 0 -2px;
     font-weight: lighter;
-    padding-bottom: 22px;
+    padding-bottom: 52px;
   }
 
   .hero-image-wrapper img.hero-img {
@@ -920,7 +1193,7 @@ section,
   }
 
   .parallax-section {
-    height: 400px;
+    height: 500px;
   }
 
   .text-content-parallax {
@@ -973,8 +1246,6 @@ section,
   }
 }
 
-
-
 /* ==========================================================================
    QUEM SOMOS - CSS 
 ========================================================================== */
@@ -985,7 +1256,7 @@ body.modal-open {
 
 .pd-page-title {
 	background-color: color-mix(in srgb, var(--default-color), transparent 55%);
-	padding: 130px 0 40px;
+	padding: 135px 0 40px;
 }
 
 .pd-light-bg {
@@ -1069,8 +1340,7 @@ body.modal-open {
 .pd-nav-breadcrumbs a:hover,
 .pd-nav-breadcrumbs a:focus-visible {
 	color: var(--accent-color);
-	outline: 2px solid var(--accent-color);
-	outline-offset: 2px;
+	
 }
 
 .row-box {
@@ -1164,7 +1434,7 @@ body.modal-open {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 	.pd-page-title {
 		padding: 160px 0 40px;
 		background: color-mix(in srgb, var(--default-color), transparent 55%);
@@ -1223,6 +1493,22 @@ body.modal-open {
 	padding-bottom: 16px;
 	margin-top: -7px
 }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+	.pd-page-title {
+		padding: 173px 0 40px;
+		background: color-mix(in srgb, var(--default-color), transparent 55%);
+	}
+	.about .about-title {
+        font-size: var(--font-size-title-tablet);
+        font-weight: lighter;
+        color: var(--heading-color);
+        text-align: left;
+        padding-bottom: 16px;
+        margin-top: -7px;
+
+	}
 }
 
 @media (min-width: 1200px) {
@@ -1453,6 +1739,26 @@ body.modal-open {
 	color: var(--surface-color);
 }
 
+/* ===== AJUSTE SOLICITADO PARA O LINK "INÍCIO" ===== */
+
+/* Remove outline padrão só do Início */
+.pd-nav-breadcrumbs a.inicio-link:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color), white 75%);
+    background: color-mix(in srgb, var(--accent-color), white 90%);
+    color: var(--accent-color) !important;
+    border-radius: 5px;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+/* Remove borda/outline ao clicar com mouse e troca cor */
+.pd-nav-breadcrumbs a.inicio-link:active {
+    color: var(--accent-color) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
 
 /* ============================
    EQUIPAMENTOS - CSS
@@ -1500,6 +1806,29 @@ body.modal-open {
 	font-weight: 300;
 }
 
+/* NOVO: Estilo para a linha Detalhe */
+.card-detalhe {
+	font-size: 14px;
+	color: var(--heading-color);
+	font-weight: 400;
+	margin-top: -6px;
+	line-height: 1.3;
+	min-height: 1.1em;
+	letter-spacing: 0.01em;
+	word-break: break-word;
+	transition: color 0.3s;
+}
+
+/* NOVO: Estilo para o ID */
+.card-id {
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	margin-top: 4px;
+    margin-bottom: 16px !important;
+	user-select: text;
+}
+
 .card-designacao {
 	font-size: 22px;
 	color: var(--heading-color);
@@ -1522,7 +1851,6 @@ body.modal-open {
 .equipamento-card .btn:hover,
 .equipamento-card .btn:focus {
 	background-color: var(--nav-hover-color);
-	outline-offset: 2px;
 	outline-style: solid;
 	outline-color: var(--nav-hover-color);
 }
@@ -1790,7 +2118,15 @@ label {
 		margin-top: -146px;
 	}
 	.equipamento-card .card-title {
-		font-size: 24px;
+		font-size: 22px;
+	}
+	.card-detalhe {
+		font-size: 15px;
+		margin-top: -2px;
+	}
+	.card-id {
+		font-size: 13px;
+		margin-bottom: 0.5em;
 	}
 	.custom-pagination {
 		gap: 0.4rem;
@@ -1828,6 +2164,11 @@ label {
 	.features-boxes .feature-box:hover {
 		transform: none;
 	}
+
+	.card-designacao {
+    min-height: 0.5em;
+    
+	}
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -1836,6 +2177,7 @@ label {
 		max-width: 50%;
 	}
 }
+
 
 /* ============================
    DETALHES - CSS
@@ -1902,7 +2244,7 @@ label {
 	transform: scale(1.03);
 	opacity: 0.95;
 	outline-offset: 4px;
-	outline: 3px solid var(--accent-color);
+	
 }
 
 .thumbs-wrapper {
@@ -1952,7 +2294,6 @@ label {
 .thumb-slide img:focus-visible {
 	opacity: 1;
 	outline-offset: 4px;
-	outline: 3px solid var(--accent-color);
 }
 
 .thumb-slide.active {
@@ -2031,7 +2372,7 @@ h6 {
 .tab-buttons button:focus-visible,
 .tab-buttons button:hover {
 	outline-offset: 4px;
-	outline: 3px solid var(--accent-color);
+
 }
 
 .tab-buttons button.active {
@@ -2143,7 +2484,7 @@ h6 {
 	border: 1px solid var(--accent-color);
 	transition: background-color 0.3s ease, transform 0.2s ease;
 	outline-offset: 4px;
-	outline: 3px solid var(--accent-color);
+
 }
 
 .pd-btn:active {
@@ -2405,9 +2746,6 @@ h6 {
 }
 
 
-/* ============================= */
-/*   CONTACTO -CSS
-/* ============================= */
 #contact-section.contact-section {
 	padding: 160px 0;
 }
@@ -2423,35 +2761,39 @@ h6 {
 	border: 1px solid var(--accent-color);
 	border-radius: 12px;
 	cursor: pointer;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.3s ease;
+	outline: none;
+	outline-offset: 0;
+}
+
+.contact-card:hover {
+	transform: translateY(-6px);
+}
+
+.contact-card:focus-within {
+	outline: 3px solid var(--accent-color);
 	outline-offset: 4px;
 }
 
-.contact-card:hover,
-.contact-card:focus-visible {
-	transform: translateY(-6px);
-	box-shadow: 0 0 0 3px var(--accent-color);
-}
-
 .contact-link-wrapper {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	color: inherit;
 	text-decoration: none;
 	padding: 32px 24px;
 	height: 100%;
 	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	outline: none;
 }
 
 .contact-link-wrapper:hover,
+.contact-link-wrapper:focus,
 .contact-link-wrapper:focus-visible {
 	color: var(--accent-color);
 	text-decoration: none;
-	outline: 3px solid var(--accent-color);
-	outline-offset: 4px;
+	outline: none;
 }
 
 .contact-icon {
@@ -2506,12 +2848,10 @@ h6 {
 	.contact-card {
 		transition: none;
 	}
-
-	.contact-card:hover,
-	.contact-card:focus-visible {
+	.contact-card:hover {
 		transform: none;
-		box-shadow: none;
 	}
+	
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -2546,11 +2886,8 @@ h6 {
 	.contact-card {
 		transition: none;
 	}
-
-	.contact-card:hover,
-	.contact-card:focus-visible {
+	.contact-card:hover {
 		transform: none;
-		box-shadow: none;
 	}
 }
 
@@ -2582,9 +2919,6 @@ h6 {
 		font-size: 16px;
 	}
 }
-
-
-
 
 /* ==========================================================================
    SCROLL TO TOP BUTTON - CSS
@@ -2637,6 +2971,16 @@ h6 {
 	background-color: var(--background-color);
 	font-size: 14px;
 	position: relative;
+}
+
+.footer-widget {
+	padding: 0px 60px;
+	
+}
+
+.footer-infor {
+   padding-right: 50px;
+	
 }
 
 .footer .footer-main {
@@ -2736,6 +3080,7 @@ h6 {
 	gap: 12px;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	margin-top: 16px;
 }
 
 .footer .footer-main .social-icons a {
@@ -2856,6 +3201,7 @@ h6 {
 
 	.footer .footer-main .social-icons {
 		justify-content: flex-start;
+		margin-top: 16px;
 	}
 
 	.footer-bottom {
@@ -2899,6 +3245,9 @@ h6 {
 	.footer .footer-main .footer-widget .logo {
 		margin-top: 6px;
 	}
+	.footer-widget {
+    padding: 28px 0px 0px 0px;
+}
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -2933,12 +3282,18 @@ h6 {
 
 	.footer .footer-main .social-icons {
 		justify-content: flex-start;
+		margin-top: 24px;
+		padding-bottom: 24px;
 	}
 
 	.row {
     	display: flex;
     	flex-wrap: wrap;
-    	justify-content: flex-start;
+    	justify-content: center;
+	}
+
+	.footer-widget {
+    padding: 0px;
 	}
 }
 
