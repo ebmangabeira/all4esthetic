@@ -265,7 +265,7 @@ body {
   color: var(--default-color);
   line-height: 1.6;
   font-size: 1rem;
-  padding: 0;
+  padding: 0 16px;
 }
 .modal-body h6 {
   margin-top: 1.5rem;
@@ -1420,8 +1420,9 @@ section,
 body.modal-open {
 	margin-right: -16px;
 	overflow: hidden;
-  touch-action: none;
+    touch-action: none;
 }
+
 
 .pd-page-title {
 	background-color: color-mix(in srgb, var(--default-color), transparent 55%);
