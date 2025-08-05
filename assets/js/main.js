@@ -32,18 +32,33 @@
 
 	function openMobileNav() {
 		document.body.classList.add('mobile-nav-active');
+		openToggle.setAttribute('aria-expanded', 'true');
 	}
 
 	function closeMobileNav() {
 		document.body.classList.remove('mobile-nav-active');
+		openToggle.setAttribute('aria-expanded', 'false');
+		openToggle.focus();
 	}
 
 	if (openToggle) {
 		openToggle.addEventListener('click', openMobileNav);
+		openToggle.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				openMobileNav();
+			}
+		});
 	}
 
 	if (closeToggle) {
 		closeToggle.addEventListener('click', closeMobileNav);
+		closeToggle.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				closeMobileNav();
+			}
+		});
 	}
 
 	document.querySelectorAll('#navmenu a').forEach(navmenu => {
@@ -77,13 +92,16 @@
 			window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
 		}
 	}
-	scrollTop.addEventListener('click', (e) => {
-		e.preventDefault();
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth'
+
+	if(scrollTop) {
+		scrollTop.addEventListener('click', (e) => {
+			e.preventDefault();
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
 		});
-	});
+	}
 
 	window.addEventListener('load', toggleScrollTop);
 	document.addEventListener('scroll', toggleScrollTop);
@@ -127,6 +145,7 @@
 		});
 
 	});
+
 	window.addEventListener("scroll", function () {
 		const header = document.getElementById("header");
 		if (window.scrollY > 50) {
@@ -140,15 +159,6 @@
 		const navUl = document.querySelector('.mobile-nav-active .navmenu > ul');
 		if(navUl){
 			navUl.style.position = 'relative';
-		}
-	});
-
-	window.addEventListener("scroll", function () {
-		const header = document.getElementById("header");
-		if (window.scrollY > 50) {
-			header.classList.add("hide-main");
-		} else {
-			header.classList.remove("hide-main");
 		}
 	});
 
@@ -173,7 +183,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	let page = 1, perPage = 6, filtered = [...allEquip];
 
-	// ----------- INÍCIO DA ALTERAÇÃO (só ADICIONA ESSA FUNÇÃO!) -------------
 	function normalize(str) {
 		return (str || "")
 			.normalize('NFD')
@@ -181,7 +190,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 			.toLowerCase()
 			.trim();
 	}
-	// ----------- FIM DA ALTERAÇÃO -------------
 
 	function toggle(div, arrA, arrR) {
 		arrA.forEach(i => {
@@ -198,9 +206,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	function apply({ cats, av, rents }) {
 		page = 1;
 		filtered = allEquip.filter(e => {
-			// ----------- ALTERAÇÃO AQUI! -----------
 			if (cats.length && !cats.some(cat => normalize(cat) === normalize(e.category))) return false;
-			// ----------- FIM DA ALTERAÇÃO -----------
 			if (av === 'Venda') return e.sale;
 			if (av === 'Aluguer') {
 				return rents.length ? rents.some(r => e.rental[r]) : Object.values(e.rental).some(v => v);
@@ -224,7 +230,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	btnFiltro.addEventListener('click', () => {
 		mobFilt.classList.add('open');
-		document.body.style.overflow = 'hidden';  // bloqueia scroll da página
+		document.body.style.overflow = 'hidden';
 		const filtrosContent = mobFilt.querySelector('.mobile-filters-content');
 		if (filtrosContent) filtrosContent.scrollTop = 0;
 		window.scrollTo({ top: 0, behavior: 'auto' });
@@ -232,15 +238,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	btnClose.addEventListener('click', () => {
 		mobFilt.classList.remove('open');
-		document.body.style.overflow = '';  // libera scroll da página
+		document.body.style.overflow = '';
 	});
 
 	btnSearch.addEventListener('click', () => {
 		apply({ ...vals(catM, '.mobile-avail:checked', reM) });
 		mobFilt.classList.remove('open');
-		document.body.style.overflow = '';  // libera scroll da página
+		document.body.style.overflow = '';
 	});
-	// ALTERAÇÃO SOMENTE AQUI: removido "ID:" e fica só o número no card
+
 	function renderPage() {
 		ctn.innerHTML = '';
 		const start = (page - 1) * perPage;
@@ -348,6 +354,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	}
 	apply({ cats: [], av: null, rents: [] });
 });
+
 document.addEventListener('DOMContentLoaded', async () => {
 	const params = new URLSearchParams(location.search);
 	const eqId = params.get('id');
@@ -538,7 +545,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const rejectBtn = document.getElementById('cookie-reject-btn');
   const consentKey = 'all4esthetic_cookie_consent_v1';
 
-  // Função para mostrar o banner se ainda não houver consentimento
   function showCookieBanner() {
     if (!localStorage.getItem(consentKey)) {
       banner.classList.add('show');
@@ -547,30 +553,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Função para ocultar o banner
   function hideCookieBanner() {
     banner.classList.remove('show');
     banner.setAttribute('aria-hidden', 'true');
   }
 
-  // Clique em ACEITAR
   acceptBtn.addEventListener('click', function() {
     localStorage.setItem(consentKey, 'accepted');
     hideCookieBanner();
-    // Aqui pode ativar scripts de tracking, analytics, etc.
   });
 
-  // Clique em REJEITAR
   rejectBtn.addEventListener('click', function() {
     localStorage.setItem(consentKey, 'rejected');
     hideCookieBanner();
-    // Aqui pode bloquear scripts de tracking, analytics, etc.
   });
 
-  // Exibe banner ao carregar, caso ainda não tenha escolhido
   document.addEventListener('DOMContentLoaded', showCookieBanner);
 
-  // Acessibilidade: fechar no Esc
   banner.addEventListener('keydown', function(e){
     if(e.key === "Escape") hideCookieBanner();
   });

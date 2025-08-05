@@ -48,16 +48,16 @@
 							</a>
 							<nav class="navmenu mx-auto justify-content-center" id="navmenu" aria-label="Menu principal" role="navigation">
 								<ul>
-									<li
-										class="navmenu-close d-xl-none"
-										tabindex="0"
-										role="button"
-										aria-label="Fechar menu"
-										onkeypress="if(event.key==='Enter' || event.key===' ') this.click();"
-									>
-										<span class="mobile-nav-close" aria-hidden="true">X</span>
+									<li>
+										<button
+											class="navmenu-close d-xl-none"
+											aria-label="Fechar menu"
+											type="button"
+										>
+											<span class="mobile-nav-close" aria-hidden="true">X</span>
+										</button>
 									</li>
-									<li><a class="active" href="#" aria-current="page">Início</a></li>
+									<li><a class="active" href="index.html" aria-current="page">Início</a></li>
 									<li><a href="quem-somos.html">Quem Somos</a></li>
 									<li><a href="equipamentos.html">Equipamentos</a></li>
 									<li><a href="contacto.html">Contacto</a></li>
@@ -69,31 +69,110 @@
 			</div>
 		</header>
 
-		<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="dialog" aria-live="polite" aria-modal="true" aria-label="Aviso de Cookies" tabindex="-1">
-			<div class="cookie-banner-content">
-				<div class="cookie-banner-header">
-				<span class="cookie-banner-icon" aria-hidden="true">
-					<svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-					<path d="M26.9 17.18a3.46 3.46 0 0 1-4.17-4.16a1 1 0 0 0-1.28-1.27a3.47 3.47 0 0 1-4.17-4.18A1 1 0 0 0 15.9 6.5A1 1 0 0 0 15 5.48V5A1 1 0 0 0 14.1 4.07A12 12 0 1 0 28 18.36a1 1 0 0 0-1.08-1.18a1 1 0 0 0-.02 0Zm-7.47 9.49a2 2 0 1 1 2-2a2 2 0 0 1-2 2ZM10 14.5a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm-1 7a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm9-10a2 2 0 1 1 2-2a2 2 0 0 1-2 2Z"/>
-					</svg>
-				</span>
-				<span class="cookie-banner-title">Cookies</span>
-				</div>
-				<span class="cookie-banner-text">
-				Utilizamos cookies para melhorar a sua experiência no site, personalizar conteúdo e analisar o nosso tráfego.
-				Ao aceitar, autoriza a utilização de cookies conforme a nossa <a href="politica-privacidade.html" target="_blank" class="cookie-link">Política de Privacidade</a>.
-				</span>
-				<div class="cookie-banner-actions">
-				<button id="cookie-accept-btn" class="cookie-btn" type="button">Aceitar</button>
-				<button id="cookie-reject-btn" class="btn-outline-light cookie-btn" type="button">Rejeitar</button>
-				</div>
-			</div>
-		</div>
+		<!-- Cookie Consent Banner -->
+<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="status" aria-live="polite" aria-label="Aviso de Cookies" tabindex="-1">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-header">
+      <span class="cookie-banner-icon" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+          <path d="M26.9 17.18a3.46 3.46 0 0 1-4.17-4.16a1 1 0 0 0-1.28-1.27a3.47 3.47 0 0 1-4.17-4.18A1 1 0 0 0 15.9 6.5A1 1 0 0 0 15 5.48V5A1 1 0 0 0 14.1 4.07A12 12 0 1 0 28 18.36a1 1 0 0 0-1.08-1.18a1 1 0 0 0-.02 0Zm-7.47 9.49a2 2 0 1 1 2-2a2 2 0 0 1-2 2ZM10 14.5a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm-1 7a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm9-10a2 2 0 1 1 2-2a2 2 0 0 1-2 2Z"/>
+        </svg>
+      </span>
+      <span class="cookie-banner-title">Cookies</span>
+    </div>
+    <span class="cookie-banner-text">
+      Utilizamos cookies para melhorar a sua experiência no site, personalizar conteúdo e analisar o nosso tráfego.
+      Ao aceitar, autoriza a utilização de cookies conforme a nossa
+      <a href="#" class="cookie-link" data-bs-toggle="modal" data-bs-target="#privacyModal">Política de Privacidade</a>.
+    </span>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept-btn" class="cookie-btn" type="button">Aceitar</button>
+      <button id="cookie-reject-btn" class="btn-outline-light cookie-btn" type="button">Rejeitar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Política de Privacidade Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalTitle" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="privacyModalTitle">Política de Privacidade</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <h6>1. Responsável pelo Tratamento</h6>
+        <p>
+          All4esthetic<br>
+          Rua dos Tractores 506, Armazém AE, Lisboa, 2870-607, Portugal<br>
+          Email: <a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
+        </p>
+
+        <h6>2. Dados que Recolhemos</h6>
+        <p>
+          Este website é um catálogo informativo de equipamentos estéticos e não solicita, recolhe nem processa dados pessoais através de formulários ou outras interações diretas.  
+          Apenas são recolhidos dados técnicos de navegação, como cookies e registos anónimos para melhorar a experiência do utilizador e analisar o tráfego do site.
+        </p>
+
+        <h6>3. Finalidades do Tratamento</h6>
+        <ul>
+          <li>Garantir o funcionamento seguro e eficiente do website.</li>
+          <li>Personalizar conteúdos e anúncios com base em dados anónimos.</li>
+          <li>Analisar estatísticas agregadas de utilização.</li>
+          <li>Permitir que os utilizadores entrem em contacto através dos meios disponibilizados (email e telefone), caso desejem obter mais informações.</li>
+        </ul>
+
+        <h6>4. Base Legal</h6>
+        <p>
+          O tratamento dos seus dados anónimos baseia-se no nosso legítimo interesse em garantir a funcionalidade e a melhoria do serviço (Art.º 6.º(1)(f) do RGPD).  
+          Para qualquer dado pessoal facultado diretamente via contacto, o tratamento apoia-se no seu consentimento (Art.º 6.º(1)(a) RGPD).
+        </p>
+
+        <h6>5. Destinatários</h6>
+        <p>
+          Os seus dados poderão ser comunicados a prestadores de serviços técnicos e parceiros responsáveis pelo funcionamento do website (hospedagem, análises, marketing), que asseguram confidencialidade e proteção dos dados.
+        </p>
+
+        <h6>6. Período de Conservação</h6>
+        <p>
+          Os dados recolhidos são conservados pelo período necessário para cumprir as finalidades indicadas e em conformidade com a legislação aplicável.
+        </p>
+
+        <h6>7. Direitos dos Titulares</h6>
+        <p>
+          Como titular dos dados, tem o direito de solicitar acesso, retificação, eliminação, limitação ou oposição ao tratamento, bem como a portabilidade dos seus dados e a retirada do consentimento a qualquer momento, sem prejuízo da licitude do tratamento anterior.  
+          Para exercer estes direitos, por favor contacte-nos através do email <a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>.
+        </p>
+
+        <h6>8. Segurança</h6>
+        <p>
+          Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra acesso não autorizado, divulgação, alteração ou destruição.
+        </p>
+
+        <h6>9. Alterações a Esta Política</h6>
+        <p>
+          Esta política poderá ser atualizada periodicamente. A data da última revisão será indicada no início da página.
+        </p>
+
+        <h6>10. Contacto da Comissão Nacional de Proteção de Dados</h6>
+        <p>
+          Se entender que os seus direitos não foram respeitados, pode apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD): <a href="https://www.cnpd.pt" target="_blank" rel="noopener noreferrer">www.cnpd.pt</a>.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 		<main class="main" role="main">
 			<section class="hero light-background" id="hero" aria-label="Seção principal">
 				<div class="hero-image-wrapper">
-					<img alt="Imagem principal de estética" class="img-fluid hero-img" src="assets/img/hero-imagem.webp" />
+					<!-- Imagem informativa: alt descritivo mantido -->
+					<img loading="lazy" alt="Imagem principal de estética" class="img-fluid hero-img" src="assets/img/hero-imagem.webp" />
 				</div>
 				<div class="container-xl position-relative">
 					<div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
@@ -103,6 +182,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="sobre sobre-section" data-aos="fade-up" id="sobre" aria-labelledby="sobre-title">
 				<div class="container">
 					<div class="row align-items-center gx-5">
@@ -111,16 +191,19 @@
 								<h3 class="fw-semibold mb-3" id="sobre-title">Tecnologia em que Pode Confiar</h3>
 								<p>Oferecemos equipamentos de estética de última geração, projetados para garantir resultados seguros e precisos em cada tratamento.</p>
 								<ul>
+									<!-- Ícones decorativos, aria-hidden aplicado -->
 									<li><i class="bi bi-check-circle me-2" aria-hidden="true"></i>Performance excecional em cada aplicação.</li>
 									<li><i class="bi bi-check-circle me-2" aria-hidden="true"></i>Materiais de elevada durabilidade e design intuitivo.</li>
 									<li><i class="bi bi-check-circle me-2" aria-hidden="true"></i>Compatibilidade com as técnicas estéticas mais inovadoras.</li>
 								</ul>
-								<p class="quote">“Precisão e inovação ao serviço da sua confiança.”</p>
+								<blockquote class="quote">“Precisão e inovação ao serviço da sua confiança.”</blockquote>
 							</div>
 						</div>
 						<div class="col-lg-6 d-flex justify-content-center align-items-center" data-aos="fade-left">
-							<div class="placeholder-decorativo">
-								<img src="assets/img/equipments/equipamento.png" alt="Equipamento de estética avançado" class="img-sobre" />
+							<!-- Elemento decorativo, aria-hidden aplicado -->
+							<div class="placeholder-decorativo" aria-hidden="true">
+								<!-- Imagem decorativa: alt vazio + role="presentation" -->
+								<img src="assets/img/equipments/equipamento.png" alt="" class="img-sobre" role="presentation" />
 							</div>
 						</div>
 					</div>
@@ -139,15 +222,18 @@
 							<p class="section-description">
 								Conheça os nossos equipamentos de alta tecnologia que transformam a estética, proporcionando resultados excecionais e inovação para a sua prática. Descubra como os nossos produtos podem elevar os seus serviços e surpreender os seus clientes!
 							</p>
-							<a class="btn btn-saiba-mais mt-4" href="equipamentos.html">Saiba mais</a>
+							<a class="btn btn-saiba-mais mt-4" href="equipamentos.html" aria-label="Saiba mais sobre nossos equipamentos">Saiba mais</a>
 						</div>
 					</div>
 				</div>
 			</section>
+
+
 			<section class="testimonials section" id="testimonials" aria-label="Depoimentos de clientes">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+							<!-- Swiper acessível -->
 							<div class="swiper init-swiper testimonials-swiper" role="region" aria-live="polite" aria-atomic="true" aria-relevant="additions">
 								<script class="swiper-config" type="application/json">
 									{
@@ -162,6 +248,7 @@
 									<div class="swiper-slide" role="group" aria-label="Depoimento 1 de 3">
 										<div class="testimonial-item">
 											<div class="d-flex align-items-center mb-3">
+												<!-- Imagem de perfil: alt descritivo -->
 												<img
 													src="assets/img/depoimentos/manoelle_souza.webp"
 													alt="Foto de Manoelle Souza"
@@ -171,6 +258,7 @@
 													loading="lazy"
 												/>
 												<div class="ms-3">
+													<!-- Avaliação com ícones decorativos, aria-label para grupo -->
 													<div class="testimonial-rating" aria-label="Avaliação com 5 estrelas">
 														<i class="fa fa-star" aria-hidden="true"></i>
 														<i class="fa fa-star" aria-hidden="true"></i>
@@ -182,7 +270,11 @@
 													<h4>Cliente</h4>
 												</div>
 											</div>
-											<p><i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. A Miriam quem me apresentou a empresa e sou mesmo grata a ela por tudo. Simpática  e profissionalismo.<i class="bi bi-quote quote-icon-right" aria-hidden="true"></i></p>
+											<p>
+												<i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
+												Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. A Miriam quem me apresentou a empresa e sou mesmo grata a ela por tudo. Simpática  e profissionalismo.
+												<i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
+											</p>
 										</div>
 									</div>
 									<div class="swiper-slide" role="group" aria-label="Depoimento 2 de 3">
@@ -208,7 +300,11 @@
 													<h4>Cliente</h4>
 												</div>
 											</div>
-											<p><i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>Gostaria de destacar a excelente qualidade dos produtos e serviços oferecidos pela All4esthétic! Já sou cliente há 6 anos e só tenho a agradecer e dar os Parabéns pelo trabalho excepcional e pelo compromisso com a satisfação dos clientes!<i class="bi bi-quote quote-icon-right" aria-hidden="true"></i></p>
+											<p>
+												<i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
+												Gostaria de destacar a excelente qualidade dos produtos e serviços oferecidos pela All4esthétic! Já sou cliente há 6 anos e só tenho a agradecer e dar os Parabéns pelo trabalho excepcional e pelo compromisso com a satisfação dos clientes!
+												<i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
+											</p>
 										</div>
 									</div>
 									<div class="swiper-slide" role="group" aria-label="Depoimento 3 de 3">
@@ -234,7 +330,11 @@
 													<h4>Cliente</h4>
 												</div>
 											</div>
-											<p><i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. Simpática  e profissionalismo.<i class="bi bi-quote quote-icon-right" aria-hidden="true"></i></p>
+											<p>
+												<i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
+												Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. Simpática  e profissionalismo.
+												<i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
+											</p>
 										</div>
 									</div>
 								</div>
@@ -245,6 +345,7 @@
 				</div>
 			</section>
 		</main>
+
 		<footer class="footer" id="footer" role="contentinfo">
 			<div class="footer-main">
 				<div class="container">
@@ -261,7 +362,7 @@
 										<a aria-label="Facebook" href="#"><i class="bi bi-facebook" aria-hidden="true"></i></a>
 										<a aria-label="Instagram" href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
 										<a aria-label="YouTube" href="#"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+										<a aria-label="Whatsapp" href="https://wa.me/351214095469"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
 									</div>
 								</div>
 							</div>
@@ -286,8 +387,8 @@
 								</ul>
 							</div>
 						</div>
-						<div class="footer-widget col-lg col-md-6 col-sm-6">
-							<div>
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
 								<h4>Contacto</h4>
 								<div class="footer-contact mt-4">
 									<div class="contact-item">
@@ -328,9 +429,11 @@
 				</div>
 			</div>
 		</footer>
+
+
 		<a
 			class="scroll-top d-flex align-items-center justify-content-center"
-			href="#"
+			href="#header"
 			id="scroll-top"
 			aria-label="Voltar ao topo da página"
 			role="button"

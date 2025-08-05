@@ -46,7 +46,13 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-/* ======== COOKIE CONSENT BANNER - All4Esthetic =========== */
+:root {
+  --background-rgb: 255, 255, 255;
+  --accent-rgb: 120, 186, 54;
+  --surface-rgb: 46, 46, 46;
+}
+
+/* Banner de Cookies */
 .cookie-banner {
   position: fixed;
   left: 50%;
@@ -56,7 +62,7 @@ body {
   background: var(--surface-color);
   color: var(--default-color);
   border-radius: 16px;
-  box-shadow: 0 8px 32px 0 rgba(41,41,46,0.15);
+  box-shadow: 0 8px 32px rgba(41,41,46,0.15);
   padding: 26px 32px 22px 32px;
   display: flex;
   align-items: center;
@@ -103,8 +109,6 @@ body {
   gap: 12px;
   margin-top: 3px;
 }
-
-/* Botões base */
 .cookie-btn {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -122,19 +126,16 @@ body {
   justify-content: center;
   min-width: 90px;
 }
-
 .cookie-btn:hover,
 .cookie-btn:active {
   background: var(--nav-hover-color);
   color: var(--contrast-color);
   filter: brightness(0.93);
 }
-
 .cookie-btn:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
-
 .btn-outline-light.cookie-btn {
   background: transparent;
   color: var(--accent-color);
@@ -143,10 +144,9 @@ body {
 .btn-outline-light.cookie-btn:hover,
 .btn-outline-light.cookie-btn:focus-visible {
   background: var(--accent-color);
-  color: var(--contrast-color, #fff);
+  color: var(--contrast-color);
   border: 1.5px solid var(--accent-color);
 }
-
 .cookie-banner-header {
   display: flex;
   align-items: center;
@@ -172,22 +172,150 @@ body {
   font-family: var(--heading-font, 'Quicksand', sans-serif);
   margin-top: 2px;
 }
-
 .cookie-banner:focus,
 .cookie-banner:focus-visible {
-  outline: 0px solid var(--accent-color);
+  outline: none;
   outline-offset: 0;
 }
 
+/* Correção z-index para modal sobre o banner */
+.modal-backdrop {
+  z-index: 1000000 !important;
+}
+.modal {
+  z-index: 1000001 !important;
+}
 
-/* ======= MOBILE: até 767px ======= */
+/* Modal estilizada igual ao cookie banner com largura maior */
+.modal-dialog {
+  max-width: 800px; /* largura maior */
+  margin: 1.5rem auto;
+}
+
+.modal-content {
+  max-width: 100%;
+  width: 100%;
+  background: var(--surface-color);
+  color: var(--default-color);
+  border-radius: 16px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 8px 32px rgba(41,41,46,0.15);
+  padding: 26px 32px 22px 32px;
+  font-size: 1rem;
+
+  /* Scrollbar para modal */
+  overflow-y: auto;
+  max-height: 75vh;
+}
+
+/* Scrollbar customizada para webkit */
+.modal-content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: var(--surface-color);
+  border-radius: 16px;
+  border: 1px solid var(--accent-color);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 16px;
+  border: 3px solid var(--surface-color);
+  transition: background-color 0.3s ease;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover,
+.modal-content::-webkit-scrollbar-thumb:focus {
+  background-color: var(--nav-hover-color);
+}
+
+/* Scrollbar para Firefox */
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--surface-color);
+}
+
+/* Modal header */
+.modal-header {
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--contrast-color);
+  font-family: var(--heading-font, 'Quicksand', sans-serif);
+  font-weight: 600;
+  font-size: 1.13rem;
+}
+.modal-header .btn-close {
+  filter: brightness(0.3);
+  transition: filter 0.3s ease;
+}
+.modal-header .btn-close:hover,
+.modal-header .btn-close:focus {
+  filter: brightness(1);
+  outline: none;
+}
+
+/* Modal body */
+.modal-body {
+  color: var(--default-color);
+  line-height: 1.6;
+  font-size: 1rem;
+  padding: 0;
+}
+.modal-body h6 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: var(--contrast-color);
+  font-size: 1.05rem;
+}
+.modal-body p,
+.modal-body ul {
+  margin-bottom: 0.75rem;
+}
+.modal-body ul {
+  padding-left: 1.25rem;
+}
+.modal-body ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+/* Modal footer */
+.modal-footer {
+  padding-top: 18px;
+  border-top: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-footer .btn {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 500;
+  border: none;
+  transition: background 0.3s ease, outline 0.3s ease;
+  min-width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-footer .btn:hover,
+.modal-footer .btn:focus-visible {
+  background: var(--nav-hover-color);
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Responsividade */
 @media (max-width: 767px) {
   .cookie-banner {
-    left: 50%;
-    right: auto;
     bottom: 10px;
-    top: auto;
-    transform: translateX(-50%);
     min-width: 0;
     max-width: 98vw;
     width: 98vw;
@@ -226,15 +354,38 @@ body {
   .cookie-banner-title {
     font-size: 1rem;
   }
+
+  /* Modal responsivo */
+  .modal-dialog {
+    max-width: 95vw;
+    margin: 1rem auto;
+  }
+  .modal-content {
+    padding: 14px 16px 16px 16px;
+    border-radius: 12px;
+    font-size: 0.97rem;
+  }
+  .modal-header {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+  .modal-body h6 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .modal-footer .btn {
+    min-width: auto;
+    padding: 11px 0;
+    width: 100%;
+    border-radius: 24px;
+    font-size: 14px;
+  }
 }
 
-/* ======= TABLET: 768px até 1199px ======= */
 @media (min-width: 768px) and (max-width: 1199px) {
   .cookie-banner {
-    left: 50%;
-    right: auto;
     bottom: 18px;
-    transform: translateX(-50%);
     min-width: 320px;
     max-width: 410px;
     width: 85vw;
@@ -270,13 +421,9 @@ body {
   }
 }
 
-/* ======= DESKTOP: 1200px para cima ======= */
 @media (min-width: 1200px) {
   .cookie-banner {
-    left: 50%;
-    right: auto;
     bottom: 32px;
-    transform: translateX(-50%);
     min-width: 380px;
     max-width: 440px;
     width: 420px;
@@ -309,7 +456,6 @@ body {
 }
 
 
-
 /* ==========================================================================
    HEADER - MENU - CSS
 ========================================================================== */
@@ -329,9 +475,8 @@ body {
 	outline-offset: 2px;
 }
 
-
 .header .main-header {
-	background: rgba(255, 255, 255, 0);
+	background: transparent;
 }
 
 .header .main-header .logo img {
@@ -794,9 +939,8 @@ body {
 	}
 }
 
-
 /* ==========================================================================
-   INDEX - CSS 
+   INDEX - CSS (Acessibilidade Corrigida)
 ========================================================================== */
 
 section,
@@ -821,7 +965,8 @@ section,
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-saiba-mais:hover {
+.btn-saiba-mais:hover,
+.btn-saiba-mais:focus-visible {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -831,7 +976,6 @@ section,
   box-shadow: none;
 }
 
-/* Acessibilidade: foco visível para navegação por teclado */
 .btn-saiba-mais:focus-visible {
   outline: 3px solid var(--accent-color);
   outline-offset: 3px;
@@ -920,6 +1064,7 @@ section,
   color: var(--accent-color) !important;
   font-size: 16px;
   margin-right: 0.5rem;
+  aria-hidden: true;
 }
 
 .placeholder-decorativo {
@@ -927,12 +1072,20 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 90%);
   padding: 1rem;
   margin-left: 200px;
+  pointer-events: none;
+  user-select: none;
+  aria-hidden: true;
 }
 
 .placeholder-decorativo i {
   font-weight: 200;
   stroke-width: 0.5px;
   opacity: 0.9;
+}
+
+.quote {
+  color: var(--heading-color);
+  margin-bottom: 0;
 }
 
 .img-sobre {
@@ -995,6 +1148,7 @@ section,
   border-radius: 50px;
   border: 6px solid var(--background-color);
   margin-right: 10px;
+  border: 2px solid var(--nav-hover-color);
 }
 
 .testimonials .testimonial-item h3 {
@@ -1015,6 +1169,7 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 60%);
   font-size: 26px;
   line-height: 0;
+  aria-hidden: true;
 }
 
 .testimonials .testimonial-item .quote-icon-left {
@@ -1062,6 +1217,7 @@ section,
 
 .fa-star {
   color: var(--accent-color);
+  aria-hidden: true;
 }
 
 @media (max-width: 767px) {
@@ -1100,7 +1256,7 @@ section,
 
   .sobre .content h3 {
     font-size: var(--font-size-title-mobile) !important;
-	margin-top: -6px;
+    margin-top: -6px;
   }
 
   .sobre .content p,
@@ -1143,6 +1299,16 @@ section,
   }
   .text-start {
     margin-top: 34px;
+  }
+  .parallax-section {
+    background-attachment: scroll !important;
+    background-position: 35% center !important; 
+    background-size: cover !important; 
+    height: 500px; 
+  }
+
+  .parallax-section::before {
+    background-color: color-mix(in srgb, var(--surface-color), transparent 25%);
   }
 }
 
@@ -1246,12 +1412,15 @@ section,
   }
 }
 
+
 /* ==========================================================================
    QUEM SOMOS - CSS 
 ========================================================================== */
 
 body.modal-open {
 	margin-right: -16px;
+	overflow: hidden;
+  touch-action: none;
 }
 
 .pd-page-title {
@@ -2920,45 +3089,43 @@ h6 {
 	}
 }
 
-/* ==========================================================================
-   SCROLL TO TOP BUTTON - CSS
-========================================================================== */
-
 .scroll-top {
-	position: fixed;
-	visibility: hidden;
-	opacity: 0;
-	right: 15px;
-	bottom: -15px;
-	z-index: 99999;
-	background-color: var(--accent-color);
-	width: 40px;
-	height: 40px;
-	border-radius: 50px;
-	transition: background-color 0.4s ease, opacity 0.4s ease, bottom 0.4s ease;
-	outline: none;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: background-color 0.4s ease, opacity 0.4s ease, bottom 0.4s ease;
+  /* retiramos qualquer outline:none daqui */
 }
 
+.scroll-top:focus,
 .scroll-top:focus-visible {
-	outline: 2px solid #000;
-	outline-offset: 2px;
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 6px var(--accent-color) !important;
 }
 
 .scroll-top i {
-	font-size: 24px;
-	color: var(--contrast-color);
-	line-height: 0;
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
 }
 
 .scroll-top:hover {
-	background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-	color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
 }
 
 .scroll-top.active {
-	visibility: visible;
-	opacity: 1;
-	bottom: 15px;
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
 }
 
 
@@ -3246,8 +3413,8 @@ h6 {
 		margin-top: 6px;
 	}
 	.footer-widget {
-    padding: 28px 0px 0px 0px;
-}
+    padding: 28px 0px 0 0px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -3295,6 +3462,13 @@ h6 {
 	.footer-widget {
     padding: 0px;
 	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .footer .footer-main .social-icons {
+        justify-content: flex-start;
+        margin-top: 24px;
+        padding-bottom: 0px;
+    }
 }
 
 @media (min-width: 1200px) {
