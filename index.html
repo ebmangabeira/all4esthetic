@@ -19,7 +19,31 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.css" />
 		<link href="assets/css/custom.css" rel="stylesheet" />
 	</head>
+
 	<body class="index-page">
+		<a href="#main" class="skip-link">Ir para o conteúdo</a>
+		<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="status" aria-live="polite" aria-label="Aviso de Cookies">
+			<div class="cookie-banner-content">
+				<div class="cookie-banner-header">
+				<span class="cookie-banner-icon" aria-hidden="true">
+					<svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+					<path d="M26.9 17.18a3.46 3.46 0 0 1-4.17-4.16a1 1 0 0 0-1.28-1.27a3.47 3.47 0 0 1-4.17-4.18A1 1 0 0 0 15.9 6.5A1 1 0 0 0 15 5.48V5A1 1 0 0 0 14.1 4.07A12 12 0 1 0 28 18.36a1 1 0 0 0-1.08-1.18a1 1 0 0 0-.02 0Zm-7.47 9.49a2 2 0 1 1 2-2a2 2 0 0 1-2 2ZM10 14.5a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm-1 7a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm9-10a2 2 0 1 1 2-2a2 2 0 0 1-2 2Z"/>
+					</svg>
+				</span>
+				<span class="cookie-banner-title">Cookies</span>
+				</div>
+				<span class="cookie-banner-text">
+				Utilizamos cookies para melhorar a sua experiência no site, personalizar conteúdo e analisar o nosso tráfego.
+				Ao aceitar, autoriza a utilização de cookies conforme a nossa
+				<a href="#" class="cookie-link" data-bs-toggle="modal" data-bs-target="#privacyModalCustom">Política de Privacidade</a>.
+				</span>
+				<div class="cookie-banner-actions">
+				<button id="cookie-accept-btn" class="cookie-btn" type="button">Aceitar</button>
+				<button id="cookie-reject-btn" class="btn-outline-light cookie-btn" type="button">Rejeitar</button>
+				</div>
+			</div>
+		</div>
+
 		<header class="header position-fixed top-0 w-100" id="header" role="banner">
 			<div class="main-header">
 				<div class="container-fluid container-xl header-container">
@@ -69,109 +93,162 @@
 			</div>
 		</header>
 
-		<!-- Cookie Consent Banner -->
-<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="status" aria-live="polite" aria-label="Aviso de Cookies" tabindex="-1">
-  <div class="cookie-banner-content">
-    <div class="cookie-banner-header">
-      <span class="cookie-banner-icon" aria-hidden="true">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-          <path d="M26.9 17.18a3.46 3.46 0 0 1-4.17-4.16a1 1 0 0 0-1.28-1.27a3.47 3.47 0 0 1-4.17-4.18A1 1 0 0 0 15.9 6.5A1 1 0 0 0 15 5.48V5A1 1 0 0 0 14.1 4.07A12 12 0 1 0 28 18.36a1 1 0 0 0-1.08-1.18a1 1 0 0 0-.02 0Zm-7.47 9.49a2 2 0 1 1 2-2a2 2 0 0 1-2 2ZM10 14.5a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm-1 7a2 2 0 1 1 2-2a2 2 0 0 1-2 2Zm9-10a2 2 0 1 1 2-2a2 2 0 0 1-2 2Z"/>
-        </svg>
-      </span>
-      <span class="cookie-banner-title">Cookies</span>
-    </div>
-    <span class="cookie-banner-text">
-      Utilizamos cookies para melhorar a sua experiência no site, personalizar conteúdo e analisar o nosso tráfego.
-      Ao aceitar, autoriza a utilização de cookies conforme a nossa
-      <a href="#" class="cookie-link" data-bs-toggle="modal" data-bs-target="#privacyModal">Política de Privacidade</a>.
-    </span>
-    <div class="cookie-banner-actions">
-      <button id="cookie-accept-btn" class="cookie-btn" type="button">Aceitar</button>
-      <button id="cookie-reject-btn" class="btn-outline-light cookie-btn" type="button">Rejeitar</button>
-    </div>
-  </div>
-</div>
+		<div class="modal fade" id="privacyModalCustom" tabindex="-1" aria-labelledby="privacyModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="privacyModalCustomTitle">Política de Privacidade</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Responsável pelo Tratamento</h6>
+						<p>
+							All4esthetic<br/>
+							Rua dos Tractores 506, Armazém AE, Lisboa, 2870-607, Portugal<br/>
+							Email: <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>
+						</p>
+						<h6>2. Dados que Recolhemos</h6>
+						<p>
+							Este website é um catálogo informativo de equipamentos estéticos e não solicita, recolhe nem processa dados pessoais através de formulários ou outras interações diretas. Apenas são recolhidos dados técnicos de navegação, como cookies e registos anónimos para melhorar a experiência do utilizador e analisar o tráfego do site.
+						</p>
+						<h6>3. Finalidades do Tratamento</h6>
+						<ul>
+							<li>Garantir o funcionamento seguro e eficiente do website.</li>
+							<li>Personalizar conteúdos e anúncios com base em dados anónimos.</li>
+							<li>Analisar estatísticas agregadas de utilização.</li>
+							<li>Permitir que os utilizadores entrem em contacto através dos meios disponibilizados (email e telefone), caso desejem obter mais informações.</li>
+						</ul>
+						<h6>4. Base Legal</h6>
+						<p>
+							O tratamento dos seus dados anónimos baseia-se no nosso legítimo interesse em garantir a funcionalidade e a melhoria do serviço (Art.º 6.º(1)(f) do RGPD). Para qualquer dado pessoal facultado diretamente via contacto, o tratamento apoia-se no seu consentimento (Art.º 6.º(1)(a) RGPD).
+						</p>
+						<h6>5. Destinatários</h6>
+						<p>
+							Os seus dados poderão ser comunicados a prestadores de serviços técnicos e parceiros responsáveis pelo funcionamento do website (hospedagem, análises, marketing), que asseguram confidencialidade e proteção dos dados.
+						</p>
+						<h6>6. Período de Conservação</h6>
+						<p>
+							Os dados recolhidos são conservados pelo período necessário para cumprir as finalidades indicadas e em conformidade com a legislação aplicável.
+						</p>
+						<h6>7. Direitos dos Titulares</h6>
+						<p>
+							Como titular dos dados, tem o direito de solicitar acesso, retificação, eliminação, limitação ou oposição ao tratamento, bem como a portabilidade dos seus dados e a retirada do consentimento a qualquer momento, sem prejuízo da licitude do tratamento anterior. Para exercer estes direitos, por favor contacte-nos através do email <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+						<h6>8. Segurança</h6>
+						<p>
+							Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra acesso não autorizado, divulgação, alteração ou destruição.
+						</p>
+						<h6>9. Alterações a Esta Política</h6>
+						<p>
+							Esta política poderá ser atualizada periodicamente. A data da última revisão será indicada no início da página.
+						</p>
+						<h6>10. Contacto da Comissão Nacional de Proteção de Dados</h6>
+						<p>
+							Se entender que os seus direitos não foram respeitados, pode apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD): <a href="https://www.cnpd.pt" target="_blank" rel="noopener noreferrer" class="termos">www.cnpd.pt</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<!-- Política de Privacidade Modal -->
-<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalTitle" aria-hidden="true" role="dialog" aria-modal="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="privacyModalTitle">Política de Privacidade</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="modal-body">
-        <h6>1. Responsável pelo Tratamento</h6>
-        <p>
-          All4esthetic<br>
-          Rua dos Tractores 506, Armazém AE, Lisboa, 2870-607, Portugal<br>
-          Email: <a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
-        </p>
+		<div class="modal fade" id="legalNoticeModalCustom" tabindex="-1" aria-labelledby="legalNoticeModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="legalNoticeModalCustomTitle">Aviso Legal</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Informações Gerais</h6>
+						<p>
+							Todos os conteúdos, textos, imagens, gráficos e informações presentes neste website são de responsabilidade da All4esthetic e destinam-se exclusivamente a fornecer informações sobre os produtos e serviços oferecidos.
+						</p>
+						<h6>2. Direitos de Propriedade Intelectual</h6>
+						<p>
+							Todos os direitos de propriedade intelectual, incluindo marcas, logotipos, imagens, textos e design gráfico, são propriedade exclusiva da All4esthetic ou dos seus licenciadores, estando protegidos por legislação nacional e internacional.
+						</p>
+						<h6>3. Limitação de Responsabilidade</h6>
+						<p>
+							A All4esthetic não se responsabiliza por quaisquer danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do uso ou impossibilidade de uso deste website, incluindo erros ou omissões nas informações apresentadas.
+						</p>
+						<h6>4. Conteúdos de Terceiros</h6>
+						<p>
+							Este website pode conter links para sites de terceiros, sobre os quais a All4esthetic não exerce controle e não assume responsabilidade pelo conteúdo, políticas de privacidade ou práticas desses sites.
+						</p>
+						<h6>5. Alterações ao Website</h6>
+						<p>
+							A All4esthetic reserva-se o direito de modificar, atualizar ou remover qualquer conteúdo do website a qualquer momento, sem aviso prévio.
+						</p>
+						<h6>6. Lei Aplicável e Jurisdição</h6>
+						<p>
+							Este aviso legal é regido pela legislação portuguesa. Quaisquer litígios relacionados com o uso do website serão submetidos aos tribunais competentes de Lisboa, Portugal.
+						</p>
+						<h6>7. Contactos</h6>
+						<p>
+							Para quaisquer dúvidas ou questões legais, por favor contacte-nos através do email <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <h6>2. Dados que Recolhemos</h6>
-        <p>
-          Este website é um catálogo informativo de equipamentos estéticos e não solicita, recolhe nem processa dados pessoais através de formulários ou outras interações diretas.  
-          Apenas são recolhidos dados técnicos de navegação, como cookies e registos anónimos para melhorar a experiência do utilizador e analisar o tráfego do site.
-        </p>
+		<div class="modal fade" id="termsModalCustom" tabindex="-1" aria-labelledby="termsModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="termsModalCustomTitle">Termos de Uso</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Aceitação dos Termos</h6>
+						<p>
+							Ao acessar e utilizar este website, você concorda em cumprir estes Termos de Uso e todas as leis aplicáveis. Caso não concorde com algum destes termos, por favor não utilize o site.
+						</p>
+						<h6>2. Uso do Website</h6>
+						<p>
+							Este site destina-se a fins informativos e comerciais relacionados a equipamentos estéticos. Você concorda em utilizá-lo apenas para propósitos legais e de forma que não infrinja os direitos de terceiros.
+						</p>
+						<h6>3. Propriedade Intelectual</h6>
+						<p>
+							Todos os conteúdos, imagens, textos, logos e demais materiais são de propriedade da All4esthetic ou de seus licenciadores, estando protegidos pelas leis de propriedade intelectual.
+						</p>
+						<h6>4. Limitação de Responsabilidade</h6>
+						<p>
+							A All4esthetic não se responsabiliza por quaisquer danos diretos ou indiretos decorrentes do uso ou impossibilidade de uso do site, incluindo a precisão das informações fornecidas.
+						</p>
+						<h6>5. Modificações nos Termos</h6>
+						<p>
+							Reservamo-nos o direito de alterar estes Termos de Uso a qualquer momento, sendo recomendada a consulta periódica desta página para verificar atualizações.
+						</p>
+						<h6>6. Privacidade</h6>
+						<p>
+							Para informações sobre coleta e uso de dados pessoais, consulte a nossa
+							<a href="#" data-bs-toggle="modal" data-bs-target="#privacyModalCustom" class="termos">Política de Privacidade</a>.
+						</p>
+						<h6>7. Lei Aplicável</h6>
+						<p>
+							Estes Termos de Uso são regidos pelas leis vigentes em Portugal. Quaisquer disputas serão dirimidas nos tribunais competentes de Lisboa.
+						</p>
+						<h6>8. Contato</h6>
+						<p>
+							Em caso de dúvidas ou sugestões sobre estes Termos de Uso, entre em contato pelo email
+							<a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <h6>3. Finalidades do Tratamento</h6>
-        <ul>
-          <li>Garantir o funcionamento seguro e eficiente do website.</li>
-          <li>Personalizar conteúdos e anúncios com base em dados anónimos.</li>
-          <li>Analisar estatísticas agregadas de utilização.</li>
-          <li>Permitir que os utilizadores entrem em contacto através dos meios disponibilizados (email e telefone), caso desejem obter mais informações.</li>
-        </ul>
-
-        <h6>4. Base Legal</h6>
-        <p>
-          O tratamento dos seus dados anónimos baseia-se no nosso legítimo interesse em garantir a funcionalidade e a melhoria do serviço (Art.º 6.º(1)(f) do RGPD).  
-          Para qualquer dado pessoal facultado diretamente via contacto, o tratamento apoia-se no seu consentimento (Art.º 6.º(1)(a) RGPD).
-        </p>
-
-        <h6>5. Destinatários</h6>
-        <p>
-          Os seus dados poderão ser comunicados a prestadores de serviços técnicos e parceiros responsáveis pelo funcionamento do website (hospedagem, análises, marketing), que asseguram confidencialidade e proteção dos dados.
-        </p>
-
-        <h6>6. Período de Conservação</h6>
-        <p>
-          Os dados recolhidos são conservados pelo período necessário para cumprir as finalidades indicadas e em conformidade com a legislação aplicável.
-        </p>
-
-        <h6>7. Direitos dos Titulares</h6>
-        <p>
-          Como titular dos dados, tem o direito de solicitar acesso, retificação, eliminação, limitação ou oposição ao tratamento, bem como a portabilidade dos seus dados e a retirada do consentimento a qualquer momento, sem prejuízo da licitude do tratamento anterior.  
-          Para exercer estes direitos, por favor contacte-nos através do email <a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>.
-        </p>
-
-        <h6>8. Segurança</h6>
-        <p>
-          Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra acesso não autorizado, divulgação, alteração ou destruição.
-        </p>
-
-        <h6>9. Alterações a Esta Política</h6>
-        <p>
-          Esta política poderá ser atualizada periodicamente. A data da última revisão será indicada no início da página.
-        </p>
-
-        <h6>10. Contacto da Comissão Nacional de Proteção de Dados</h6>
-        <p>
-          Se entender que os seus direitos não foram respeitados, pode apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD): <a href="https://www.cnpd.pt" target="_blank" rel="noopener noreferrer">www.cnpd.pt</a>.
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-		<main class="main" role="main">
+		<a href="#main" class="skip-link">Ir para o conteúdo</a>
+		<main class="main" role="main" id="main">
 			<section class="hero light-background" id="hero" aria-label="Seção principal">
 				<div class="hero-image-wrapper">
-					<!-- Imagem informativa: alt descritivo mantido -->
 					<img loading="lazy" alt="Imagem principal de estética" class="img-fluid hero-img" src="assets/img/hero-imagem.webp" />
 				</div>
 				<div class="container-xl position-relative">
@@ -191,7 +268,6 @@
 								<h3 class="fw-semibold mb-3" id="sobre-title">Tecnologia em que Pode Confiar</h3>
 								<p>Oferecemos equipamentos de estética de última geração, projetados para garantir resultados seguros e precisos em cada tratamento.</p>
 								<ul>
-									<!-- Ícones decorativos, aria-hidden aplicado -->
 									<li><i class="bi bi-check-circle me-2" aria-hidden="true"></i>Performance excecional em cada aplicação.</li>
 									<li><i class="bi bi-check-circle me-2" aria-hidden="true"></i>Materiais de elevada durabilidade e design intuitivo.</li>
 									<li><i class="bi bi-check-circle me-2" aria-hidden="true"></i>Compatibilidade com as técnicas estéticas mais inovadoras.</li>
@@ -200,9 +276,7 @@
 							</div>
 						</div>
 						<div class="col-lg-6 d-flex justify-content-center align-items-center" data-aos="fade-left">
-							<!-- Elemento decorativo, aria-hidden aplicado -->
 							<div class="placeholder-decorativo" aria-hidden="true">
-								<!-- Imagem decorativa: alt vazio + role="presentation" -->
 								<img src="assets/img/equipments/equipamento.png" alt="" class="img-sobre" role="presentation" />
 							</div>
 						</div>
@@ -210,11 +284,7 @@
 				</div>
 			</section>
 
-			<section
-				class="parallax-section text-white d-flex align-items-center"
-				style="background-image: url('assets/img/parallax-imagem.webp');"
-				aria-label="Seção parallax com destaque para equipamentos"
-			>
+			<section class="parallax-section text-white d-flex align-items-center" style="background-image: url('assets/img/parallax-imagem.webp');" aria-label="Seção parallax com destaque para equipamentos">
 				<div class="container position-relative">
 					<div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
 						<div class="text-content-parallax text-start mb-lg-0">
@@ -228,27 +298,24 @@
 				</div>
 			</section>
 
-
 			<section class="testimonials section" id="testimonials" aria-label="Depoimentos de clientes">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-							<!-- Swiper acessível -->
-							<div class="swiper init-swiper testimonials-swiper" role="region" aria-live="polite" aria-atomic="true" aria-relevant="additions">
+							<div class="swiper init-swiper testimonials-swiper" role="region" aria-live="polite" aria-atomic="true" aria-relevant="additions" tabindex="-1">
 								<script class="swiper-config" type="application/json">
-									{
-										"loop": true,
-										"speed": 600,
-										"autoplay": { "delay": 5000 },
-										"slidesPerView": 1,
-										"pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
-									}
+								{
+									"loop": true,
+									"speed": 600,
+									"autoplay": { "delay": 5000 },
+									"slidesPerView": 1,
+									"pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+								}
 								</script>
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" role="group" aria-label="Depoimento 1 de 3">
 										<div class="testimonial-item">
 											<div class="d-flex align-items-center mb-3">
-												<!-- Imagem de perfil: alt descritivo -->
 												<img
 													src="assets/img/depoimentos/manoelle_souza.webp"
 													alt="Foto de Manoelle Souza"
@@ -258,7 +325,6 @@
 													loading="lazy"
 												/>
 												<div class="ms-3">
-													<!-- Avaliação com ícones decorativos, aria-label para grupo -->
 													<div class="testimonial-rating" aria-label="Avaliação com 5 estrelas">
 														<i class="fa fa-star" aria-hidden="true"></i>
 														<i class="fa fa-star" aria-hidden="true"></i>
@@ -272,7 +338,7 @@
 											</div>
 											<p>
 												<i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-												Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. A Miriam quem me apresentou a empresa e sou mesmo grata a ela por tudo. Simpática  e profissionalismo.
+												Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. A Miriam quem me apresentou a empresa e sou mesmo grata a ela por tudo. Simpática e profissionalismo.
 												<i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
 											</p>
 										</div>
@@ -332,7 +398,7 @@
 											</div>
 											<p>
 												<i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-												Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. Simpática  e profissionalismo.
+												Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. Simpática e profissionalismo.
 												<i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
 											</p>
 										</div>
@@ -371,23 +437,23 @@
 							<div class="footer-widget">
 								<h4>Quem Somos</h4>
 								<ul class="footer-links">
-									<li><a href="#">Historia</a></li>
-									<li><a href="#">Equipe</a></li>
-									<li><a href="#">Visão</a></li>
+									<li><a href="quem-somos.html#modalHistoria">História</a></li>
+									<li><a href="quem-somos.html#modalEquipa">Equipa</a></li>
+									<li><a href="quem-somos.html#modalVisao">Visão</a></li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg col-md-6 col-sm-6">
-  <div class="footer-widget">
-    <h4>Informações</h4>
-    <ul class="footer-links">
-      <li><a href="#">Termos de Uso</a></li>
-      <li><a href="#">Aviso Legal</a></li>
-      <li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Política de Privacidade</a></li>
-    </ul>
-  </div>
-</div>
 
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Informações</h4>
+								<ul class="footer-links">
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#termsModalCustom">Termos de Uso</a></li>
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#legalNoticeModalCustom">Aviso Legal</a></li>
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModalCustom">Política de Privacidade</a></li>
+								</ul>
+							</div>
+						</div>
 						<div class="col-lg col-md-6 col-sm-6">
 							<div class="footer-widget">
 								<h4>Contacto</h4>
@@ -431,7 +497,6 @@
 			</div>
 		</footer>
 
-
 		<a
 			class="scroll-top d-flex align-items-center justify-content-center"
 			href="#header"
@@ -444,6 +509,7 @@
 			<i class="bi bi-arrow-up-short" aria-hidden="true"></i>
 		</a>
 		<div id="preloader" aria-hidden="true"></div>
+
 		<script src="assets/swiper/swiper-bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
@@ -453,7 +519,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
-		<script src="assets/js/main.js"></script>
 
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>

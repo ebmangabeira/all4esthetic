@@ -4,8 +4,14 @@
 	function toggleScrolled() {
 		const selectBody = document.querySelector('body');
 		const selectHeader = document.querySelector('#header');
-		if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-		window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+		if (
+			!selectHeader.classList.contains('scroll-up-sticky') &&
+			!selectHeader.classList.contains('sticky-top') &&
+			!selectHeader.classList.contains('fixed-top')
+		) return;
+		window.scrollY > 100
+			? selectBody.classList.add('scrolled')
+			: selectBody.classList.remove('scrolled');
 	}
 
 	document.addEventListener('scroll', toggleScrolled);
@@ -27,8 +33,8 @@
 
 	window.addEventListener("load", initSwiper);
 
-	const openToggle = document.querySelector('.mobile-nav-open'); 
-	const closeToggle = document.querySelector('.navmenu-close'); 
+	const openToggle = document.querySelector('.mobile-nav-open');
+	const closeToggle = document.querySelector('.navmenu-close');
 
 	function openMobileNav() {
 		document.body.classList.add('mobile-nav-active');
@@ -89,11 +95,13 @@
 
 	function toggleScrollTop() {
 		if (scrollTop) {
-			window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+			window.scrollY > 100
+				? scrollTop.classList.add('active')
+				: scrollTop.classList.remove('active');
 		}
 	}
 
-	if(scrollTop) {
+	if (scrollTop) {
 		scrollTop.addEventListener('click', (e) => {
 			e.preventDefault();
 			window.scrollTo({
@@ -143,7 +151,6 @@
 				}
 			}, false);
 		});
-
 	});
 
 	window.addEventListener("scroll", function () {
@@ -157,11 +164,10 @@
 
 	document.addEventListener('DOMContentLoaded', function(){
 		const navUl = document.querySelector('.mobile-nav-active .navmenu > ul');
-		if(navUl){
+		if (navUl) {
 			navUl.style.position = 'relative';
 		}
 	});
-
 })();
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -225,8 +231,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 		return { cats, av, rents };
 	}
 
-	catD.concat(avD, reD).forEach(i => i.addEventListener('change', () => apply({ ...vals(catD, '.desktop-avail:checked', reD) })));
-	catM.concat(avM, reM).forEach(i => i.addEventListener('change', () => apply({ ...vals(catM, '.mobile-avail:checked', reM) })));
+	catD.concat(avD, reD).forEach(i => i.addEventListener('change', () => apply(vals(catD, '.desktop-avail:checked', reD))));
+	catM.concat(avM, reM).forEach(i => i.addEventListener('change', () => apply(vals(catM, '.mobile-avail:checked', reM))));
 
 	btnFiltro.addEventListener('click', () => {
 		mobFilt.classList.add('open');
@@ -242,7 +248,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 	});
 
 	btnSearch.addEventListener('click', () => {
-		apply({ ...vals(catM, '.mobile-avail:checked', reM) });
+		apply(vals(catM, '.mobile-avail:checked', reM));
 		mobFilt.classList.remove('open');
 		document.body.style.overflow = '';
 	});
@@ -290,7 +296,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 			closeBtn.innerHTML = 'X';
 			closeBtn.onclick = () => {
 				cat.checked = false;
-				apply({ cats: [...document.querySelectorAll('.mobile-cat:checked')].map(c => c.value), av: selectedAvail ? selectedAvail.value : null, rents: [] });
+				apply(vals(catM, '.mobile-avail:checked', reM));
 			};
 			tag.appendChild(closeBtn);
 			tagsContainer.appendChild(tag);
@@ -305,7 +311,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 			closeBtn.innerHTML = 'X';
 			closeBtn.onclick = () => {
 				selectedAvail.checked = false;
-				apply({ cats: [...document.querySelectorAll('.mobile-cat:checked')].map(c => c.value), av: null, rents: [] });
+				apply(vals(catM, '.mobile-avail:checked', reM));
 			};
 			tag.appendChild(closeBtn);
 			tagsContainer.appendChild(tag);
@@ -326,30 +332,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 			page--;
 			renderPage();
 			renderPagination();
-			const firstCard = document.querySelector('#equipamentos-container');
-			if (firstCard) {
-				firstCard.scrollIntoView({ behavior: "smooth", block: "start" });
-			}
+			document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: "smooth", block: "start" });
 		}, 'prev'));
 		for (let i = 1; i <= cnt; i++) {
 			pg.appendChild(mk(false, i, () => {
 				page = i;
 				renderPage();
 				renderPagination();
-				const firstCard = document.querySelector('#equipamentos-container');
-				if (firstCard) {
-					firstCard.scrollIntoView({ behavior: "smooth", block: "start" });
-				}
+				document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: "smooth", block: "start" });
 			}, i === page ? 'active' : ''));
 		}
 		pg.appendChild(mk(page === cnt, '»', () => {
 			page++;
 			renderPage();
 			renderPagination();
-			const firstCard = document.querySelector('#equipamentos-container');
-			if (firstCard) {
-				firstCard.scrollIntoView({ behavior: "smooth", block: "start" });
-			}
+			document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: "smooth", block: "start" });
 		}, 'next'));
 	}
 	apply({ cats: [], av: null, rents: [] });
@@ -540,39 +537,47 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 (function() {
-  const banner = document.getElementById('cookie-consent-banner');
-  const acceptBtn = document.getElementById('cookie-accept-btn');
-  const rejectBtn = document.getElementById('cookie-reject-btn');
-  const consentKey = 'all4esthetic_cookie_consent_v1';
+	const banner = document.getElementById('cookie-consent-banner');
+	const acceptBtn = document.getElementById('cookie-accept-btn');
+	const rejectBtn = document.getElementById('cookie-reject-btn');
+	const consentKey = 'all4esthetic_cookie_consent_v1';
 
-  function showCookieBanner() {
-    if (!localStorage.getItem(consentKey)) {
-      banner.classList.add('show');
-      banner.setAttribute('aria-hidden', 'false');
-      banner.focus();
-    }
-  }
+	function showCookieBanner() {
+		if (!localStorage.getItem(consentKey)) {
+			banner.classList.add('show');
+			banner.setAttribute('aria-hidden', 'false');
+			banner.focus();
+		}
+	}
 
-  function hideCookieBanner() {
-    banner.classList.remove('show');
-    banner.setAttribute('aria-hidden', 'true');
-  }
+	function hideCookieBanner() {
+		banner.classList.remove('show');
+		banner.setAttribute('aria-hidden', 'true');
+	}
 
-  acceptBtn.addEventListener('click', function() {
-    localStorage.setItem(consentKey, 'accepted');
-    hideCookieBanner();
-  });
+	acceptBtn.addEventListener('click', function() {
+		localStorage.setItem(consentKey, 'accepted');
+		hideCookieBanner();
+	});
 
-  rejectBtn.addEventListener('click', function() {
-    localStorage.setItem(consentKey, 'rejected');
-    hideCookieBanner();
-  });
+	rejectBtn.addEventListener('click', function() {
+		localStorage.setItem(consentKey, 'rejected');
+		hideCookieBanner();
+	});
 
-  document.addEventListener('DOMContentLoaded', showCookieBanner);
+	document.addEventListener('DOMContentLoaded', showCookieBanner);
 
-  banner.addEventListener('keydown', function(e){
-    if(e.key === "Escape") hideCookieBanner();
-  });
+	banner.addEventListener('keydown', function(e){
+		if (e.key === "Escape") hideCookieBanner();
+	});
 })();
 
-
+document.addEventListener('DOMContentLoaded', function() {
+	var hash = window.location.hash;
+	if (!hash) return;
+	var id = hash.substring(1);
+	var modalEl = document.getElementById(id);
+	if (!modalEl) return;
+	var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+	modal.show();
+});
