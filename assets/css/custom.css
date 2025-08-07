@@ -950,6 +950,11 @@ section,
   margin-left: 225px;
 }
 
+.testimonial-rating .bi-star-fill {
+  color: var(--nav-hover-color) !important;
+}
+
+
 .testimonials .swiper {
   background-color: var(--background-color);
 }
