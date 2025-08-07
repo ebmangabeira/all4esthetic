@@ -210,26 +210,29 @@ body {
   transition: color 0.2s ease;
   font-weight: 400;
 }
+
 .termos:hover,
 .termos:focus-visible {
   color: var(--nav-hover-color);
 }
+
 .modal-open {
-  overflow: hidden;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  padding: 0 !important;
+  overflow: hidden; 
 }
-.modal.modal-open {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  padding: 0 !important;
-}
+
+/* Remove o height:100vh forçado */
 .modal-dialog.modal-dialog-scrollable.modal-lg.modal-dialog-custom {
-  max-width: calc(100% - 2rem);
-  margin: 1rem;
+  /* apenas max-width, margens serão controladas abaixo */
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+/* Responsividade e limites de altura */
+@media (max-width: 767px) {
+  .modal-dialog.modal-dialog-scrollable.modal-lg.modal-dialog-custom {
+    margin: 1rem;
+    max-width: none;
+  }
 }
 
 .modal-content.modal-content-custom {
@@ -238,15 +241,21 @@ body {
   border-radius: 16px;
   border: 1px solid var(--accent-color);
   box-shadow: 0 8px 32px rgba(41,41,46,0.15);
-  padding: calc(26px + env(safe-area-inset-top)) 32px 22px 32px;
+  padding: 26px 32px 22px 32px;
   font-size: 1rem;
   overflow-y: auto;
-  max-height: 90vh;
-  box-sizing: border-box;
-  width: 100%;
+  /* limite de altura interna */
+  max-height: 75vh;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-color) var(--contrast-color);
 }
+
+@media (max-width: 767px) {
+  .modal-content.modal-content-custom {
+    max-height: 90vh;
+  }
+}
+
 .modal-content-custom::-webkit-scrollbar {
   width: 12px;
 }
@@ -265,6 +274,7 @@ body {
 .modal-content-custom::-webkit-scrollbar-thumb:focus {
   background-color: var(--nav-hover-color);
 }
+
 .modal-header-custom {
   border-bottom: 1px solid var(--accent-color);
   padding-bottom: 12px;
@@ -277,6 +287,7 @@ body {
   font-weight: 600;
   font-size: 1.13rem;
 }
+
 .modal-header-custom .btn-close-custom {
   filter: brightness(0.3);
   transition: filter 0.3s ease;
@@ -286,42 +297,52 @@ body {
   height: 1em;
   cursor: pointer;
 }
+
 .modal-header-custom .btn-close-custom:hover,
 .modal-header-custom .btn-close-custom:focus {
   filter: brightness(1);
 }
+
 .modal-title {
   color: var(--surface-color);
 }
+
 .modal-body-custom {
   color: var(--default-color);
   line-height: 1.6;
   font-size: 1rem;
   padding: 0 16px;
 }
+
 .modal-body-custom h6 {
   margin-top: 1.5rem;
   font-weight: 400;
   font-size: 20px;
   color: var(--heading-color);
 }
+
 .modal-body-custom p,
 .modal-body-custom ul {
   margin-bottom: 0.75rem;
   color: var(--heading-color);
 }
+
 .modal-body-custom ul {
   padding-left: 1.25rem;
 }
+
 .modal-body-custom ul li {
   margin-bottom: 0.5rem;
 }
+
 .modal-footer-custom {
   padding-top: 18px;
+  padding-bottom: 0px;
   border-top: 1px solid var(--accent-color);
   display: flex;
   justify-content: flex-end;
 }
+
 .modal-footer-custom .btn-close-custom,
 .modal-footer-custom .btn {
   background: var(--accent-color);
@@ -337,23 +358,13 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+
 .modal-footer-custom .btn-close-custom:hover,
 .modal-footer-custom .btn-close-custom:focus,
 .modal-footer-custom .btn:hover,
 .modal-footer-custom .btn:focus-visible {
   background: var(--nav-hover-color);
   outline-offset: 2px;
-}
-@media (max-width: 767px) {
-  .modal-dialog.modal-dialog-scrollable.modal-lg.modal-dialog-custom {
-    margin: 1rem;
-    max-width: none;
-  }
-  body.modal-open {
-    overflow: visible !important;
-	max-width: calc(100% - 2rem);
-    margin: 0;
-  }
 }
 
 
