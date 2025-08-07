@@ -2754,15 +2754,22 @@ label {
     font-size: 12pt !important;
     line-height: 1.5 !important;
     margin-bottom: 3mm !important;
+	
   }
   .pdf-wrapper #pdf-contact-info {
     margin-top: 8mm !important;
     page-break-inside: avoid !important;
+	
   }
   .pdf-wrapper #pdf-contact-info.pd-box {
     display: block !important;
     margin: 0 !important;
     page-break-inside: avoid !important;
+	
+  }
+   .pdf-wrapper #pdf-contact-info a {
+	text-decoration: none !important;
+    color: var(--accent-color) !important;
   }
 }
 
