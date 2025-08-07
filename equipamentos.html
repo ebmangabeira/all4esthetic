@@ -87,235 +87,223 @@
 			</div>
 		</div>
 		<main class="main">
-			<div class="pd-page-title pd-light-bg">
-				<div class="container-xl pd-breadcrumbs pd-container">
-				<h1 class="pd-title-text">Equipamentos</h1>
-				<nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
-					<ol>
-					<li><a href="index.html">Início</a></li>
-					<li class="current" aria-current="page">Equipamentos</li>
-					</ol>
-				</nav>
+		<section class="about section" aria-labelledby="about-heading">
+			<div class="container" data-aos="fade-up" data-aos-delay="100">
+			<div class="about">
+				<div class="row align-items-center">
+				<div>
+					<h2 id="about-heading" class="about-title">Realçando a sua beleza com equipamentos de excelência</h2>
+					<p class="about-description">
+					A nossa missão é fornecer soluções seguras, eficazes e adaptadas às necessidades de cada cliente ou clínica, promovendo bem-estar e confiança.
+					</p>
+				</div>
 				</div>
 			</div>
-			<section class="about section" aria-labelledby="about-heading">
-				<div class="container" data-aos="fade-up" data-aos-delay="100">
-				<div class="about">
-					<div class="row align-items-center">
-					<div>
-						<h2 id="about-heading" class="about-title">Realçando a sua beleza com equipamentos de excelência</h2>
-						<p class="about-description">
-						A nossa missão é fornecer soluções seguras, eficazes e adaptadas às necessidades de cada cliente ou clínica, promovendo bem-estar e confiança.
-						</p>
+			<div class="mt-3">
+				<div class="row">
+				<aside class="col-lg-3 sidebar d-none d-md-block" aria-label="Filtros de equipamentos">
+					<div class="filter-section">
+					<h3 class="filter-title">Tecnologia</h3>
+					<ul class="list-unstyled">
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-electroestimulacao" value="Electroestimulação" aria-checked="false" />
+						<label class="form-check-label" for="cat-electroestimulacao">Electroestimulação</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-emsculpt" value="Emsculpt" aria-checked="false" />
+						<label class="form-check-label" for="cat-emsculpt">Emsculpt</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-microdermoabrasao" value="Microdermoabrasão" aria-checked="false" />
+						<label class="form-check-label" for="cat-microdermoabrasao">Microdermoabrasão</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-pressoterapia" value="Pressoterapia" aria-checked="false" />
+						<label class="form-check-label" for="cat-pressoterapia">Pressoterapia</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-multifuncoes" value="Multifunções" aria-checked="false" />
+						<label class="form-check-label" for="cat-multifuncoes">Multifunções</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-criolipolise" value="Criolipólise" aria-checked="false" />
+						<label class="form-check-label" for="cat-criolipolise">Criolipólise</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-radiofrequencia" value="Radiofrequência" aria-checked="false" />
+						<label class="form-check-label" for="cat-radiofrequencia">Radiofrequência</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-luz-pulsada" value="Luz pulsada" aria-checked="false" />
+						<label class="form-check-label" for="cat-luz-pulsada">Luz pulsada</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-endermologia" value="Endermologia" aria-checked="false" />
+						<label class="form-check-label" for="cat-endermologia">Endermologia</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-laser" value="Laser" aria-checked="false" />
+						<label class="form-check-label" for="cat-laser">Laser</label>
+						</li>
+						<li class="form-check">
+						<input type="checkbox" class="form-check-input desktop-cat" id="cat-hifu-liposonix" value="Hifu e Liposonix" aria-checked="false" />
+						<label class="form-check-label" for="cat-hifu-liposonix">Hifu e Liposonix</label>
+						</li>
+					</ul>
 					</div>
+					<div class="filter-section">
+					<h3 class="filter-title">Disponibilidade</h3>
+					<ul class="list-unstyled">
+						<li class="form-check">
+						<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-venda" value="Venda" aria-checked="false" />
+						<label class="form-check-label" for="filter-venda">Venda</label>
+						</li>
+						<li class="form-check">
+						<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-aluguer" value="Aluguer" aria-checked="false" />
+						<label class="form-check-label" for="filter-aluguer">Aluguer</label>
+						</li>
+					</ul>
 					</div>
-				</div>
-				<div class="mt-3">
-					<div class="row">
-					<aside class="col-lg-3 sidebar d-none d-md-block" aria-label="Filtros de equipamentos">
+					<div class="filter-section" id="aluguer-periodos" hidden>
+					<h3 class="filter-title">Períodos de Aluguer</h3>
+					<ul class="list-unstyled">
+						<li class="form-check">
+						<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-diario" value="diario" aria-checked="false" />
+						<label class="form-check-label" for="filter-diario">Diário</label>
+						</li>
+						<li class="form-check">
+						<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-bidiario" value="bidiario" aria-checked="false" />
+						<label class="form-check-label" for="filter-bidiario">Bidiário</label>
+						</li>
+						<li class="form-check">
+						<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-semanal" value="semanal" aria-checked="false" />
+						<label class="form-check-label" for="filter-semanal">Semanal</label>
+						</li>
+						<li class="form-check">
+						<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-mensal" value="mensal" aria-checked="false" />
+						<label class="form-check-label" for="filter-mensal">Mensal</label>
+						</li>
+					</ul>
+					</div>
+				</aside>
+				<div class="col-12 d-md-none mb-3">
+					<button id="filtro-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-filters">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2" aria-hidden="true" focusable="false">
+						<line x1="3" y1="5" x2="17" y2="5"/>
+						<circle cx="19" cy="5" r="2" fill="currentColor"/>
+						<line x1="7" y1="12" x2="21" y2="12"/>
+						<circle cx="5" cy="12" r="2" fill="currentColor"/>
+						<line x1="3" y1="19" x2="15" y2="19"/>
+						<circle cx="17" cy="19" r="2" fill="currentColor"/>
+					</svg>
+					Filtro
+					</button>
+					<div id="mobile-filters" aria-modal="true" role="dialog" aria-labelledby="mobile-filters-title" aria-hidden="true">
+					<div class="mobile-filters-header">
+						<h3 class="filter-title m-0" id="mobile-filters-title">Filtros</h3>
+						<button id="close-filtro" class="btn-close" aria-label="Fechar"></button>
+					</div>
+					<div class="mobile-filters-content">
 						<div class="filter-section">
-						<!-- ALTERADO: Categorias para Tecnologia -->
-						<h3 class="filter-title">Tecnologia</h3>
+						<h4 class="filter-title">Tecnologia</h4>
 						<ul class="list-unstyled">
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-electroestimulacao" value="Electroestimulação" aria-checked="false" />
-							<label class="form-check-label" for="cat-electroestimulacao">Electroestimulação</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-electroestimulacao-mob" value="Electroestimulação" aria-checked="false"/>
+							<label class="form-check-label" for="cat-electroestimulacao-mob">Electroestimulação</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-emsculpt" value="Emsculpt" aria-checked="false" />
-							<label class="form-check-label" for="cat-emsculpt">Emsculpt</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-emsculpt-mob" value="Emsculpt" aria-checked="false"/>
+							<label class="form-check-label" for="cat-emsculpt-mob">Emsculpt</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-microdermoabrasao" value="Microdermoabrasão" aria-checked="false" />
-							<label class="form-check-label" for="cat-microdermoabrasao">Microdermoabrasão</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-microdermoabrasao-mob" value="Microdermoabrasão" aria-checked="false"/>
+							<label class="form-check-label" for="cat-microdermoabrasao-mob">Microdermoabrasão</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-pressoterapia" value="Pressoterapia" aria-checked="false" />
-							<label class="form-check-label" for="cat-pressoterapia">Pressoterapia</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-pressoterapia-mob" value="Pressoterapia" aria-checked="false"/>
+							<label class="form-check-label" for="cat-pressoterapia-mob">Pressoterapia</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-multifuncoes" value="Multifunções" aria-checked="false" />
-							<label class="form-check-label" for="cat-multifuncoes">Multifunções</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-multifuncoes-mob" value="Multifunções" aria-checked="false"/>
+							<label class="form-check-label" for="cat-multifuncoes-mob">Multifunções</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-criolipolise" value="Criolipólise" aria-checked="false" />
-							<label class="form-check-label" for="cat-criolipolise">Criolipólise</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-criolipolise-mob" value="Criolipólise" aria-checked="false"/>
+							<label class="form-check-label" for="cat-criolipolise-mob">Criolipólise</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-radiofrequencia" value="Radiofrequência" aria-checked="false" />
-							<label class="form-check-label" for="cat-radiofrequencia">Radiofrequência</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-radiofrequencia-mob" value="Radiofrequência" aria-checked="false"/>
+							<label class="form-check-label" for="cat-radiofrequencia-mob">Radiofrequência</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-luz-pulsada" value="Luz pulsada" aria-checked="false" />
-							<label class="form-check-label" for="cat-luz-pulsada">Luz pulsada</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-luz-pulsada-mob" value="Luz pulsada" aria-checked="false"/>
+							<label class="form-check-label" for="cat-luz-pulsada-mob">Luz pulsada</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-endermologia" value="Endermologia" aria-checked="false" />
-							<label class="form-check-label" for="cat-endermologia">Endermologia</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-endermologia-mob" value="Endermologia" aria-checked="false"/>
+							<label class="form-check-label" for="cat-endermologia-mob">Endermologia</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-laser" value="Laser" aria-checked="false" />
-							<label class="form-check-label" for="cat-laser">Laser</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-laser-mob" value="Laser" aria-checked="false"/>
+							<label class="form-check-label" for="cat-laser-mob">Laser</label>
 							</li>
 							<li class="form-check">
-							<input type="checkbox" class="form-check-input desktop-cat" id="cat-hifu-liposonix" value="Hifu e Liposonix" aria-checked="false" />
-							<label class="form-check-label" for="cat-hifu-liposonix">Hifu e Liposonix</label>
+							<input type="checkbox" class="form-check-input mobile-cat" id="cat-hifu-liposonix-mob" value="Hifu e Liposonix" aria-checked="false"/>
+							<label class="form-check-label" for="cat-hifu-liposonix-mob">Hifu e Liposonix</label>
 							</li>
 						</ul>
 						</div>
 						<div class="filter-section">
-						<h3 class="filter-title">Disponibilidade</h3>
+						<h4 class="filter-title">Disponibilidade</h4>
 						<ul class="list-unstyled">
 							<li class="form-check">
-							<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-venda" value="Venda" aria-checked="false" />
-							<label class="form-check-label" for="filter-venda">Venda</label>
+							<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-venda-mob" value="Venda" aria-checked="false"/>
+							<label class="form-check-label" for="filter-venda-mob">Venda</label>
 							</li>
 							<li class="form-check">
-							<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-aluguer" value="Aluguer" aria-checked="false" />
-							<label class="form-check-label" for="filter-aluguer">Aluguer</label>
+							<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-aluguer-mob" value="Aluguer" aria-checked="false"/>
+							<label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
 							</li>
 						</ul>
 						</div>
-						<div class="filter-section" id="aluguer-periodos" hidden>
-						<h3 class="filter-title">Períodos de Aluguer</h3>
+						<div class="filter-section" id="aluguer-periodos-mob" hidden>
+						<h4 class="filter-title">Períodos de Aluguer</h4>
 						<ul class="list-unstyled">
 							<li class="form-check">
-							<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-diario" value="diario" aria-checked="false" />
-							<label class="form-check-label" for="filter-diario">Diário</label>
+							<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-diario-mob" value="diario" aria-checked="false"/>
+							<label class="form-check-label" for="filter-diario-mob">Diário</label>
 							</li>
 							<li class="form-check">
-							<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-bidiario" value="bidiario" aria-checked="false" />
-							<label class="form-check-label" for="filter-bidiario">Bidiário</label>
+							<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-bidiario-mob" value="bidiario" aria-checked="false"/>
+							<label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
 							</li>
 							<li class="form-check">
-							<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-semanal" value="semanal" aria-checked="false" />
-							<label class="form-check-label" for="filter-semanal">Semanal</label>
+							<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-semanal-mob" value="semanal" aria-checked="false"/>
+							<label class="form-check-label" for="filter-semanal-mob">Semanal</label>
 							</li>
 							<li class="form-check">
-							<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-mensal" value="mensal" aria-checked="false" />
-							<label class="form-check-label" for="filter-mensal">Mensal</label>
+							<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-mensal-mob" value="mensal" aria-checked="false"/>
+							<label class="form-check-label" for="filter-mensal-mob">Mensal</label>
 							</li>
 						</ul>
 						</div>
-					</aside>
-					<div class="col-12 d-md-none mb-3">
-						<button id="filtro-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-filters">
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2" aria-hidden="true" focusable="false">
-							<line x1="3" y1="5" x2="17" y2="5" />
-							<circle cx="19" cy="5" r="2" fill="currentColor" />
-							<line x1="7" y1="12" x2="21" y2="12" />
-							<circle cx="5" cy="12" r="2" fill="currentColor" />
-							<line x1="3" y1="19" x2="15" y2="19" />
-							<circle cx="17" cy="19" r="2" fill="currentColor" />
-						</svg>
-						Filtro
-						</button>
-						<div id="mobile-filters" aria-modal="true" role="dialog" aria-labelledby="mobile-filters-title" aria-hidden="true">
-						<div class="mobile-filters-header">
-							<h3 class="filter-title m-0" id="mobile-filters-title">Filtros</h3>
-							<button id="close-filtro" class="btn-close" aria-label="Fechar"></button>
-						</div>
-						<div class="mobile-filters-content">
-							<div class="filter-section">
-							<!-- ALTERADO: Categorias para Tecnologia -->
-							<h4 class="filter-title">Tecnologia</h4>
-							<ul class="list-unstyled">
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-electroestimulacao-mob" value="Electroestimulação" aria-checked="false" />
-								<label class="form-check-label" for="cat-electroestimulacao-mob">Electroestimulação</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-emsculpt-mob" value="Emsculpt" aria-checked="false" />
-								<label class="form-check-label" for="cat-emsculpt-mob">Emsculpt</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-microdermoabrasao-mob" value="Microdermoabrasão" aria-checked="false" />
-								<label class="form-check-label" for="cat-microdermoabrasao-mob">Microdermoabrasão</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-pressoterapia-mob" value="Pressoterapia" aria-checked="false" />
-								<label class="form-check-label" for="cat-pressoterapia-mob">Pressoterapia</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-multifuncoes-mob" value="Multifunções" aria-checked="false" />
-								<label class="form-check-label" for="cat-multifuncoes-mob">Multifunções</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-criolipolise-mob" value="Criolipólise" aria-checked="false" />
-								<label class="form-check-label" for="cat-criolipolise-mob">Criolipólise</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-radiofrequencia-mob" value="Radiofrequência" aria-checked="false" />
-								<label class="form-check-label" for="cat-radiofrequencia-mob">Radiofrequência</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-luz-pulsada-mob" value="Luz pulsada" aria-checked="false" />
-								<label class="form-check-label" for="cat-luz-pulsada-mob">Luz pulsada</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-endermologia-mob" value="Endermologia" aria-checked="false" />
-								<label class="form-check-label" for="cat-endermologia-mob">Endermologia</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-laser-mob" value="Laser" aria-checked="false" />
-								<label class="form-check-label" for="cat-laser-mob">Laser</label>
-								</li>
-								<li class="form-check">
-								<input type="checkbox" class="form-check-input mobile-cat" id="cat-hifu-liposonix-mob" value="Hifu e Liposonix" aria-checked="false" />
-								<label class="form-check-label" for="cat-hifu-liposonix-mob">Hifu e Liposonix</label>
-								</li>
-							</ul>
-							</div>
-							<div class="filter-section">
-							<h4 class="filter-title">Disponibilidade</h4>
-							<ul class="list-unstyled">
-								<li class="form-check">
-								<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-venda-mob" value="Venda" aria-checked="false" />
-								<label class="form-check-label" for="filter-venda-mob">Venda</label>
-								</li>
-								<li class="form-check">
-								<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-aluguer-mob" value="Aluguer" aria-checked="false" />
-								<label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
-								</li>
-							</ul>
-							</div>
-							<div class="filter-section" id="aluguer-periodos-mob" hidden>
-							<h4 class="filter-title">Períodos de Aluguer</h4>
-							<ul class="list-unstyled">
-								<li class="form-check">
-								<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-diario-mob" value="diario" aria-checked="false" />
-								<label class="form-check-label" for="filter-diario-mob">Diário</label>
-								</li>
-								<li class="form-check">
-								<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-bidiario-mob" value="bidiario" aria-checked="false" />
-								<label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
-								</li>
-								<li class="form-check">
-								<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-semanal-mob" value="semanal" aria-checked="false" />
-								<label class="form-check-label" for="filter-semanal-mob">Semanal</label>
-								</li>
-								<li class="form-check">
-								<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-mensal-mob" value="mensal" aria-checked="false" />
-								<label class="form-check-label" for="filter-mensal-mob">Mensal</label>
-								</li>
-							</ul>
-							</div>
-							<button id="pesquisar-btn" class="btn btn-primary w-100">Aplicar</button>
-						</div>
-						</div>
-					</div>
-					<div class="col-lg-9">
-						<div id="selected-tags-container" class="d-none"></div>
-						<div id="equipamentos-container" class="row g-4"></div>
-						<nav aria-label="Page navigation" class="mt-4">
-						<ul id="pagination" class="pagination justify-content-center custom-pagination"></ul>
-						</nav>
+						<button id="pesquisar-btn" class="btn btn-primary w-100">Aplicar</button>
 					</div>
 					</div>
 				</div>
+				<div class="col-lg-9">
+					<div id="selected-tags-container" class="d-none"></div>
+					<div id="equipamentos-container" class="row g-4"></div>
+					<nav aria-label="Page navigation" class="mt-4">
+					<ul id="pagination" class="pagination justify-content-center custom-pagination"></ul>
+					</nav>
 				</div>
-			</section>
+				</div>
+			</div>
+			</div>
+		</section>
 		</main>
+
 
 
 

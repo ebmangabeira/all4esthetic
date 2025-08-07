@@ -1772,12 +1772,11 @@ body.modal-open {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	background-color: var(--contrast-color);
-	color: var(--accent-color);
-	border: 1px solid var(--accent-color);
-	font-size: 0.75rem;
-	padding: 4px 8px;
-	border-radius: 25px;
+	background-color: rgba(255, 255, 255, 0);
+	color: rgba(255, 255, 255, 0);
+	font-size: 0px;
+	padding: 0px;
+	border-radius: 0px;
 	z-index: 2;
 }
 
@@ -1787,9 +1786,8 @@ body.modal-open {
 	height: auto;
 	aspect-ratio: 4 / 3;
 	object-fit: cover;
-	padding-top: 16px;
-	margin-left: 45px;
-	margin-top: 48px;
+	margin-left: 35px;
+	margin-top: 24px;
 }
 
 .equipamento-card .card-body {
