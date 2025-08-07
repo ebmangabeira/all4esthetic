@@ -255,11 +255,6 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--accent-color) var(--contrast-color);
 }
-@media (max-width: 767px) {
-  .modal-body-custom {
-    max-height: 90vh;
-  }
-}
 .modal-content-custom::-webkit-scrollbar {
   width: 12px;
 }
@@ -317,8 +312,6 @@ body {
   line-height: 1.6;
   font-size: 1rem;
   padding: 0 16px;
-  overflow-y: auto;
-  max-height: 75vh;
 }
 .modal-body-custom h6 {
   margin-top: 1.5rem;
@@ -368,6 +361,20 @@ body {
   background: var(--nav-hover-color);
   outline-offset: 2px;
 }
+
+/* Scroll container para todas as modals (reset automático a cada abertura) */
+.modal-body,
+.modal-body-custom {
+  overflow-y: auto;
+  max-height: 75vh;
+}
+@media (max-width: 767px) {
+  .modal-body,
+  .modal-body-custom {
+    max-height: 90vh;
+  }
+}
+
 
 
 /* ==========================================================================
