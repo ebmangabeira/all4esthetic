@@ -425,3 +425,16 @@ document.addEventListener("DOMContentLoaded", async ()=>{
 	document.addEventListener("DOMContentLoaded",show);
 	banner&&banner.addEventListener("keydown",e=>{if(e.key==="Escape")hide();});
 })();
+
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash;
+    if (hash === "#modalHistoria" || hash === "#modalEquipa" || hash === "#modalVisao") {
+      const targetModal = document.querySelector(hash);
+      if (targetModal) {
+        const modal = new bootstrap.Modal(targetModal);
+        modal.show();
+        history.replaceState(null, null, window.location.pathname);
+      }
+    }
+  });

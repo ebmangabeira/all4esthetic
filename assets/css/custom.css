@@ -85,7 +85,6 @@ body {
 	left: 50%;
 	bottom: 24px;
 	transform: translateX(-50%);
-	/* reduzido para ficar atrás da backdrop */
 	z-index: 1000;
 	background: var(--surface-color);
 	color: var(--default-color);
@@ -203,324 +202,145 @@ body {
 }
 
 
-/* ==========================================================================
-   Modais Customizadas
-========================================================================== */
+/* ===========================================================
+   PRIVACY PAGE 
+   =========================================================== */
 
-.termos {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color .2s ease;
-  font-weight: 400;
-}
-.termos:hover,
-.termos:focus-visible {
-  color: var(--nav-hover-color);
+.privacy-page {
+  background-color: color-mix(in srgb, var(--background-color), transparent 95%);
+  color: var(--default-color);
 }
 
-/* backdrop atrás do modal (por cima dos cookies) */
-.modal-backdrop.show {
-  z-index: 1040 !important;
-}
-/* modal acima do backdrop */
-.modal {
-  z-index: 1050 !important;
-}
-
-.modal-open {
-  overflow: hidden;
-}
-
-/* Dialog customizado */
-.modal-dialog.modal-dialog-scrollable.modal-lg.modal-dialog-custom {
-  max-width: 800px;
-  margin: 1.5rem auto;
-}
-@media (max-width: 767px) {
-  .modal-dialog.modal-dialog-scrollable.modal-lg.modal-dialog-custom {
-    margin: 1rem;
-    max-width: none;
-  }
-}
-
-/* Conteúdo */
-.modal-content.modal-content-custom {
+.privacy-page .pp-card {
   background: var(--contrast-color);
-  color: var(--default-color);
-  border-radius: 16px;
   border: 1px solid var(--accent-color);
-  box-shadow: 0 8px 32px rgba(41,41,46,0.15);
-  padding: 26px 32px 22px 32px;
-  font-size: 1rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) var(--contrast-color);
-}
-.modal-content-custom::-webkit-scrollbar {
-  width: 12px;
-}
-.modal-content-custom::-webkit-scrollbar-track {
-  background: var(--surface-color);
   border-radius: 16px;
-  border: 1px solid var(--accent-color);
-}
-.modal-content-custom::-webkit-scrollbar-thumb {
-  background-color: var(--accent-color);
-  border-radius: 16px;
-  border: 3px solid var(--surface-color);
-  transition: background-color .3s ease;
-}
-.modal-content-custom::-webkit-scrollbar-thumb:hover,
-.modal-content-custom::-webkit-scrollbar-thumb:focus {
-  background-color: var(--nav-hover-color);
+  padding: clamp(18px, 3vw, 32px);
 }
 
-/* Cabeçalho */
-.modal-header-custom {
-  border-bottom: 1px solid var(--accent-color);
-  padding-bottom: 12px;
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--contrast-color);
+.privacy-page h1 {
+  font-weight: 300;
+  font-size: 32px;
+  color: var(--heading-color);
+  margin-bottom: 10px !important;
+}
+
+.privacy-page h2 {
   font-family: var(--heading-font);
-  font-weight: 600;
-  font-size: 1.13rem;
-}
-.modal-header-custom .btn-close-custom {
-  filter: brightness(.3);
-  transition: filter .3s ease;
-  background: transparent;
-  border: none;
-  width: 1em;
-  height: 1em;
-  cursor: pointer;
-}
-.modal-header-custom .btn-close-custom:hover,
-.modal-header-custom .btn-close-custom:focus {
-  filter: brightness(1);
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--heading-color);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  position: relative;
 }
 
-/* Título */
-.modal-title {
-  color: var(--surface-color);
+.privacy-page h2::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  margin-top: 8px;
+  background: color-mix(in srgb, var(--accent-color), transparent 35%);
+  border-radius: 2px;
 }
 
-/* Corpo */
-.modal-body-custom {
-  color: var(--default-color);
-  line-height: 1.6;
-  font-size: 1rem;
-  padding: 0 16px;
+.privacy-page .pp-meta {
+  color: var(--heading-color) !important;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
 }
-.modal-body-custom h6 {
-  margin-top: 1.5rem;
-  font-weight: 400;
-  font-size: 1.25rem;
+
+.privacy-page p,
+.privacy-page ul,
+.privacy-page li {
   color: var(--heading-color);
+  font-size: var(--font-size-paragraph-desktop);
+  line-height: 1.7;
 }
-.modal-body-custom p,
-.modal-body-custom ul {
-  margin-bottom: .75rem;
-  color: var(--heading-color);
-}
-.modal-body-custom ul {
+
+.privacy-page ul {
   padding-left: 1.25rem;
-}
-.modal-body-custom ul li {
-  margin-bottom: .5rem;
+  margin-bottom: 0.75rem;
 }
 
-/* Rodapé */
-.modal-footer-custom {
-  padding-top: 18px;
-  padding-bottom: 0;
-  border-top: 1px solid var(--accent-color);
-  display: flex;
-  justify-content: flex-end;
-}
-.modal-footer-custom .btn-close-custom,
-.modal-footer-custom .btn {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border-radius: 50px;
-  padding: 8px 20px;
-  font-weight: 500;
-  border: none;
-  transition: background .3s ease, outline .3s ease;
-  min-width: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.modal-footer-custom .btn-close-custom:hover,
-.modal-footer-custom .btn-close-custom:focus,
-.modal-footer-custom .btn:hover,
-.modal-footer-custom .btn:focus-visible {
-  background: var(--nav-hover-color);
-  outline-offset: 2px;
-}
-
-/* Scroll container para todas as modals (reset automático a cada abertura) */
-.modal-body,
-.modal-body-custom {
-  overflow-y: auto;
-  max-height: 75vh;
-}
-@media (max-width: 767px) {
-  .modal-body,
-  .modal-body-custom {
-    max-height: 90vh;
-  }
-}
-
-/* ================================
-   LEGAL OVERLAY + CARD = MODAL LOOK
-   ================================ */
-
-/* Backdrop (equivalente ao .modal-backdrop.show) */
-.legal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 1050; /* igual .modal */
-  display: none; /* será exibido como flex via JS */
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-/* Caixa do card (equivale ao .modal-content.modal-content-custom) */
-.legal-card {
-  background: var(--contrast-color);
-  color: var(--default-color);
-  border-radius: 16px;
-  border: 1px solid var(--accent-color);
-  box-shadow: 0 8px 32px rgba(41,41,46,0.15);
-  max-width: 800px; /* mesmo do dialog lg */
-  width: 100%;
-  max-height: 90vh; /* mobile-friendly */
-  overflow: hidden;  /* header/footer fixos; body rola */
-}
-
-/* Scrollbar (igual à da modal) */
-.legal-card::-webkit-scrollbar { width: 12px; }
-.legal-card::-webkit-scrollbar-track {
-  background: var(--surface-color);
-  border-radius: 16px;
-  border: 1px solid var(--accent-color);
-}
-.legal-card::-webkit-scrollbar-thumb {
-  background-color: var(--accent-color);
-  border-radius: 16px;
-  border: 3px solid var(--surface-color);
-  transition: background-color .3s ease;
-}
-.legal-card::-webkit-scrollbar-thumb:hover,
-.legal-card::-webkit-scrollbar-thumb:focus {
-  background-color: var(--nav-hover-color);
-}
-
-/* Cabeçalho (igual .modal-header-custom) */
-.legal-card-header {
-  border-bottom: 1px solid var(--accent-color);
-  padding: 26px 32px 12px 32px;
-  margin-bottom: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--contrast-color);
-  font-family: var(--heading-font);
-  font-weight: 600;
-  font-size: 1.13rem;
-}
-.legal-card-title { color: var(--surface-color); margin: 0; }
-
-/* Botão fechar (igual .btn-close-custom) */
-.legal-card-close {
-  filter: brightness(.3);
-  transition: filter .3s ease;
-  background: transparent;
-  border: none;
-  width: 1em;
-  height: 1em;
-  cursor: pointer;
-  line-height: 1;
-  color: var(--surface-color);
-}
-.legal-card-close:hover,
-.legal-card-close:focus-visible { filter: brightness(1); outline: none; }
-
-/* Corpo (igual .modal-body-custom) */
-.legal-card-body {
-  color: var(--default-color);
-  line-height: 1.6;
-  font-size: 1rem;
-  padding: 0 32px 22px 32px;
-  overflow-y: auto;          /* o scroll fica aqui */
-  max-height: calc(90vh - 26px - 12px - 18px - 70px); 
-  /* 90vh - header paddings/margin - footer aprox (70px). Ajuste fino se quiser */
-}
-.legal-card-body h6 {
-  margin-top: 1.5rem;
-  font-weight: 400;
-  font-size: 1.25rem;
-  color: var(--heading-color);
-}
-.legal-card-body p,
-.legal-card-body ul { margin-bottom: .75rem; color: var(--heading-color); }
-.legal-card-body ul { padding-left: 1.25rem; }
-.legal-card-body ul li { margin-bottom: .5rem; }
-
-/* Rodapé (igual .modal-footer-custom) */
-.legal-card-footer {
-  padding: 18px 32px 0 32px;
-  border-top: 1px solid var(--accent-color);
-  display: flex;
-  justify-content: flex-end;
-}
-.legal-card-footer .btn-close-legal,
-.legal-card-footer .btn {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border-radius: 50px;
-  padding: 8px 20px;
-  font-weight: 500;
-  border: none;
-  transition: background .3s ease, outline .3s ease;
-  min-width: 90px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.legal-card-footer .btn-close-legal:hover,
-.legal-card-footer .btn:focus-visible,
-.legal-card-footer .btn:hover {
-  background: var(--nav-hover-color);
-  outline: none;
-  outline-offset: 2px;
-}
-
-/* Links com a mesma classe/estilo que você já usa */
-.legal-card a.termos {
+.privacy-page a {
   color: var(--accent-color);
   text-decoration: none;
   transition: color .2s ease;
-  font-weight: 400;
 }
-.legal-card a.termos:hover,
-.legal-card a.termos:focus-visible { color: var(--nav-hover-color); }
 
-/* Responsivo (equivalente ao dialog mobile) */
+.privacy-page a:hover,
+.privacy-page a:focus-visible {
+  color: var(--nav-hover-color);
+  text-decoration: underline;
+}
+
+.privacy-page strong {
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.privacy-page section {
+  background: transparent;
+  padding: 142px 0 40px;
+}
+
 @media (max-width: 767px) {
-  .legal-overlay { padding: .75rem; }
-  .legal-card-body {
-    padding: 0 16px 16px 16px;
-    max-height: calc(90vh - 26px - 12px - 18px - 64px);
+  .privacy-page section { padding: 130px 0 40px; }
+}
+
+.privacy-page .pp-header {
+  margin-bottom: 1.25rem;
+}
+
+.privacy-page :focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+.privacy-page .pp-block {
+  background: var(--contrast-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%);
+  border-radius: 12px;
+  padding: clamp(14px, 2.6vw, 22px);
+  margin-top: 1rem;
+}
+
+.privacy-page .pp-block + .pp-block {
+  margin-top: 1rem;
+}
+
+.privacy-page .pp-note {
+  background: color-mix(in srgb, var(--accent-color), white 92%);
+  border: 1px dashed var(--accent-color);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--surface-color);
+  font-size: 0.95rem;
+}
+
+.footer .footer-links a[href*="politica"],
+.footer .footer-links a[href*="privacidade"] {
+  transition: color .2s ease;
+}
+
+.footer .footer-links a:hover,
+.footer .footer-links a:focus-visible {
+  color: var(--accent-color);
+}
+
+@media print {
+  .privacy-page .pp-card,
+  .privacy-page .pp-block {
+    box-shadow: none !important;
+    border-color: #ccc !important;
+  }
+  .privacy-page a {
+    text-decoration: underline;
   }
 }
+
 
 /* ==========================================================================
    HEADER - MENU
@@ -3509,132 +3329,4 @@ label {
 	.footer-bottom {
 		padding: 2px 0;
 	}
-}
-
-
-/* ==========================================================================
-   PRIVACY PAGE – All4Esthetic
-   Prefixo exclusivo: .privacy-page
-   ========================================================================== */
-
-.privacy-page {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: var(--background-color);
-  color: var(--default-color);
-  font-family: var(--heading-font);
-}
-
-.privacy-page .container {
-  max-width: 900px;
-  background: var(--contrast-color);
-  border-radius: 16px;
-  padding: 3rem;
-  box-shadow: 0 8px 32px rgba(41, 41, 46, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Título principal */
-.privacy-page h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--surface-color);
-  margin-bottom: 1rem;
-  position: relative;
-}
-.privacy-page h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: var(--accent-color);
-  margin-top: 0.5rem;
-  border-radius: 4px;
-}
-
-/* Data de revisão */
-.privacy-page .text-muted em {
-  font-style: normal;
-  color: var(--nav-color);
-  font-size: 0.9rem;
-  display: block;
-  margin-bottom: 2rem;
-}
-
-/* Subtítulos */
-.privacy-page h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--surface-color);
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding-left: 0.5rem;
-  border-left: 4px solid var(--accent-color);
-}
-
-/* Parágrafos */
-.privacy-page p {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  color: var(--heading-color);
-}
-
-/* Listas */
-.privacy-page ul {
-  margin-left: 1.25rem;
-  margin-bottom: 1rem;
-  padding-left: 0;
-}
-.privacy-page ul li {
-  margin-bottom: 0.5rem;
-  color: var(--heading-color);
-  position: relative;
-  padding-left: 1.2rem;
-}
-.privacy-page ul li::before {
-  content: "•";
-  color: var(--accent-color);
-  position: absolute;
-  left: 0;
-}
-
-/* Links */
-.privacy-page a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-.privacy-page a:hover,
-.privacy-page a:focus-visible {
-  color: var(--nav-hover-color);
-  text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 991px) {
-  .privacy-page .container {
-    padding: 2rem;
-  }
-  .privacy-page h1 {
-    font-size: 2rem;
-  }
-  .privacy-page h2 {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 575px) {
-  .privacy-page {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-  .privacy-page .container {
-    padding: 1.5rem;
-  }
-  .privacy-page p,
-  .privacy-page ul li {
-    font-size: 0.95rem;
-  }
 }
