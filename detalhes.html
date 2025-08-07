@@ -2,78 +2,27 @@
 <html lang="pt">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 		<title>all4esthetic</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="icon" href="assets/img/favicon.png" />
-		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap"
-		/>
+		<meta content="" name="description" />
+		<meta content="" name="keywords" />
+		<link href="assets/img/favicon.png" rel="icon" />
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+		<link href="https://fonts.googleapis.com" rel="preconnect" />
+		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/drift-zoom@1.3.0/dist/drift-basic.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
-		<link rel="stylesheet" href="assets/css/pdf.css" />
+		<link href="assets/css/custom.css" rel="stylesheet" />
 	</head>
+
 	<body class="index-page">
-		<header id="header" class="header position-fixed top-0 w-100" role="banner">
-			<div class="main-header">
-				<div class="container-fluid container-xl">
-					<div class="d-flex align-items-center justify-content-between">
-						<a href="index.html" class="logo d-flex align-items-center d-xl-none" aria-label="Página inicial">
-							<img src="assets/img/logo-header.png" alt="Logo all4esthetic" />
-						</a>
-						<div class="header-actions d-flex align-items-center justify-content-end">
-							<i
-								class="mobile-nav-open bi bi-list me-0 mobile-nav-toggle d-xl-none"
-								role="button"
-								tabindex="0"
-								aria-label="Abrir menu"
-								aria-expanded="false"
-								aria-controls="navmenu"
-							></i>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="header-nav">
-				<div class="container-fluid container-xl">
-					<div class="position-relative">
-						<div class="d-flex align-items-center justify-content-between">
-							<a href="index.html" class="logo d-flex align-items-center me-4 d-none d-xl-flex" aria-label="Página inicial">
-								<img src="assets/img/logo-header.png" alt="Logo all4esthetic" />
-							</a>
-							<nav id="navmenu" class="navmenu mx-auto justify-content-center" aria-label="Menu principal" role="navigation">
-								<ul>
-									<li
-										class="navmenu-close d-xl-none"
-										role="button"
-										tabindex="0"
-										aria-label="Fechar menu"
-										aria-controls="navmenu"
-									>
-										<span class="mobile-nav-close">X</span>
-									</li>
-									<li><a href="index.html">Início</a></li>
-									<li><a href="quem-somos.html">Quem Somos</a></li>
-									<li><a href="equipamentos.html">Equipamentos</a></li>
-									<li><a href="contacto.html">Contacto</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="dialog" aria-live="polite" aria-modal="true" aria-label="Aviso de Cookies" tabindex="-1">
+		<a href="#main" class="skip-link">Ir para o conteúdo</a>
+		<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="status" aria-live="polite" aria-label="Aviso de Cookies">
 			<div class="cookie-banner-content">
 				<div class="cookie-banner-header">
 				<span class="cookie-banner-icon" aria-hidden="true">
@@ -85,7 +34,8 @@
 				</div>
 				<span class="cookie-banner-text">
 				Utilizamos cookies para melhorar a sua experiência no site, personalizar conteúdo e analisar o nosso tráfego.
-				Ao aceitar, autoriza a utilização de cookies conforme a nossa <a href="politica-privacidade.html" target="_blank" class="cookie-link">Política de Privacidade</a>.
+				Ao aceitar, autoriza a utilização de cookies conforme a nossa
+				<a href="#" class="cookie-link" data-bs-toggle="modal" data-bs-target="#privacyModalCustom">Política de Privacidade</a>.
 				</span>
 				<div class="cookie-banner-actions">
 				<button id="cookie-accept-btn" class="cookie-btn" type="button">Aceitar</button>
@@ -93,155 +43,355 @@
 				</div>
 			</div>
 		</div>
-		<main class="main" role="main">
-			<div class="pd-page-title pd-light-bg pd-principais">
+
+		<header class="header position-fixed top-0 w-100" id="header" role="banner">
+			<div class="main-header">
+				<div class="container-fluid container-xl header-container">
+					<div class="d-flex align-items-center justify-content-between">
+						<a class="logo d-flex align-items-center d-xl-none" href="index.html" aria-label="Página inicial">
+							<img alt="Logo" src="assets/img/logo-header.png" />
+						</a>
+						<div class="header-actions d-flex align-items-center justify-content-end">
+							<i
+								class="mobile-nav-open d-xl-none bi bi-list me-0 mobile-nav-toggle"
+								aria-label="Abrir menu"
+								role="button"
+								tabindex="0"
+								onkeypress="if(event.key==='Enter' || event.key===' ') this.click();"
+							></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-nav">
+				<div class="container-fluid container-xl">
+					<div class="position-relative">
+						<div class="d-flex align-items-center justify-content-between">
+							<a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html" aria-label="Página inicial">
+								<img alt="Logo" src="assets/img/logo-header.png" />
+							</a>
+							<nav class="navmenu mx-auto justify-content-center" id="navmenu" aria-label="Menu principal" role="navigation">
+								<ul>
+									<li>
+										<button
+											class="navmenu-close d-xl-none"
+											aria-label="Fechar menu"
+											type="button"
+										>
+											<span class="mobile-nav-close" aria-hidden="true">X</span>
+										</button>
+									</li>
+									<li><a href="index.html" aria-current="page">Início</a></li>
+									<li><a href="quem-somos.html">Quem Somos</a></li>
+									<li><a href="equipamentos.html">Equipamentos</a></li>
+									<li><a href="contacto.html">Contacto</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="modal fade" id="privacyModalCustom" tabindex="-1" aria-labelledby="privacyModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="privacyModalCustomTitle">Política de Privacidade</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Responsável pelo Tratamento</h6>
+						<p>
+							All4esthetic<br/>
+							Rua dos Tractores 506, Armazém AE, Lisboa, 2870-607, Portugal<br/>
+							Email: <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>
+						</p>
+						<h6>2. Dados que Recolhemos</h6>
+						<p>
+							Este website é um catálogo informativo de equipamentos estéticos e não solicita, recolhe nem processa dados pessoais através de formulários ou outras interações diretas. Apenas são recolhidos dados técnicos de navegação, como cookies e registos anónimos para melhorar a experiência do utilizador e analisar o tráfego do site.
+						</p>
+						<h6>3. Finalidades do Tratamento</h6>
+						<ul>
+							<li>Garantir o funcionamento seguro e eficiente do website.</li>
+							<li>Personalizar conteúdos e anúncios com base em dados anónimos.</li>
+							<li>Analisar estatísticas agregadas de utilização.</li>
+							<li>Permitir que os utilizadores entrem em contacto através dos meios disponibilizados (email e telefone), caso desejem obter mais informações.</li>
+						</ul>
+						<h6>4. Base Legal</h6>
+						<p>
+							O tratamento dos seus dados anónimos baseia-se no nosso legítimo interesse em garantir a funcionalidade e a melhoria do serviço (Art.º 6.º(1)(f) do RGPD). Para qualquer dado pessoal facultado diretamente via contacto, o tratamento apoia-se no seu consentimento (Art.º 6.º(1)(a) RGPD).
+						</p>
+						<h6>5. Destinatários</h6>
+						<p>
+							Os seus dados poderão ser comunicados a prestadores de serviços técnicos e parceiros responsáveis pelo funcionamento do website (hospedagem, análises, marketing), que asseguram confidencialidade e proteção dos dados.
+						</p>
+						<h6>6. Período de Conservação</h6>
+						<p>
+							Os dados recolhidos são conservados pelo período necessário para cumprir as finalidades indicadas e em conformidade com a legislação aplicável.
+						</p>
+						<h6>7. Direitos dos Titulares</h6>
+						<p>
+							Como titular dos dados, tem o direito de solicitar acesso, retificação, eliminação, limitação ou oposição ao tratamento, bem como a portabilidade dos seus dados e a retirada do consentimento a qualquer momento, sem prejuízo da licitude do tratamento anterior. Para exercer estes direitos, por favor contacte-nos através do email <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+						<h6>8. Segurança</h6>
+						<p>
+							Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra acesso não autorizado, divulgação, alteração ou destruição.
+						</p>
+						<h6>9. Alterações a Esta Política</h6>
+						<p>
+							Esta política poderá ser atualizada periodicamente. A data da última revisão será indicada no início da página.
+						</p>
+						<h6>10. Contacto da Comissão Nacional de Proteção de Dados</h6>
+						<p>
+							Se entender que os seus direitos não foram respeitados, pode apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD): <a href="https://www.cnpd.pt" target="_blank" rel="noopener noreferrer" class="termos">www.cnpd.pt</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="legalNoticeModalCustom" tabindex="-1" aria-labelledby="legalNoticeModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="legalNoticeModalCustomTitle">Aviso Legal</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Informações Gerais</h6>
+						<p>
+							Todos os conteúdos, textos, imagens, gráficos e informações presentes neste website são de responsabilidade da All4esthetic e destinam-se exclusivamente a fornecer informações sobre os produtos e serviços oferecidos.
+						</p>
+						<h6>2. Direitos de Propriedade Intelectual</h6>
+						<p>
+							Todos os direitos de propriedade intelectual, incluindo marcas, logotipos, imagens, textos e design gráfico, são propriedade exclusiva da All4esthetic ou dos seus licenciadores, estando protegidos por legislação nacional e internacional.
+						</p>
+						<h6>3. Limitação de Responsabilidade</h6>
+						<p>
+							A All4esthetic não se responsabiliza por quaisquer danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do uso ou impossibilidade de uso deste website, incluindo erros ou omissões nas informações apresentadas.
+						</p>
+						<h6>4. Conteúdos de Terceiros</h6>
+						<p>
+							Este website pode conter links para sites de terceiros, sobre os quais a All4esthetic não exerce controle e não assume responsabilidade pelo conteúdo, políticas de privacidade ou práticas desses sites.
+						</p>
+						<h6>5. Alterações ao Website</h6>
+						<p>
+							A All4esthetic reserva-se o direito de modificar, atualizar ou remover qualquer conteúdo do website a qualquer momento, sem aviso prévio.
+						</p>
+						<h6>6. Lei Aplicável e Jurisdição</h6>
+						<p>
+							Este aviso legal é regido pela legislação portuguesa. Quaisquer litígios relacionados com o uso do website serão submetidos aos tribunais competentes de Lisboa, Portugal.
+						</p>
+						<h6>7. Contactos</h6>
+						<p>
+							Para quaisquer dúvidas ou questões legais, por favor contacte-nos através do email <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="termsModalCustom" tabindex="-1" aria-labelledby="termsModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="termsModalCustomTitle">Termos de Uso</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Aceitação dos Termos</h6>
+						<p>
+							Ao acessar e utilizar este website, você concorda em cumprir estes Termos de Uso e todas as leis aplicáveis. Caso não concorde com algum destes termos, por favor não utilize o site.
+						</p>
+						<h6>2. Uso do Website</h6>
+						<p>
+							Este site destina-se a fins informativos e comerciais relacionados a equipamentos estéticos. Você concorda em utilizá-lo apenas para propósitos legais e de forma que não infrinja os direitos de terceiros.
+						</p>
+						<h6>3. Propriedade Intelectual</h6>
+						<p>
+							Todos os conteúdos, imagens, textos, logos e demais materiais são de propriedade da All4esthetic ou de seus licenciadores, estando protegidos pelas leis de propriedade intelectual.
+						</p>
+						<h6>4. Limitação de Responsabilidade</h6>
+						<p>
+							A All4esthetic não se responsabiliza por quaisquer danos diretos ou indiretos decorrentes do uso ou impossibilidade de uso do site, incluindo a precisão das informações fornecidas.
+						</p>
+						<h6>5. Modificações nos Termos</h6>
+						<p>
+							Reservamo-nos o direito de alterar estes Termos de Uso a qualquer momento, sendo recomendada a consulta periódica desta página para verificar atualizações.
+						</p>
+						<h6>6. Privacidade</h6>
+						<p>
+							Para informações sobre coleta e uso de dados pessoais, consulte a nossa
+							<a href="#" data-bs-toggle="modal" data-bs-target="#privacyModalCustom" class="termos">Política de Privacidade</a>.
+						</p>
+						<h6>7. Lei Aplicável</h6>
+						<p>
+							Estes Termos de Uso são regidos pelas leis vigentes em Portugal. Quaisquer disputas serão dirimidas nos tribunais competentes de Lisboa.
+						</p>
+						<h6>8. Contato</h6>
+						<p>
+							Em caso de dúvidas ou sugestões sobre estes Termos de Uso, entre em contato pelo email
+							<a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="#main" class="skip-link">Ir para o conteúdo</a>
+<main class="main" role="main" id="main">
+  <div class="pd-page-title pd-light-bg">
 				<div class="container-xl pd-breadcrumbs pd-container">
-					<h1 class="pd-title-text">Detalhes</h1>
-					<nav class="pd-nav-breadcrumbs" aria-label="Breadcrumb">
+					<h1 class="pd-title-text" id="main-heading">Detalhes</h1>
+					<nav class="pd-nav-breadcrumbs" aria-label="Caminho de navegação">
 						<ol>
-							<li><a href="index.html">Início</a></li>
-							<li><a href="equipamentos.html">Equipamentos</a></li>
+							<li><a href="index.html" class="inicio-link">Início</a></li>
+							<li><a href="equipamentos.html" class="inicio-link">Equipamentos</a></li>
 							<li class="current" aria-current="page">Detalhes</li>
 						</ol>
 					</nav>
 				</div>
 			</div>
 
-			<section id="pd-product-section" class="pd-details-section pd-container section" aria-labelledby="pd-title-text">
-				<div class="pdf-wrapper">
-					<div id="pdf-logo-container" aria-hidden="true">
-						<img src="assets/img/logo-header.png" alt="Logo all4esthetic" id="pdf-logo" />
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="grid-product">
-								<div class="image-column">
-									<div class="pd-img-container">
-										<span id="pd-category-text" class="pd-category-label" aria-live="polite"></span>
-										<img
-											id="pd-main-img"
-											class="pd-main-image"
-											src=""
-											alt="Imagem Principal do produto"
-											loading="lazy"
-											tabindex="0"
-										/>
-									</div>
-									<div class="thumbs-wrapper">
-										<button
-											class="thumb-btn prev"
-											aria-label="Imagem anterior"
-											type="button"
-											tabindex="0"
-										>
-											&lt;
-										</button>
-										<div class="thumbs-viewport" role="list" aria-label="Miniaturas do produto">
-											<ul class="thumbs-track" role="list"></ul>
-										</div>
-										<button
-											class="thumb-btn next"
-											aria-label="Próxima imagem"
-											type="button"
-											tabindex="0"
-										>
-											&gt;
-										</button>
-									</div>
-								</div>
-								<div class="info-column">
-									<h2 id="pd-title-text" class="pd-product-title" tabindex="0"></h2>
-									<div class="tab-buttons" role="tablist" aria-label="Seções do produto">
-										<button
-											id="btn-funcao"
-											class="pd-btn-funcao active"
-											role="tab"
-											aria-selected="true"
-											aria-controls="content-funcao"
-											type="button"
-											tabindex="0"
-										>
-											Função
-										</button>
-										<button
-											id="btn-tecnica"
-											class="pd-btn-tecnica"
-											role="tab"
-											aria-selected="false"
-											aria-controls="content-tecnica"
-											type="button"
-											tabindex="-1"
-										>
-											Ficha Técnica
-										</button>
-									</div>
-									<div id="tab-content">
-										<div
-											id="content-funcao"
-											class="tab-panel active"
-											role="tabpanel"
-											aria-labelledby="btn-funcao"
-										>
-											<div id="pd-functions-list" tabindex="0"></div>
-										</div>
-										<div
-											id="content-tecnica"
-											class="tab-panel"
-											role="tabpanel"
-											aria-labelledby="btn-tecnica"
-											hidden
-											tabindex="0"
-										>
-											<div class="pd-box">
-												<h5>Dados Técnicos</h5>
-												<table id="pd-tech-table" class="table" summary="Tabela com dados técnicos do produto"></table>
-											</div>
-											<div class="pd-box">
-												<h5>Logística</h5>
-												<table id="pd-logistics-table" class="table" summary="Tabela com informações logísticas do produto"></table>
-											</div>
-											<div class="pd-box">
-												<h5>Aplicação</h5>
-												<p id="pd-application-text" tabindex="0"></p>
-											</div>
-										</div>
-									</div>
-									<div class="pd-box pd-availability-box mt-4">
-										<h5>Disponibilidade</h5>
-										<ul id="pd-availability-list" class="list-unstyled" role="list" tabindex="0"></ul>
-									</div>
-									<div id="pdf-contact-info" class="pd-box" aria-hidden="true">
-										<h5>All4Esthetic — innovating beauty</h5>
-										<p>
-											<strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia
-										</p>
-										<p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
-										<p><strong>E-mail:</strong> geral@all4esthetic.com</p>
-										<p>
-											<strong>Site:</strong>
-											<a href="https://www.all4esthetic.com" target="_blank" rel="noopener noreferrer">www.all4esthetic.com</a>
-										</p>
-									</div>
-									<div class="pd-actions mb-4">
-										<button id="btn-pdf" class="pd-btn pd-btn-outline-pdf" type="button" aria-label="Gerar PDF do produto">
-											Gerar PDF
-										</button>
-										<button
-											id="btn-quote"
-											class="pd-btn pd-btn-outline"
-											type="button"
-											aria-label="Solicitar orçamento do produto"
-										>
-											Solicitar Orçamento
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
+  <section id="pd-product-section" class="pd-details-section pd-container section" aria-labelledby="pd-title-text">
+    <div class="pdf-wrapper">
+      <div id="pdf-logo-container" aria-hidden="true">
+        <img src="assets/img/logo-header.png" alt="Logo all4esthetic" id="pdf-logo" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="grid-product">
+            <div class="image-column">
+              <div class="pd-img-container">
+                <span id="pd-category-text" class="pd-category-label" aria-live="polite"></span>
+                <img
+                  id="pd-main-img"
+                  class="pd-main-image"
+                  src=""
+                  alt="Imagem Principal do produto"
+                  loading="lazy"
+                />
+              </div>
+              <div class="thumbs-wrapper">
+                <button
+                  class="thumb-btn prev"
+                  aria-label="Imagem anterior"
+                  type="button"
+                >
+                  &lt;
+                </button>
+                <div class="thumbs-viewport" role="list" aria-label="Miniaturas do produto">
+                  <ul class="thumbs-track" role="list"></ul>
+                </div>
+                <button
+                  class="thumb-btn next"
+                  aria-label="Próxima imagem"
+                  type="button"
+                >
+                  &gt;
+                </button>
+              </div>
+            </div>
+            <div class="info-column">
+              <h2 id="pd-title-text" class="pd-product-title"></h2>
+              <div class="tab-buttons" role="tablist" aria-label="Seções do produto">
+                <button
+                  id="btn-funcao"
+                  class="pd-btn-funcao active"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="content-funcao"
+                  type="button"
+                >
+                  Função
+                </button>
+                <button
+                  id="btn-tecnica"
+                  class="pd-btn-tecnica"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="content-tecnica"
+                  type="button"
+                >
+                  Ficha Técnica
+                </button>
+              </div>
+              <div id="tab-content">
+                <div
+                  id="content-funcao"
+                  class="tab-panel active"
+                  role="tabpanel"
+                  aria-labelledby="btn-funcao"
+                >
+                  <div id="pd-functions-list"></div>
+                </div>
+                <div
+                  id="content-tecnica"
+                  class="tab-panel"
+                  role="tabpanel"
+                  aria-labelledby="btn-tecnica"
+                  hidden
+                >
+                  <div class="pd-box">
+                    <h5>Dados Técnicos</h5>
+                    <table id="pd-tech-table" class="table" summary="Tabela com dados técnicos do produto"></table>
+                  </div>
+                  <div class="pd-box">
+                    <h5>Logística</h5>
+                    <table id="pd-logistics-table" class="table" summary="Tabela com informações logísticas do produto"></table>
+                  </div>
+                  <div class="pd-box">
+                    <h5>Aplicação</h5>
+                    <p id="pd-application-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="pd-box pd-availability-box mt-4">
+                <h5>Disponibilidade</h5>
+                <ul id="pd-availability-list" class="list-unstyled" role="list"></ul>
+              </div>
+              <div id="pdf-contact-info" class="pd-box" aria-hidden="true">
+                <h5>All4Esthetic — innovating beauty</h5>
+                <p>
+                  <strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia
+                </p>
+                <p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
+                <p><strong>E-mail:</strong> geral@all4esthetic.com</p>
+                <p>
+                  <strong>Site:</strong>
+                  <a href="https://www.all4esthetic.com" target="_blank" rel="noopener noreferrer">www.all4esthetic.com</a>
+                </p>
+              </div>
+              <div class="pd-actions mb-4">
+                <button id="btn-pdf" class="pd-btn pd-btn-outline-pdf" type="button" aria-label="Gerar PDF do produto">
+                  Gerar PDF
+                </button>
+                <button
+                  id="btn-quote"
+                  class="pd-btn pd-btn-outline"
+                  type="button"
+                  aria-label="Solicitar orçamento do produto"
+                >
+                  Solicitar Orçamento
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
 
 		<footer class="footer" id="footer" role="contentinfo">
 			<div class="footer-main">
@@ -259,7 +409,7 @@
 										<a aria-label="Facebook" href="#"><i class="bi bi-facebook" aria-hidden="true"></i></a>
 										<a aria-label="Instagram" href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
 										<a aria-label="YouTube" href="#"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+										<a aria-label="Whatsapp" href="https://wa.me/351214095469"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
 									</div>
 								</div>
 							</div>
@@ -268,24 +418,25 @@
 							<div class="footer-widget">
 								<h4>Quem Somos</h4>
 								<ul class="footer-links">
-									<li><a href="#">Historia</a></li>
-									<li><a href="#">Equipe</a></li>
-									<li><a href="#">Visão</a></li>
+									<li><a href="quem-somos.html#modalHistoria">História</a></li>
+									<li><a href="quem-somos.html#modalEquipa">Equipa</a></li>
+									<li><a href="quem-somos.html#modalVisao">Visão</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Informações</h4>
+								<ul class="footer-links">
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#termsModalCustom">Termos de Uso</a></li>
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#legalNoticeModalCustom">Aviso Legal</a></li>
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModalCustom">Política de Privacidade</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-lg col-md-6 col-sm-6">
 							<div class="footer-widget">
-								<h4>Informações</h4>
-								<ul class="footer-links">
-									<li><a href="#">Termos de Uso</a></li>
-									<li><a href="#">Aviso Legal</a></li>
-									<li><a href="#">Política de Privacidade</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="footer-widget col-lg col-md-6 col-sm-6">
-							<div>
 								<h4>Contacto</h4>
 								<div class="footer-contact mt-4">
 									<div class="contact-item">
@@ -326,9 +477,10 @@
 				</div>
 			</div>
 		</footer>
+
 		<a
 			class="scroll-top d-flex align-items-center justify-content-center"
-			href="#"
+			href="#header"
 			id="scroll-top"
 			aria-label="Voltar ao topo da página"
 			role="button"
@@ -338,6 +490,7 @@
 			<i class="bi bi-arrow-up-short" aria-hidden="true"></i>
 		</a>
 		<div id="preloader" aria-hidden="true"></div>
+
 		<script src="assets/swiper/swiper-bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
@@ -347,8 +500,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
+
 		<script src="assets/js/main.js"></script>
-		<script>
-		</script>
 	</body>
 </html>
