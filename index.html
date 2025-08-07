@@ -551,7 +551,7 @@
 			<div class="footer-bottom">
 				<div>
 					<div class="copyright text-center mt-4">
-						<p class="footer-p">© <span>Copyright 2026</span> <strong class="px-1 sitename">all4esthetic.</strong> <span>Todos os Direitos Reservados.</span></p>
+						<p class="footer-p">© <span>Copyright 2025</span> <strong class="px-1 sitename">all4esthetic.</strong> <span>Todos os Direitos Reservados.</span></p>
 					</div>
 				</div>
 			</div>
@@ -581,5 +581,17 @@
 		<script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
 
 		<script src="assets/js/main.js"></script>
+		<Script>
+			// assegurar que não fiquem backdrops ou modal-open depois de fechar ou antes de abrir
+document.addEventListener('show.bs.modal', () => {
+	document.body.classList.remove('modal-open');
+	document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+});
+document.addEventListener('hidden.bs.modal', () => {
+	document.body.classList.remove('modal-open');
+	document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+});
+
+		</Script>
 	</body>
 </html>
