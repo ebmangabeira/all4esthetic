@@ -583,8 +583,14 @@
 
 		<script src="assets/js/main.js"></script>
 		<script>
-			document.addEventListener('show.bs.modal', ()=>{document.body.classList.remove('modal-open');document.querySelectorAll('.modal-backdrop').forEach(e=>e.remove());});
-			document.addEventListener('hidden.bs.modal',()=>{document.body.classList.remove('modal-open');document.querySelectorAll('.modal-backdrop').forEach(e=>e.remove());});
-		</script>
+  document.addEventListener('show.bs.modal', () => {
+    document.body.classList.remove('modal-open');
+    document.querySelectorAll('.modal-backdrop').forEach(e => e.remove());
+  });
+  document.addEventListener('hidden.bs.modal', () => {
+    document.body.classList.remove('modal-open');
+    document.querySelectorAll('.modal-backdrop').forEach(e => e.remove());
+  });
+</script>
 	</body>
 </html>
