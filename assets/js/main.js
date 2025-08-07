@@ -426,3 +426,9 @@ document.addEventListener("DOMContentLoaded", async ()=>{
 	banner&&banner.addEventListener("keydown",e=>{if(e.key==="Escape")hide();});
 })();
 
+document.querySelectorAll('.modal').forEach(modalEl => {
+  modalEl.addEventListener('show.bs.modal', () => {
+    const body = modalEl.querySelector('.modal-body-custom');
+    if (body) body.scrollTop = 0;
+  });
+});
