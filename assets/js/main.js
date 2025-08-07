@@ -426,7 +426,3 @@ document.addEventListener("DOMContentLoaded", async ()=>{
 	banner&&banner.addEventListener("keydown",e=>{if(e.key==="Escape")hide();});
 })();
 
-document.addEventListener('hidden.bs.modal', ()=>{
-	document.body.classList.remove('modal-open');
-	document.querySelectorAll('.modal-backdrop').forEach(el=>el.remove());
-});
