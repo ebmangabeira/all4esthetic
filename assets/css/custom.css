@@ -208,176 +208,165 @@ body {
 ========================================================================== */
 
 .termos {
-	color: var(--accent-color);
-	text-decoration: none;
-	transition: color 0.2s ease;
-	font-weight: 400;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color .2s ease;
+  font-weight: 400;
 }
-
 .termos:hover,
 .termos:focus-visible {
-	color: var(--nav-hover-color);
+  color: var(--nav-hover-color);
 }
 
-/* backdrop acima do banner */
-.modal-backdrop {
-	z-index: 1040 !important;
+/* backdrop atrás do modal (por cima dos cookies) */
+.modal-backdrop.show {
+  z-index: 1040 !important;
 }
-
 /* modal acima do backdrop */
 .modal {
-	z-index: 1050 !important;
+  z-index: 1050 !important;
 }
 
 .modal-open {
-	overflow: hidden; 
+  overflow: hidden;
 }
 
-/* Remove o height:100vh forçado */
+/* Dialog customizado */
 .modal-dialog.modal-dialog-scrollable.modal-lg.modal-dialog-custom {
-	/* apenas max-width, margens serão controladas abaixo */
-	max-width: 800px;
-	margin: 1.5rem auto;
+  max-width: 800px;
+  margin: 1.5rem auto;
 }
-
-/* Responsividade e limites de altura */
 @media (max-width: 767px) {
-	.modal-dialog.modal-dialog-scrollable.modal-lg.modal-dialog-custom {
-		margin: 1rem;
-		max-width: none;
-	}
+  .modal-dialog.modal-dialog-scrollable.modal-lg.modal-dialog-custom {
+    margin: 1rem;
+    max-width: none;
+  }
 }
 
+/* Conteúdo */
 .modal-content.modal-content-custom {
-	background: var(--contrast-color);
-	color: var(--default-color);
-	border-radius: 16px;
-	border: 1px solid var(--accent-color);
-	box-shadow: 0 8px 32px rgba(41,41,46,0.15);
-	padding: 26px 32px 22px 32px;
-	font-size: 1rem;
-	overflow-y: auto;
-	/* limite de altura interna */
-	max-height: 75vh;
-	scrollbar-width: thin;
-	scrollbar-color: var(--accent-color) var(--contrast-color);
+  background: var(--contrast-color);
+  color: var(--default-color);
+  border-radius: 16px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 8px 32px rgba(41,41,46,0.15);
+  padding: 26px 32px 22px 32px;
+  font-size: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--contrast-color);
 }
-
 @media (max-width: 767px) {
-	.modal-content.modal-content-custom {
-		max-height: 90vh;
-	}
+  .modal-body-custom {
+    max-height: 90vh;
+  }
 }
-
 .modal-content-custom::-webkit-scrollbar {
-	width: 12px;
+  width: 12px;
 }
 .modal-content-custom::-webkit-scrollbar-track {
-	background: var(--surface-color);
-	border-radius: 16px;
-	border: 1px solid var(--accent-color);
+  background: var(--surface-color);
+  border-radius: 16px;
+  border: 1px solid var(--accent-color);
 }
 .modal-content-custom::-webkit-scrollbar-thumb {
-	background-color: var(--accent-color);
-	border-radius: 16px;
-	border: 3px solid var(--surface-color);
-	transition: background-color 0.3s ease;
+  background-color: var(--accent-color);
+  border-radius: 16px;
+  border: 3px solid var(--surface-color);
+  transition: background-color .3s ease;
 }
 .modal-content-custom::-webkit-scrollbar-thumb:hover,
 .modal-content-custom::-webkit-scrollbar-thumb:focus {
-	background-color: var(--nav-hover-color);
+  background-color: var(--nav-hover-color);
 }
 
+/* Cabeçalho */
 .modal-header-custom {
-	border-bottom: 1px solid var(--accent-color);
-	padding-bottom: 12px;
-	margin-bottom: 18px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	color: var(--contrast-color);
-	font-family: var(--heading-font);
-	font-weight: 600;
-	font-size: 1.13rem;
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 1.13rem;
 }
-
 .modal-header-custom .btn-close-custom {
-	filter: brightness(0.3);
-	transition: filter 0.3s ease;
-	background: transparent;
-	border: none;
-	width: 1em;
-	height: 1em;
-	cursor: pointer;
+  filter: brightness(.3);
+  transition: filter .3s ease;
+  background: transparent;
+  border: none;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
 }
-
 .modal-header-custom .btn-close-custom:hover,
 .modal-header-custom .btn-close-custom:focus {
-	filter: brightness(1);
+  filter: brightness(1);
 }
 
+/* Título */
 .modal-title {
-	color: var(--surface-color);
+  color: var(--surface-color);
 }
 
+/* Corpo */
 .modal-body-custom {
-	color: var(--default-color);
-	line-height: 1.6;
-	font-size: 1rem;
-	padding: 0 16px;
+  color: var(--default-color);
+  line-height: 1.6;
+  font-size: 1rem;
+  padding: 0 16px;
+  overflow-y: auto;
+  max-height: 75vh;
 }
-
 .modal-body-custom h6 {
-	margin-top: 1.5rem;
-	font-weight: 400;
-	font-size: 20px;
-	color: var(--heading-color);
+  margin-top: 1.5rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--heading-color);
 }
-
 .modal-body-custom p,
 .modal-body-custom ul {
-	margin-bottom: 0.75rem;
-	color: var(--heading-color);
+  margin-bottom: .75rem;
+  color: var(--heading-color);
 }
-
 .modal-body-custom ul {
-	padding-left: 1.25rem;
+  padding-left: 1.25rem;
 }
-
 .modal-body-custom ul li {
-	margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
+/* Rodapé */
 .modal-footer-custom {
-	padding-top: 18px;
-	padding-bottom: 0px;
-	border-top: 1px solid var(--accent-color);
-	display: flex;
-	justify-content: flex-end;
+  padding-top: 18px;
+  padding-bottom: 0;
+  border-top: 1px solid var(--accent-color);
+  display: flex;
+  justify-content: flex-end;
 }
-
 .modal-footer-custom .btn-close-custom,
 .modal-footer-custom .btn {
-	background: var(--accent-color);
-	color: var(--contrast-color);
-	border-radius: 50px;
-	padding: 8px 20px;
-	font-weight: 500;
-	border: none;
-	transition: background 0.3s ease, outline 0.3s ease;
-	min-width: 90px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: 500;
+  border: none;
+  transition: background .3s ease, outline .3s ease;
+  min-width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-
 .modal-footer-custom .btn-close-custom:hover,
 .modal-footer-custom .btn-close-custom:focus,
 .modal-footer-custom .btn:hover,
 .modal-footer-custom .btn:focus-visible {
-	background: var(--nav-hover-color);
-	outline-offset: 2px;
+  background: var(--nav-hover-color);
+  outline-offset: 2px;
 }
 
 
