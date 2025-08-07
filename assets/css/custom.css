@@ -512,8 +512,8 @@ body {
     cursor: pointer;
   }
   .navmenu-close {
-    font-size: 24px;
-	font-weight: 500;
+    font-size: 14px;
+	font-weight: 600;
     background-color: var(--accent-color);
     color: white;
     border-radius: 50%;
@@ -621,8 +621,8 @@ body {
     color: var(--contrast-color);
   }
       .navmenu-close {
-        font-size: 24px;
-		font-weight: 500;
+        font-size: 14px;
+		font-weight: 600;
         background-color: var(--accent-color);
         color: white;
         border-radius: 50%;

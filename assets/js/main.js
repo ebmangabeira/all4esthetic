@@ -169,7 +169,6 @@
         if (navUl) navUl.style.position = 'relative';
     });
 })();
-
 document.addEventListener('DOMContentLoaded', async () => {
     let allEquip;
     try {
@@ -214,6 +213,108 @@ document.addEventListener('DOMContentLoaded', async () => {
     toggle(pd, avD, reD);
     toggle(pm, avM, reM);
 
+    function renderPage() {
+        if (!ctn) return;
+        ctn.innerHTML = '';
+        const start = (page - 1) * perPage;
+        filtered.slice(start, start + perPage).forEach((e, i) => {
+            const col = document.createElement('div');
+            col.className = 'col-12 col-md-6 col-lg-4';
+            const card = document.createElement('div');
+            card.className = 'card equipamento-card';
+            card.setAttribute('data-aos', 'zoom-in');
+            card.setAttribute('data-aos-delay', String(i * 100));
+
+            const catTop = document.createElement('div');
+            catTop.className = 'card-category-top';
+            catTop.textContent = e.category;
+
+            const img = document.createElement('img');
+            img.src = e.image;
+            img.className = 'card-img-top';
+            img.alt = e.name;
+
+            const body = document.createElement('div');
+            body.className = 'card-body d-flex flex-column';
+
+            const h5 = document.createElement('h5');
+            h5.className = 'card-title';
+            h5.textContent = e.name;
+
+            const pDesig = document.createElement('p');
+            pDesig.className = 'card-designacao mb-2';
+            pDesig.textContent = e.designação || '';
+
+            const pDet = document.createElement('p');
+            pDet.className = 'card-detalhe mb-2';
+            pDet.textContent = e.detalhe || '';
+
+            const pId = document.createElement('p');
+            pId.className = 'card-id text-muted small mb-2';
+            pId.textContent = e.id;
+
+            const link = document.createElement('a');
+            link.href = `detalhes.html?id=${e.id}`;
+            link.className = 'btn btn-primary mt-auto';
+            link.textContent = 'Mais detalhes';
+
+            body.append(h5, pDesig, pDet, pId, link);
+            card.append(catTop, img, body);
+            col.appendChild(card);
+            ctn.appendChild(col);
+        });
+    }
+
+    function renderPagination() {
+        if (!pg) return;
+        pg.innerHTML = '';
+        const cnt = Math.ceil(filtered.length / perPage);
+        function mk(disabled, label, fn, extraClass) {
+            const li = document.createElement('li');
+            li.className = `page-item ${extraClass || ''}` + (disabled ? ' disabled' : '');
+            const a = document.createElement('a');
+            a.className = 'page-link';
+            a.href = '#';
+            a.textContent = label;
+            if (!disabled) {
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    fn();
+                });
+            }
+            li.appendChild(a);
+            return li;
+        }
+        pg.appendChild(mk(page === 1, '«', () => {
+            page--;
+            renderPage();
+            renderPagination();
+            document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 'prev'));
+        for (let i = 1; i <= cnt; i++) {
+            pg.appendChild(mk(false, String(i), () => {
+                page = i;
+                renderPage();
+                renderPagination();
+                document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, i === page ? 'active' : ''));
+        }
+        pg.appendChild(mk(page === cnt, '»', () => {
+            page++;
+            renderPage();
+            renderPagination();
+            document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 'next'));
+    }
+
+    function vals(selC, selA, selR) {
+        const cats = selC.filter(i => i.checked).map(i => i.value);
+        const avEl = document.querySelector(selA);
+        const av = avEl ? avEl.value : null;
+        const rents = selR.filter(i => i.checked).map(i => i.value.toLowerCase());
+        return { cats, av, rents };
+    }
+
     function apply({ cats, av, rents }) {
         page = 1;
         filtered = allEquip.filter(e => {
@@ -227,14 +328,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderPage();
         renderPagination();
         updateTags();
-    }
-
-    function vals(selC, selA, selR) {
-        const cats = selC.filter(i => i.checked).map(i => i.value);
-        const avEl = document.querySelector(selA);
-        const av = avEl ? avEl.value : null;
-        const rents = selR.filter(i => i.checked).map(i => i.value.toLowerCase());
-        return { cats, av, rents };
     }
 
     catD.concat(avD, reD).forEach(i => i.addEventListener('change', () => apply(vals(catD, '.desktop-avail:checked', reD))));
@@ -265,49 +358,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    function renderPage() {
-        if (!ctn) return;
-        ctn.innerHTML = '';
-        const start = (page - 1) * perPage;
-        filtered.slice(start, start + perPage).forEach((e, i) => {
-            const col = document.createElement('div');
-            col.className = 'col-12 col-md-6 col-lg-4';
-            const card = document.createElement('div');
-            card.className = 'card equipamento-card';
-            card.setAttribute('data-aos', 'zoom-in');
-            card.setAttribute('data-aos-delay', String(i * 100));
-            const catTop = document.createElement('div');
-            catTop.className = 'card-category-top';
-            catTop.textContent = e.category;
-            const img = document.createElement('img');
-            img.src = e.image;
-            img.className = 'card-img-top';
-            img.alt = e.name;
-            const body = document.createElement('div');
-            body.className = 'card-body d-flex flex-column';
-            const h5 = document.createElement('h5');
-            h5.className = 'card-title';
-            h5.textContent = e.name;
-            const pDesig = document.createElement('p');
-            pDesig.className = 'card-designacao mb-2';
-            pDesig.textContent = e.designação || '';
-            const pDet = document.createElement('p');
-            pDet.className = 'card-detalhe mb-2';
-            pDet.textContent = e.detalhe || '';
-            const pId = document.createElement('p');
-            pId.className = 'card-id text-muted small mb-2';
-            pId.textContent = e.id;
-            const link = document.createElement('a');
-            link.href = `detalhes.html?id=${e.id}`;
-            link.className = 'btn btn-primary mt-auto';
-            link.textContent = 'Mais detalhes';
-            body.append(h5, pDesig, pDet, pId, link);
-            card.append(catTop, img, body);
-            col.appendChild(card);
-            ctn.appendChild(col);
-        });
-    }
-
     function updateTags() {
         const tagsContainer = document.getElementById('selected-tags-container');
         if (!tagsContainer) return;
@@ -335,49 +385,28 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
         if (selectedAvail) {
             const tag = document.createElement('span');
-           	tag.className = 'selected-tag';
-           	tag.textContent = selectedAvail.value;
-           	const closeBtn = document.createElement('button');
-           	closeBtn.className = 'close-btn';
-           	closeBtn.textContent = 'X';
-           	closeBtn.onclick = () => {
-           		selectedAvail.checked = false;
-           		apply(vals(catM, '.mobile-avail:checked', reM));
-           	};
-           	tag.appendChild(closeBtn);
-           	tagsContainer.appendChild(tag);
+            tag.className = 'selected-tag';
+            tag.textContent = selectedAvail.value;
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'close-btn';
+            closeBtn.textContent = 'X';
+            closeBtn.onclick = () => {
+                selectedAvail.checked = false;
+                apply(vals(catM, '.mobile-avail:checked', reM));
+            };
+            tag.appendChild(closeBtn);
+            tagsContainer.appendChild(tag);
         }
     }
 
-    function renderPagination() {
-        if (!pg) return;
-        pg.innerHTML = '';
-        const cnt = Math.ceil(filtered.length / perPage);
-        function mk(disabled, label, fn, extraClass) {
-            const li = document.createElement('li');
-            li.className = `page-item ${extraClass || ''}` + (disabled ? ' disabled' : '');
-            const a = document.createElement('a');
-            a.className = 'page-link';
-            a.href = '#';
-            a.textContent = label;
-            if (!disabled) {
-                a.addEventListener('click', (e) => {
-                    e.preventDefault(); fn();
-                });
-            }
-            li.appendChild(a);
-            return li;
-        }
-        pg.appendChild(mk(page === 1, '«', () => { page--; renderPage(); renderPagination(); document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });}, 'prev'));
-        for (let i = 1; i <= cnt; i++) {
-            pg.appendChild(mk(false, String(i), () => { page = i; renderPage(); renderPagination(); document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });}, i === page ? 'active' : ''));
-        }
-        pg.appendChild(mk(page === cnt, '»', () => { page++; renderPage(); renderPagination(); document.querySelector('#equipamentos-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });}, 'next'));
+    function renderTagsAndPagination() {
+        renderPage();
+        renderPagination();
+        updateTags();
     }
 
     apply({ cats: [], av: null, rents: [] });
 });
-
 document.addEventListener('DOMContentLoaded', async () => {
     const params = new URLSearchParams(location.search);
     const eqId = params.get('id');
@@ -443,24 +472,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (appText) appText.textContent = eq.application;
 
     if (btnFunc) btnFunc.addEventListener('click', () => {
-        if (btnFunc) btnFunc.classList.add('active');
-        if (btnTech) btnTech.classList.remove('active');
-        if (panelF) panelF.classList.add('active'); panelF.hidden = false;
-        if (panelT) panelT.classList.remove('active'); panelT.hidden = true;
-        if (btnFunc) btnFunc.setAttribute('aria-selected', 'true');
-        if (btnTech) btnTech.setAttribute('aria-selected', 'false');
+        btnFunc.classList.add('active');
+        btnTech.classList.remove('active');
+        panelF.classList.add('active'); panelF.hidden = false;
+        panelT.classList.remove('active'); panelT.hidden = true;
+        btnFunc.setAttribute('aria-selected', 'true');
+        btnTech.setAttribute('aria-selected', 'false');
     });
     if (btnTech) btnTech.addEventListener('click', () => {
-        if (btnTech) btnTech.classList.add('active');
-        if (btnFunc) btnFunc.classList.remove('active');
-        if (panelT) panelT.classList.add('active'); panelT.hidden = false;
-        if (panelF) panelF.classList.remove('active'); panelF.hidden = true;
-        if (btnTech) btnTech.setAttribute('aria-selected', 'true');
-        if (btnFunc) btnFunc.setAttribute('aria-selected', 'false');
+        btnTech.classList.add('active');
+        btnFunc.classList.remove('active');
+        panelT.classList.add('active'); panelT.hidden = false;
+        panelF.classList.remove('active'); panelF.hidden = true;
+        btnTech.setAttribute('aria-selected', 'true');
+        btnFunc.setAttribute('aria-selected', 'false');
     });
 
-    if (panelF) panelF.hidden = false;
-    if (panelT) panelT.hidden = true;
+    panelF.hidden = false;
+    panelT.hidden = true;
 
     const techTable = document.getElementById('pd-tech-table');
     const logTable = document.getElementById('pd-logistics-table');
@@ -487,8 +516,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (eq.sale) availUL.insertAdjacentHTML('beforeend', `<li><i class='bi bi-check-circle-fill me-2'></i>Para venda</li>`);
         Object.entries(eq.rental).filter(([,ok]) => ok).forEach(([periodo]) => {
             const labels = { diario: 'Diário', bidiario: 'Bidiário', semanal: 'Semanal', mensal: 'Mensal' };
-            const text = labels[periodo] || periodo;
-            availUL.insertAdjacentHTML('beforeend', `<li><i class='bi bi-check-circle-fill me-2'></i>Para aluguer ${text}</li>`);
+            availUL.insertAdjacentHTML('beforeend', `<li><i class='bi bi-check-circle-fill me-2'></i>Para aluguer ${labels[periodo] || periodo}</li>`);
         });
     }
 
@@ -539,7 +567,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.addEventListener('resize', updateCarousel);
     updateCarousel();
 });
-
 (function(){
     const banner = document.getElementById('cookie-consent-banner');
     const acceptBtn = document.getElementById('cookie-accept-btn');
@@ -552,8 +579,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.addEventListener('DOMContentLoaded', showCookieBanner);
     if(banner) banner.addEventListener('keydown', e=>{ if(e.key==='Escape') hideCookieBanner(); });
 })();
-
 document.addEventListener('DOMContentLoaded', function(){
     function handleHash(){ const hash=window.location.hash; if(!hash) return; const id=hash.substring(1); const modalEl=document.getElementById(id); if(!modalEl) return; bootstrap.Modal.getOrCreateInstance(modalEl).show(); }
     handleHash(); window.addEventListener('hashchange', handleHash);
+    ['termsModalCustom','legalNoticeModalCustom','privacyModalCustom'].forEach(id => {
+        const m = document.getElementById(id);
+        if (m) {
+            m.addEventListener('hide.bs.modal', () => {
+                history.replaceState(null, '', location.pathname + location.search);
+            });
+        }
+    });
 });
