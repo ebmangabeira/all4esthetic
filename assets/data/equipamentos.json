@@ -811,7 +811,7 @@
       "diario": true,
       "bidiario": true,
       "semanal": false,
-      "mensal": true
+      "mensal": false
     }
   }
 ]
