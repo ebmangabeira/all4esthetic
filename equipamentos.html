@@ -19,54 +19,10 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.css" />
 		<link href="assets/css/custom.css" rel="stylesheet" />
 	</head>
+
 	<body class="index-page">
-		<header class="header position-fixed top-0 w-100" id="header">
-			<div class="main-header">
-				<div class="container-fluid container-xl header-container">
-					<div class="d-flex align-items-center justify-content-between">
-						<a class="logo d-flex align-items-center d-xl-none" href="index.html">
-							<img alt="Logo" src="assets/img/logo-header.png" />
-						</a>
-						<div class="header-actions d-flex align-items-center justify-content-end">
-							<i
-								class="mobile-nav-open d-xl-none bi bi-list me-0 mobile-nav-toggle"
-								aria-label="Abrir menu"
-								role="button"
-								tabindex="0"
-								></i>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="header-nav">
-				<div class="container-fluid container-xl">
-					<div class="position-relative">
-						<div class="d-flex align-items-center justify-content-between">
-							<a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html">
-								<img alt="Logo" src="assets/img/logo-header.png" />
-							</a>
-							<nav class="navmenu mx-auto justify-content-center" id="navmenu" aria-label="Menu principal">
-								<ul>
-									<li
-										class="navmenu-close d-xl-none"
-										tabindex="0"
-										role="button"
-										aria-label="Fechar menu"
-										>
-										<span class="mobile-nav-close">X</span>
-									</li>
-									<li><a href="index.html">Início</a></li>
-									<li><a href="quem-somos.html">Quem Somos</a></li>
-									<li><a class="active" href="#">Equipamentos</a></li>
-									<li><a href="contacto.html">Contacto</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="dialog" aria-live="polite" aria-modal="true" aria-label="Aviso de Cookies" tabindex="-1">
+		<a href="#main" class="skip-link">Ir para o conteúdo</a>
+		<div id="cookie-consent-banner" class="cookie-banner shadow-lg" role="status" aria-live="polite" aria-label="Aviso de Cookies">
 			<div class="cookie-banner-content">
 				<div class="cookie-banner-header">
 				<span class="cookie-banner-icon" aria-hidden="true">
@@ -78,7 +34,8 @@
 				</div>
 				<span class="cookie-banner-text">
 				Utilizamos cookies para melhorar a sua experiência no site, personalizar conteúdo e analisar o nosso tráfego.
-				Ao aceitar, autoriza a utilização de cookies conforme a nossa <a href="politica-privacidade.html" target="_blank" class="cookie-link">Política de Privacidade</a>.
+				Ao aceitar, autoriza a utilização de cookies conforme a nossa
+				<a href="#" class="cookie-link" data-bs-toggle="modal" data-bs-target="#privacyModalCustom">Política de Privacidade</a>.
 				</span>
 				<div class="cookie-banner-actions">
 				<button id="cookie-accept-btn" class="cookie-btn" type="button">Aceitar</button>
@@ -86,226 +43,428 @@
 				</div>
 			</div>
 		</div>
-		<main class="main">
-		<section class="about section" aria-labelledby="about-heading">
-			<div class="container" data-aos="fade-up" data-aos-delay="100">
-			<div class="about">
-				<div class="row align-items-center">
-				<div>
-					<h2 id="about-heading" class="about-title">Realçando a sua beleza com equipamentos de excelência</h2>
-					<p class="about-description">
-					A nossa missão é fornecer soluções seguras, eficazes e adaptadas às necessidades de cada cliente ou clínica, promovendo bem-estar e confiança.
-					</p>
-				</div>
+
+		<header class="header position-fixed top-0 w-100" id="header" role="banner">
+			<div class="main-header">
+				<div class="container-fluid container-xl header-container">
+					<div class="d-flex align-items-center justify-content-between">
+						<a class="logo d-flex align-items-center d-xl-none" href="index.html" aria-label="Página inicial">
+							<img alt="Logo" src="assets/img/logo-header.png" />
+						</a>
+						<div class="header-actions d-flex align-items-center justify-content-end">
+							<i
+								class="mobile-nav-open d-xl-none bi bi-list me-0 mobile-nav-toggle"
+								aria-label="Abrir menu"
+								role="button"
+								tabindex="0"
+								onkeypress="if(event.key==='Enter' || event.key===' ') this.click();"
+							></i>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="mt-3">
-				<div class="row">
-				<aside class="col-lg-3 sidebar d-none d-md-block" aria-label="Filtros de equipamentos">
-					<div class="filter-section">
-					<h3 class="filter-title">Tecnologia</h3>
-					<ul class="list-unstyled">
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-electroestimulacao" value="Electroestimulação" aria-checked="false" />
-						<label class="form-check-label" for="cat-electroestimulacao">Electroestimulação</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-emsculpt" value="Emsculpt" aria-checked="false" />
-						<label class="form-check-label" for="cat-emsculpt">Emsculpt</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-microdermoabrasao" value="Microdermoabrasão" aria-checked="false" />
-						<label class="form-check-label" for="cat-microdermoabrasao">Microdermoabrasão</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-pressoterapia" value="Pressoterapia" aria-checked="false" />
-						<label class="form-check-label" for="cat-pressoterapia">Pressoterapia</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-multifuncoes" value="Multifunções" aria-checked="false" />
-						<label class="form-check-label" for="cat-multifuncoes">Multifunções</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-criolipolise" value="Criolipólise" aria-checked="false" />
-						<label class="form-check-label" for="cat-criolipolise">Criolipólise</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-radiofrequencia" value="Radiofrequência" aria-checked="false" />
-						<label class="form-check-label" for="cat-radiofrequencia">Radiofrequência</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-luz-pulsada" value="Luz pulsada" aria-checked="false" />
-						<label class="form-check-label" for="cat-luz-pulsada">Luz pulsada</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-endermologia" value="Endermologia" aria-checked="false" />
-						<label class="form-check-label" for="cat-endermologia">Endermologia</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-laser" value="Laser" aria-checked="false" />
-						<label class="form-check-label" for="cat-laser">Laser</label>
-						</li>
-						<li class="form-check">
-						<input type="checkbox" class="form-check-input desktop-cat" id="cat-hifu-liposonix" value="Hifu e Liposonix" aria-checked="false" />
-						<label class="form-check-label" for="cat-hifu-liposonix">Hifu e Liposonix</label>
-						</li>
-					</ul>
-					</div>
-					<div class="filter-section">
-					<h3 class="filter-title">Disponibilidade</h3>
-					<ul class="list-unstyled">
-						<li class="form-check">
-						<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-venda" value="Venda" aria-checked="false" />
-						<label class="form-check-label" for="filter-venda">Venda</label>
-						</li>
-						<li class="form-check">
-						<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-aluguer" value="Aluguer" aria-checked="false" />
-						<label class="form-check-label" for="filter-aluguer">Aluguer</label>
-						</li>
-					</ul>
-					</div>
-					<div class="filter-section" id="aluguer-periodos" hidden>
-					<h3 class="filter-title">Períodos de Aluguer</h3>
-					<ul class="list-unstyled">
-						<li class="form-check">
-						<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-diario" value="diario" aria-checked="false" />
-						<label class="form-check-label" for="filter-diario">Diário</label>
-						</li>
-						<li class="form-check">
-						<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-bidiario" value="bidiario" aria-checked="false" />
-						<label class="form-check-label" for="filter-bidiario">Bidiário</label>
-						</li>
-						<li class="form-check">
-						<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-semanal" value="semanal" aria-checked="false" />
-						<label class="form-check-label" for="filter-semanal">Semanal</label>
-						</li>
-						<li class="form-check">
-						<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-mensal" value="mensal" aria-checked="false" />
-						<label class="form-check-label" for="filter-mensal">Mensal</label>
-						</li>
-					</ul>
-					</div>
-				</aside>
-				<div class="col-12 d-md-none mb-3">
-					<button id="filtro-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-filters">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2" aria-hidden="true" focusable="false">
-						<line x1="3" y1="5" x2="17" y2="5"/>
-						<circle cx="19" cy="5" r="2" fill="currentColor"/>
-						<line x1="7" y1="12" x2="21" y2="12"/>
-						<circle cx="5" cy="12" r="2" fill="currentColor"/>
-						<line x1="3" y1="19" x2="15" y2="19"/>
-						<circle cx="17" cy="19" r="2" fill="currentColor"/>
-					</svg>
-					Filtro
-					</button>
-					<div id="mobile-filters" aria-modal="true" role="dialog" aria-labelledby="mobile-filters-title" aria-hidden="true">
-					<div class="mobile-filters-header">
-						<h3 class="filter-title m-0" id="mobile-filters-title">Filtros</h3>
-						<button id="close-filtro" class="btn-close" aria-label="Fechar"></button>
-					</div>
-					<div class="mobile-filters-content">
-						<div class="filter-section">
-						<h4 class="filter-title">Tecnologia</h4>
-						<ul class="list-unstyled">
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-electroestimulacao-mob" value="Electroestimulação" aria-checked="false"/>
-							<label class="form-check-label" for="cat-electroestimulacao-mob">Electroestimulação</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-emsculpt-mob" value="Emsculpt" aria-checked="false"/>
-							<label class="form-check-label" for="cat-emsculpt-mob">Emsculpt</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-microdermoabrasao-mob" value="Microdermoabrasão" aria-checked="false"/>
-							<label class="form-check-label" for="cat-microdermoabrasao-mob">Microdermoabrasão</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-pressoterapia-mob" value="Pressoterapia" aria-checked="false"/>
-							<label class="form-check-label" for="cat-pressoterapia-mob">Pressoterapia</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-multifuncoes-mob" value="Multifunções" aria-checked="false"/>
-							<label class="form-check-label" for="cat-multifuncoes-mob">Multifunções</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-criolipolise-mob" value="Criolipólise" aria-checked="false"/>
-							<label class="form-check-label" for="cat-criolipolise-mob">Criolipólise</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-radiofrequencia-mob" value="Radiofrequência" aria-checked="false"/>
-							<label class="form-check-label" for="cat-radiofrequencia-mob">Radiofrequência</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-luz-pulsada-mob" value="Luz pulsada" aria-checked="false"/>
-							<label class="form-check-label" for="cat-luz-pulsada-mob">Luz pulsada</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-endermologia-mob" value="Endermologia" aria-checked="false"/>
-							<label class="form-check-label" for="cat-endermologia-mob">Endermologia</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-laser-mob" value="Laser" aria-checked="false"/>
-							<label class="form-check-label" for="cat-laser-mob">Laser</label>
-							</li>
-							<li class="form-check">
-							<input type="checkbox" class="form-check-input mobile-cat" id="cat-hifu-liposonix-mob" value="Hifu e Liposonix" aria-checked="false"/>
-							<label class="form-check-label" for="cat-hifu-liposonix-mob">Hifu e Liposonix</label>
-							</li>
-						</ul>
+			<div class="header-nav">
+				<div class="container-fluid container-xl">
+					<div class="position-relative">
+						<div class="d-flex align-items-center justify-content-between">
+							<a class="logo d-flex align-items-center me-4 d-none d-xl-flex" href="index.html" aria-label="Página inicial">
+								<img alt="Logo" src="assets/img/logo-header.png" />
+							</a>
+							<nav class="navmenu mx-auto justify-content-center" id="navmenu" aria-label="Menu principal" role="navigation">
+								<ul>
+									<li>
+										<button
+											class="navmenu-close d-xl-none"
+											aria-label="Fechar menu"
+											type="button"
+										>
+											<span class="mobile-nav-close" aria-hidden="true">X</span>
+										</button>
+									</li>
+									<li><a class="active" href="index.html" aria-current="page">Início</a></li>
+									<li><a href="quem-somos.html">Quem Somos</a></li>
+									<li><a href="equipamentos.html">Equipamentos</a></li>
+									<li><a href="contacto.html">Contacto</a></li>
+								</ul>
+							</nav>
 						</div>
-						<div class="filter-section">
-						<h4 class="filter-title">Disponibilidade</h4>
-						<ul class="list-unstyled">
-							<li class="form-check">
-							<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-venda-mob" value="Venda" aria-checked="false"/>
-							<label class="form-check-label" for="filter-venda-mob">Venda</label>
-							</li>
-							<li class="form-check">
-							<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-aluguer-mob" value="Aluguer" aria-checked="false"/>
-							<label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
-							</li>
-						</ul>
-						</div>
-						<div class="filter-section" id="aluguer-periodos-mob" hidden>
-						<h4 class="filter-title">Períodos de Aluguer</h4>
-						<ul class="list-unstyled">
-							<li class="form-check">
-							<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-diario-mob" value="diario" aria-checked="false"/>
-							<label class="form-check-label" for="filter-diario-mob">Diário</label>
-							</li>
-							<li class="form-check">
-							<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-bidiario-mob" value="bidiario" aria-checked="false"/>
-							<label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
-							</li>
-							<li class="form-check">
-							<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-semanal-mob" value="semanal" aria-checked="false"/>
-							<label class="form-check-label" for="filter-semanal-mob">Semanal</label>
-							</li>
-							<li class="form-check">
-							<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-mensal-mob" value="mensal" aria-checked="false"/>
-							<label class="form-check-label" for="filter-mensal-mob">Mensal</label>
-							</li>
-						</ul>
-						</div>
-						<button id="pesquisar-btn" class="btn btn-primary w-100">Aplicar</button>
-					</div>
 					</div>
 				</div>
-				<div class="col-lg-9">
-					<div id="selected-tags-container" class="d-none"></div>
-					<div id="equipamentos-container" class="row g-4"></div>
-					<nav aria-label="Page navigation" class="mt-4">
-					<ul id="pagination" class="pagination justify-content-center custom-pagination"></ul>
+			</div>
+		</header>
+
+		<div class="modal fade" id="privacyModalCustom" tabindex="-1" aria-labelledby="privacyModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="privacyModalCustomTitle">Política de Privacidade</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Responsável pelo Tratamento</h6>
+						<p>
+							All4esthetic<br/>
+							Rua dos Tractores 506, Armazém AE, Lisboa, 2870-607, Portugal<br/>
+							Email: <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>
+						</p>
+						<h6>2. Dados que Recolhemos</h6>
+						<p>
+							Este website é um catálogo informativo de equipamentos estéticos e não solicita, recolhe nem processa dados pessoais através de formulários ou outras interações diretas. Apenas são recolhidos dados técnicos de navegação, como cookies e registos anónimos para melhorar a experiência do utilizador e analisar o tráfego do site.
+						</p>
+						<h6>3. Finalidades do Tratamento</h6>
+						<ul>
+							<li>Garantir o funcionamento seguro e eficiente do website.</li>
+							<li>Personalizar conteúdos e anúncios com base em dados anónimos.</li>
+							<li>Analisar estatísticas agregadas de utilização.</li>
+							<li>Permitir que os utilizadores entrem em contacto através dos meios disponibilizados (email e telefone), caso desejem obter mais informações.</li>
+						</ul>
+						<h6>4. Base Legal</h6>
+						<p>
+							O tratamento dos seus dados anónimos baseia-se no nosso legítimo interesse em garantir a funcionalidade e a melhoria do serviço (Art.º 6.º(1)(f) do RGPD). Para qualquer dado pessoal facultado diretamente via contacto, o tratamento apoia-se no seu consentimento (Art.º 6.º(1)(a) RGPD).
+						</p>
+						<h6>5. Destinatários</h6>
+						<p>
+							Os seus dados poderão ser comunicados a prestadores de serviços técnicos e parceiros responsáveis pelo funcionamento do website (hospedagem, análises, marketing), que asseguram confidencialidade e proteção dos dados.
+						</p>
+						<h6>6. Período de Conservação</h6>
+						<p>
+							Os dados recolhidos são conservados pelo período necessário para cumprir as finalidades indicadas e em conformidade com a legislação aplicável.
+						</p>
+						<h6>7. Direitos dos Titulares</h6>
+						<p>
+							Como titular dos dados, tem o direito de solicitar acesso, retificação, eliminação, limitação ou oposição ao tratamento, bem como a portabilidade dos seus dados e a retirada do consentimento a qualquer momento, sem prejuízo da licitude do tratamento anterior. Para exercer estes direitos, por favor contacte-nos através do email <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+						<h6>8. Segurança</h6>
+						<p>
+							Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra acesso não autorizado, divulgação, alteração ou destruição.
+						</p>
+						<h6>9. Alterações a Esta Política</h6>
+						<p>
+							Esta política poderá ser atualizada periodicamente. A data da última revisão será indicada no início da página.
+						</p>
+						<h6>10. Contacto da Comissão Nacional de Proteção de Dados</h6>
+						<p>
+							Se entender que os seus direitos não foram respeitados, pode apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD): <a href="https://www.cnpd.pt" target="_blank" rel="noopener noreferrer" class="termos">www.cnpd.pt</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="legalNoticeModalCustom" tabindex="-1" aria-labelledby="legalNoticeModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="legalNoticeModalCustomTitle">Aviso Legal</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Informações Gerais</h6>
+						<p>
+							Todos os conteúdos, textos, imagens, gráficos e informações presentes neste website são de responsabilidade da All4esthetic e destinam-se exclusivamente a fornecer informações sobre os produtos e serviços oferecidos.
+						</p>
+						<h6>2. Direitos de Propriedade Intelectual</h6>
+						<p>
+							Todos os direitos de propriedade intelectual, incluindo marcas, logotipos, imagens, textos e design gráfico, são propriedade exclusiva da All4esthetic ou dos seus licenciadores, estando protegidos por legislação nacional e internacional.
+						</p>
+						<h6>3. Limitação de Responsabilidade</h6>
+						<p>
+							A All4esthetic não se responsabiliza por quaisquer danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do uso ou impossibilidade de uso deste website, incluindo erros ou omissões nas informações apresentadas.
+						</p>
+						<h6>4. Conteúdos de Terceiros</h6>
+						<p>
+							Este website pode conter links para sites de terceiros, sobre os quais a All4esthetic não exerce controle e não assume responsabilidade pelo conteúdo, políticas de privacidade ou práticas desses sites.
+						</p>
+						<h6>5. Alterações ao Website</h6>
+						<p>
+							A All4esthetic reserva-se o direito de modificar, atualizar ou remover qualquer conteúdo do website a qualquer momento, sem aviso prévio.
+						</p>
+						<h6>6. Lei Aplicável e Jurisdição</h6>
+						<p>
+							Este aviso legal é regido pela legislação portuguesa. Quaisquer litígios relacionados com o uso do website serão submetidos aos tribunais competentes de Lisboa, Portugal.
+						</p>
+						<h6>7. Contactos</h6>
+						<p>
+							Para quaisquer dúvidas ou questões legais, por favor contacte-nos através do email <a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="termsModalCustom" tabindex="-1" aria-labelledby="termsModalCustomTitle" aria-hidden="true" role="dialog" aria-modal="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-custom">
+				<div class="modal-content modal-content-custom">
+					<div class="modal-header modal-header-custom">
+						<h5 class="modal-title" id="termsModalCustomTitle">Termos de Uso</h5>
+					</div>
+					<div class="modal-body modal-body-custom">
+						<h6>1. Aceitação dos Termos</h6>
+						<p>
+							Ao acessar e utilizar este website, você concorda em cumprir estes Termos de Uso e todas as leis aplicáveis. Caso não concorde com algum destes termos, por favor não utilize o site.
+						</p>
+						<h6>2. Uso do Website</h6>
+						<p>
+							Este site destina-se a fins informativos e comerciais relacionados a equipamentos estéticos. Você concorda em utilizá-lo apenas para propósitos legais e de forma que não infrinja os direitos de terceiros.
+						</p>
+						<h6>3. Propriedade Intelectual</h6>
+						<p>
+							Todos os conteúdos, imagens, textos, logos e demais materiais são de propriedade da All4esthetic ou de seus licenciadores, estando protegidos pelas leis de propriedade intelectual.
+						</p>
+						<h6>4. Limitação de Responsabilidade</h6>
+						<p>
+							A All4esthetic não se responsabiliza por quaisquer danos diretos ou indiretos decorrentes do uso ou impossibilidade de uso do site, incluindo a precisão das informações fornecidas.
+						</p>
+						<h6>5. Modificações nos Termos</h6>
+						<p>
+							Reservamo-nos o direito de alterar estes Termos de Uso a qualquer momento, sendo recomendada a consulta periódica desta página para verificar atualizações.
+						</p>
+						<h6>6. Privacidade</h6>
+						<p>
+							Para informações sobre coleta e uso de dados pessoais, consulte a nossa
+							<a href="#" data-bs-toggle="modal" data-bs-target="#privacyModalCustom" class="termos">Política de Privacidade</a>.
+						</p>
+						<h6>7. Lei Aplicável</h6>
+						<p>
+							Estes Termos de Uso são regidos pelas leis vigentes em Portugal. Quaisquer disputas serão dirimidas nos tribunais competentes de Lisboa.
+						</p>
+						<h6>8. Contato</h6>
+						<p>
+							Em caso de dúvidas ou sugestões sobre estes Termos de Uso, entre em contato pelo email
+							<a href="mailto:geral@all4esthetic.com" class="termos">geral@all4esthetic.com</a>.
+						</p>
+					</div>
+					<div class="modal-footer modal-footer-custom">
+						<button type="button" class="btn btn-outline-secondary btn-close-custom" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<a href="#main" class="skip-link">Ir para o conteúdo</a>
+		<main id="main" role="main" class="main">
+			<div class="pd-page-title pd-light-bg">
+				<div class="container-xl pd-breadcrumbs pd-container">
+					<h1 class="pd-title-text" id="main-heading">Equipamentos</h1>
+					<nav class="pd-nav-breadcrumbs" aria-label="Caminho de navegação">
+						<ol>
+							<li><a href="index.html" class="inicio-link">Início</a></li>
+							<li class="current" aria-current="page">Equipamentos</li>
+						</ol>
 					</nav>
 				</div>
+			</div>
+			<section class="about section" aria-labelledby="about-heading">
+				<div class="container" data-aos="fade-up" data-aos-delay="100">
+					<div class="about">
+						<div class="row align-items-center">
+							<div>
+								<h2 id="about-heading" class="about-title">Realçando a sua beleza com equipamentos de excelência</h2>
+								<p class="about-description">
+									A nossa missão é fornecer soluções seguras, eficazes e adaptadas às necessidades de cada cliente ou clínica, promovendo bem-estar e confiança.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mt-3">
+						<div class="row">
+							<aside class="col-lg-3 sidebar d-none d-md-block" aria-label="Filtros de equipamentos">
+								<div class="filter-section">
+									<h3 class="filter-title">Categorias</h3>
+									<ul class="list-unstyled">
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-electroestimulacao" value="Electroestimulação" aria-checked="false" />
+											<label class="form-check-label" for="cat-electroestimulacao">Electroestimulação</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-emsculpt" value="Emsculpt" aria-checked="false" />
+											<label class="form-check-label" for="cat-emsculpt">Emsculpt</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-microdermoabrasao" value="Microdermoabrasão" aria-checked="false" />
+											<label class="form-check-label" for="cat-microdermoabrasao">Microdermoabrasão</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-pressoterapia" value="Pressoterapia" aria-checked="false" />
+											<label class="form-check-label" for="cat-pressoterapia">Pressoterapia</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-multifuncoes" value="Multifunções" aria-checked="false" />
+											<label class="form-check-label" for="cat-multifuncoes">Multifunções</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-criolipolise" value="Criolipólise" aria-checked="false" />
+											<label class="form-check-label" for="cat-criolipolise">Criolipólise</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-radiofrequencia" value="Radiofrequência" aria-checked="false" />
+											<label class="form-check-label" for="cat-radiofrequencia">Radiofrequência</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-luz-pulsada" value="Luz pulsada" aria-checked="false" />
+											<label class="form-check-label" for="cat-luz-pulsada">Luz pulsada</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-endermologia" value="Endermologia" aria-checked="false" />
+											<label class="form-check-label" for="cat-endermologia">Endermologia</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-laser" value="Laser" aria-checked="false" />
+											<label class="form-check-label" for="cat-laser">Laser</label>
+										</li>
+										<li class="form-check">
+											<input type="checkbox" class="form-check-input desktop-cat" id="cat-hifu-liposonix" value="Hifu e Liposonix" aria-checked="false" />
+											<label class="form-check-label" for="cat-hifu-liposonix">Hifu e Liposonix</label>
+										</li>
+									</ul>
+								</div>
+								<div class="filter-section">
+									<h3 class="filter-title">Disponibilidade</h3>
+									<ul class="list-unstyled">
+										<li class="form-check">
+											<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-venda" value="Venda" aria-checked="false" />
+											<label class="form-check-label" for="filter-venda">Venda</label>
+										</li>
+										<li class="form-check">
+											<input type="radio" class="form-check-input desktop-avail" name="availability" id="filter-aluguer" value="Aluguer" aria-checked="false" />
+											<label class="form-check-label" for="filter-aluguer">Aluguer</label>
+										</li>
+									</ul>
+								</div>
+								<div class="filter-section" id="aluguer-periodos" hidden>
+									<h3 class="filter-title">Períodos de Aluguer</h3>
+									<ul class="list-unstyled">
+										<li class="form-check">
+											<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-diario" value="diario" aria-checked="false" />
+											<label class="form-check-label" for="filter-diario">Diário</label>
+										</li>
+										<li class="form-check">
+											<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-bidiario" value="bidiario" aria-checked="false" />
+											<label class="form-check-label" for="filter-bidiario">Bidiário</label>
+										</li>
+										<li class="form-check">
+											<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-semanal" value="semanal" aria-checked="false" />
+											<label class="form-check-label" for="filter-semanal">Semanal</label>
+										</li>
+										<li class="form-check">
+											<input type="radio" class="form-check-input desktop-rent" name="rental-period" id="filter-mensal" value="mensal" aria-checked="false" />
+											<label class="form-check-label" for="filter-mensal">Mensal</label>
+										</li>
+									</ul>
+								</div>
+							</aside>
+							<div class="col-12 d-md-none mb-3">
+								<button id="filtro-btn" class="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-filters">Filtro</button>
+								<div id="mobile-filters" aria-modal="true" role="dialog" aria-labelledby="mobile-filters-title" aria-hidden="true">
+									<div class="mobile-filters-header">
+										<h3 class="filter-title m-0" id="mobile-filters-title">Filtros</h3>
+										<button id="close-filtro" class="btn-close" aria-label="Fechar"></button>
+									</div>
+									<div class="mobile-filters-content">
+										<div class="filter-section">
+											<h4 class="filter-title">Categorias</h4>
+											<ul class="list-unstyled">
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-electroestimulacao-mob" value="Electroestimulação" aria-checked="false" />
+													<label class="form-check-label" for="cat-electroestimulacao-mob">Electroestimulação</label>
+												</li>
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-emsculpt-mob" value="Emsculpt" aria-checked="false" />
+													<label class="form-check-label" for="cat-emsculpt-mob">Emsculpt</label>
+												</li>
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-microdermoabrasao-mob" value="Microdermoabrasão" aria-checked="false" />
+													<label class="form-check-label" for="cat-microdermoabrasao-mob">Microdermoabrasão</label>
+												</li>
+												<li class="form-check">					  
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-pressoterapia-mob" value="Pressoterapia" aria-checked="false" />
+													<label class="form-check-label" for="cat-pressoterapia-mob">Pressoterapia</label>
+												</li>
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-multifuncoes-mob" value="Multifunções" aria-checked="false" />
+													<label class="form-check-label" for="cat-multifuncoes-mob">Multifunções</label>
+												</li>
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-criolipolise-mob" value="Criolipólise" aria-checked="false" />
+													<label class="form-check-label" for="cat-criolipolise-mob">Criolipólise</label>
+												</li>
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-radiofrequencia-mob" value="Radiofrequência" aria-checked="false" />
+													<label class="form-check-label" for="cat-radiofrequencia-mob">Radiofrequência</label>
+												</li>
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-luz-pulsada-mob" value="Luz pulsada" aria-checked="false" />
+													<label class="form-check-label" for="cat-luz-pulsada-mob">Luz pulsada</label>
+												</li>
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-endermologia-mob" value="Endermologia" aria-checked="false" />
+													<label class="form-check-label" for="cat-endermologia-mob">Endermologia</label>
+												</li>
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-laser-mob" value="Laser" aria-checked="false" />
+													<label class="form-check-label" for="cat-laser-mob">Laser</label>
+												</li>					
+												<li class="form-check">
+													<input type="checkbox" class="form-check-input mobile-cat" id="cat-hifu-liposonix-mob" value="Hifu e Liposonix" aria-checked="false" />
+													<label class="form-check-label" for="cat-hifu-liposonix-mob">Hifu e Liposonix</label>
+												</li>
+											</ul>
+										</div>
+										<div class="filter-section">
+											<h4 class="filter-title">Disponibilidade</h4>
+											<ul class="list-unstyled">
+												<li class="form-check">
+													<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-venda-mob" value="Venda" aria-checked="false" />
+													<label class="form-check-label" for="filter-venda-mob">Venda</label>
+												</li>
+												<li class="form-check">
+													<input type="radio" class="form-check-input mobile-avail" name="availability-mob" id="filter-aluguer-mob" value="Aluguer" aria-checked="false" />
+													<label class="form-check-label" for="filter-aluguer-mob">Aluguer</label>
+												</li>
+											</ul>
+										</div>
+										<div class="filter-section" id="aluguer-periodos-mob" hidden>
+											<h4 class="filter-title">Períodos de Aluguer</h4>
+											<ul class="list-unstyled">
+												<li class="form-check">
+													<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-diario-mob" value="diario" aria-checked="false" />
+													<label class="form-check-label" for="filter-diario-mob">Diário</label>
+												</li>
+												<li class="form-check">
+													<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-bidiario-mob" value="bidiario" aria-checked="false" />
+													<label class="form-check-label" for="filter-bidiario-mob">Bidiário</label>
+												</li>
+												<li class="form-check">
+													<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-semanal-mob" value="semanal" aria-checked="false" />
+													<label class="form-check-label" for="filter-semanal-mob">Semanal</label>
+												</li>
+												<li class="form-check">
+													<input type="radio" class="form-check-input mobile-rent" name="rental-period-mob" id="filter-mensal-mob" value="mensal" aria-checked="false" />
+													<label class="form-check-label" for="filter-mensal-mob">Mensal</label>
+												</li>
+											</ul>
+										</div>
+										<button id="pesquisar-btn" class="btn btn-primary w-100">Aplicar</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-9">
+								<div id="selected-tags-container" class="d-none"></div>
+								<div id="equipamentos-container" class="row g-4"></div>
+								<nav aria-label="Page navigation" class="mt-4">
+									<ul id="pagination" class="pagination justify-content-center custom-pagination"></ul>
+								</nav>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-			</div>
-		</section>
+			</section>
 		</main>
-
-
-
 
 		<footer class="footer" id="footer" role="contentinfo">
 			<div class="footer-main">
@@ -323,7 +482,7 @@
 										<a aria-label="Facebook" href="#"><i class="bi bi-facebook" aria-hidden="true"></i></a>
 										<a aria-label="Instagram" href="#"><i class="bi bi-instagram" aria-hidden="true"></i></a>
 										<a aria-label="YouTube" href="#"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-										<a aria-label="Whatsapp" href="#"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+										<a aria-label="Whatsapp" href="https://wa.me/351214095469"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
 									</div>
 								</div>
 							</div>
@@ -332,24 +491,25 @@
 							<div class="footer-widget">
 								<h4>Quem Somos</h4>
 								<ul class="footer-links">
-									<li><a href="#">Historia</a></li>
-									<li><a href="#">Equipe</a></li>
-									<li><a href="#">Visão</a></li>
+									<li><a href="quem-somos.html#modalHistoria">História</a></li>
+									<li><a href="quem-somos.html#modalEquipa">Equipa</a></li>
+									<li><a href="quem-somos.html#modalVisao">Visão</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-lg col-md-6 col-sm-6">
+							<div class="footer-widget">
+								<h4>Informações</h4>
+								<ul class="footer-links">
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#termsModalCustom">Termos de Uso</a></li>
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#legalNoticeModalCustom">Aviso Legal</a></li>
+									<li><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModalCustom">Política de Privacidade</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-lg col-md-6 col-sm-6">
 							<div class="footer-widget">
-								<h4>Informações</h4>
-								<ul class="footer-links">
-									<li><a href="#">Termos de Uso</a></li>
-									<li><a href="#">Aviso Legal</a></li>
-									<li><a href="#">Política de Privacidade</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="footer-widget col-lg col-md-6 col-sm-6">
-							<div>
 								<h4>Contacto</h4>
 								<div class="footer-contact mt-4">
 									<div class="contact-item">
@@ -390,8 +550,20 @@
 				</div>
 			</div>
 		</footer>
-		<a class="scroll-top d-flex align-items-center justify-content-center" href="#" id="scroll-top" aria-label="Voltar ao topo"><i class="bi bi-arrow-up-short"></i></a>
+
+		<a
+			class="scroll-top d-flex align-items-center justify-content-center"
+			href="#header"
+			id="scroll-top"
+			aria-label="Voltar ao topo da página"
+			role="button"
+			tabindex="0"
+			onkeypress="if(event.key==='Enter' || event.key===' ') this.click();"
+		>
+			<i class="bi bi-arrow-up-short" aria-hidden="true"></i>
+		</a>
 		<div id="preloader" aria-hidden="true"></div>
+
 		<script src="assets/swiper/swiper-bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8.0.0/swiper-bundle.min.js"></script>
@@ -401,8 +573,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
+
 		<script src="assets/js/main.js"></script>
-		<script>
-		</script>
 	</body>
 </html>
