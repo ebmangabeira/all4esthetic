@@ -137,6 +137,7 @@
   });
 })();
 
+/* ---------- LISTAGEM DE EQUIPAMENTOS ---------- */
 document.addEventListener("DOMContentLoaded", async () => {
   let allEquip = [];
   try {
@@ -186,39 +187,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.className = "card equipamento-card";
       card.dataset.aos = "zoom-in";
       card.dataset.aosDelay = i * 100;
-      const catTop = Object.assign(document.createElement("div"), {
-        className: "card-category-top",
-        textContent: e.category,
-      });
-      const img = Object.assign(document.createElement("img"), {
-        src: e.image,
-        alt: e.name,
-        className: "card-img-top",
-      });
-      const body = Object.assign(document.createElement("div"), {
-        className: "card-body d-flex flex-column",
-      });
-      body.append(
-        Object.assign(document.createElement("h5"), { className: "card-title", textContent: e.name }),
-        Object.assign(document.createElement("p"), {
-          className: "card-designacao mb-2",
-          textContent: e.designação || "",
-        }),
-        Object.assign(document.createElement("p"), {
-          className: "card-detalhe mb-2",
-          textContent: e.detalhe || "",
-        }),
-        Object.assign(document.createElement("p"), {
-          className: "card-id text-muted small mb-2",
-          textContent: e.id,
-        }),
-        Object.assign(document.createElement("a"), {
-          href: `detalhes.html?id=${e.id}`,
-          className: "btn btn-primary mt-auto",
-          textContent: "Mais detalhes",
-        })
-      );
-      card.append(catTop, img, body);
+      card.innerHTML = `
+        <div class="card-category-top">${e.category}</div>
+        <img src="${e.image}" alt="${e.name}" class="card-img-top" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">${e.name}</h5>
+          <p class="card-designacao mb-2">${e.designação || ""}</p>
+          <p class="card-detalhe mb-2">${e.detalhe || ""}</p>
+          <p class="card-id text-muted small mb-2">${e.id}</p>
+          <a href="detalhes.html?id=${e.id}" class="btn btn-primary mt-auto">Mais detalhes</a>
+        </div>`;
       col.append(card);
       ctn.append(col);
     });
@@ -324,12 +302,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const tags = document.getElementById("selected-tags-container");
     if (!tags) return;
     tags.innerHTML = "";
-    const addTag = (text, cb) => {
-      const t = Object.assign(document.createElement("span"), { className: "selected-tag", textContent: text });
+    const addTag = (txt, cb) => {
+      const span = Object.assign(document.createElement("span"), { className: "selected-tag", textContent: txt });
       const x = Object.assign(document.createElement("button"), { className: "close-btn", textContent: "X" });
       x.onclick = cb;
-      t.append(x);
-      tags.append(t);
+      span.append(x);
+      tags.append(span);
     };
     const selCats = [...document.querySelectorAll(".mobile-cat:checked")];
     const selAvail = document.querySelector(".mobile-avail:checked");
@@ -345,48 +323,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   apply({ cats: [], av: null, rents: [] });
 });
 
+/* ---------- PÁGINA DETALHES ---------- */
 document.addEventListener("DOMContentLoaded", async () => {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
-  const mainImg = document.getElementById("pd-main-img");
-  const availUL = document.getElementById("pd-availability-list");
-  const btnPdf = document.getElementById("btn-pdf");
-  const btnFunc = document.getElementById("btn-funcao");
-  const btnTech = document.getElementById("btn-tecnica");
-  const panelF = document.getElementById("content-funcao");
-  const panelT = document.getElementById("content-tecnica");
-
-  function bothPanels() {
-    panelF.classList.add("active");
-    panelT.classList.add("active");
-    panelF.hidden = panelT.hidden = false;
-    btnFunc.setAttribute("aria-selected", "true");
-    btnTech.setAttribute("aria-selected", "true");
-  }
-  function funcPanel() {
-    panelF.classList.add("active");
-    panelT.classList.remove("active");
-    panelF.hidden = false;
-    panelT.hidden = true;
-    btnFunc.setAttribute("aria-selected", "true");
-    btnTech.setAttribute("aria-selected", "false");
-  }
-
-  window.addEventListener("beforeprint", bothPanels);
-  window.addEventListener("afterprint", funcPanel);
-  btnPdf && btnPdf.addEventListener("click", () => window.print());
-
+  if (!id) return;
   let data = [];
   try {
     data = await (await fetch("assets/data/equipamentos.json")).json();
   } catch {}
-
   const eq = data.find((e) => e.id === id);
-  if (!eq) {
-    document.getElementById("pd-title-text").textContent = "Equipamento não encontrado";
-    return;
-  }
+  if (!eq) return;
 
+  const mainImg = document.getElementById("pd-main-img");
   mainImg.src = eq.image;
   mainImg.alt = eq.name;
   document.getElementById("pd-category-text").textContent = eq.category;
@@ -395,32 +344,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   const funcList = document.getElementById("pd-functions-list");
   funcList.innerHTML = "";
   eq.functions.forEach((f) => {
-    const item = Object.assign(document.createElement("div"), { className: "pd-function-item" });
-    const h = document.createElement("h6");
+    const item = document.createElement("div");
+    item.className = "pd-function-item";
     const p = Object.assign(document.createElement("p"), { className: "pd-funcao-descricao", textContent: f.descricao });
-    item.append(h, p);
+    item.append(document.createElement("h6"), p);
     funcList.append(item);
   });
   document.getElementById("pd-application-text").textContent = eq.application;
-
-  btnFunc &&
-    btnFunc.addEventListener("click", () => {
-      btnFunc.classList.add("active");
-      btnTech.classList.remove("active");
-      funcPanel();
-    });
-  btnTech &&
-    btnTech.addEventListener("click", () => {
-      btnTech.classList.add("active");
-      btnFunc.classList.remove("active");
-      panelT.classList.add("active");
-      panelF.classList.remove("active");
-      panelT.hidden = false;
-      panelF.hidden = true;
-      btnTech.setAttribute("aria-selected", "true");
-      btnFunc.setAttribute("aria-selected", "false");
-    });
-  funcPanel();
 
   const techTable = document.getElementById("pd-tech-table");
   const logTable = document.getElementById("pd-logistics-table");
@@ -436,6 +366,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     logTable.insertAdjacentHTML("beforeend", `<tr><th>${k.replace(/_/g, " ")}</th><td>${v}</td></tr>`)
   );
 
+  const availUL = document.getElementById("pd-availability-list");
   availUL.innerHTML = "";
   eq.sale &&
     availUL.insertAdjacentHTML("beforeend", "<li><i class='bi bi-check-circle-fill me-2'></i>Para venda</li>");
@@ -448,8 +379,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         `<li><i class='bi bi-check-circle-fill me-2'></i>Para aluguer ${labels[p] || p}</li>`
       )
     );
-
-  document.getElementById("btn-quote")?.addEventListener("click", () => (location.href = "contacto.html"));
 
   const track = document.querySelector(".thumbs-track");
   if (track && eq.images) {
@@ -480,7 +409,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       track.append(li);
     });
   }
-
   let currentIndex = 0;
   const prevBtn = document.querySelector(".thumb-btn.prev");
   const nextBtn = document.querySelector(".thumb-btn.next");
@@ -494,17 +422,55 @@ document.addEventListener("DOMContentLoaded", async () => {
     prevBtn && (prevBtn.disabled = currentIndex <= 0);
     nextBtn && (nextBtn.disabled = currentIndex >= eq.images.length - vis);
   }
-  prevBtn && prevBtn.addEventListener("click", () => ((currentIndex -= currentIndex > 0), updateCarousel()));
+  prevBtn &&
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) currentIndex--;
+      updateCarousel();
+    });
   nextBtn &&
     nextBtn.addEventListener("click", () => {
       const vis = innerWidth < 768 ? 1 : innerWidth < 992 ? 2 : 3;
-      currentIndex += currentIndex < eq.images.length - vis ? 1 : 0;
+      if (currentIndex < eq.images.length - vis) currentIndex++;
       updateCarousel();
     });
   addEventListener("resize", updateCarousel);
   updateCarousel();
+
+  document.getElementById("btn-pdf")?.addEventListener("click", () => window.print());
+  document.getElementById("btn-quote")?.addEventListener("click", () => (location.href = "contacto.html"));
+
+  const btnFunc = document.getElementById("btn-funcao");
+  const btnTech = document.getElementById("btn-tecnica");
+  const panelF = document.getElementById("content-funcao");
+  const panelT = document.getElementById("content-tecnica");
+
+  function setPanels(showTech) {
+    if (showTech) {
+      btnTech.classList.add("active");
+      btnFunc.classList.remove("active");
+      panelT.classList.add("active");
+      panelF.classList.remove("active");
+      panelT.hidden = false;
+      panelF.hidden = true;
+      btnTech.setAttribute("aria-selected", "true");
+      btnFunc.setAttribute("aria-selected", "false");
+    } else {
+      btnFunc.classList.add("active");
+      btnTech.classList.remove("active");
+      panelF.classList.add("active");
+      panelT.classList.remove("active");
+      panelF.hidden = false;
+      panelT.hidden = true;
+      btnFunc.setAttribute("aria-selected", "true");
+      btnTech.setAttribute("aria-selected", "false");
+    }
+  }
+  btnFunc && btnFunc.addEventListener("click", () => setPanels(false));
+  btnTech && btnTech.addEventListener("click", () => setPanels(true));
+  setPanels(false);
 });
 
+/* ---------- COOKIE BANNER ---------- */
 (function () {
   const banner = document.getElementById("cookie-consent-banner");
   const accept = document.getElementById("cookie-accept-btn");
@@ -528,28 +494,3 @@ document.addEventListener("DOMContentLoaded", async () => {
       e.key === "Escape" && hide();
     });
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-  function handleHash() {
-    const id = location.hash.substring(1);
-    if (!id) return;
-    const modal = document.getElementById(id);
-    modal && bootstrap.Modal.getOrCreateInstance(modal).show();
-  }
-  handleHash();
-  addEventListener("hashchange", handleHash);
-  ["termsModalCustom", "legalNoticeModalCustom", "privacyModalCustom"].forEach((id) => {
-    const m = document.getElementById(id);
-    m &&
-      m.addEventListener("hide.bs.modal", () => {
-        history.replaceState(null, "", location.pathname + location.search);
-      });
-  });
-});
-
-document.querySelectorAll(".modal").forEach((m) =>
-  m.addEventListener("hidden.bs.modal", () => {
-    document.body.classList.remove("modal-open");
-    document.querySelectorAll(".modal-backdrop").forEach((b) => b.remove());
-  })
-);
