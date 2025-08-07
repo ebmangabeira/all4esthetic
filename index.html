@@ -556,7 +556,7 @@
 			<div class="footer-bottom">
 				<div>
 					<div class="copyright text-center mt-4">
-						<p class="footer-p">© <span>Copyright 2026</span> <strong class="px-1 sitename">all4esthetic.</strong> <span>Todos os Direitos Reservados.</span></p>
+						<p class="footer-p">© <span>Copyright 2025</span> <strong class="px-1 sitename">all4esthetic.</strong> <span>Todos os Direitos Reservados.</span></p>
 					</div>
 				</div>
 			</div>
@@ -585,5 +585,25 @@
 		<script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/purecounterjs@1/dist/purecounter_vanilla.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			document.querySelectorAll('[data-open-legal]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = link.getAttribute('data-open-legal');
+
+    document.getElementById('legalOverlay').style.display = 'flex';
+    document.querySelectorAll('.legal-card').forEach(card => {
+      card.style.display = (card.dataset.legalCard === target) ? 'block' : 'none';
+    });
+  });
+});
+
+document.querySelectorAll('.legal-card-close, .btn-close-legal').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('legalOverlay').style.display = 'none';
+  });
+});
+
+		</script>
 	</body>
 </html>
