@@ -1861,7 +1861,7 @@ body.modal-open {
   color: var(--heading-color);
   border-bottom: 1px solid var(--accent-color);
   padding-bottom: 0.25rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 24px;
 }
 
 .form-check {
@@ -1902,17 +1902,15 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--default-color);
-  margin-bottom: 1rem;
+  margin-bottom: -24px;
   padding-bottom: 4px;
 }
 
 .mobile-filters-content {
   overflow-y: auto;
   max-height: calc(100vh - 100px);
-  padding-right: 1rem;
-  padding-bottom: 80px;
-  padding-top: 60px;
+  padding-bottom: 140px;
+  padding-right: 6px;
 }
 
 .mobile-filters-content .filter-section {
@@ -1920,6 +1918,7 @@ label {
   border-radius: 12px;
   padding: 0.75rem;
   margin-bottom: 1rem;
+  margin-top: 14px;
 }
 
 #pesquisar-btn {
@@ -2098,7 +2097,7 @@ label {
 @media (max-width: 767px) {
   #mobile-filters {
     max-width: 100%;
-    margin-top: -80px;
+    margin-top: -98px;
   }
   .equipamento-card .card-title {
     font-size: 22px;
