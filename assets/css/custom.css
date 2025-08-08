@@ -1739,24 +1739,7 @@ body.modal-open {
    EQUIPAMENTOS - CSS
    ============================ */
 
-*:focus-visible {
-  outline: 3px solid var(--accent-color) !important;
-  outline-offset: 3px !important;
-}
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 8px;
-  z-index: 100;
-  transition: top 0.3s;
-}
-.skip-link:focus {
-  top: 0;
-}
 
 .equipamento-card {
   position: relative;
@@ -1892,6 +1875,7 @@ label {
   z-index: 1050;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 512px;
 }
 
 #mobile-filters.open {
@@ -1909,7 +1893,7 @@ label {
 .mobile-filters-content {
   overflow-y: auto;
   max-height: calc(100vh - 100px);
-  padding-bottom: 140px;
+  padding-bottom: 240px;
   padding-right: 6px;
 }
 
