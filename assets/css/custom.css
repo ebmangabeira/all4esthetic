@@ -1214,15 +1214,9 @@ section,
   }
 }
 
-
-
 /* ==========================================================================
    QUEM SOMOS - CSS 
 ========================================================================== */
-*:focus-visible {
-  outline: 3px solid var(--accent-color) !important;
-  outline-offset: 3px !important;
-}
 
 .skip-link {
   position: absolute;
