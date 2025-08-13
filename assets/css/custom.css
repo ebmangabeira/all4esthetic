@@ -1842,7 +1842,7 @@ body.modal-open {
   font-size: 22px;
   font-weight: 300;
   color: var(--heading-color);
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--nav-hover-color);
   padding-bottom: 0.25rem;
   margin-bottom: 24px;
 }
@@ -1865,23 +1865,21 @@ label {
 #mobile-filters {
   position: fixed;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 100%;
-  max-width: 85%;
   height: 100%;
   background-color: var(--background-color);
   padding: 1rem;
-  transition: left 0.3s ease-in-out;
   z-index: 1050;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 512px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 #mobile-filters.open {
-  left: 0;
+  transform: translateX(0);
 }
-
 .mobile-filters-header {
   display: flex;
   justify-content: space-between;
@@ -1891,10 +1889,7 @@ label {
 }
 
 .mobile-filters-content {
-  overflow-y: auto;
-  max-height: calc(100vh - 100px);
-  padding-bottom: 240px;
-  padding-right: 6px;
+  padding-bottom: 160px;
 }
 
 .mobile-filters-content .filter-section {
@@ -2079,10 +2074,6 @@ label {
 }
 
 @media (max-width: 767px) {
-  #mobile-filters {
-    max-width: 100%;
-    margin-top: -98px;
-  }
   .equipamento-card .card-title {
     font-size: 22px;
   }
@@ -2126,11 +2117,9 @@ label {
     align-items: center;
     height: 100%;
   }
-
   .features-boxes .feature-box:hover {
     transform: none;
   }
-
   .card-designacao {
     min-height: 0.5em;
   }
@@ -2149,6 +2138,61 @@ label {
   }
 }
 
+/* === MOBILE FILTERS (FULLSCREEN SLIDE-IN) === */
+@media (max-width: 767px) {
+  /* trava a página quando o painel abre */
+  html.noscroll, html.noscroll body {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  /* painel cobrindo 100% da tela, entrando da esquerda */
+  #mobile-filters {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;              /* usa dvh para mobile */
+    background: var(--background-color);
+    z-index: 2000;
+    transition: transform .32s ease;
+  }
+  #mobile-filters.open {
+    transform: translateX(0);
+    margin-top: -96px;
+  }
+
+  /* cabeçalho do painel (fecha sempre visível) */
+  .mobile-filters-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 48px;
+    padding: 8px 12px;
+    background: var(--background-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  /* conteúdo interno rola a tela toda (menos o header) */
+  .mobile-filters-content {
+    position: relative;
+    height: calc(100dvh - 48px);
+    max-height: none !important;      /* remove limites antigos */
+    padding-right: 6px;               /* já existia no teu CSS */
+  }
+
+  /* (restante do teu CSS mobile pode ficar como está) */
+}
+
+/* ======= REMOVER do teu CSS antigo =======
+1) Qualquer bloco anterior que definia:
+   #mobile-filters { left:-100% / max-width:85% / height:100% / overflow-y:auto }
+   #mobile-filters.open { left:0 }
+2) Em .mobile-filters-content: max-height: calc(100vh - 100px) e padding-bottom: 240px
+   (esses dois causavam corte e "pulo" de scroll).
+=========================================== */
 
 
 /* ============================

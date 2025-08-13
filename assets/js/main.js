@@ -503,3 +503,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+const mobFilt     = document.getElementById('mobile-filters');
+const filtroBtn   = document.getElementById('filtro-btn');
+const closeBtn    = document.getElementById('close-filtro');
+const panelScroll = mobFilt ? mobFilt.querySelector('.mobile-filters-content') : null;
+
+function openPanel() {
+  if (!mobFilt) return;
+  mobFilt.classList.add('open');
+  document.documentElement.classList.add('noscroll'); 
+  if (panelScroll) panelScroll.scrollTop = 0;         
+}
+
+function closePanel() {
+  if (!mobFilt) return;
+  mobFilt.classList.remove('open');
+  document.documentElement.classList.remove('noscroll'); 
+  if (panelScroll) panelScroll.scrollTop = 0;            
+}
+
+filtroBtn?.addEventListener('click', openPanel);
+closeBtn?.addEventListener('click', closePanel);
+
+document.getElementById('pesquisar-btn')?.addEventListener('click', () => {
+
+  closePanel();
+});
+
