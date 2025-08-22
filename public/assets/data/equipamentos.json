@@ -1,0 +1,817 @@
+[
+  {
+    "id": "E007",
+    "name": "Electroestimulação",
+    "designação": "",
+    "detalhe":"Corrente alternada em kHz com ondas moduladas, ideal para emagrecimento rápido e tonificação muscular intensa." ,
+    "ref": "E007",
+    "code_rev": "FTE007.05",
+    "functions": [
+      {
+        "nome": "Eletroterapia",
+        "descricao": "É uma corrente alternada de média frequência em kHz com formas de ondas diferenciadas e moduladas em pulsos de curta duração o que a torna eficiente a força de contração muscular. Equipamento bastante completo com 9 programas como emagrecimento, de drenagem, de ginástica passiva / tonificação muscular e de fisioterapia."
+      }
+    ],
+    "technical_data": {
+      "Potência:": "35 W",
+      "Voltagem:": "110V/220V 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "48cm x 32cm x 12,5cm",
+      "Peso:": "7 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E007/E007-1.webp",
+    "images": [
+      "assets/img/equipments/E007/E007-1.webp",
+      "assets/img/equipments/E007/E007-2.webp",
+      "assets/img/equipments/E007/E007-3.webp",
+      "assets/img/equipments/E007/E007-4.webp",
+      "assets/img/equipments/E007/E007-5.webp",
+      "assets/img/equipments/E007/E007-6.webp",
+      "assets/img/equipments/E007/E007-7.webp",
+      "assets/img/equipments/E007/E007-8.webp"
+    ],
+    "category": "Electroestimulação",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": false
+    }
+  },
+  {
+    "id": "E012V1",
+    "name": "Emsculpt com",
+    "designação": "2 Manipuladores",
+    "detalhe":"Ondas electromagnéticas intensas para acções musculares involuntárias localizadas no abdómen e nádegas." ,
+    "ref": "E012V1",
+    "code_rev": "FTE012V1.01",
+    "functions": [
+      {
+        "nome": "EMS",
+        "descricao": "A tecnologia Emsculpt utiliza ondas electromagnéticas localizadas de alta intensidade. Estas são responsáveis por produzir acções musculares involuntárias e com intensidades que naturalmente o músculo, por si só, não é capaz de efectuar. É indicado para tonificação muscular, em específico para abdómen e nádegas."
+      }
+    ],
+    "technical_data": {
+      "Frequência:": "5-100 Hz",
+      "Potência:": "2000 W",
+      "Corrente_eléctrica:": "220V - 50Hz"
+    },
+    "logistics": {
+      "Dimensões:": "61,0 cm x 48,5 cm x 38,5 cm",
+      "Peso:": "18 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E012V1/E012V1-1.png",
+    "images": [
+      "assets/img/equipments/E012V1/E012V1-1.png",
+      "assets/img/equipments/E012V1/E012V1-2.png",
+      "assets/img/equipments/E012V1/E012V1-3.png",
+      "assets/img/equipments/E012V1/E012V1-4.png",
+      "assets/img/equipments/E012V1/E012V1-5.png",
+      "assets/img/equipments/E012V1/E012V1-6.png"
+    ],
+    "category": "Emsculpt",
+    "sale": true,
+    "rental": {
+      "diario": true,
+      "bidiario": true,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E025",
+    "name": "Microdermoabrasão",
+    "designação": "",
+    "detalhe":"Circuito de vácuo ajustável, promove esfoliação profunda, regeneração celular e melhora a qualidade da pele." ,
+    "ref": "E025",
+    "code_rev": "FTE025.03",
+    "functions": [
+      {
+        "nome": "Lipolaser",
+        "descricao": "Equipamento com circuito de vácuo que promove uma esfoliação mecânica progressiva e controlada através da aplicação de uma caneta promovendo a sucção da epiderme. A pressão negativa é ajustável, permitindo controle e segurança na aplicação. Efeitos ao nível da regeneração celular; produção de colagénio; melhorar a qualidade da pele."
+      }
+    ],
+    "technical_data": {
+      "Programação:": "Manual",
+      "Potência:": "50W",
+      "Modo_de_trabalho:": "Continuo",
+      "Refrigeração:": "Cooler",
+      "Corrente_eléctrica:": "Voltagem: 110V/220V 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "50cm x 40cm x 30cm",
+      "Peso:": "5 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E025/E025-1.png",
+    "images": [
+      "assets/img/equipments/E025/E025-1.png",
+      "assets/img/equipments/E025/E025-2.png",
+      "assets/img/equipments/E025/E025-3.png",
+      "assets/img/equipments/E025/E025-4.png"
+    ],
+    "category": "Microdermoabrasão",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": false
+    }
+  },
+  {
+    "id": "E048V1",
+    "name": "Pressoterapia 3 em 1",
+    "designação": "",
+    "detalhe":"Ativam circulação, reduzem inchaço e gordura, tonificam e modelam eficazmente pernas, braços e abdómen." ,
+    "ref": "E048V1",
+    "code_rev": "FTE048V1.03",
+    "functions": [
+      {
+        "nome": "Drenagem pneumática",
+        "descricao": "A Drenagem pneumática é recomendada para tratamento anti-celulítico, emagrecimento, retenção de líquidos e desintoxicação corporal. Através de uma eficaz drenagem linfática, ajuda a promover as funções do corpo fazendo uma revitalização e oxigenação do tecido magro, que contribui para redefinir as pernas, abdómen e braços e que consiste em melhorar o perfil e contorno corporal. Alivia a dor e inchaço, reduz a inflamação e edema, alivia a fadiga nas pernas, acelera a cicatrização e melhora o fluxo de oxigénio pelo corpo."
+      },
+      {
+        "nome": "Infra-Vermelhos",
+        "descricao": "Associado ao processo de drenagem, a produção de calor através deste modelo, ajuda a aumentar a taxa metabólica básica. Deste modo o corpo gasta energia a procurar novamente a temperatura óptima. Por outro lado, o aquecimento provoca maior fluidez do fluxo sanguíneo, o que promove a melhoria da circulação e a um desagregamento de pequenas gorduras."
+      },
+      {
+        "nome": "Electroestimulação",
+        "descricao": "Tratamento que utiliza a técnica de estimulação muscular, ou seja, provoca movimentação (contracção e relaxamento) muscular. Principais benefícios: Melhora a circulação sanguínea, aumenta o oxigénio nos músculos, combate a flacidez, celulite e promove a tonificação muscular."
+      }
+    ],
+    "technical_data": {
+      "Potência:": "300W",
+      "Pressão:": "100/160/200/240",
+      "N.º_de_entradas_de_ar:": "36",
+      "Corrente_eléctrica:": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "60cm x 43cm x 57cm",
+      "Peso:": "28 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E048V1/E048V1-1.png",
+    "images": [
+      "assets/img/equipments/E048V1/E048V1-1.png",
+      "assets/img/equipments/E048V1/E048V1-2.png",
+      "assets/img/equipments/E048V1/E048V1-3.png",
+      "assets/img/equipments/E048V1/E048V1-4.png",
+      "assets/img/equipments/E048V1/E048V1-5.png",
+      "assets/img/equipments/E048V1/E048V1-6.png",
+      "assets/img/equipments/E048V1/E048V1-7.png",
+      "assets/img/equipments/E048V1/E048V1-8.png"
+    ],
+    "category": "Pressoterapia",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E049V1",
+    "name": "Pressoterapia",
+    "designação": "",
+    "detalhe":"Promove drenagem linfática, redefine melhor contorno corporal, alivia inchaço e retenção de líquidos." ,
+    "ref": "E049V1",
+    "code_rev": "FTE049V1.01",
+    "functions": [
+      {
+        "nome": "Drenagem pneumática",
+        "descricao": "A Drenagem pneumática é recomendada para tratamento anti-celulítico, emagrecimento, retenção de líquidos e desintoxicação corporal. Através de uma eficaz drenagem linfática, ajuda a promover as funções do corpo fazendo uma revitalização e oxigenação do tecido magro, que contribui para redefinir as pernas, abdómen e braços e que consiste em melhorar o perfil e contorno corporal. Alivia a dor e inchaço, reduz a inflamação e edema, alivia a fadiga nas pernas, acelera a cicatrização e melhora o fluxo de oxigénio pelo corpo. Este modelo contem programas de emagrecimento, de drenagem linfática e ainda um programa manual, onde o utilizador pode programar um tratamento totalmente personalizado. Da mesma forma, aplicável a todos os programas, é possível selecionar 3 tipos de intensidade, dando solução a vários estágios e níveis de tratamento."
+      }
+    ],
+    "technical_data": {
+      "Potência:": "100W",
+      "Pressão:": "0,4kg/cm2",
+      "N.º_de_entradas_de_ar:": "16",
+      "Corrente_eléctrica:": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "48cm x 32cm x 13cm",
+      "Peso:": "12 kgs"
+    },
+    "legislation": [
+      "LVD 2006/95/EC",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E049V1/E049V1-1.webp",
+    "images": [
+      "assets/img/equipments/E049V1/E049V1-1.webp",
+      "assets/img/equipments/E049V1/E049V1-2.webp",
+      "assets/img/equipments/E049V1/E049V1-3.webp",
+      "assets/img/equipments/E049V1/E049V1-4.webp"
+    ],
+    "category": "Pressoterapia",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E055",
+    "name": "Multifunções 5 em 1",
+    "designação": "",
+    "detalhe":"Cavitação destrói gordura sem cortes, radiofrequência combate flacidez e rugas, vácuo ativa circulação." ,
+    "ref": "E055",
+    "code_rev": "FTE055.03",
+    "functions": [
+      {
+        "nome": "Cavitação",
+        "descricao": "Lipoaspiração não invasiva, técnica ultrapontente capaz de destruir a gordura localizada sem recorrer a cirurgia e sem correr riscos, sem cortes, sem tempo de recuperação."
+      },
+      {
+        "nome": "Radiofrequência",
+        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. Neste equipamento tem disponível os 2 tipos de radiofrequencia que permite actuar em várias profundidades e de forma adequada para cada tipo de clientes. Num só equipamento dispõe de Radiofrequencia Monopolar (corpo), Radifrecuencia Tripolar (Rosto e corpo)."
+      },
+      {
+        "nome": "Vácuo",
+        "descricao": "Técnica usada para favorecer a circulação sanguínea e o encaminhamento de líquidos, sendo por isso eficaz no combate à retenção de líquidos."
+      }
+    ],
+    "technical_data": {
+      "Cavitação_potência:": "300W",
+      "Cavitação_frequência:": "40Khz",
+      "Radiofrêquencia_potência:": "100W",
+      "Radiofrequência_frequência_tripolar:": "1-10 Mhz",
+      "Radiofrequência_frequência_monopolar:": "1-10 Mhz",
+      "Vácuo_potência:": "100W",
+      "Vácuo_pressão:": "1000 Kpa",
+      "Corrente_eléctrica:": "110/220V +/-10% 60Hz 6A"
+    },
+    "logistics": {
+      "Dimensões:": "40,0 cm x 35,0 cm x 40,0 cm",
+      "Peso:": "15 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E055/E055-1.webp",
+    "images": [
+      "assets/img/equipments/E055/E055-1.webp",
+      "assets/img/equipments/E055/E055-2.webp",
+      "assets/img/equipments/E055/E055-3.webp",
+      "assets/img/equipments/E055/E055-4.webp"
+    ],
+    "category": "Multifunções",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E058V2",
+    "name": "Criolipólise 360º",
+    "designação": "com 2 Manipulos",
+    "detalhe":"Tratamento não invasivo que congela e suga gordura localizada, eliminada pelo sistema linfático." ,
+    "ref": "E058V2",
+    "code_rev": "FTE058V2.02",
+    "functions": [
+      {
+        "nome": "Lipoescultura a frio",
+        "descricao": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura. A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo."
+      }
+    ],
+    "technical_data": {
+      "Programação:": "Manual",
+      "Potência:": "1000W",
+      "Pressão_vácuo:": "0-50KPA",
+      "Corrente_eléctrica:": "110-220VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "57cm x 34,5cm x 41,5cm",
+      "Peso:": "16,700 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E058V2/E058V2-1.webp",
+    "images": [
+      "assets/img/equipments/E058V2/E058V2-1.webp",
+      "assets/img/equipments/E058V2/E058V2-2.webp",
+      "assets/img/equipments/E058V2/E058V2-3.webp",
+      "assets/img/equipments/E058V2/E058V2-4.webp",
+      "assets/img/equipments/E058V2/E058V2-5.webp"
+    ],
+    "category": "Criolipólise",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E058V3",
+    "name": "Criolipólise de Placas",
+    "designação": "",
+    "detalhe":"Ultrassom de alta energia no SMAS, lipoescultura a frio congela e succiona gordura, remodelando corpo." ,
+    "ref": "E058V3",
+    "code_rev": "FTE058V3.02",
+    "functions": [
+      {
+        "nome": "Lipoescultura a frio",
+        "descricao": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura. A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo."
+      }
+    ],
+    "technical_data": {
+      "Potência:": "1000W",
+      "Corrente_eléctrica:": "110-220VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "57cm x 34,5cm x 41,5cm",
+      "Peso:": "16,700 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E058V3/E058V3-1.webp",
+    "images": [
+      "assets/img/equipments/E058V3/E058V3-1.webp",
+      "assets/img/equipments/E058V3/E058V3-2.webp",
+      "assets/img/equipments/E058V3/E058V3-3.webp",
+      "assets/img/equipments/E058V3/E058V3-4.webp"
+    ],
+    "category": "Criolipólise",
+    "sale": true,
+    "rental": {
+      "diario": true,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E059",
+    "name": "Radiofrequência Bi e",
+    "designação": "Tripolar (Rosto e Corpo)",
+    "detalhe":"Lipoescultura a frio, radiofrequência aquece pele, reduz flacidez, celulite e gordura, estimulando colágeno." ,
+    "ref": "E059",
+    "code_rev": "FTE059.02",
+    "functions": [
+      {
+        "nome": "Lipoescultura a frio",
+        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes manipulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia leva a possibilitar o profissional de trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura e celulite e tonificação e firmeza da pele."
+      }
+    ],
+    "technical_data": {
+      "Radiofrêquencia:": {
+        "Potência:": "150 Watts",
+        "Frequência:": "1-10 Mhz"
+      },
+      "Corrente_eléctrica:": "110/220V+10% 60Hz 6A"
+    },
+    "logistics": {
+      "Dimensões:": "25,0 cm x 15,0 cm x 20,0 cm",
+      "Peso:": "10 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E059/E059-1.webp",
+    "images": [
+      "assets/img/equipments/E059/E059-1.webp",
+      "assets/img/equipments/E059/E059-2.webp",
+      "assets/img/equipments/E059/E059-3.webp"
+    ],
+    "category": "Radiofrequência",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": false
+    }
+  },
+  {
+    "id": "E060",
+    "name": "IPL SHR",
+    "designação": "",
+    "detalhe":"Radiofrequência tripolar gera aquecimento profundo, tonifica a pele, reduz flacidez, celulite e gordura." ,
+    "ref": "E060",
+    "code_rev": "FTE060.05",
+    "functions": [
+      {
+        "nome": "IPL - SHR",
+        "descricao": "Equipamento ultra-moderno usando a técnologia SHR Super Hair Removal, que combina a eficiencia da Luz Pulsada com In Motion - tecnologia de laser, resultando em tratamentos mais efecientes e sem dor. A IPL convencional aplicam impulsos curtos de aproximadamente 2-300 ms com aplicação de grande quanitdade de energia 12-120 J/cm2, energia essa que é transportada para raiz do cabelo através da melanina onde normalmente chega atingir 65-72 °C, provocando desconforto, dor e por vezes queimaduras irreverciveis. A técnologia SHR, usa apenas 50% da energia das tradicionais equipamentos de foto depilação, mas com uma alta taxa de repetição (até 10 Hz, ou seja, 10 vezes por segundo ). O resultado é um tratamento mais eficaz e com uma redução significativa da temperatura na area de actuação que ronda os 45ºC. Eliminando praticamente o desconforto durante o tratamento. Equipamento ultra rapido, com a capacidade maxima de 10 disparos por segundo."
+      }
+    ],
+    "technical_data": {
+      "Potência:": "2000W",
+      "Espectro:": "430-1200nm",
+      "Duração_do_impulso:": "1-30 ms Ajustável",
+      "Intervalo_entre_impulso:": "1-50ms Ajustável",
+      "Corrente_eléctrica:": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "65cm x 50cm x 50cm",
+      "Peso:": "41 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E060/E060-1.webp",
+    "images": [
+      "assets/img/equipments/E060/E060-1.webp",
+      "assets/img/equipments/E060/E060-2.webp",
+      "assets/img/equipments/E060/E060-3.webp",
+      "assets/img/equipments/E060/E060-4.webp"
+    ],
+    "category": "Luz pulsada",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E061V1",
+    "name": "V-Shape",
+    "designação": "com 4 Manípulos",
+    "detalhe":"RF bipolar, cilindros modeladores, vácuo, infravermelho, ultrassom; 4 manípulos e 3 cabeçotes ajustáveis." ,
+    "ref": "E061V1",
+    "code_rev": "FTE061V1.02",
+    "functions": [
+      {
+        "nome": "V-Shape",
+        "descricao": "combina a tecnologia de Radiofrequência Bipolar, com movimentos modeladores executados pelos cilindros circulantes, vacuoterapia, infravermelhos e ultrassom. A combinação perfeita para a modelação corporal, com resultados totalmente eficazes na redução de volume corporal e uma ferramenta extremamente útil no combate à celulite. Possui 4 manipulos, sendo que o de rosto ainda contem 3 cabeçotes ajustáveis de tamanhos diferentes."
+      }
+    ],
+    "technical_data": {
+      "Programação:": "Touch Screen pelo Monitor e através dos Manípulos",
+      "Modo_de_operação:": "Pulsado",
+      "Velocidade_dos_rolos:": "0-36 rpm",
+      "Energia_rf:": "0-60 J/cm^3",
+      "Frequência_rf:": "1 Mhz / 5 Mhz",
+      "Espectro_infravermelhos:": "940 nm",
+      "Potência_infravermelhos:": "20 W",
+      "Pressão_vácuo:": "0-90KPA",
+      "N.º_manipulos:": "4",
+      "Corrente_eléctrica:": "AC220V ± 10%, 50Hz ± 1Hz / AC110V ± 10%, 60Hz ± 1Hz (opcional)"
+    },
+    "logistics": {
+      "Dimensões:": "53,5 cm x 34,8 cm x 107,5 cm",
+      "Peso:": "55,250 kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E061V1/E061V1-1.webp",
+    "images": [
+      "assets/img/equipments/E061V1/E061V1-1.webp",
+      "assets/img/equipments/E061V1/E061V1-2.webp",
+      "assets/img/equipments/E061V1/E061V1-3.webp"
+    ],
+    "category": "Endermologia",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E069V1",
+    "name": "Laser Diodo 808nm",
+    "designação": "",
+    "detalhe":"Laser 12 barras, software automático por zona e fototipo, refrigeração in‑out, ventilação e segurança." ,
+    "ref": "E069V1",
+    "code_rev": "FTE069V1.02",
+    "functions": [
+      {
+        "nome": "Laser Diodo",
+        "descricao": "Equipamento de foco unidirecional com 12 barras emissoras de laser. Equipado com software de programação automática de acordo com a zona e foto-tipo, pudendo este ser ajustado até ao VI. Novo sistema de refrigeração incluindo sistema de ventilação in-out, sistema de circulação de água com radiador incorporado, o que permite a refrigeração da água ao longo do trabalho. Novo sistema de refrigeração de manipulo que permite a utilização de energias mais baixas, sem que provoque incomodo ao cliente. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
+      }
+    ],
+    "technical_data": {
+      "Programção:": "Automática",
+      "Potência:": "720W (12 barras de 60W)",
+      "Espectro_laser:": "808nm +/- 2nm",
+      "Energia_regulável:": "1 a 160 J/cm^3",
+      "Fonte_de_alimentação_de_laser:": "1200W",
+      "Refrigeração:": "Cooler e água com sistema ITEC incorporado",
+      "Corrente_elétrica:": "100-240VAC, 20A max, 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "57 cm x 37 cm x 35 cm",
+      "Peso:": "35,400 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-1.webp",
+    "images": [
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-1.webp",
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-2.webp",
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-3.webp",
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-4.webp"
+    ],
+    "category": "Laser",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E169V1",
+    "name": "Laser Diodo 755, 808",
+    "designação": "e 1064nm",
+    "detalhe":"Laser de 12 barras e 3 profundidades, refrigeração otimizada e HIFU no SMAS remodela rosto e corpo." ,
+    "ref": "E169V1",
+    "code_rev": "FTE169V1.03",
+    "functions": [
+      {
+        "nome": "Laser Diodo",
+        "descricao": "Equipamento de foco unidirecional com 12 barras emissoras de laser. Equipado com software de programação automática de acordo com a zona e foto-tipo, pudendo este ser ajustado até ao VI. Actua em 3 niveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Novo sistema de refrigeração incluindo sistema de ventilação in-out, sistema de circulação de água com radiador incorporado, o que permite a refrigeração da água ao longo do trabalho. Novo sistema de refrigeração de manipulo que permite a utilização de energias mais baixas, sem que provoque incomodo ao cliente. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
+      }
+    ],
+    "technical_data": {
+      "Programação:": "Automática",
+      "Potência:": "720W (12 barras de 60W)",
+      "Espectro_laser:": "755nm, 808nm e 1064nm",
+      "Energia_regulável:": "1 a 160 J/cm^3",
+      "fonte_alimentacao_de_laser": "1200W",
+      "Refrigeração:": "Cooler e água com sistema ITEC incorporado",
+      "Corrente_eléctrica:": "100-240VAC, 20A max, 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "57 cm x 37 cm x 35 cm",
+      "Peso:": "35,400 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-3.webp",
+    "images": [
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-3.webp",
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-2.webp",
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-1.webp",
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-4.webp"
+    ],
+    "category": "Laser",
+    "sale": true,
+    "rental": {
+      "diario": true,
+      "bidiario": true,
+      "semanal": true,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E169V3",
+    "name": "Laser Diodo 755, 808",
+    "designação": "e 1064nm",
+    "detalhe":"Programação por zonas, 3 profundidades simultâneas, resultados rápidos, alertas e sensores integrados." ,
+    "ref": "E169V3",
+    "code_rev": "FTE169V3.03",
+    "functions": [
+      {
+        "nome": "Laser Diodo",
+        "descricao": "Equipado com software de programação automática de acordo com a zona. Actua em 3 niveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
+      }
+    ],
+    "technical_data": {
+      "Programação:": "Automática",
+      "Potência:": "540W (9 barras de 60W)",
+      "Espectro_laser:": "755nm, 808nm e 1064nm",
+      "Energia_regulável:": "1 a 160 J/cm^3",
+      "Fonte_de_alimentação_de_laser:": "1200W",
+      "Refrigeração:": "Cooler + radiador de alumínio e cobre",
+      "Corrente_eléctrica:": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "39,5 cm x 30 cm x 51 cm",
+      "Peso:": "22,250 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU",
+      "Laser classe 4 de acordo com a norma europeia EN 60825-1:1994 e com as demais atualizações"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E169V3/E169V3-1.webp",
+    "images": [
+      "assets/img/equipments/E169V3/E169V3-1.webp",
+      "assets/img/equipments/E169V3/E169V3-2.webp",
+      "assets/img/equipments/E169V3/E169V3-3.webp",
+      "assets/img/equipments/E169V3/E169V3-4.webp"
+    ],
+    "category": "Laser",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": true,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E169V4",
+    "name": "Laser Diodo Eos Ice",
+    "designação": "",
+    "detalhe":"Software automático por zona, atua em 3 profundidades com alertas e sensores de fluxo e temperatura." ,
+    "ref": "E169V4",
+    "code_rev": "FTE169V4.01",
+    "functions": [
+      {
+        "nome": "Laser Diodo",
+        "descricao": "Equipado com software de programação automática de acordo com a zona. Actua em 3 niveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
+      }
+    ],
+    "technical_data": {
+      "Ecrã:": "Sistema Android com 15,6 polegadas e resolução 1920x1080",
+      "Programação:": "Automática e através de sonda",
+      "Potência:": "1 Manipulo com 2000W + 1 Manipulo com 1000W",
+      "Espectro_laser:": "755nm, 808nm e 1064nm",
+      "Energia_regulável:": "2 a 95J/cm² + 2 a 50J/cm²",
+      "Fonte_de_alimentacao_de_laser:": "1 fonte de 1000W + 1 fonte de 2000W",
+      "Refrigeração:": "Cooler e água com sistema ITEC incorporado",
+      "Corrente_eléctrica:": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "47,5 cm x 55 cm x 183 cm",
+      "Peso:": "56,600 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E169V4/E169V4-1.webp",
+    "images": [
+      "assets/img/equipments/E169V4/E169V4-1.webp",
+      "assets/img/equipments/E169V4/E169V4-2.webp",
+      "assets/img/equipments/E169V4/E169V4-3.webp",
+      "assets/img/equipments/E169V4/E169V4-4.webp"
+    ],
+    "category": "Laser",
+    "sale": true,
+    "rental": {
+      "diario": false,
+      "bidiario": false,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E174",
+    "name": "Laser Remoção de",
+    "designação": "Derrames",
+    "detalhe":"Ultrassom de alta energia foca no SMAS, remodela o corpo; equipamento unidirecional, controle preciso." ,
+    "ref": "E174",
+    "code_rev": "FTE174.04",
+    "functions": [
+      {
+        "nome": "Laser Remoção de Derrames",
+        "descricao": "Equipamento que utiliza uma fonte de energia unidirecional com controlo de energia preciso. Em consequência, Proporciona melhores resultados em tratamentos e aumentando a segurança. Possui um gama vasta de possiveis parameterizações de forma abranger vários tipo de pessoas. Para além disso, dispõem de aneis de regulação que permitem gerir a proximidade do laser para com a pele."
+      }
+    ],
+    "technical_data": {
+      "Potência_saida:": "0,2-10W",
+      "Espectro_laser:": "980 nm",
+      "Frequência:": "1-6Hz",
+      "Duração_tempo_impulso:": "0-999 ms",
+      "Modo_de_funcionamento:": "Contínuo e descontínuo",
+      "Corrente_eléctrica:": "100-240VAC, 20A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "35 cm x 30 cm x 23 cm",
+      "Peso:": "4 Kg"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E174/E174-1.webp",
+    "images": [
+      "assets/img/equipments/E174/E174-1.webp",
+      "assets/img/equipments/E174/E174-2.webp",
+      "assets/img/equipments/E174/E174-3.webp",
+      "assets/img/equipments/E174/E174-4.webp",
+      "assets/img/equipments/E174/E174-5.webp"
+    ],
+    "category": "Laser",
+    "sale": true,
+    "rental": {
+      "diario": true,
+      "bidiario": true,
+      "semanal": false,
+      "mensal": true
+    }
+  },
+  {
+    "id": "E176V2",
+    "name": "HIFU e Liposonix",
+    "designation": "HIFU e Liposonix",
+    "detalhe":"Ultrassom de alta energia foca no SMAS, agindo com precisão suspendendo e remodelando rosto e corpo." ,
+    "ref": "E176V2",
+    "code_rev": "FTE176V2.01",
+    "functions": [
+      {
+        "nome": "HIFU e Liposonix",
+        "descricao": "Com o sistema de ultrassom focado de alta energia, pode-se atingir diretamente a camada SMAS (Sistema Muscular Aponeurótico Superficial), promover a suspensão da fáscia SMAS e resolver de forma abrangente os problemas de flacidez e relaxamento do rosto e do corpo. Esta técnica atua com precisão na camada de fáscia subcutânea e na camada de colagénio em diferentes profundidades, atuando na camada de fáscia para crescer e levantar o músculo para obter os melhores efeitos de moldar o corpo e, de seguida, rejuvenescer o colagénio e solucionar problemas de anti envelhecimento, como a elasticidade da pele, clareamento, remoção de rugas e redução de poros e chegar assim ao efeito que pretende rapidamente."
+      }
+    ],
+    "technical_data": {
+      "Ecrã:": "Tela de 12 polegadas",
+      "Programação:": "Automática e ajustável",
+      "potencia": "500W",
+      "Espectro_laser:": "Não aplicável",
+      "Energia_regulável:": "Não aplicável",
+      "Fonte_de_alimentação:": "Fonte de 220V",
+      "Refrigeração:": "Não aplicável",
+      "Corrente_eléctrica:": "100-240VAC, 10A max., 50/60Hz"
+    },
+    "logistics": {
+      "Dimensões:": "55cm x 70cm x 90cm",
+      "Peso:": "18,000 kgs"
+    },
+    "legislation": [
+      "LVD 2014/35/EU",
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
+    ],
+    "application": "Apenas para uso estético.",
+    "image": "assets/img/equipments/E176V2/E176V2-1.webp",
+    "images": [
+      "assets/img/equipments/E176V2/E176V2-1.webp",
+      "assets/img/equipments/E176V2/E176V2-2.webp",
+      "assets/img/equipments/E176V2/E176V2-3.webp",
+      "assets/img/equipments/E176V2/E176V2-4.webp",
+      "assets/img/equipments/E176V2/E176V2-5.webp"
+    ],
+    "category": "Hifu e Liposonix",
+    "sale": true,
+    "rental": {
+      "diario": true,
+      "bidiario": true,
+      "semanal": false,
+      "mensal": false
+    }
+  }
+]
