@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -241,7 +241,7 @@ type EquipmentDetails = {
   application?: string;
 };
 
-export default function Page() {
+function DetalhesInner() {
   const sp = useSearchParams();
   const id = sp.get("id") ?? "";
 
@@ -326,7 +326,6 @@ export default function Page() {
   useEffect(() => {
     setCurrent(0);
     setTab("funcao");
-    setIsSwitching(false);
   }, [id]);
 
   useEffect(() => {
@@ -841,5 +840,13 @@ export default function Page() {
       <Footer />
       <div id="preloader" aria-hidden="true" />
     </>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div style={{ padding: "2rem" }}>A carregar…</div>}>
+      <DetalhesInner />
+    </Suspense>
   );
 }
