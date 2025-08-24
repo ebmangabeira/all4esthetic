@@ -1555,9 +1555,11 @@ body.modal-open {
   }
 
   .row-box {
-    flex-wrap: wrap;
+    display: flex;
     gap: 20px;
     margin-right: -4px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .row-box.features-boxes > div {
