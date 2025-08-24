@@ -60,7 +60,7 @@ export default function AvisoLegalPage() {
 
               <p className="mt-4">
                 Consulte também a nossa{" "}
-                <Link href="/privacidade" className="termos">Política de Privacidade</Link>.
+                <Link href="/politica-privacidade" className="termos">Política de Privacidade</Link>.
               </p>
             </div>
           </div>

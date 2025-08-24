@@ -4,7 +4,7 @@ import ScrollTop from "@/components/ScrollTop";
 
 export const metadata: Metadata = {
 	title: "all4esthetic",
-	description: "",
+	description: "Equipamentos e soluções estéticas profissionais em Portugal.",
 	icons: {
 		icon: "/assets/img/favicon.png",
 		apple: "/assets/img/apple-touch-icon.png",

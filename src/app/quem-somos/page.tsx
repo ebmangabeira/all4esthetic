@@ -8,7 +8,7 @@ import HashModalOpener from "@/components/HashModalOpener";
 
 export const metadata = {
   title: "Quem Somos | all4esthetic",
-  description: "",
+  description: "Conheça a história, equipa e visão da all4esthetic.",
 };
 
 export default function QuemSomosPage() {

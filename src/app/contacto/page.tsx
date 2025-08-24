@@ -9,7 +9,7 @@ import HashModalOpener from "@/components/HashModalOpener";
 
 export const metadata: Metadata = {
   title: "Contacto | all4esthetic",
-  description: "",
+  description: "Contacte a all4esthetic em Portugal para informações e orçamentos.",
 };
 
 export default function ContactoPage() {

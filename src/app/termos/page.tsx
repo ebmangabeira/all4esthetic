@@ -80,7 +80,7 @@ export default function TermosDeUsoPage() {
 							<p>
 								Para informações sobre coleta e uso de dados pessoais, consulte
 								a nossa{" "}
-								<Link href="/privacidade" className="termos">
+								<Link href="/politica-privacidade" className="termos">
 									Política de Privacidade
 								</Link>
 								.

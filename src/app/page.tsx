@@ -333,9 +333,7 @@ export default function HomePage() {
         href="#header"
         id="scroll-top"
         aria-label="Voltar ao topo da página"
-        role="button"
         tabIndex={0}
-        onKeyDown={onKeyActivate}
       >
         <i className="bi bi-arrow-up-short" aria-hidden="true"></i>
       </a>
