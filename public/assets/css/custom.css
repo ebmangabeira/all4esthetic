@@ -2764,9 +2764,6 @@ label {
   .pd-box table th {
     font-size: var(--font-size-paragraph-mobile) !important;
   }
-  .pd-img-container {
-    padding: 56px 0 0 0;
-  }
   .pd-title-row {
     gap: 0;
     padding-bottom: 32px;
@@ -3595,9 +3592,9 @@ label {
 	}
 }
 
-
-/* Fade-in suave opt-in */
-.fade-soft { animation: fade-soft .24s ease both; }
+.fade-soft { 
+  animation: fade-soft .24s ease both; 
+}
 @keyframes fade-soft { from { opacity:0; transform: translateY(4px);} to { opacity:1; transform:none;} }
 
 /* Sticky footer local ao wrapper */
