@@ -1908,17 +1908,10 @@ html.noscroll {
   justify-content: center;
   padding: 12px 12px 0;
 }
-.equipamento-card .card-img-top {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .equipamento-card .card-body {
   display: flex;
   flex-direction: column;
 }
-
 .sidebar .filter-section + .filter-section {
   margin-top: 1.25rem;
 }
@@ -1953,8 +1946,6 @@ html.noscroll {
   height: auto;
   aspect-ratio: 4/3;
   object-fit: cover;
-  margin-left: 35px;
-  margin-top: 24px;
 }
 .equipamento-card .card-title {
   font-size: 22px;
