@@ -3,13 +3,8 @@ import React from "react";
 import Container from "./Container";
 
 export default function Footer() {
-  // Endereço exibido
   const addressDisplay =
     "R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607";
-
-  // URL de navegação (abre rotas/GPS no mobile)
-  // Dica: se quiser mais precisão, troque o destination por latitude/longitude:
-  // https://www.google.com/maps/dir/?api=1&destination=38.65,-9.03
   const mapsNavigateUrl =
     "https://www.google.com/maps/dir/?api=1&destination=R.%20dos%20Tractores%20506%2C%20Armaz%C3%A9m%20AE%2C%20Lisboa%2C%20PT%202870-607";
 
