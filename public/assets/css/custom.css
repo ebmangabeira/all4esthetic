@@ -2807,6 +2807,7 @@ label {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
     gap: 2rem;
+    margin-top: 68px;
   }
   .thumb-btn {
     width: 2.5rem;
@@ -3593,3 +3594,17 @@ label {
 		padding: 2px 0;
 	}
 }
+
+
+/* Fade-in suave opt-in */
+.fade-soft { animation: fade-soft .24s ease both; }
+@keyframes fade-soft { from { opacity:0; transform: translateY(4px);} to { opacity:1; transform:none;} }
+
+/* Sticky footer local ao wrapper */
+.page-shell { min-height: 100dvh; display:flex; flex-direction:column; }
+.page-shell > main { flex: 1 0 auto; }
+.page-shell > .footer { margin-top:auto; }
+
+/* Reserva de espaço da imagem só na página de detalhes */
+.details-page .pd-img-container { aspect-ratio: 4 / 3; }
+.details-page .pd-main-image { width:100%; height:100%; object-fit:contain; }

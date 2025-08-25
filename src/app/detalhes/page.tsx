@@ -277,6 +277,8 @@ function DetalhesInner() {
     };
   }, []);
 
+  // (Removido) Efeito body.ready que podia esconder páginas
+
   const activeThumbRef = useRef<HTMLLIElement | null>(null);
 
   useEffect(() => {
@@ -356,27 +358,68 @@ function DetalhesInner() {
     }, 0);
   };
 
+  // ====== ESTADO LOADING COM MESMA GRELHA (skeleton) ======
   if (loading) {
     return (
-      <>
+      <div className="page-shell details-page">
         <Header />
-        <main className="main" id="main" role="main">
-          <Container>
-            <p className="text-center text-muted" style={{ padding: "120px 0 60px" }}>
-              Carregando…
-            </p>
-          </Container>
+        <main className="main fade-soft" id="main" role="main" aria-busy="true">
+          <div className="pd-page-title pd-light-bg">
+            <div className="container-xl pd-breadcrumbs pd-container">
+              <h1 className="pd-title-text">Detalhes</h1>
+              <nav className="pd-nav-breadcrumbs" aria-label="Caminho de navegação">
+                <ol>
+                  <li><span className="inicio-link">Início</span></li>
+                  <li><span className="inicio-link">Equipamentos</span></li>
+                  <li className="current" aria-current="page">Detalhes</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <section className="pd-details-section pd-container section">
+            <Container>
+              <div className="row">
+                <div className="grid-product">
+                  <div className="image-column">
+                    <div className="pd-img-container skeleton" aria-hidden="true" />
+                    <div className="thumbs-wrapper skeleton" aria-hidden="true" style={{ height: 64, borderRadius: 12 }} />
+                  </div>
+                  <div className="info-column">
+                    <div className="pd-title-row">
+                      <div className="skeleton skeleton-title" />
+                      <div className="skeleton skeleton-chip" />
+                    </div>
+                    <div className="tab-buttons" role="tablist" aria-label="Seções do produto">
+                      <div className="skeleton skeleton-tab" />
+                      <div className="skeleton skeleton-tab" />
+                    </div>
+                    <div className="pd-box">
+                      <div className="skeleton skeleton-text" />
+                      <div className="skeleton skeleton-text" />
+                      <div className="skeleton skeleton-text" style={{ width: "60%" }} />
+                    </div>
+                    <div className="pd-actions">
+                      <div className="skeleton skeleton-btn" />
+                      <div className="skeleton skeleton-btn" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Container>
+          </section>
         </main>
         <Footer />
-      </>
+        <div id="preloader" aria-hidden="true" />
+      </div>
     );
   }
 
+  // ====== NOT FOUND ======
   if (!eq) {
     return (
-      <>
+      <div className="page-shell details-page">
         <Header />
-        <main className="main" id="main" role="main">
+        <main className="main fade-soft" id="main" role="main">
           <Container>
             <div className="pd-page-title pd-light-bg">
               <div className="container-xl pd-breadcrumbs pd-container">
@@ -396,7 +439,7 @@ function DetalhesInner() {
           </Container>
         </main>
         <Footer />
-      </>
+      </div>
     );
   }
 
@@ -407,11 +450,11 @@ function DetalhesInner() {
   });
 
   return (
-    <>
+    <div className="page-shell details-page">
       <a href="#main" className="skip-link">Ir para o conteúdo</a>
       <CookieBanner />
       <Header />
-      <main className="main" id="main" role="main">
+      <main className="main fade-soft" id="main" role="main">
         <AOSReady />
         <div className="pd-page-title pd-light-bg">
           <div className="container-xl pd-breadcrumbs pd-container">
@@ -449,7 +492,10 @@ function DetalhesInner() {
                         className="pd-main-image"
                         src={images[current] ?? "/assets/img/placeholder.png"}
                         alt={title || "Imagem do produto"}
-                        loading="lazy"
+                        // Evita atraso de pintura e reserva espaço via CSS (aspect-ratio)
+                        loading={current === 0 ? "eager" : "lazy"}
+                        fetchPriority={current === 0 ? "high" as const : undefined}
+                        decoding="async"
                       />
                     </div>
                     {images.length > 1 && (
@@ -481,7 +527,7 @@ function DetalhesInner() {
                                     aria-label={`Ver imagem ${i + 1}`}
                                     style={{ all: "unset", cursor: "pointer", display: "block" }}
                                   >
-                                    <img src={src} alt={`Miniatura ${i + 1}`} />
+                                    <img src={src} alt={`Miniatura ${i + 1}`} loading="lazy" decoding="async" />
                                   </button>
                                 </li>
                               );
@@ -839,7 +885,7 @@ function DetalhesInner() {
       </main>
       <Footer />
       <div id="preloader" aria-hidden="true" />
-    </>
+    </div>
   );
 }
 
