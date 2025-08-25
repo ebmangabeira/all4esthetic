@@ -3588,11 +3588,11 @@ label {
 }
 @keyframes fade-soft { from { opacity:0; transform: translateY(4px);} to { opacity:1; transform:none;} }
 
-/* Sticky footer local ao wrapper */
+
 .page-shell { min-height: 100dvh; display:flex; flex-direction:column; }
 .page-shell > main { flex: 1 0 auto; }
 .page-shell > .footer { margin-top:auto; }
 
-/* Reserva de espaço da imagem só na página de detalhes */
+
 .details-page .pd-img-container { aspect-ratio: 4 / 3; }
 .details-page .pd-main-image { width:100%; height:100%; object-fit:contain; }
