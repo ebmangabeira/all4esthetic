@@ -105,7 +105,6 @@ export default function ContactoPage() {
 
       <Footer />
       <ScrollTop />
-      <div id="preloader" aria-hidden="true"></div>
     </>
   );
 }

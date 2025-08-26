@@ -436,7 +436,6 @@ export default function Page() {
 			</main>
 
 			<Footer />
-			<div id="preloader" aria-hidden="true"></div>
 		</>
 	);
 }

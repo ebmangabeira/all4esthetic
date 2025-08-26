@@ -327,18 +327,6 @@ export default function HomePage() {
       </main>
 
       <Footer />
-
-      <a
-        className="scroll-top d-flex align-items-center justify-content-center"
-        href="#header"
-        id="scroll-top"
-        aria-label="Voltar ao topo da página"
-        tabIndex={0}
-      >
-        <i className="bi bi-arrow-up-short" aria-hidden="true"></i>
-      </a>
-
-      <div id="preloader" aria-hidden="true"></div>
     </>
   );
 }

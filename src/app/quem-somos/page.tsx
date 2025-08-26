@@ -243,7 +243,6 @@ export default function QuemSomosPage() {
 
       <Footer />
       <ScrollTop />
-      <div id="preloader" aria-hidden="true"></div>
     </>
   );
 }

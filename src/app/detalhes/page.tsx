@@ -409,7 +409,6 @@ function DetalhesInner() {
           </section>
         </main>
         <Footer />
-        <div id="preloader" aria-hidden="true" />
       </div>
     );
   }
