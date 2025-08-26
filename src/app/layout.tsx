@@ -31,11 +31,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/assets/css/custom.css" />
       </head>
       <body className="index-page" suppressHydrationWarning>
-        {/* Preloader (logo + "A carregar…") — altera apenas overlay e classe no body */}
+        {/* Preloader: logo + pontinhos; use `always` em dev se quiser forçar */}
         <Preloader minDurationMs={600} timeoutMs={7000} />
-        {/* <Preloader always minDurationMs={600} timeoutMs={7000} />  // use em DEV se quiser forçar sempre */}
+        {/* <Preloader always minDurationMs={600} timeoutMs={7000} /> */}
 
-        {/* Wrapper para entrada suave do conteúdo (controlado por body.preloader-active/page-ready) */}
+        {/* Wrapper para entrada suave do conteúdo */}
         <div className="a4e-page">
           {children}
         </div>
