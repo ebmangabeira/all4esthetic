@@ -1,20 +1,7 @@
 // src/components/Preloader.tsx
 "use client";
-
 import React from "react";
 
-/**
- * Preloader (logo) — mostra 1x por sessão (sessionStorage).
- * - Exibe o logo /assets/img/logo-header.png
- * - Texto "A carregar" com pontinhos 0→3→0
- * - Duração mínima para evitar "flash"
- * - Ao esconder: aplica classe de entrada suave no conteúdo da página
- *
- * Props:
- *  - always?: força exibir sempre (útil em dev)
- *  - minDurationMs?: exibição mínima (default: 500ms)
- *  - timeoutMs?: fallback máximo (default: 7000ms)
- */
 type Props = {
   always?: boolean;
   minDurationMs?: number;
@@ -33,7 +20,6 @@ export default function Preloader({
   const dotsTimerRef = React.useRef<number | null>(null);
   const mountedAtRef = React.useRef<number>(Date.now());
 
-  // Pontinhos (0..3..0..)
   React.useEffect(() => {
     dotsTimerRef.current = window.setInterval(() => {
       setDots((d) => (d + 1) % 4);
@@ -45,31 +31,24 @@ export default function Preloader({
 
   const doHideNow = React.useCallback(() => {
     const root = document.getElementById("a4e-preloader");
-    // anima a saída do overlay
+    // fade out do overlay
     root?.classList.add("is-hiding");
 
-    // Inicia a animação de entrada da página
+    // libera o scroll e marca a página como pronta (classe permanente)
     document.body.classList.remove("preloader-active");
-    document.body.classList.add("page-enter");
+    document.body.classList.add("page-ready");
 
-    // remove a classe de entrada após a transição
-    window.setTimeout(() => {
-      document.body.classList.remove("page-enter");
-    }, 650); // combina com a animação CSS (500–600ms)
-
-    // desmonta o componente após o fade do overlay
+    // desmonta após o fade
     window.setTimeout(() => setVisible(false), 500);
-    try {
-      sessionStorage.setItem("a4e_preloader_seen", "1");
-    } catch {}
+
+    try { sessionStorage.setItem("a4e_preloader_seen", "1"); } catch {}
   }, []);
 
   const hideRespectingMin = React.useCallback(() => {
     const elapsed = Date.now() - mountedAtRef.current;
     const wait = Math.max(0, minDurationMs - elapsed);
-    if (wait === 0) {
-      doHideNow();
-    } else {
+    if (wait === 0) doHideNow();
+    else {
       if (minTimerRef.current) window.clearTimeout(minTimerRef.current);
       minTimerRef.current = window.setTimeout(doHideNow, wait);
     }
@@ -80,14 +59,12 @@ export default function Preloader({
   }, [doHideNow]);
 
   React.useEffect(() => {
-    // mostra 1x por sessão, a menos que `always`
     let forceAlways = false;
-    try {
-      forceAlways = localStorage.getItem("A4E_PRELOADER_ALWAYS") === "1";
-    } catch {}
+    try { forceAlways = localStorage.getItem("A4E_PRELOADER_ALWAYS") === "1"; } catch {}
     try {
       if (!always && !forceAlways && sessionStorage.getItem("a4e_preloader_seen") === "1") {
         setVisible(false);
+        document.body.classList.add("page-ready");
         return;
       }
     } catch {}
@@ -97,14 +74,9 @@ export default function Preloader({
 
     const onLoad = () => hideRespectingMin();
 
-    if (document.readyState === "complete") {
-      // cache quente: ainda respeita minDuration
-      hideRespectingMin();
-    } else {
-      window.addEventListener("load", onLoad, { once: true });
-    }
+    if (document.readyState === "complete") hideRespectingMin();
+    else window.addEventListener("load", onLoad, { once: true });
 
-    // Fallback máximo
     hideTimerRef.current = window.setTimeout(hideRespectingMin, timeoutMs);
 
     return () => {

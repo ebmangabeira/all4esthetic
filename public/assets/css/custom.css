@@ -3597,31 +3597,44 @@ label {
 .details-page .pd-img-container { aspect-ratio: 4 / 3; }
 .details-page .pd-main-image { width:100%; height:100%; object-fit:contain; }
 
-/* === All4esthetic: Preloader (logo) & Page Enter ================= */
+/* === All4esthetic: Preloader (logo) + Page Ready ================= */
 
-/* Enquanto o preloader está ativo, evitamos scroll e "precarregar" a entrada */
+/* Preloader ativo: trava scroll e mantém conteúdo invisível */
 body.preloader-active {
   overflow: hidden;
   overflow: clip;
 }
+body.preloader-active .a4e-page {
+  opacity: 0;
+  transform: translateY(8px) scale(0.995);
+}
 
-/* Overlay do preloader */
+/* Wrapper do conteúdo com transições suaves */
+.a4e-page {
+  transition: opacity .55s ease, transform .55s ease;
+  will-change: opacity, transform;
+}
+
+/* Quando a página está pronta, aplicamos o estado final suavemente */
+body.page-ready .a4e-page {
+  opacity: 1;
+  transform: none;
+}
+
+/* Overlay do preloader (logo) */
 .preloader {
   position: fixed;
   inset: 0;
   background: var(--background-color, #fff);
   display: grid;
   place-items: center;
-  z-index: 2147483647; /* em prod, reduza para 100001 se preferir */
+  z-index: 2147483647; /* em prod, pode reduzir para 100001 */
   opacity: 1;
   visibility: visible;
   transition: opacity .5s ease, visibility .5s ease; /* saída suave */
   will-change: opacity, visibility;
 }
-.preloader.is-hiding {
-  opacity: 0;
-  visibility: hidden;
-}
+.preloader.is-hiding { opacity: 0; visibility: hidden; }
 
 .preloader__inner {
   display: grid;
@@ -3634,11 +3647,9 @@ body.preloader-active {
   width: clamp(140px, 24vmin, 260px);
   height: auto;
   object-fit: contain;
-  image-rendering: auto;
-  filter: none;
 }
 
-/* ATENÇÃO: cor pedida pelo usuário */
+/* Cor pedida */
 .preloader__label {
   margin: 0;
   font-weight: 700;
@@ -3649,7 +3660,7 @@ body.preloader-active {
 
 .preloader__dots {
   display: inline-block;
-  min-width: 1.5em; /* evita pulo quando os pontos mudam */
+  min-width: 1.5em; /* evita pulo ao variar os pontos */
   text-align: left;
 }
 
@@ -3667,35 +3678,10 @@ body.preloader-active {
   cursor: pointer;
 }
 
-/* ---------- Entrada suave do conteúdo ---------- */
-/* Marque o wrapper do conteúdo com .a4e-page (ver layout.tsx abaixo) */
-
-/* Enquanto o preloader estiver ativo, mantenha o conteúdo invisível (sem flicker) */
-body.preloader-active .a4e-page {
-  opacity: 0;
-}
-
-/* Ao esconder o preloader, aplicamos a animação de entrada na página */
-body.page-enter .a4e-page {
-  animation: a4e-page-in .55s ease forwards;
-  will-change: opacity, transform;
-}
-
-@keyframes a4e-page-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px) scale(0.995);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Respeito a acessibilidade */
+/* Acessibilidade */
 @media (prefers-reduced-motion: reduce) {
+  .a4e-page { transition: none; }
   .preloader { transition: opacity .2s linear, visibility .2s linear; }
-  body.page-enter .a4e-page { animation: none; opacity: 1; transform: none; }
 }
-/* === /Preloader & Page Enter ==================================== */
+/* === /Preloader & Page Ready ==================================== */
 
