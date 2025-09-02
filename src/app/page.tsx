@@ -94,7 +94,7 @@ export default function HomePage() {
           <Container xl className="position-relative">
             <div className="welcome position-relative" data-aos="fade-down" data-aos-delay={100}>
               <div className="mobile-slide-text">
-                <h2>all4.<br />innovation.<br />results.</h2>
+                <h2>all4esthetic.<br />innovation.<br />results.</h2>
               </div>
             </div>
           </Container>
@@ -117,7 +117,7 @@ export default function HomePage() {
               </div>
               <div className="col-lg-6 d-flex justify-content-center align-items-center" data-aos="fade-left">
                 <div className="placeholder-decorativo" aria-hidden="true">
-                  <img src="/assets/img/equipments/equipamento.png" alt="" className="img-sobre" role="presentation" />
+                  <img src="/assets/img/equipments/E169V4/E169V4-1.webp" alt="" className="img-sobre" role="presentation" />
                 </div>
               </div>
             </div>
