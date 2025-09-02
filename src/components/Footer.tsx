@@ -3,10 +3,9 @@ import React from "react";
 import Container from "./Container";
 
 export default function Footer() {
-  const addressDisplay =
-    "R. dos Tractores 506, Armazém AE, Lisboa, PT 2870-607";
-  const mapsNavigateUrl =
-    "https://www.google.com/maps/dir/?api=1&destination=R.%20dos%20Tractores%20506%2C%20Armaz%C3%A9m%20AE%2C%20Lisboa%2C%20PT%202870-607";
+  const addressDisplay = '2870-672 Alto Estanqueiro-Jardia, Montijo';
+const mapsNavigateUrl =
+  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('2870-672 Alto Estanqueiro-Jardia, Montijo, Portugal')}&travelmode=driving`;
 
   return (
     <footer className="footer" id="footer" role="contentinfo">
@@ -47,7 +46,7 @@ export default function Footer() {
                     </a>
                     <a
                       aria-label="Whatsapp"
-                      href="https://wa.me/351214095469"
+                      href="https://wa.me/351936623907"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

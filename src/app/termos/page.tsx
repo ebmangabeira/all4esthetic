@@ -89,7 +89,7 @@ export default function TermosDeUsoPage() {
 							<h2>7. Lei Aplicável</h2>
 							<p>
 								Estes Termos de Uso são regidos pelas leis vigentes em Portugal.
-								Quaisquer disputas serão dirimidas nos tribunais competentes de
+								Quaisquer disputas serão decididas nos tribunais competentes de
 								Lisboa.
 							</p>
 

@@ -79,7 +79,7 @@ export default function ContactoPage() {
                     <i className="bi bi-telephone-fill"></i>
                   </div>
                   <h3 className="contact-title">Contacto</h3>
-                  <p className="contact-text">+351 21 409 5469</p>
+                  <p className="contact-text">(+351) 936 623 907</p>
                 </a>
               </div>
 
