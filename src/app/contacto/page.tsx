@@ -71,7 +71,7 @@ export default function ContactoPage() {
 
               <div className="contact-card" role="listitem">
                 <a
-                  href="tel:+351214095469"
+                  href="tel:+351936623907"
                   className="contact-link-wrapper"
                   aria-label="Contacto telefónico: +351 21 409 5469"
                 >
