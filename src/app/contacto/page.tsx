@@ -52,19 +52,19 @@ export default function ContactoPage() {
             <div className="contact-cards-row" role="list">
               <div className="contact-card" role="listitem">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=R.+dos+Tractores+506,+Armazém+AE,+Lisboa,+2870-607"
+                  href="https://www.google.com/maps/search/?api=1&query=2870-672%20Alto%20Estanqueiro-Jardia%2C%20Montijo%2C%20Portugal"
                   className="contact-link-wrapper"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Endereço: R. dos Tractores 506, Armazém AE, Lisboa, 2870-607 - abre em nova aba"
+                  aria-label="Endereço: 2870-672 Alto Estanqueiro-Jardia, Montijo, Portugal — abre em nova aba"
                 >
                   <div className="contact-icon" aria-hidden="true">
                     <i className="bi bi-geo-alt"></i>
                   </div>
                   <h3 className="contact-title">Endereço</h3>
                   <p className="contact-text">
-                    R. dos Tractores 506, Armazém AE,<br />
-                    Lisboa, 2870-607
+                    2870-672 Alto Estanqueiro-Jardia,<br />
+                    Montijo, Portugal
                   </p>
                 </a>
               </div>
