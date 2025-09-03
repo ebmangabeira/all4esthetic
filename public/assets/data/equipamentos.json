@@ -118,7 +118,8 @@
     },
     "legislation": [
       "LVD 2014/35/EU",
-      "ROSH 2011/65/EU"
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E025/E025-1.png",
@@ -141,7 +142,7 @@
     "id": "E048V1",
     "name": "Pressoterapia 3 em 1",
     "designação": "",
-    "detalhe":"Ativam circulação, reduzem inchaço e gordura, tonificam e modelam eficazmente pernas, braços e abdómen." ,
+    "detalhe":"Pressoterapia 3 em 1, deverá ler-se: Ativa a circulação, reduz inchaço e gordura, tonifica e modela eficazmente pernas, braços e abdómen." ,
     "ref": "E048V1",
     "code_rev": "FTE048V1.03",
     "functions": [
@@ -183,7 +184,8 @@
       "assets/img/equipments/E048V1/E048V1-5.png",
       "assets/img/equipments/E048V1/E048V1-6.png",
       "assets/img/equipments/E048V1/E048V1-7.png",
-      "assets/img/equipments/E048V1/E048V1-8.png"
+      "assets/img/equipments/E048V1/E048V1-8.png",
+      "assets/img/equipments/E048V1/E048V1-9.webp"
     ],
     "category": "Pressoterapia",
     "sale": true,
@@ -198,7 +200,7 @@
     "id": "E049V1",
     "name": "Pressoterapia",
     "designação": "",
-    "detalhe":"Promove drenagem linfática, redefine melhor contorno corporal, alivia inchaço e retenção de líquidos." ,
+    "detalhe":"Pressoterapia, deverá ler-se Promove a drenagem linfática, redefine o contorno corporal, alivia o inchaço e melhora a retenção de líquidos." ,
     "ref": "E049V1",
     "code_rev": "FTE049V1.01",
     "functions": [
@@ -249,11 +251,11 @@
     "functions": [
       {
         "nome": "Cavitação",
-        "descricao": "Lipoaspiração não invasiva, técnica ultrapontente capaz de destruir a gordura localizada sem recorrer a cirurgia e sem correr riscos, sem cortes, sem tempo de recuperação."
+        "descricao": "Lipoaspiração não invasiva, técnica ultrapontente capaz de destruir a gordura localizada a cirurgia e sem correr riscos, sem cortes, sem tempo de recuperação."
       },
       {
         "nome": "Radiofrequência",
-        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. Neste equipamento tem disponível os 2 tipos de radiofrequencia que permite actuar em várias profundidades e de forma adequada para cada tipo de clientes. Num só equipamento dispõe de Radiofrequencia Monopolar (corpo), Radifrecuencia Tripolar (Rosto e corpo)."
+        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. Neste equipamento tem disponível os 2 tipos de radiofrequência que permite actuar em várias profundidades e de forma adequada para cada tipo de clientes. Num só equipamento dispõe de Radiofrequência Monopolar (corpo), Radiofrequência Tripolar (Rosto e corpo)."
       },
       {
         "nome": "Vácuo",
@@ -321,7 +323,8 @@
     },
     "legislation": [
       "LVD 2014/35/EU",
-      "ROSH 2011/65/EU"
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E058V2/E058V2-1.webp",
@@ -345,13 +348,13 @@
     "id": "E058V3",
     "name": "Criolipólise de Placas",
     "designação": "",
-    "detalhe":"Ultrassom de alta energia no SMAS, lipoescultura a frio congela e succiona gordura, remodelando corpo." ,
+    "detalhe":"Lipoescultura a frio congela a gordura, remodelando o corpo." ,
     "ref": "E058V3",
     "code_rev": "FTE058V3.02",
     "functions": [
       {
         "nome": "Lipoescultura a frio",
-        "descricao": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante e o vácuo para eliminar a gordura. A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo."
+        "descricao": "Tratamento não invasivo para o combate à gordura localizada. Usa o efeito congelante para eliminar a gordura. A destruição do tecido adiposo é feita através das baixas temperaturas que depois são encaminhadas pelo sistema linfático para a eliminação do organismo."
       }
     ],
     "technical_data": {
@@ -364,7 +367,8 @@
     },
     "legislation": [
       "LVD 2014/35/EU",
-      "ROSH 2011/65/EU"
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E058V3/E058V3-1.webp",
@@ -392,8 +396,8 @@
     "code_rev": "FTE059.02",
     "functions": [
       {
-        "nome": "Lipoescultura a frio",
-        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes manipulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia leva a possibilitar o profissional de trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura e celulite e tonificação e firmeza da pele."
+        "nome": "Radiofrequência",
+        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes manípulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia permite que o profissional possa trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura, celulite, tonificação e firmeza da pele."
       }
     ],
     "technical_data": {
@@ -432,13 +436,13 @@
     "id": "E060",
     "name": "IPL SHR",
     "designação": "",
-    "detalhe":"Radiofrequência tripolar gera aquecimento profundo, tonifica a pele, reduz flacidez, celulite e gordura." ,
+    "detalhe":"Equipamento ultra-moderno usando a tecnologia SHR (Super Hair Removal), que combina a eficiência da Luz Pulsada com (In Motion) - tecnologia de laser, resultando em tratamentos mais eficientes e sem dor." ,
     "ref": "E060",
     "code_rev": "FTE060.05",
     "functions": [
       {
         "nome": "IPL - SHR",
-        "descricao": "Equipamento ultra-moderno usando a técnologia SHR Super Hair Removal, que combina a eficiencia da Luz Pulsada com In Motion - tecnologia de laser, resultando em tratamentos mais efecientes e sem dor. A IPL convencional aplicam impulsos curtos de aproximadamente 2-300 ms com aplicação de grande quanitdade de energia 12-120 J/cm2, energia essa que é transportada para raiz do cabelo através da melanina onde normalmente chega atingir 65-72 °C, provocando desconforto, dor e por vezes queimaduras irreverciveis. A técnologia SHR, usa apenas 50% da energia das tradicionais equipamentos de foto depilação, mas com uma alta taxa de repetição (até 10 Hz, ou seja, 10 vezes por segundo ). O resultado é um tratamento mais eficaz e com uma redução significativa da temperatura na area de actuação que ronda os 45ºC. Eliminando praticamente o desconforto durante o tratamento. Equipamento ultra rapido, com a capacidade maxima de 10 disparos por segundo."
+        "descricao": "A IPL convencional aplica impulsos curtos de aproximadamente 2-300 ms com aplicação de energia 12-120 J/cm2, energia essa que é transportada para a raiz do cabelo através da melanina onde normalmente chega a atingir 65-72 °C, provocando desconforto, dor e por vezes queimaduras irreversíveis. A tecnologia SHR, usa apenas 50% da energia das tradicionais equipamentos de fotodepilação, mas com uma alta taxa de repetição (até 10 Hz, ou seja, 10 vezes por segundo ). O resultado é um tratamento mais eficaz e com uma redução significativa da temperatura na área de atuação que ronda os 45ºC, eliminando praticamente o desconforto durante o tratamento. Equipamento ultra rápido, com a capacidade máxima de 10 disparos por segundo."
       }
     ],
     "technical_data": {
@@ -454,7 +458,8 @@
     },
     "legislation": [
       "LVD 2014/35/EU",
-      "ROSH 2011/65/EU"
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E060/E060-1.webp",
@@ -477,7 +482,7 @@
     "id": "E061V1",
     "name": "V-Shape",
     "designação": "com 4 Manípulos",
-    "detalhe":"RF bipolar, cilindros modeladores, vácuo, infravermelho, ultrassom; 4 manípulos e 3 cabeçotes ajustáveis." ,
+    "detalhe":"A combinação perfeita para a modelação corporal, com resultados totalmente eficazes na redução de volume corporal é uma ferramenta extremamente útil no combate à celulite. Possui 4 manípulos, sendo que o de rosto ainda contém 3 cabeçotes ajustáveis de tamanhos diferentes." ,
     "ref": "E061V1",
     "code_rev": "FTE061V1.02",
     "functions": [
@@ -504,14 +509,20 @@
     },
     "legislation": [
       "LVD 2014/35/EU",
-      "ROSH 2011/65/EU"
+      "ROSH 2011/65/EU",
+      "EMC 2014/30/EU"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E061V1/E061V1-1.webp",
     "images": [
       "assets/img/equipments/E061V1/E061V1-1.webp",
       "assets/img/equipments/E061V1/E061V1-2.webp",
-      "assets/img/equipments/E061V1/E061V1-3.webp"
+      "assets/img/equipments/E061V1/E061V1-3.webp",
+      "assets/img/equipments/E061V1/E061V1-4.webp",
+      "assets/img/equipments/E061V1/E061V1-5.webp",
+      "assets/img/equipments/E061V1/E061V1-6.webp",
+      "assets/img/equipments/E061V1/E061V1-7.webp",
+      "assets/img/equipments/E061V1/E061V1-8.webp"
     ],
     "category": "Endermologia",
     "sale": true,
@@ -532,7 +543,7 @@
     "functions": [
       {
         "nome": "Laser Diodo",
-        "descricao": "Equipamento de foco unidirecional com 12 barras emissoras de laser. Equipado com software de programação automática de acordo com a zona e foto-tipo, pudendo este ser ajustado até ao VI. Novo sistema de refrigeração incluindo sistema de ventilação in-out, sistema de circulação de água com radiador incorporado, o que permite a refrigeração da água ao longo do trabalho. Novo sistema de refrigeração de manipulo que permite a utilização de energias mais baixas, sem que provoque incomodo ao cliente. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
+        "descricao": "Equipamento de foco unidirecional com 12 barras emissoras de laser. Equipado com software de programação automática de acordo com a zona e fototipo, podendo este ser ajustado até ao fototipo VI. Novo sistema de refrigeração incluindo sistema de ventilação in-out, sistema de circulação de água com radiador incorporado, que permite a refrigeração da água ao longo do trabalho. Novo sistema de refrigeração de manípulo que permite a utilização de energias mais baixas, sem que provoque incômodo ao cliente. Sistemas de alerta e de segurança incorporados, como a regulação do caudal da água, sensores de temperatura do manípulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
       }
     ],
     "technical_data": {
@@ -551,7 +562,8 @@
     "legislation": [
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
-      "EMC 2014/30/EU"
+      "EMC 2014/30/EU",
+      "EN 60825-1:1994"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-1.webp",
@@ -580,7 +592,7 @@
     "functions": [
       {
         "nome": "Laser Diodo",
-        "descricao": "Equipamento de foco unidirecional com 12 barras emissoras de laser. Equipado com software de programação automática de acordo com a zona e foto-tipo, pudendo este ser ajustado até ao VI. Actua em 3 niveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Novo sistema de refrigeração incluindo sistema de ventilação in-out, sistema de circulação de água com radiador incorporado, o que permite a refrigeração da água ao longo do trabalho. Novo sistema de refrigeração de manipulo que permite a utilização de energias mais baixas, sem que provoque incomodo ao cliente. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
+        "descricao": "Equipamento de foco unidirecional com 12 barras emissoras de laser. Equipado com software de programação automática de acordo com a zona e fototipo, podendo este ser ajustado até ao fototipo VI. Actua em 3 níveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Novo sistema de refrigeração incluindo sistema de ventilação in-out, sistema de circulação de água com radiador incorporado, o que permite a refrigeração da água ao longo do trabalho. Novo sistema de refrigeração de manípulo que permite a utilização de energias mais baixas, sem que provoque incômodo ao cliente. Sistemas de alerta e de segurança incorporados, como a regulação do caudal da água, sensores de temperatura do manípulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
       }
     ],
     "technical_data": {
@@ -599,7 +611,8 @@
     "legislation": [
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
-      "EMC 2014/30/EU"
+      "EMC 2014/30/EU",
+      "EN 60825-1:1994"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-3.webp",
@@ -671,13 +684,13 @@
     "id": "E169V4",
     "name": "Laser Diodo Eos Ice",
     "designação": "",
-    "detalhe":"Software automático por zona, atua em 3 profundidades com alertas e sensores de fluxo e temperatura." ,
+    "detalhe":"Com tecnologia de ponta e desempenho superior, este laser assegura uma experiência única e a máxima satisfação em cada tratamento." ,
     "ref": "E169V4",
     "code_rev": "FTE169V4.01",
     "functions": [
       {
         "nome": "Laser Diodo",
-        "descricao": "Equipado com software de programação automática de acordo com a zona. Actua em 3 niveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
+        "descricao": "Uma inovação que redefine os padrões de performance. Equipado com uma sonda inteligente, o sistema analisa a pele e o pelo, ajustando automaticamente os parâmetros para garantir resultados seguros, rápidos e eficazes. Atua em 3 níveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manípulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
       }
     ],
     "technical_data": {
@@ -697,7 +710,8 @@
     "legislation": [
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
-      "EMC 2014/30/EU"
+      "EMC 2014/30/EU",
+      "EN 60825-1:1994"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E169V4/E169V4-1.webp",
@@ -705,7 +719,9 @@
       "assets/img/equipments/E169V4/E169V4-1.webp",
       "assets/img/equipments/E169V4/E169V4-2.webp",
       "assets/img/equipments/E169V4/E169V4-3.webp",
-      "assets/img/equipments/E169V4/E169V4-4.webp"
+      "assets/img/equipments/E169V4/E169V4-4.webp",
+      "assets/img/equipments/E169V4/E169V4-5.webp",
+      "assets/img/equipments/E169V4/E169V4-6.webp"
     ],
     "category": "Laser",
     "sale": true,
@@ -719,14 +735,14 @@
   {
     "id": "E174",
     "name": "Laser Remoção de",
-    "designação": "Derrames",
-    "detalhe":"Ultrassom de alta energia foca no SMAS, remodela o corpo; equipamento unidirecional, controle preciso." ,
+    "designação": "Derrames e Micoses",
+    "detalhe":"Desenvolvido com tecnologia de última geração, este laser utiliza uma fonte de energia unidirecional com controlo de energia precisa." ,
     "ref": "E174",
     "code_rev": "FTE174.04",
     "functions": [
       {
         "nome": "Laser Remoção de Derrames",
-        "descricao": "Equipamento que utiliza uma fonte de energia unidirecional com controlo de energia preciso. Em consequência, Proporciona melhores resultados em tratamentos e aumentando a segurança. Possui um gama vasta de possiveis parameterizações de forma abranger vários tipo de pessoas. Para além disso, dispõem de aneis de regulação que permitem gerir a proximidade do laser para com a pele."
+        "descricao": "Possui vários tipos de parametrizações de forma a abranger as necessidades de cada cliente. Para além disso, dispõem de anéis de regulação que permitem gerir a proximidade do laser para com a pele."
       }
     ],
     "technical_data": {
@@ -744,7 +760,8 @@
     "legislation": [
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
-      "EMC 2014/30/EU"
+      "EMC 2014/30/EU",
+      "EN 60825-1:1994"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E174/E174-1.webp",
@@ -768,13 +785,13 @@
     "id": "E176V2",
     "name": "HIFU e Liposonix",
     "designation": "HIFU e Liposonix",
-    "detalhe":"Ultrassom de alta energia foca no SMAS, agindo com precisão suspendendo e remodelando rosto e corpo." ,
+    "detalhe":"Tecnologia Avançada para Remodelação Corporal e Facial." ,
     "ref": "E176V2",
     "code_rev": "FTE176V2.01",
     "functions": [
       {
         "nome": "HIFU e Liposonix",
-        "descricao": "Com o sistema de ultrassom focado de alta energia, pode-se atingir diretamente a camada SMAS (Sistema Muscular Aponeurótico Superficial), promover a suspensão da fáscia SMAS e resolver de forma abrangente os problemas de flacidez e relaxamento do rosto e do corpo. Esta técnica atua com precisão na camada de fáscia subcutânea e na camada de colagénio em diferentes profundidades, atuando na camada de fáscia para crescer e levantar o músculo para obter os melhores efeitos de moldar o corpo e, de seguida, rejuvenescer o colagénio e solucionar problemas de anti envelhecimento, como a elasticidade da pele, clareamento, remoção de rugas e redução de poros e chegar assim ao efeito que pretende rapidamente."
+        "descricao": "Combina a potência do Hifu (Ultrassom Microfocado de Alta Intensidade) com a eficácia do Lipossonix (Ultrassom Macrofocado), oferecendo um tratamento não invasivo para redução de gordura localizada e firmeza da pele. Com resultados visíveis desde as primeiras sessões, garante segurança, precisão e conforto, promovendo uma remodelação corporal eficaz sem necessidade de métodos invasivos ou tempo de recuperação."
       }
     ],
     "technical_data": {

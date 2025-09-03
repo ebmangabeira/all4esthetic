@@ -134,7 +134,7 @@ export default function QuemSomosPage() {
                     <div className="history-client mb-3">
                       <div className="history-info">
                         <h5 className="history-name mb-1">Nuno Jorge</h5>
-                        <span className="history-role">Proprietário da All4esthetic</span>
+                        <span className="history-role">CEO da All4esthetic</span>
                       </div>
                     </div>
                     <button

@@ -2345,7 +2345,8 @@ label {
 .tab-buttons {
   display: flex; 
   gap: 12px; 
-  margin-bottom: 16px; 
+  margin-bottom: 16px;
+  padding-top: 24px; 
 }
 
 .pd-details-section {
@@ -2521,16 +2522,16 @@ label {
 .pd-designacao {
     font-size: var(--font-size-title-desktop);
     color: var(--heading-color);
-    margin-bottom: 1rem;
     line-height: 1.5;
     font-weight: 300;
+    padding-bottom: 18px;
 }
 
 .pd-product-title {
   font-size: var(--font-size-title-desktop);
   font-weight: 300;
   color: var(--heading-color);
-  margin-bottom: 24px;
+  margin-bottom: -16px;
 }
 
 .pd-title-row {
@@ -2757,7 +2758,6 @@ label {
   }
   .pd-title-row {
     gap: 0;
-    padding-bottom: 32px;
   }
   .pd-product-title {
     margin-bottom: 0px;
@@ -2768,6 +2768,14 @@ label {
   }
   .pd-legislation-table th {
     width: 44%;
+  }
+  .pd-product-title {
+  font-size: var(--font-size-title-mobile);
+  
+  }
+  .pd-designacao {
+    font-size: var(--font-size-title-mobile);
+    padding-bottom: 18px;
   }
 }
 
