@@ -2300,10 +2300,6 @@ label {
   }
 }
 
-/* ============================
-   DETALHES - CSS
-   ============================ */
-
 .availability-list {
   list-style: none;
   margin: 0;
@@ -3610,26 +3606,21 @@ label {
 .details-page .pd-img-container { aspect-ratio: 4 / 3; }
 .details-page .pd-main-image { width:100%; height:100%; object-fit:contain; }
 
-
-/* === All4esthetic: Preloader (logo) & Page Enter ================= */
-
-/* Enquanto o preloader está ativo, evitamos scroll e "precarregar" a entrada */
 body.preloader-active {
   overflow: hidden;
   overflow: clip;
 }
 
-/* Overlay do preloader */
 .preloader {
   position: fixed;
   inset: 0;
   background: var(--background-color, #fff);
   display: grid;
   place-items: center;
-  z-index: 2147483647; /* em prod, reduza para 100001 se preferir */
+  z-index: 2147483647; 
   opacity: 1;
   visibility: visible;
-  transition: opacity .5s ease, visibility .5s ease; /* saída suave */
+  transition: opacity .5s ease, visibility .5s ease; 
   will-change: opacity, visibility;
 }
 .preloader.is-hiding {
@@ -3652,7 +3643,6 @@ body.preloader-active {
   filter: none;
 }
 
-/* ATENÇÃO: cor pedida pelo usuário */
 .preloader__label {
   margin: 0;
   font-weight: 700;
@@ -3681,15 +3671,10 @@ body.preloader-active {
   cursor: pointer;
 }
 
-/* ---------- Entrada suave do conteúdo ---------- */
-/* Marque o wrapper do conteúdo com .a4e-page (ver layout.tsx abaixo) */
-
-/* Enquanto o preloader estiver ativo, mantenha o conteúdo invisível (sem flicker) */
 body.preloader-active .a4e-page {
   opacity: 0;
 }
 
-/* Ao esconder o preloader, aplicamos a animação de entrada na página */
 body.page-enter .a4e-page {
   animation: a4e-page-in .55s ease forwards;
   will-change: opacity, transform;
@@ -3706,9 +3691,8 @@ body.page-enter .a4e-page {
   }
 }
 
-/* Respeito a acessibilidade */
 @media (prefers-reduced-motion: reduce) {
   .preloader { transition: opacity .2s linear, visibility .2s linear; }
   body.page-enter .a4e-page { animation: none; opacity: 1; transform: none; }
 }
-/* === /Preloader & Page Enter ==================================== */
+

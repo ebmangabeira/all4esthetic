@@ -3,103 +3,214 @@
 Desenvolvido por **Emerson Botelho Mangabeira** com foco em tecnologia, estética e inovação.  
 Contato: [ebmangabeira@gmail.com](mailto:ebmangabeira@gmail.com)
 
-# All4esthetic
+# All4esthetic — Catálogo e Site Institucional
 
-Site institucional e catálogo digital desenvolvido em **Next.js**, focado em equipamentos e soluções estéticas.  
-O projeto segue boas práticas de **UX/UI**, é totalmente **responsivo** e preparado para futuras integrações com catálogos e APIs.
+Projeto **Next.js (App Router) + TypeScript + Tailwind v4 + Bootstrap 5** para apresentar o catálogo de equipamentos estéticos da All4esthetic.  
+Inclui **lista com filtros e paginação**, **página de detalhes**, **banner de cookies acessível**, **páginas legais** e **componentes utilitários** (preloader, voltar ao topo, etc.).
 
----
-
-## 🚀 Tecnologias
-
-- [Next.js 15](https://nextjs.org/) — framework React
-- [React 19](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Bootstrap 5](https://getbootstrap.com/) + [Bootstrap Icons](https://icons.getbootstrap.com/)
-- [Swiper.js](https://swiperjs.com/) — carrosséis
-- [AOS](https://michalsnik.github.io/aos/) — animações on scroll
-- [Glightbox](https://glightbox.mcstudios.com.mx/) — lightbox responsivo
-- [Drift Zoom](https://github.com/imgix/drift) — zoom em imagens
-- [Isotope](https://isotope.metafizzy.co/) — filtragem dinâmica
-- [ImagesLoaded](https://imagesloaded.desandro.com/) — carregamento inteligente de imagens
-- [TailwindCSS 4](https://tailwindcss.com/) (configurado, mas opcional)
-- Customização em `/public/assets/css/custom.css`
+> Atualizado em **2025-09-03** a partir do código enviado (`all4esthetic.zip`).
 
 ---
 
-## 📂 Estrutura do Projeto
+## ✨ Principais recursos
+
+- **Next.js 15** (App Router) + **React 19** com componentes client-side (`"use client"`).
+- **Tailwind CSS v4** + **Bootstrap 5.3** + **Bootstrap Icons**.
+- **Animações e UI**: AOS (on-scroll), GLightbox (galeria), Swiper (carrossel), Drift Zoom (zoom), Isotope + ImagesLoaded (grid e filtros), Framer Motion.
+- **Acessibilidade**:
+  - Navegação por teclado no header (Enter/Espaço ativa links).
+  - `aria-*`, `role`, rótulos e foco visível em elementos interativos.
+  - **Cookie banner** com `aria-live`, `role="dialog"`, botões com rótulos claros.
+- **Páginas legais**: Termos de Uso, Aviso Legal, Política de Privacidade.
+- **SEO básico** por `metadata` nas rotas e ícones (`favicon`, `apple-touch-icon`).
+
+---
+
+## 🧱 Estrutura do projeto
 
 ```
-all4esthetic/
-├── public/
-│   ├── assets/
-│   │   ├── css/        # Estilos customizados
-│   │   ├── img/        # Imagens do site
-│   │   └── data/       # JSON de equipamentos
-├── src/
-│   ├── app/            # Páginas (App Router)
-│   │   ├── page.tsx            # Home
-│   │   ├── equipamentos/       # Lista de equipamentos
-│   │   ├── detalhes/           # Página de detalhes
-│   │   ├── quem-somos/         # Institucional
-│   │   ├── contacto/           # Contato
-│   │   ├── termos/             # Termos de Uso
-│   │   ├── aviso-legal/        # Aviso Legal
-│   │   └── politica-privacidade/ # Política de Privacidade
-│   └── components/     # Header, Footer, Banner de Cookies etc.
-├── package.json
-├── tsconfig.json
-└── README.md
+.
+├─ package.json
+├─ package-lock.json
+├─ next.config.ts
+├─ tailwind.config.ts
+├─ tsconfig.json
+├─ eslint.config.mjs
+├─ .gitignore
+├─ README.md
+├─ public/
+│  └─ assets/
+│     ├─ css/
+│     │  └─ custom.css
+│     ├─ data/
+│     │  └─ equipamentos.json
+│     └─ img/
+│        └─ equipments/
+│           ├─ E007/ (E007-1.webp, E007-2.webp, ...)
+│           ├─ E012V1/ (E012V1-1.webp, E012V1-2.webp, ...)
+│           ├─ E055/ (E055-1.webp, E055-2.webp, ...)
+│           ├─ E174/ (E174-1.webp, E174-2.webp, ...)
+│           ├─ E184/ (E184-1.webp, E184-2.webp, ...)
+│           └─ …
+├─ src/
+│  ├─ components/
+│  │  ├─ AOSReady.tsx
+│  │  ├─ Container.tsx
+│  │  ├─ CookieBanner.tsx
+│  │  ├─ Footer.tsx
+│  │  ├─ HashModalOpener.tsx
+│  │  ├─ Header.tsx
+│  │  ├─ Preloader.tsx
+│  │  └─ ScrollTop.tsx
+│  └─ app/
+│     ├─ layout.tsx
+│     ├─ page.tsx               (Home / Catálogo resumido)
+│     ├─ equipamentos/
+│     │  ├─ metadata.ts
+│     │  └─ page.tsx            (Lista, filtros, paginação)
+│     ├─ detalhes/
+│     │  ├─ metadata.ts
+│     │  └─ page.tsx            (Ficha técnica por ID via query)
+│     ├─ contacto/
+│     │  └─ page.tsx
+│     ├─ quem-somos/
+│     │  └─ page.tsx
+│     ├─ termos/
+│     │  └─ page.tsx
+│     ├─ aviso-legal/
+│     │  └─ page.tsx
+│     └─ politica-privacidade/
+│        └─ page.tsx
 ```
+> *Obs.:* `node_modules` e `.next` foram omitidos. As imagens em `public/assets/img/equipments/**` seguem convenção `{ID}/{ID}-{n}.webp`.
 
 ---
 
-## ⚙️ Como Rodar Localmente
+## 🗂️ Conteúdo dinâmico (catálogo)
+
+A fonte de dados do catálogo é **`public/assets/data/equipamentos.json`**.  
+Cada item possui a estrutura (exemplo simplificado):
+
+```jsonc
+{
+  "id": "E007",
+  "name": "Electroestimulação",
+  "designação": "…",
+  "detalhe": "…",
+  "ref": "E007",
+  "code_rev": "FTE007.05",
+  "functions": [{ "nome": "…", "descricao": "…" }],
+  "technical_data": { "Potência:": "35 W", "Voltagem:": "110V/220V" },
+  "logistics": { "Dimensões:": "…", "Peso:": "…" },
+  "legislation": ["LVD 2014/35/EU", "ROSH 2011/65/EU"],
+  "application": "Apenas para uso estético.",
+  "image": "assets/img/equipments/E007/E007-1.webp",
+  "images": ["assets/img/equipments/E007/E007-1.webp", "…"],
+  "category": "Electroestimulação",
+  "sale": true,
+  "rental": { "diario": false, "bidiario": false, "semanal": false, "mensal": false }
+}
+```
+
+### Como adicionar/editar equipamentos
+1. **Imagens**: crie `public/assets/img/equipments/{ID}/` e adicione `{ID}-1.webp`, `{ID}-2.webp`, etc.
+2. **Dados**: adicione/edite o objeto correspondente em `equipamentos.json`.
+3. **Categoria**: use uma das existentes ou crie uma nova (fica visível nos filtros).
+4. **Venda/Aluguer**: `sale: true/false` e `rental: { diario|bidiario|semanal|mensal }`.
+5. **Rebuild**: execute `npm run build` ou `npm run export` (ver abaixo).
+
+> A lista/página de detalhes buscam o JSON diretamente de **`/assets/data/equipamentos.json`** via `fetch()` no client.  
+
+---
+
+## ⚙️ Requisitos
+
+- **Node.js 18.18+** (recomendado **20+**)
+- **npm 9+** (ou superior)
+
+---
+
+## ▶️ Como rodar localmente
 
 ```bash
-# 1. Clonar repositório
-git clone https://github.com/seu-usuario/all4esthetic.git
-cd all4esthetic
-
-# 2. Instalar dependências
+# 1) Instalar dependências
 npm install
 
-# 3. Rodar em ambiente de desenvolvimento
+# 2) Ambiente de desenvolvimento (HMR)
 npm run dev
 
-# 4. Abrir no navegador
-http://localhost:3000
+# 3) Build de produção
+npm run build
+
+# 4) Servir build de produção
+npm start  # (usa .next/)
+
+# 5) Export estático (somente páginas estáticas)
+npm run export  # gera ./out/ para hospedagem estática
 ```
 
----
-
-## 🛠️ Scripts Disponíveis
-
-- `npm run dev` → Inicia ambiente de desenvolvimento
-- `npm run build` → Cria versão otimizada de produção
-- `npm run start` → Inicia servidor de produção
-- `npm run lint` → Analisa código com ESLint
+> O projeto carrega várias bibliotecas via **CDN** em `src/app/layout.tsx` (Bootstrap, Swiper, AOS, GLightbox, Drift, ImagesLoaded, Isotope, PureCounter). Em ambiente offline, considere bundlar localmente ou garantir acesso às CDNs.
 
 ---
 
-## 🔒 Variáveis de Ambiente
+## 🚀 Deploy
 
-Crie um arquivo `.env.local` na raiz do projeto para credenciais e chaves privadas.  
-(Exemplo: EmailJS, APIs externas, etc.)
+### Opção A — Vercel (recomendado para Next.js)
+- Conecte o repositório e use *build command* padrão (`next build`).
+- Para **static export**, publique o diretório `out/`.
 
----
+### Opção B — Netlify / GitHub Pages
+- Gere `out/` via `npm run export` e publique como site estático.
 
-## 🌍 Deploy
-
-O projeto pode ser publicado em:
-
-- [Vercel](https://vercel.com/) (recomendado)
-- [Netlify](https://www.netlify.com/)
-- [Hostinger](https://www.hostinger.pt/) (já em uso)
+### Opção C — Hostinger
+- **Hospedagem estática**: suba o conteúdo de `out/` para `public_html/`.
+- **Hospedagem Node** (VPS/Cloud): rode `npm run build && npm start` por *PM2* ou serviço equivalente.
 
 ---
 
-## 👨‍💻 Autor
+## 🧩 Componentes de UX incluídos
 
-Desenvolvido por **All4esthetic** com foco em tecnologia, estética e inovação.  
-Contato: [geral@all4esthetic.com](mailto:geral@all4esthetic.com)
+- **Header** com realce da rota ativa e suporte a teclado (Enter/Espaço).
+- **Preloader** (`<Preloader />`) com *fallback* e timeout configurável.
+- **Scroll to Top** (`<ScrollTop />`) com visibilidade após rolagem.
+- **Cookie Banner** acessível com persistência via `document.cookie`.
+- **AOS Ready** para inicialização/resgate de visibilidade em elementos `data-aos`.
+- **HashModalOpener**: abre *modals* (Bootstrap) quando a hash da URL aponta para `#modal…`.
+
+---
+
+## 🧪 Qualidade de código
+
+- **TypeScript** com **ESLint** (`eslint.config.mjs`).
+- Tailwind v4 (config mínima) + utilitários em `public/assets/css/custom.css`.
+- `.gitignore` preparado para `node_modules`, `.next`, `out`, `.env*` etc.
+
+---
+
+## 🔐 Privacidade & Legais
+
+- Páginas dedicadas: **/termos**, **/aviso-legal**, **/politica-privacidade**.
+- Cookie banner com **aceitar/rejeitar** e links para as páginas legais.
+
+---
+
+## 📈 Roadmap sugerido
+
+- Multi-idioma (i18n) e geolocalização de conteúdo.
+- Pesquisa textual por *full-text* (Fuse.js) e coleções salvas.
+- Painel de CMS (p.ex. leitura do JSON via API/Headless CMS).
+- Testes de acessibilidade (axe), *lighthouse* e melhorias contínuas.
+- Versão *white-label* com *tokens* de marca (cores, tipografia).
+
+---
+
+## 👤 Autor & Contato
+
+Desenvolvido por **All4esthetic**.  
+📧 E-mail: **geral@all4esthetic.com**
+
+---
+
+## 📄 Licença
+
+Definir licença do repositório (por ora, todos os direitos reservados a All4esthetic).
