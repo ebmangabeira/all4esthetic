@@ -1,324 +1,485 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import CookieBanner from "../components/CookieBanner";
-import Container from "../components/Container";
+import { useEffect, useMemo, useState } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
+import AOSReady from "@/components/AOSReady";
+import Container from "@/components/Container";
+import { AnimatePresence, motion } from "framer-motion";
 
-const onKeyActivate = (e: React.KeyboardEvent<HTMLElement>) => {
-  if (e.key === "Enter" || e.key === " ") {
-    (e.currentTarget as HTMLElement).click();
-    e.preventDefault();
-  }
+type RentalKey = "diario" | "bidiario" | "semanal" | "mensal";
+
+type Equipment = {
+  id: string;
+  ref?: string; // <<--- NOVO: referência vinda do JSON
+  name: string;
+  image: string;
+  category: string;
+  designação?: string;
+  detalhe?: string;
+  sale?: boolean;
+  rental?: Partial<Record<RentalKey, boolean>>;
 };
 
-function useAOSFallback() {
+const CATEGORIES = [
+  "Electroestimulação",
+  "Emsculpt",
+  "Microdermoabrasão",
+  "Pressoterapia",
+  "Multifunções",
+  "Criolipólise",
+  "Radiofrequência",
+  "Luz pulsada",
+  "Endermologia",
+  "Laser",
+  "Hifu e Liposonix",
+];
+
+const RENT_LABEL: Record<RentalKey, string> = {
+  diario: "Diário",
+  bidiario: "Bidiário",
+  semanal: "Semanal",
+  mensal: "Mensal",
+};
+
+const normalize = (s = "") =>
+  s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+
+export default function Page() {
+  const [all, setAll] = useState<Equipment[]>([]);
+  const [selectedCats, setSelectedCats] = useState<string[]>([]);
+  const [availability, setAvailability] = useState<"Venda" | "Aluguer" | null>(null);
+  const [rental, setRental] = useState<RentalKey | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const perPage = 6;
+  const [page, setPage] = useState(1);
+
   useEffect(() => {
-    try {
-      (window as any).AOS?.init?.({ duration: 700, once: true, offset: 100 });
-    } catch {}
-    const t = setTimeout(() => {
-      document.querySelectorAll<HTMLElement>("[data-aos]").forEach((el) => {
-        if (!el.classList.contains("aos-animate")) el.style.opacity = "1";
-      });
-    }, 1200);
-    return () => clearTimeout(t);
-  }, []);
-}
-
-function useSwiperFallback() {
-  useEffect(() => {
-    const start = () => {
-      const W = window as any;
-      if (!W.Swiper) return;
-      const container = document.querySelector<HTMLElement>(".testimonials-swiper");
-      if (!container) return;
-      if (container.classList.contains("swiper-initialized")) return;
-
-      let cfg: any = { slidesPerView: 1 };
-      const cfgScript = container.querySelector<HTMLScriptElement>(".swiper-config");
-      if (cfgScript?.textContent) {
-        try {
-          cfg = JSON.parse(cfgScript.textContent);
-        } catch (e) {
-          console.warn("Config do Swiper inválida:", e);
-        }
-      }
-
-      const paginationEl = container.querySelector(".swiper-pagination") ?? ".swiper-pagination";
-      cfg.pagination = cfg.pagination || {};
-      cfg.pagination.el = cfg.pagination.el || paginationEl;
-      if (cfg.autoplay && typeof cfg.autoplay === "object" && !cfg.autoplay.delay) {
-        cfg.autoplay.delay = 5000;
-      }
-
-      try {
-        new W.Swiper(container, cfg);
-      } catch (e) {
-        console.warn("Falha ao inicializar Swiper (fallback):", e);
-      }
+    let active = true;
+    fetch("/assets/data/equipamentos.json")
+      .then((r) => r.json())
+      .then((data: Equipment[]) => {
+        if (active) setAll(data || []);
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
     };
-
-    if ((window as any).Swiper) {
-      start();
-    } else {
-      const id = setInterval(() => {
-        if ((window as any).Swiper) {
-          clearInterval(id);
-          start();
-        }
-      }, 100);
-      return () => clearInterval(id);
-    }
   }, []);
-}
 
-export default function HomePage() {
-  useAOSFallback();
-  useSwiperFallback();
+  useEffect(() => {
+    document.documentElement.classList.toggle("noscroll", mobileOpen);
+    return () => document.documentElement.classList.remove("noscroll");
+  }, [mobileOpen]);
+
+  const filtered = useMemo(() => {
+    const hasCats = selectedCats.length > 0;
+    return all.filter((e) => {
+      if (hasCats && !selectedCats.some((c) => normalize(c) === normalize(e.category))) {
+        return false;
+      }
+      if (availability === "Venda") return !!e.sale;
+      if (availability === "Aluguer") {
+        if (!e.rental) return false;
+        if (rental) return !!e.rental[rental];
+        return Object.values(e.rental).some(Boolean);
+      }
+      return true;
+    });
+  }, [all, selectedCats, availability, rental]);
+
+  const pageCount = Math.max(1, Math.ceil(filtered.length / perPage));
+  useEffect(() => setPage(1), [selectedCats, availability, rental]);
+
+  const slice = filtered.slice((page - 1) * perPage, page * perPage);
+
+  const toggleCat = (cat: string, checked: boolean) =>
+    setSelectedCats((prev) =>
+      checked ? [...new Set([...prev, cat])] : prev.filter((c) => c !== cat)
+    );
+
+  const clearTag = (tag: string) => {
+    if (tag === "Venda" || tag === "Aluguer") {
+      setAvailability(null);
+      setRental(null);
+    } else if ((Object.keys(RENT_LABEL) as RentalKey[]).includes(tag as RentalKey)) {
+      setRental(null);
+    } else {
+      setSelectedCats((prev) => prev.filter((c) => c !== tag));
+    }
+  };
 
   return (
     <>
-      <a href="#main" className="skip-link">Ir para o conteúdo</a>
+      <a href="#main" className="skip-link">
+        Ir para o conteúdo
+      </a>
 
       <CookieBanner />
       <Header />
 
-      <main className="main" role="main" id="main">
-        <section className="hero light-background" id="hero" aria-label="Seção principal">
-          <div className="hero-image-wrapper">
-            <img loading="lazy" alt="Imagem principal de estética" className="img-fluid hero-img" src="/assets/img/hero-imagem.webp" />
+      <main id="main" role="main" className="main">
+        <AOSReady />
+
+        <div className="pd-page-title pd-light-bg">
+          <div className="container-xl pd-breadcrumbs pd-container">
+            <h1 className="pd-title-text" id="main-heading">
+              Equipamentos
+            </h1>
+            <nav className="pd-nav-breadcrumbs" aria-label="Caminho de navegação">
+              <ol>
+                <li>
+                  <Link href="/" className="inicio-link">
+                    Início
+                  </Link>
+                </li>
+                <li className="current" aria-current="page">
+                  Equipamentos
+                </li>
+              </ol>
+            </nav>
           </div>
-          <Container xl className="position-relative">
-            <div className="welcome position-relative" data-aos="fade-down" data-aos-delay={100}>
-              <div className="mobile-slide-text">
-                <h2>all4esthetic.<br />innovation.<br />results.</h2>
-              </div>
-            </div>
-          </Container>
-        </section>
+        </div>
 
-        <section className="sobre sobre-section" data-aos="fade-up" id="sobre" aria-labelledby="sobre-title">
+        <section className="about section" aria-labelledby="about-heading">
           <Container>
-            <div className="row align-items-center gx-5">
-              <div className="col-lg-6" data-aos="fade-right">
-                <div className="content">
-                  <h3 className="fw-semibold mb-3" id="sobre-title">Tecnologia em que Pode Confiar</h3>
-                  <p>Oferecemos equipamentos de estética de última geração, projetados para garantir resultados seguros e precisos em cada tratamento.</p>
-                  <ul>
-                    <li><i className="bi bi-check-circle me-2" aria-hidden="true"></i>Performance excecional em cada aplicação.</li>
-                    <li><i className="bi bi-check-circle me-2" aria-hidden="true"></i>Materiais de elevada durabilidade e design intuitivo.</li>
-                    <li><i className="bi bi-check-circle me-2" aria-hidden="true"></i>Compatibilidade com as técnicas estéticas mais inovadoras.</li>
-                  </ul>
-                  <blockquote className="quote">“Precisão e inovação ao serviço da sua confiança.”</blockquote>
-                </div>
-              </div>
-              <div className="col-lg-6 d-flex justify-content-center align-items-center" data-aos="fade-left">
-                <div className="placeholder-decorativo" aria-hidden="true">
-                  <img src="/assets/img/equipments/E169V4/E169V4-1.webp" alt="" className="img-sobre" role="presentation" />
+            <div className="about" data-aos="fade-up" data-aos-delay={100}>
+              <div className="row align-items-center">
+                <div>
+                  <h2 id="about-heading" className="about-title">
+                    Realçando a sua beleza com equipamentos de excelência
+                  </h2>
+                  <p className="about-description">
+                    A nossa missão é fornecer soluções seguras, eficazes e adaptadas às
+                    necessidades de cada cliente ou clínica, promovendo bem-estar e
+                    confiança.
+                  </p>
                 </div>
               </div>
             </div>
-          </Container>
-        </section>
 
-        <section
-          className="parallax-section text-white d-flex align-items-center"
-          style={{ backgroundImage: "url('/assets/img/parallax-imagem.webp')" }}
-          aria-label="Seção parallax com destaque para equipamentos"
-        >
-          <Container className="position-relative">
-            <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between">
-              <div className="text-content-parallax text-start mb-lg-0">
-                <h2 className="section-title mb-3">Confira os nossos Equipamentos</h2>
-                <p className="section-description">
-                  Conheça os nossos equipamentos de alta tecnologia que transformam a estética, proporcionando resultados excecionais e inovação para a sua prática. Descubra como os nossos produtos podem elevar os seus serviços e surpreender os seus clientes!
-                </p>
-                <Link className="btn-saiba-mais mt-4" href="/equipamentos" aria-label="Saiba mais sobre nossos equipamentos">Saiba mais</Link>
-
-              </div>
-            </div>
-          </Container>
-        </section>
-
-        <section className="testimonials section" id="testimonials" aria-label="Depoimentos de clientes">
-          <Container>
-            <div className="row align-items-center">
-              <div className="col-lg-7" data-aos="fade-up" data-aos-delay={200}>
-                <div className="swiper init-swiper testimonials-swiper" role="region" aria-live="polite" aria-atomic="true" aria-relevant="additions" tabIndex={-1}>
-                  <script
-                    className="swiper-config"
-                    type="application/json"
-                    dangerouslySetInnerHTML={{
-                      __html: JSON.stringify({
-                        loop: true,
-                        speed: 600,
-                        autoplay: { delay: 5000 },
-                        slidesPerView: 1,
-                        pagination: { el: ".swiper-pagination", type: "bullets", clickable: true }
-                      })
-                    }}
-                  />
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide" role="group" aria-label="Depoimento 1 de 5">
-                      <div className="testimonial-item">
-                        <div className="d-flex align-items-center mb-3">
-                          <img
-                            src="/assets/img/depoimentos/manoelle_souza.webp"
-                            alt="Foto de Manoelle Souza"
-                            className="testimonial-img flex-shrink-0 rounded-circle"
-                            width={60}
-                            height={60}
-                            loading="lazy"
+            <div className="mt-3">
+              <div className="row">
+                <aside className="col-lg-3 sidebar d-none d-md-block" aria-label="Filtros de equipamentos">
+                  <div className="filter-section">
+                    <h3 className="filter-title">Tecnologia</h3>
+                    <ul className="list-unstyled">
+                      {CATEGORIES.map((cat) => (
+                        <li className="form-check" key={cat}>
+                          <input
+                            type="checkbox"
+                            className="form-check-input desktop-cat"
+                            id={`cat-${normalize(cat)}`}
+                            checked={selectedCats.includes(cat)}
+                            onChange={(e) => toggleCat(cat, e.target.checked)}
                           />
-                          <div className="ms-3">
-                            <div className="testimonial-rating" aria-label="Avaliação com 5 estrelas">
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                            </div>
-                            <h3>Manoelle Souza</h3>
-                            <h4>Cliente</h4>
-                          </div>
-                        </div>
-                        <p>
-                          <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                          Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. A Miriam quem me apresentou a empresa e sou mesmo grata a ela por tudo. Simpática e profissionalismo.
-                          <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="swiper-slide" role="group" aria-label="Depoimento 2 de 5">
-                      <div className="testimonial-item">
-                        <div className="d-flex align-items-center mb-3">
-                          <img
-                            src="/assets/img/depoimentos/rute_marques.webp"
-                            alt="Foto de Rute Marqques"
-                            className="testimonial-img flex-shrink-0 rounded-circle"
-                            width={60}
-                            height={60}
-                            loading="lazy"
-                          />
-                          <div className="ms-3">
-                            <div className="testimonial-rating" aria-label="Avaliação com 5 estrelas">
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                            </div>
-                            <h3>Rute Marqques</h3>
-                            <h4>Cliente</h4>
-                          </div>
-                        </div>
-                        <p>
-                          <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                          Sou parceira da All4esthetic há mais de 4 anos e super recomendo, desde a qualidade dos equipamentos, todo o conhecimento que é transmitido nas formações e a simpatia e disponibilidade do funcionários!
-                          <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="swiper-slide" role="group" aria-label="Depoimento 3 de 5">
-                      <div className="testimonial-item">
-                        <div className="d-flex align-items-center mb-3">
-                          <img
-                            src="/assets/img/depoimentos/williane_cabral.webp"
-                            alt="Foto de Williane Cabral"
-                            className="testimonial-img flex-shrink-0 rounded-circle"
-                            width={60}
-                            height={60}
-                            loading="lazy"
-                          />
-                          <div className="ms-3">
-                            <div className="testimonial-rating" aria-label="Avaliação com 5 estrelas">
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                            </div>
-                            <h3>Williane Cabral</h3>
-                            <h4>Cliente</h4>
-                          </div>
-                        </div>
-                        <p>
-                          <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                          Tem sido uma experiência muito boa a parceira com a All4Esthetic. Muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. E quanto a equipa toda é mesmo de excelência e sempre prontos a nos atender e ajudar. Simpática e profissionalismo.
-                          <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="swiper-slide" role="group" aria-label="Depoimento 4 de 5">
-                      <div className="testimonial-item">
-                        <div className="d-flex align-items-center mb-3">
-                          <img
-                            src="/assets/img/depoimentos/Daniela Maciel.webp"
-                            alt="Foto de Daniela Maciel"
-                            className="testimonial-img flex-shrink-0 rounded-circle"
-                            width={60}
-                            height={60}
-                            loading="lazy"
-                          />
-                          <div className="ms-3">
-                            <div className="testimonial-rating" aria-label="Avaliação com 5 estrelas">
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                            </div>
-                            <h3>Daniela Maciel</h3>
-                            <h4>Cliente</h4>
-                          </div>
-                        </div>
-                        <p>
-                          <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                          Sou extremamente grata à All4esthetic, uma parceira que me acompanha com excelência e comprometimento. Sempre que preciso, sou atendida com agilidade, atenção e, principalmente, qualidade — pontos essenciais para quem, como eu, preza por um atendimento de alto nível aos meus clientes.
-                          <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="swiper-slide" role="group" aria-label="Depoimento 5 de 5">
-                      <div className="testimonial-item">
-                        <div className="d-flex align-items-center mb-3">
-                          <img
-                            src="/assets/img/depoimentos/Talita.webp"
-                            alt="Foto de Talita"
-                            className="testimonial-img flex-shrink-0 rounded-circle"
-                            width={60}
-                            height={60}
-                            loading="lazy"
-                          />
-                          <div className="ms-3">
-                            <div className="testimonial-rating" aria-label="Avaliação com 5 estrelas">
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                              <i className="bi bi-star-fill" aria-hidden="true"></i>
-                            </div>
-                            <h3>Talita</h3>
-                            <h4>Cliente</h4>
-                          </div>
-                        </div>
-                        <p>
-                          <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                          Gostaria de destacar a excelente qualidade dos produtos e serviços oferecidos pela All4esthétic! Já sou cliente há 6 anos e só tenho a agradecer e dar os Parabéns pelo trabalho excepcional e pelo compromisso com a satisfação dos clientes!
-                          <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
-                        </p>
-                      </div>
-                    </div>
+                          <label className="form-check-label" htmlFor={`cat-${normalize(cat)}`}>
+                            {cat}
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  <div className="swiper-pagination mt-4" />
+                  <div className="filter-section">
+                    <h3 className="filter-title">Disponibilidade</h3>
+                    <ul className="list-unstyled">
+                      <li className="form-check">
+                        <input
+                          type="radio"
+                          className="form-check-input desktop-avail"
+                          name="availability"
+                          id="filter-venda"
+                          checked={availability === "Venda"}
+                          onChange={() => {
+                            setAvailability("Venda");
+                            setRental(null);
+                          }}
+                        />
+                        <label className="form-check-label" htmlFor="filter-venda">
+                          Venda
+                        </label>
+                      </li>
+                      <li className="form-check">
+                        <input
+                          type="radio"
+                          className="form-check-input desktop-avail"
+                          name="availability"
+                          id="filter-aluguer"
+                          checked={availability === "Aluguer"}
+                          onChange={() => setAvailability("Aluguer")}
+                        />
+                        <label className="form-check-label" htmlFor="filter-aluguer">
+                          Aluguer
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="filter-section" id="aluguer-periodos" hidden={availability !== "Aluguer"}>
+                    <h3 className="filter-title">Períodos de Aluguer</h3>
+                    <ul className="list-unstyled">
+                      {(Object.keys(RENT_LABEL) as RentalKey[]).map((key) => (
+                        <li className="form-check" key={key}>
+                          <input
+                            type="radio"
+                            className="form-check-input desktop-rent"
+                            name="rental-period"
+                            id={`rent-${key}`}
+                            checked={rental === key}
+                            onChange={() => setRental(key)}
+                          />
+                          <label className="form-check-label" htmlFor={`rent-${key}`}>
+                            {RENT_LABEL[key]}
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </aside>
+
+                <div className="col-12 d-md-none mb-3">
+                  <button
+                    id="filtro-btn"
+                    className="btn btn-primary w-100 d-flex align-items-center justify-content-center mb-3"
+                    aria-haspopup="true"
+                    aria-expanded={mobileOpen}
+                    aria-controls="mobile-filters"
+                    onClick={() => setMobileOpen(true)}
+                  >
+                    Filtro
+                  </button>
+
+                  {mobileOpen && (
+                    <div
+                      id="mobile-filters"
+                      role="dialog"
+                      aria-labelledby="mobile-filters-title"
+                      aria-modal="true"
+                      aria-hidden="false"
+                      tabIndex={-1}
+                      className="open"
+                    >
+                      <div className="mobile-filters-content">
+                        <h2 id="mobile-filters-title" className="visually-hidden">
+                          Filtros
+                        </h2>
+
+                        <div className="filter-section">
+                          <h4 className="filter-title">Tecnologia</h4>
+                          <ul className="list-unstyled">
+                            {CATEGORIES.map((cat) => (
+                              <li className="form-check" key={`mob-${cat}`}>
+                                <input
+                                  type="checkbox"
+                                  className="form-check-input mobile-cat"
+                                  id={`mob-cat-${normalize(cat)}`}
+                                  checked={selectedCats.includes(cat)}
+                                  onChange={(e) => toggleCat(cat, e.target.checked)}
+                                />
+                                <label className="form-check-label" htmlFor={`mob-cat-${normalize(cat)}`}>
+                                  {cat}
+                                </label>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="filter-section">
+                          <h4 className="filter-title">Disponibilidade</h4>
+                          <ul className="list-unstyled">
+                            <li className="form-check">
+                              <input
+                                type="radio"
+                                className="form-check-input mobile-avail"
+                                name="availability-mob"
+                                id="filter-venda-mob"
+                                checked={availability === "Venda"}
+                                onChange={() => {
+                                  setAvailability("Venda");
+                                  setRental(null);
+                                }}
+                              />
+                              <label className="form-check-label" htmlFor="filter-venda-mob">
+                                Venda
+                              </label>
+                            </li>
+                            <li className="form-check">
+                              <input
+                                type="radio"
+                                className="form-check-input mobile-avail"
+                                name="availability-mob"
+                                id="filter-aluguer-mob"
+                                checked={availability === "Aluguer"}
+                                onChange={() => setAvailability("Aluguer")}
+                              />
+                              <label className="form-check-label" htmlFor="filter-aluguer-mob">
+                                Aluguer
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div className="filter-section" id="aluguer-periodos-mob" hidden={availability !== "Aluguer"}>
+                          <h4 className="filter-title">Períodos de Aluguer</h4>
+                          <ul className="list-unstyled">
+                            {(Object.keys(RENT_LABEL) as RentalKey[]).map((key) => (
+                              <li className="form-check" key={`mob-${key}`}>
+                                <input
+                                  type="radio"
+                                  className="form-check-input mobile-rent"
+                                  name="rental-period-mob"
+                                  id={`filter-${key}-mob`}
+                                  checked={rental === key}
+                                  onChange={() => setRental(key)}
+                                />
+                                <label className="form-check-label" htmlFor={`filter-${key}-mob`}>
+                                  {RENT_LABEL[key]}
+                                </label>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <button
+                          id="pesquisar-btn"
+                          className="btn btn-primary w-100"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          Aplicar
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="col-lg-9">
+                  <div
+                    id="selected-tags-container"
+                    className={`selected-tags-bar d-md-none ${
+                      !selectedCats.length && !availability ? "d-none" : ""
+                    }`}
+                  >
+                    {selectedCats.map((c) => (
+                      <span key={`tag-${c}`} className="selected-tag">
+                        {c}
+                        <button className="close-btn" onClick={() => clearTag(c)} aria-label={`Remover ${c}`}>
+                          X
+                        </button>
+                      </span>
+                    ))}
+
+                    {availability && (
+                      <span className="selected-tag">
+                        {availability}
+                        <button className="close-btn" onClick={() => clearTag(availability)} aria-label="Remover disponibilidade">
+                          X
+                        </button>
+                      </span>
+                    )}
+
+                    {availability === "Aluguer" && rental && (
+                      <span className="selected-tag">
+                        {RENT_LABEL[rental]}
+                        <button className="close-btn" onClick={() => clearTag(rental)} aria-label="Remover período">
+                          X
+                        </button>
+                      </span>
+                    )}
+                  </div>
+
+                  <div id="equipamentos-container" className="row g-4">
+                    <AnimatePresence mode="popLayout">
+                      {slice.map((e) => (
+                        <motion.div
+                          key={e.id}
+                          layout
+                          initial={{ opacity: 0, y: 12, scale: 0.98 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 12, scale: 0.98 }}
+                          transition={{ duration: 0.35, ease: [0.22, 0.61, 0.36, 1] }}
+                          className="col-12 col-md-6 col-lg-4"
+                        >
+                          <div className="card equipamento-card h-100">
+                            <div className="card-category-top">{e.category}</div>
+
+                            <div className="card-img-wrap">
+                              <img src={e.image} alt={e.name} className="card-img-top" />
+                            </div>
+
+                            <div className="card-body d-flex flex-column">
+                              <h5 className="card-title">{e.name}</h5>
+                              {e.designação && <p className="card-designacao mb-2">{e.designação}</p>}
+                              {e.detalhe && <p className="card-detalhe mb-2">{e.detalhe}</p>}
+
+                              {/* <<< ALTERADO: mostra REF do JSON (com fallback para id) >>> */}
+                              <p className="card-ref text-muted small mb-2">REF: {e.ref ?? e.id}</p>
+
+                              <Link href={`/detalhes?id=${e.id}`} className="btn btn-primary mt-auto">
+                                Mais detalhes
+                              </Link>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
+
+                    {!slice.length && (
+                      <div className="col-12">
+                        <p className="text-center text-muted">
+                          Nenhum equipamento encontrado com os filtros selecionados.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  <nav aria-label="Page navigation" className="mt-4">
+                    <ul id="pagination" className="pagination justify-content-center custom-pagination">
+                      <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
+                        <a
+                          className="page-link"
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            if (page > 1) setPage((p) => p - 1);
+                          }}
+                        >
+                          «
+                        </a>
+                      </li>
+
+                      {Array.from({ length: pageCount }).map((_, i) => (
+                        <li className={`page-item ${page === i + 1 ? "active" : ""}`} key={`p${i}`}>
+                          <a
+                            className="page-link"
+                            href="#"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setPage(i + 1);
+                            }}
+                          >
+                            {i + 1}
+                          </a>
+                        </li>
+                      ))}
+
+                      <li className={`page-item ${page === pageCount ? "disabled" : ""}`}>
+                        <a
+                          className="page-link"
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            if (page < pageCount) setPage((p) => p + 1);
+                          }}
+                        >
+                          »
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
             </div>

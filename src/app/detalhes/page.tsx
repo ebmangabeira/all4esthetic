@@ -211,6 +211,7 @@ function normalizeLegislation(src: unknown): { list: string[]; rows: Array<[stri
 
 type EquipmentDetails = {
   id: string;
+  ref?: string;                 // <- REF do JSON
   name?: string;
   nome?: string;
   image?: string;
@@ -218,10 +219,20 @@ type EquipmentDetails = {
   category?: string;
   ["designação"]?: string;
   designacao?: string;
+
+  // OBS: a “descricao” principal pode não existir em alguns itens.
+  // No seu exemplo, a “descricao” está DENTRO de functions[].descricao,
+  // então vamos posicionar a REF embaixo dessa “descricao” de functions.
+  descricao?: string;
+  ["descrição"]?: string;
+  description?: string;
+
   sale?: boolean;
   rental?: Partial<Record<RentalKey, boolean>>;
+
   funcoes?: FuncItem[];
   functions?: FuncItem[];
+
   technical_data?: KV;
   fichaTecnica?: KV;
   ficha_tecnica?: KV;
@@ -232,11 +243,14 @@ type EquipmentDetails = {
   especificacoes?: KV;
   especificacoesTecnicas?: KV;
   caracteristicasTecnicas?: KV;
+
   logistica?: KV;
   logistics?: KV;
+
   legislation?: unknown;
   legislacao?: unknown;
   ["legislação"]?: unknown;
+
   aplicacao?: string;
   application?: string;
 };
@@ -277,8 +291,6 @@ function DetalhesInner() {
     };
   }, []);
 
-  // (Removido) Efeito body.ready que podia esconder páginas
-
   const activeThumbRef = useRef<HTMLLIElement | null>(null);
 
   useEffect(() => {
@@ -311,6 +323,12 @@ function DetalhesInner() {
   const images = (eq?.images && eq.images.length ? eq.images : mainImage).filter(Boolean);
 
   const funcItems = normalizeFunctions(eq?.funcoes ?? eq?.functions);
+  const refCode = eq?.ref ?? ""; // REF do JSON
+
+  // Índice do primeiro item de funções que realmente tem “descricao”
+  const firstDescIdx = useMemo(() => {
+    return funcItems.findIndex((f) => !!(f.sub && f.sub.trim()));
+  }, [funcItems]);
 
   const techSource: KV | undefined =
     (eq?.technical_data as KV | undefined) ?? findTechnicalBlock(eq as any);
@@ -358,7 +376,7 @@ function DetalhesInner() {
     }, 0);
   };
 
-  // ====== ESTADO LOADING COM MESMA GRELHA (skeleton) ======
+  // ====== ESTADO LOADING ======
   if (loading) {
     return (
       <div className="page-shell details-page">
@@ -491,9 +509,8 @@ function DetalhesInner() {
                         className="pd-main-image"
                         src={images[current] ?? "/assets/img/placeholder.png"}
                         alt={title || "Imagem do produto"}
-                        // Evita atraso de pintura e reserva espaço via CSS (aspect-ratio)
                         loading={current === 0 ? "eager" : "lazy"}
-                        fetchPriority={current === 0 ? "high" as const : undefined}
+                        fetchPriority={current === 0 ? ("high" as const) : undefined}
                         decoding="async"
                       />
                     </div>
@@ -558,6 +575,7 @@ function DetalhesInner() {
                       ) : null}
                     </div>
 
+                    {/* ====== TABS ====== */}
                     {!printAll && (
                       <>
                         <div className="tab-buttons" role="tablist" aria-label="Seções do produto">
@@ -586,6 +604,7 @@ function DetalhesInner() {
                         </div>
 
                         <div id="tab-content">
+                          {/* ====== ABA FUNÇÃO ====== */}
                           <div
                             id="content-funcao"
                             className={`tab-panel ${tab === "funcao" ? "active" : ""}`}
@@ -600,6 +619,8 @@ function DetalhesInner() {
                                     const titleIsNome = f.titleKey === "nome" || f.titleKey === "name";
                                     const subIsDescricao =
                                       f.subKey === "descricao" || f.subKey === "descrição" || f.subKey === "description";
+                                    const hasSub = !!(f.sub && f.sub.trim());
+
                                     return (
                                       <li
                                         key={i}
@@ -618,7 +639,8 @@ function DetalhesInner() {
                                             {f.title}
                                           </div>
                                         ) : null}
-                                        {f.sub ? (
+
+                                        {hasSub ? (
                                           <div
                                             className={[
                                               "pd-func-sub",
@@ -629,6 +651,13 @@ function DetalhesInner() {
                                             {f.sub}
                                           </div>
                                         ) : null}
+
+                                        {/* >>> REF: exatamente EMBAIXO da primeira descricao encontrada <<< */}
+                                        {refCode && firstDescIdx >= 0 && i === firstDescIdx && (
+                                          <div className="pd-ref text-muted" style={{ marginTop: 6 }}>
+                                            <strong>REF:</strong> {refCode}
+                                          </div>
+                                        )}
                                       </li>
                                     );
                                   })}
@@ -639,6 +668,7 @@ function DetalhesInner() {
                             </div>
                           </div>
 
+                          {/* ====== ABA FICHA TÉCNICA ====== */}
                           <div
                             id="content-tecnica"
                             className={`tab-panel ${tab === "tecnica" ? "active" : ""}`}
@@ -718,15 +748,19 @@ function DetalhesInner() {
                       </>
                     )}
 
+                    {/* ====== CONTEÚDO PARA IMPRESSÃO: REF logo após a primeira descricao ====== */}
                     {printAll && (
                       <div id="pdf-static-content">
                         <div className="pd-box">
+                          <h5>Função</h5>
                           {funcItems.length ? (
                             <ul className="list-unstyled" style={{ marginBottom: 0 }}>
                               {funcItems.map((f, i) => {
                                 const titleIsNome = f.titleKey === "nome" || f.titleKey === "name";
                                 const subIsDescricao =
                                   f.subKey === "descricao" || f.subKey === "descrição" || f.subKey === "description";
+                                const hasSub = !!(f.sub && f.sub.trim());
+
                                 return (
                                   <li
                                     key={i}
@@ -745,17 +779,25 @@ function DetalhesInner() {
                                         {f.title}
                                       </div>
                                     ) : null}
-                                    {f.sub ? (
+
+                                    {hasSub ? (
                                       <div
                                         className={[
                                           "pd-func-sub",
                                           subIsDescricao ? "pd-func-descricao" : "",
                                         ].join(" ").trim()}
-                                        style={{ fontSize: "0.95rem", opacity: 0.9 }}
+                                        style={{ fontSize: "0.95rem" }}
                                       >
                                         {f.sub}
                                       </div>
                                     ) : null}
+
+                                    {/* REF abaixo da primeira descricao também no PDF */}
+                                    {refCode && firstDescIdx >= 0 && i === firstDescIdx && (
+                                      <div className="pd-ref" style={{ marginTop: 6 }}>
+                                        <strong>REF:</strong> {refCode}
+                                      </div>
+                                    )}
                                   </li>
                                 );
                               })}

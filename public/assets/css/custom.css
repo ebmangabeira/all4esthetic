@@ -932,11 +932,6 @@ section,
   line-height: 1.6;
 }
 
-.text-muted {
-  --bs-text-opacity: 1;
-  color: var(--heading-color) !important;
-}
-
 .sobre ul {
   list-style: none;
   padding-left: 0;
@@ -1977,6 +1972,11 @@ html.noscroll {
   min-height: 1.5em;
   margin-top: -10px;
 }
+.card-ref {
+  color: var(--heading-color) !important;
+  font-weight: 600;
+  font-size: 12px;
+}
 .equipamento-card .btn {
   font-size: 16px;
   font-weight: 400;
@@ -2497,6 +2497,11 @@ label {
 .thumb-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+.pd-ref { 
+  color: var(--heading-color) !important;
+  font-weight: 300;
 }
 
 .thumb-btn:hover:not(:disabled) {
