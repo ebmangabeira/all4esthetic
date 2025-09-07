@@ -661,7 +661,7 @@ body {
     color: var(--contrast-color);
     background-color: var(--accent-color);
   }
-
+  
   .navmenu a.active:focus-visible i,
   .navmenu a.active i {
     background-color: var(--accent-color);
@@ -1455,14 +1455,7 @@ body.modal-open {
   }
 
   .pd-title-text {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    margin: 0 !important;
-    flex: 0 !important;
-    max-width: 100% !important;
-    font-size: 22px;
-    padding-top: 2px;
+    font-size: 0;
   }
 
   .pd-page-title .pd-container {
@@ -1478,7 +1471,7 @@ body.modal-open {
   }
 
   .pd-nav-breadcrumbs li {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 0;
     word-break: break-word;
   }
@@ -1531,12 +1524,11 @@ body.modal-open {
   }
 
   .pd-title-text {
-    font-size: 26px;
-    margin-top: -4px;
+    font-size: 0px;
   }
 
   .pd-nav-breadcrumbs li {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .pd-nav-breadcrumbs {
@@ -1579,7 +1571,7 @@ body.modal-open {
 
 @media (min-width: 1024px) and (max-width: 1199px) {
   .pd-page-title {
-    padding: 170px 0 50px;
+    padding: 140px 0 40px;
     background: color-mix(in srgb, var(--default-color), transparent 55%);
   }
 
@@ -1940,13 +1932,29 @@ html.noscroll {
   max-width: 100%;
   height: auto;
   aspect-ratio: 4/3;
-  object-fit: cover;
+  object-fit: scale-down;
 }
+
+@media (min-width: 500px) and (max-width: 650px) {
+  .equipamento-card img { width: 50%; }
+}
+
+@media (min-width: 500px) and (max-width: 769px) {
+  .equipamento-card img { width: 40%; }
+}
+
 .equipamento-card .card-title {
   font-size: 22px;
   color: var(--heading-color);
   font-weight: 300;
 }
+
+.equipamento-card .card-details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .card-detalhe {
   font-size: 12px;
   color: var(--heading-color);
@@ -1966,7 +1974,7 @@ html.noscroll {
   user-select: text;
 }
 .card-designacao {
-  font-size: 22px;
+  font-size: 16px;
   color: var(--heading-color);
   font-weight: 300;
   min-height: 1.5em;
@@ -2378,7 +2386,7 @@ label {
   border-radius: 12px;
   overflow: hidden;
   background: var(--background-color);
-  padding: 20px;
+  padding: 20px 20px 25px 20px;
   border: 1px solid var(--accent-color);
 }
 
@@ -3605,6 +3613,7 @@ label {
 
 .details-page .pd-img-container { aspect-ratio: 4 / 3; }
 .details-page .pd-main-image { width:100%; height:100%; object-fit:contain; }
+.details-page .pd-img-container p { text-align: center;}
 
 body.preloader-active {
   overflow: hidden;
@@ -3696,3 +3705,10 @@ body.page-enter .a4e-page {
   body.page-enter .a4e-page { animation: none; opacity: 1; transform: none; }
 }
 
+.mobile-nav-active .hovered {
+  background-color: var(--nav-hover-color);
+}
+
+.mobile-nav-active .hovered a {
+  color: white;
+}

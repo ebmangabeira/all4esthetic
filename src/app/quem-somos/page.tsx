@@ -24,7 +24,7 @@ export default function QuemSomosPage() {
         <div className="pd-page-title pd-light-bg">
           <div className="container-xl pd-breadcrumbs pd-container">
             <h1 className="pd-title-text" id="main-heading">
-              Quem<span className="detalhes-title">_</span>Somos
+              Quem Somos
             </h1>
             <nav className="pd-nav-breadcrumbs" aria-label="Caminho de navegação">
               <ol>

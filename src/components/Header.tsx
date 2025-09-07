@@ -83,7 +83,10 @@ export default function Header() {
                   if (el.closest("a")) setOpen(false);
                 }}
               >
-                <li>
+                <li
+                  onMouseEnter={(e) => e.currentTarget.classList.add("hovered")}
+                  onMouseLeave={(e) => e.currentTarget.classList.remove("hovered")}
+                >
                   <Link
                     href="/"
                     className={isActive("/") ? "active" : ""}
@@ -92,7 +95,10 @@ export default function Header() {
                     Início
                   </Link>
                 </li>
-                <li>
+                <li
+                  onMouseEnter={(e) => e.currentTarget.classList.add("hovered")}
+                  onMouseLeave={(e) => e.currentTarget.classList.remove("hovered")}
+                >
                   <Link
                     href="/quem-somos"
                     className={isActive("/quem-somos") ? "active" : ""}
@@ -101,7 +107,10 @@ export default function Header() {
                     Quem Somos
                   </Link>
                 </li>
-                <li>
+                <li
+                  onMouseEnter={(e) => e.currentTarget.classList.add("hovered")}
+                  onMouseLeave={(e) => e.currentTarget.classList.remove("hovered")}
+                >
                   <Link
                     href="/equipamentos"
                     className={isActive("/equipamentos") ? "active" : ""}
@@ -110,7 +119,10 @@ export default function Header() {
                     Equipamentos
                   </Link>
                 </li>
-                <li>
+                <li
+                  onMouseEnter={(e) => e.currentTarget.classList.add("hovered")}
+                  onMouseLeave={(e) => e.currentTarget.classList.remove("hovered")}
+                >
                   <Link
                     href="/contacto"
                     className={isActive("/contacto") ? "active" : ""}
@@ -128,9 +140,10 @@ export default function Header() {
               aria-expanded={open}
               type="button"
               onClick={() => setOpen((v) => !v)}
+              onBlur={() => setOpen(false)}
               onKeyDown={onKeyActivate}
             >
-              <i className={`bi ${open ? "bi-x" : "bi-list"} me-0`} aria-hidden="true" />
+              <i className={`bi bi-list me-0`} aria-hidden="true" />
             </button>
           </div>
         </Container>

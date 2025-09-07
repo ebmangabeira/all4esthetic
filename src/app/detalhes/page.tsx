@@ -513,6 +513,7 @@ function DetalhesInner() {
                         fetchPriority={current === 0 ? ("high" as const) : undefined}
                         decoding="async"
                       />
+                      <p>Imagem meramente ilustrativa</p>
                     </div>
                     {images.length > 1 && (
                       <div className="thumbs-wrapper">
@@ -910,7 +911,7 @@ function DetalhesInner() {
                         Gerar PDF
                       </button>
                       <Link
-                        href={`/contacto?produto=${encodeURIComponent(eq.id)}`}
+                        href={`https://wa.me/351912345678?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20equipamento%20${eq.name ?? eq.nome}%2C%20com%20a%20refer%C3%AAncia%20${eq.ref}!`} target="_blank" rel="noopener noreferrer"
                         className="pd-btn pd-btn-outline"
                         aria-label="Solicitar orçamento do produto"
                       >
