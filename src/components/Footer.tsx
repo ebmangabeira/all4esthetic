@@ -3,9 +3,9 @@ import React from "react";
 import Container from "./Container";
 
 export default function Footer() {
-  const addressDisplay = '2870-672 Alto Estanqueiro-Jardia, Montijo';
+  const addressDisplay = '2870-607 Alto Estanqueiro-Jardia, Montijo';
 const mapsNavigateUrl =
-  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('2870-672 Alto Estanqueiro-Jardia, Montijo, Portugal')}&travelmode=driving`;
+  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('2870-607 Alto Estanqueiro-Jardia, Montijo, Portugal')}&travelmode=driving`;
 
   return (
     <footer className="footer" id="footer" role="contentinfo">

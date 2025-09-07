@@ -220,9 +220,6 @@ type EquipmentDetails = {
   ["designação"]?: string;
   designacao?: string;
 
-  // OBS: a “descricao” principal pode não existir em alguns itens.
-  // No seu exemplo, a “descricao” está DENTRO de functions[].descricao,
-  // então vamos posicionar a REF embaixo dessa “descricao” de functions.
   descricao?: string;
   ["descrição"]?: string;
   description?: string;
@@ -911,12 +908,15 @@ function DetalhesInner() {
                         Gerar PDF
                       </button>
                       <Link
-                        href={`https://wa.me/351912345678?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20equipamento%20${eq.name ?? eq.nome}%2C%20com%20a%20refer%C3%AAncia%20${eq.ref}!`} target="_blank" rel="noopener noreferrer"
-                        className="pd-btn pd-btn-outline"
-                        aria-label="Solicitar orçamento do produto"
+                      href={`https://wa.me/351936623907?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20equipamento%20${eq.name ?? eq.nome}%2C%20com%20a%20refer%C3%AAncia%20${eq.ref}!`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pd-btn pd-btn-outline"
+                      aria-label="Solicitar orçamento do produto"
                       >
                         Solicitar Orçamento
                       </Link>
+
                     </div>
                   </div>
                 </div>

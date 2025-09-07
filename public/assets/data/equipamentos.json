@@ -142,7 +142,7 @@
     "id": "E048V1",
     "name": "Pressoterapia",
     "designação": "3 em 1",
-    "detalhe":"Pressoterapia 3 em 1, deverá ler-se: Ativa a circulação, reduz inchaço e gordura, tonifica e modela eficazmente pernas, braços e abdómen." ,
+    "detalhe":"Ativa a circulação, reduz inchaço e gordura, tonifica e modela eficazmente pernas, braços e abdómen." ,
     "ref": "E048V1",
     "code_rev": "FTE048V1.03",
     "functions": [
@@ -200,7 +200,7 @@
     "id": "E049V1",
     "name": "Pressoterapia",
     "designação": "",
-    "detalhe":"Pressoterapia, deverá ler-se Promove a drenagem linfática, redefine o contorno corporal, alivia o inchaço e melhora a retenção de líquidos." ,
+    "detalhe":"Promove a drenagem linfática, redefine o contorno corporal, alivia o inchaço e melhora a retenção de líquidos." ,
     "ref": "E049V1",
     "code_rev": "FTE049V1.01",
     "functions": [
@@ -251,11 +251,11 @@
     "functions": [
       {
         "nome": "Cavitação",
-        "descricao": "Lipoaspiração não invasiva, técnica ultrapontente capaz de destruir a gordura localizada a cirurgia e sem correr riscos, sem cortes, sem tempo de recuperação."
+        "descricao": "Lipoaspiração não invasiva, técnica ultrapontente capaz de destruir a gordura localizada, sem cortes e sem tempo de recuperação."
       },
       {
         "nome": "Radiofrequência",
-        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. Neste equipamento tem disponível os 2 tipos de radiofrequência que permite actuar em várias profundidades e de forma adequada para cada tipo de clientes. Num só equipamento dispõe de Radiofrequência Monopolar (corpo), Radiofrequência Tripolar (Rosto e corpo)."
+        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. Neste equipamento tem disponível os 2 tipos de radiofrequência que permite actuar em várias profundidades e de forma adequada para cada tipo de cliente. Num só equipamento dispõe de Radiofrequência Monopolar (corpo), Radiofrequência Tripolar (Rosto e corpo)."
       },
       {
         "nome": "Vácuo",
@@ -391,7 +391,7 @@
     "id": "E059",
     "name": "Radiofrequência",
     "designação": "Bi e Tripolar (Rosto e Corpo)",
-    "detalhe":"Lipoescultura a frio, radiofrequência aquece pele, reduz flacidez, celulite e gordura, estimulando colágeno." ,
+    "detalhe":"Reduz flacidez, celulite e gordura, estimulando colágeno." ,
     "ref": "E059",
     "code_rev": "FTE059.02",
     "functions": [
@@ -563,7 +563,7 @@
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
       "EMC 2014/30/EU",
-      "EN 60825-1:1994"
+      "Laser classe 4 de acordo com a norma europeia EN 60825-1:1994 e com as demais atualizações."
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-1.webp",
@@ -586,7 +586,7 @@
     "id": "E169V1",
     "name": "Laser Diodo",
     "designação": "755, 808 e 1064nm",
-    "detalhe":"Laser de 12 barras e 3 profundidades, refrigeração otimizada e HIFU no SMAS remodela rosto e corpo." ,
+    "detalhe":"Laser de 12 barras, 3 profundidades e refrigeração otimizada." ,
     "ref": "E169V1",
     "code_rev": "FTE169V1.03",
     "functions": [
@@ -612,14 +612,14 @@
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
       "EMC 2014/30/EU",
-      "EN 60825-1:1994"
+      "NOTA: Laser classe 4 de acordo com a norma europeia EN 60825-1:1994 e com as demais atualizações."
     ],
     "application": "Apenas para uso estético.",
-    "image": "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-3.webp",
+    "image": "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-1.webp",
     "images": [
-      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-3.webp",
-      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-2.webp",
       "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-1.webp",
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-2.webp",
+      "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-3.webp",
       "assets/img/equipments/E169V1-E069V1/E169V1-E069V1-4.webp"
     ],
     "category": "Laser",
@@ -661,7 +661,7 @@
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
       "EMC 2014/30/EU",
-      "Laser classe 4 de acordo com a norma europeia EN 60825-1:1994 e com as demais atualizações"
+      "NOTA: Laser classe 4 de acordo com a norma europeia EN 60825-1:1994 e com as demais atualizações"
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E169V3/E169V3-1.webp",
@@ -711,7 +711,7 @@
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
       "EMC 2014/30/EU",
-      "EN 60825-1:1994"
+      "NOTA: Laser classe 4 de acordo com a norma europeia EN 60825-1:1994 e com as demais atualizações."
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E169V4/E169V4-1.webp",
@@ -761,7 +761,7 @@
       "LVD 2014/35/EU",
       "ROSH 2011/65/EU",
       "EMC 2014/30/EU",
-      "EN 60825-1:1994"
+      "NOTA: Laser classe 4 de acordo com a norma europeia EN 60825-1:1994 e com as demais atualizações."
     ],
     "application": "Apenas para uso estético.",
     "image": "assets/img/equipments/E174/E174-1.webp",

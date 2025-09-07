@@ -52,18 +52,18 @@ export default function ContactoPage() {
             <div className="contact-cards-row" role="list">
               <div className="contact-card" role="listitem">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=2870-672%20Alto%20Estanqueiro-Jardia%2C%20Montijo%2C%20Portugal"
+                  href="https://www.google.com/maps/search/?api=1&query=2870-607%20Alto%20Estanqueiro-Jardia%2C%20Montijo%2C%20Portugal"
                   className="contact-link-wrapper"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Endereço: 2870-672 Alto Estanqueiro-Jardia, Montijo, Portugal — abre em nova aba"
+                  aria-label="Endereço: 2870-607 Alto Estanqueiro-Jardia, Montijo, Portugal — abre em nova aba"
                 >
                   <div className="contact-icon" aria-hidden="true">
                     <i className="bi bi-geo-alt"></i>
                   </div>
                   <h3 className="contact-title">Endereço</h3>
                   <p className="contact-text">
-                    2870-672 Alto Estanqueiro-Jardia,<br />
+                    2870-607 Alto Estanqueiro-Jardia,<br />
                     Montijo, Portugal
                   </p>
                 </a>
