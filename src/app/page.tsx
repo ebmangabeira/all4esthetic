@@ -116,7 +116,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="col-lg-6 d-flex justify-content-center align-items-center" data-aos="fade-left">
-                <div className="placeholder-decorativo" aria-hidden="true">
+                <div aria-hidden="true">
                   <img src="/assets/img/equipments/E169V4/E169V4-1.webp" alt="" className="img-sobre" role="presentation" />
                 </div>
               </div>

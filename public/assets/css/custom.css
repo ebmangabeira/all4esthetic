@@ -973,8 +973,8 @@ section,
 }
 
 .img-sobre {
-  width: 80%;
-  margin-left: 80px;
+  width: 150%;
+  margin-left: -160px;
 }
 
 .parallax-section {
@@ -1152,6 +1152,7 @@ section,
   .sobre .content p,
   .sobre ul li {
     font-size: var(--font-size-paragraph-mobile) !important;
+    margin-bottom: 8px;
   }
 
   .row {
@@ -1181,7 +1182,7 @@ section,
     max-width: 0;
   }
   .text-start {
-    margin-top: 34px;
+    margin-top: -14px;
   }
   .parallax-section {
     background-attachment: scroll !important;
@@ -1192,6 +1193,26 @@ section,
 
   .parallax-section::before {
     background-color: color-mix(in srgb, var(--surface-color), transparent 25%);
+  }
+  .img-sobre {
+    width: 0%;
+  }
+  #sobre .content {
+    margin-bottom: -26px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .img-sobre {
+    width: 0%;
+  }
+  #sobre .content {
+    margin-bottom: -24px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+ .img-sobre {
+    margin-left: -80px;
   }
 }
 
@@ -1478,10 +1499,6 @@ body.modal-open {
 
   .pd-page-title {
     padding: 120px 0 30px;
-  }
-
-  .sobre ul li i {
-    margin-bottom: 24px;
   }
 
   .row-box {
