@@ -412,11 +412,13 @@ export default function Page() {
 
                             <div className="card-body d-flex flex-column">
                               <h5 className="card-title">{e.name}</h5>
-                              {e.designação && <p className="card-designacao mb-2">{e.designação}</p>}
+                              <p className="card-designacao mb-2">{e.designação}</p>
+                              <span className="card-details">
                               {e.detalhe && <p className="card-detalhe mb-2">{e.detalhe}</p>}
 
                               {/* <<< ALTERADO: mostra REF do JSON (com fallback para id) >>> */}
-                              <p className="card-ref text-muted small mb-2">REF: {e.ref ?? e.id}</p>
+                              <p className="card-ref text-muted small mb-2 mt-auto">REF: {e.ref ?? e.id}</p>
+                              </span>
 
                               <Link href={`/detalhes?id=${e.id}`} className="btn btn-primary mt-auto">
                                 Mais detalhes
