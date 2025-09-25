@@ -102,7 +102,7 @@
     "functions": [
       {
         "nome": "Lipolaser",
-        "descricao": "Equipamento com circuito de vácuo que promove uma esfoliação mecânica progressiva e controlada através da aplicação de uma caneta promovendo a sucção da epiderme. A pressão negativa é ajustável, permitindo controle e segurança na aplicação. Efeitos ao nível da regeneração celular; produção de colagénio; melhorar a qualidade da pele."
+        "descricao": "Equipamento com circuito de vácuo que promove uma esfoliação mecânica progressiva e controlada através da aplicação de uma caneta promovendo a sucção da epiderme. A pressão negativa é ajustável, permitindo controlo e segurança na aplicação. Atua ao nível da regeneração celular ; produção de colagénio; melhorar a qualidade da pele."
       }
     ],
     "technical_data": {
@@ -245,13 +245,13 @@
     "id": "E055",
     "name": "Multifunções",
     "designação": "5 em 1",
-    "detalhe":"Cavitação destrói gordura sem cortes, radiofrequência combate flacidez e rugas, vácuo ativa circulação." ,
+    "detalhe":"Prático, eficaz e versátil. Com um único equipamento, é possível realizar diversos tratamentos, otimizando tempo, espaço e recursos." ,
     "ref": "E055",
     "code_rev": "FTE055.03",
     "functions": [
       {
         "nome": "Cavitação",
-        "descricao": "Lipoaspiração não invasiva, técnica ultrapontente capaz de destruir a gordura localizada, sem cortes e sem tempo de recuperação."
+        "descricao": "Lipoaspiração não invasiva, técnica ultrapontente capaz de destruir a gordura localizada, sem recorrer a métodos invasivos e sem tempo de recuperação."
       },
       {
         "nome": "Radiofrequência",

@@ -4,8 +4,8 @@ import Container from "./Container";
 
 export default function Footer() {
   const addressDisplay = '2870-607 Alto Estanqueiro-Jardia, Montijo';
-const mapsNavigateUrl =
-  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('2870-607 Alto Estanqueiro-Jardia, Montijo, Portugal')}&travelmode=driving`;
+  const mapsNavigateUrl =
+    "https://www.google.com/maps/dir/?api=1&destination=38.6795648,-8.917624&travelmode=driving";
 
   return (
     <footer className="footer" id="footer" role="contentinfo">

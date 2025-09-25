@@ -52,7 +52,7 @@ export default function ContactoPage() {
             <div className="contact-cards-row" role="list">
               <div className="contact-card" role="listitem">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=2870-607%20Alto%20Estanqueiro-Jardia%2C%20Montijo%2C%20Portugal"
+                  href="https://www.google.com/maps/search/?api=1&query=38.6795648,-8.917624"
                   className="contact-link-wrapper"
                   target="_blank"
                   rel="noopener noreferrer"
