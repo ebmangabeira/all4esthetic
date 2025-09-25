@@ -1482,7 +1482,7 @@ body.modal-open {
   .pd-page-title .pd-container {
     margin-top: 0;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
   }
 
   .pd-nav-breadcrumbs {
