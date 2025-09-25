@@ -1480,9 +1480,7 @@ body.modal-open {
   }
 
   .pd-page-title .pd-container {
-    margin-top: 0;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flow;
   }
 
   .pd-nav-breadcrumbs {
