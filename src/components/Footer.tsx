@@ -130,7 +130,7 @@ export default function Footer() {
                     <i className="bi bi-telephone" aria-hidden="true"></i>
                     <span>
                       <a href="tel:+351936623907"
-                        aria-label="Ligar para +351 936 623 907">
+                        aria-label="Ligar para +351 936 623 907 ">
                         (+351) 936 623 907
                       </a>
                     </span>
