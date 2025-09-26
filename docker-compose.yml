@@ -1,0 +1,30 @@
+services:
+  web:
+    image: ghcr.io/weeduo-it/all4esthetic:latest
+    networks:
+      - shared-network
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.all4esthetic.rule=Host(`weeduo.com`)"
+        - "traefik.http.routers.all4esthetic.entrypoints=websecure"
+        - "traefik.http.routers.all4esthetic.tls.certresolver=myresolver"
+        - "traefik.http.services.all4esthetic.loadbalancer.server.port=3000"
+
+  traefik_redirect:
+    image: traefik/whoami
+    networks:
+      - shared-network
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.http-catchall.rule=HostRegexp(`{host:.+}`)"
+        - "traefik.http.routers.http-catchall.entrypoints=web"
+        - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
+        - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+        - "traefik.http.services.traefik_redirect.loadbalancer.server.port=80" 
+
+networks:
+  shared-network:
+    external: true
+    
