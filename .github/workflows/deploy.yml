@@ -1,4 +1,4 @@
-name: build and deploy 
+name: build and deploy
 
 on:
   workflow_dispatch:
@@ -36,7 +36,8 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: deploy-gh
-          key: ${{ secrets.VPS_SSH_KEY }}
+          key: 
+            from_secret: VPS_SSH_KEY
           script: |
             docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin <<< "${{ secrets.GHCR_TOKEN }}"
             cd /var/www/all4esthetic.com
