@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: Deploy to VPS
-        uses: appleboy/ssh-action@@v1
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.VPS_HOST }}
           username: deploy-gh
