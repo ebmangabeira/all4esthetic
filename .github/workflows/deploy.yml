@@ -41,4 +41,5 @@ jobs:
             docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin <<< "${{ secrets.GHCR_TOKEN }}"
             cd /var/www/all4esthetic.com
             git pull
+            docker pull ghcr.io/weeduo-it/all4esthetic:latest
             docker stack deploy -c docker-compose.yml all4esthetic
