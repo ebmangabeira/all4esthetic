@@ -214,3 +214,4 @@ Desenvolvido por **All4esthetic**.
 ## 📄 Licença
 
 Definir licença do repositório (por ora, todos os direitos reservados a All4esthetic).
+
