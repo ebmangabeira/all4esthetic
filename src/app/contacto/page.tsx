@@ -52,17 +52,18 @@ export default function ContactoPage() {
             <div className="contact-cards-row" role="list">
               <div className="contact-card" role="listitem">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=38.6795648,-8.917624"
+                  href="https://www.google.com/maps/place/All4esthetic/@38.6728859,-8.9386461,17z/data=!3m1!4b1!4m6!3m5!1s0xd1939275241cce3:0x8900811c1b00a947!8m2!3d38.6728859!4d-8.9360712!16s%2Fg%2F11gvsgmvlj?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
                   className="contact-link-wrapper"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Endereço: 2870-607 Alto Estanqueiro-Jardia, Montijo, Portugal — abre em nova aba"
+                  aria-label="Endereço: R. dos Tractores 506 Armazém AE 2870-607 Alto Estanqueiro-Jardia, Montijo, Portugal — abre em nova aba"
                 >
                   <div className="contact-icon" aria-hidden="true">
                     <i className="bi bi-geo-alt"></i>
                   </div>
                   <h3 className="contact-title">Endereço</h3>
                   <p className="contact-text">
+                    R. dos Tractores 506 Armazém AE, 
                     2870-607 Alto Estanqueiro-Jardia,<br />
                     Montijo, Portugal
                   </p>
@@ -73,7 +74,7 @@ export default function ContactoPage() {
                 <a
                   href="tel:+351936623907"
                   className="contact-link-wrapper"
-                  aria-label="Contacto telefónico: +351 21 409 5469"
+                  aria-label="Contacto telefónico: +351 936 623 907"
                 >
                   <div className="contact-icon" aria-hidden="true">
                     <i className="bi bi-telephone-fill"></i>

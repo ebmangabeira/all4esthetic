@@ -3,9 +3,9 @@ import React from "react";
 import Container from "./Container";
 
 export default function Footer() {
-  const addressDisplay = '2870-607 Alto Estanqueiro-Jardia, Montijo';
+  const addressDisplay = 'R. dos Tractores 506 Armazém AE 2870-607, Montijo';
   const mapsNavigateUrl =
-    "https://www.google.com/maps/dir/?api=1&destination=38.6795648,-8.917624&travelmode=driving";
+    "https://www.google.com/maps/dir//All4esthetic,+R.+dos+Tractores+506+Armaz%C3%A9m+AE,+2870-607/@38.6727318,-8.9367493,18.5z/data=!4m9!4m8!1m0!1m5!1m1!1s0xd1939275241cce3:0x8900811c1b00a947!2m2!1d-8.9360726!2d38.6728933!3e0?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D";
 
   return (
     <footer className="footer" id="footer" role="contentinfo">

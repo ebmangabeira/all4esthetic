@@ -117,7 +117,7 @@ export default function Preloader({
         onClick={hideImmediately}
         aria-label="Ocultar carregamento e ver a página"
       >
-        Pular
+        Saltar
       </button>
     </div>
   );

@@ -42,7 +42,7 @@ export default function PoliticaPrivacidadePage() {
               <h2>1. Responsável pelo Tratamento</h2>
               <p>
                 All4esthetic<br />
-                2870-607, Alto Estanqueiro-Jardia, Montijo, Portugal<br />
+                R. dos Tractores 506 Armazém AE 2870-607, Alto Estanqueiro-Jardia, Montijo, Portugal<br />
                 Email:{" "}
                 <a href="mailto:geral@all4esthetic.com">geral@all4esthetic.com</a>
               </p>
