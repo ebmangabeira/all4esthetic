@@ -6,21 +6,25 @@ services:
     deploy:
       labels:
         - "traefik.enable=true"
-        
-        # HTTPS router
         - "traefik.http.routers.all4esthetic.rule=Host(`all4esthetic.com`)"
         - "traefik.http.routers.all4esthetic.entrypoints=websecure"
         - "traefik.http.routers.all4esthetic.tls.certresolver=myresolver"
         - "traefik.http.services.all4esthetic.loadbalancer.server.port=3000"
-        
-        # HTTP router for ACME + redirect
-        - "traefik.http.routers.all4esthetic-http.rule=Host(`all4esthetic.com`)"
-        - "traefik.http.routers.all4esthetic-http.entrypoints=web"
-        - "traefik.http.routers.all4esthetic-http.middlewares=redirect-to-https"
-        
-        # Middleware to redirect HTTP -> HTTPS
+
+  traefik_redirect:
+    image: traefik/whoami
+    networks:
+      - shared-network
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.http-catchall.rule=HostRegexp(`{host:.+}`)"
+        - "traefik.http.routers.http-catchall.entrypoints=web"
+        - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
         - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+        - "traefik.http.services.traefik_redirect.loadbalancer.server.port=80" 
 
 networks:
   shared-network:
     external: true
+    
