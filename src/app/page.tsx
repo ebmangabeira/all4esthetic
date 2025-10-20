@@ -198,7 +198,7 @@ export default function HomePage() {
                         <div className="d-flex align-items-center mb-3">
                           <img
                             src="/assets/img/depoimentos/rute_marques.webp"
-                            alt="Foto de Rute Marqques"
+                            alt="Foto de Rute Marques"
                             className="testimonial-img flex-shrink-0 rounded-circle"
                             width={60}
                             height={60}
@@ -212,7 +212,7 @@ export default function HomePage() {
                               <i className="bi bi-star-fill" aria-hidden="true"></i>
                               <i className="bi bi-star-fill" aria-hidden="true"></i>
                             </div>
-                            <h3>Rute Marqques</h3>
+                            <h3>Rute Marques</h3>
                             <h4>Cliente</h4>
                           </div>
                         </div>

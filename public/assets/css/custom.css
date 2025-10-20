@@ -2780,9 +2780,6 @@ label {
   .pd-box table th {
     font-size: var(--font-size-paragraph-mobile) !important;
   }
-  .pd-title-row {
-    gap: 0;
-  }
   .pd-product-title {
     margin-bottom: 0px;
   }

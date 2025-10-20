@@ -42,4 +42,5 @@ jobs:
             cd /var/www/all4esthetic.com
             git pull
             docker pull ghcr.io/weeduo-it/all4esthetic:latest
-            docker stack deploy -c docker-compose.yml all4esthetic
+            docker stack deploy --with-registry-auth --resolve-image always -c docker-compose.yml all4esthetic
+

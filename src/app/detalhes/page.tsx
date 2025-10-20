@@ -651,8 +651,8 @@ function DetalhesInner() {
                                         ) : null}
 
                                         {/* >>> REF: exatamente EMBAIXO da primeira descricao encontrada <<< */}
-                                        {refCode && firstDescIdx >= 0 && i === firstDescIdx && (
-                                          <div className="pd-ref text-muted" style={{ marginTop: 6 }}>
+                                        {refCode && firstDescIdx >= 0 && i === funcItems.length -1 && (
+                                          <div className="pd-ref text-muted" style={{ marginTop: 24 }}>
                                             <strong>REF:</strong> {refCode}
                                           </div>
                                         )}
