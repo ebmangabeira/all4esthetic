@@ -26,7 +26,7 @@ type Equipment = {
 const CATEGORIES = [
   "Electroestimulação",
   "Emsculpt",
-  "Microdermoabrasão",
+  "Microdermobrasão",
   "Pressoterapia",
   "Multifunções",
   "Criolipólise",

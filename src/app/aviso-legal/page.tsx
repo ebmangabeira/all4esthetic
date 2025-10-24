@@ -38,19 +38,19 @@ export default function AvisoLegalPage() {
               <p className="text-muted pp-meta"><em>Última revisão: 07 de Agosto de 2025</em></p>
 
               <h2>1. Informações Gerais</h2>
-              <p>Todos os conteúdos, textos, imagens, gráficos e informações presentes neste website são de responsabilidade da All4esthetic e destinam-se exclusivamente a fornecer informações sobre os produtos e serviços oferecidos.</p>
+              <p>Todos os conteúdos, textos, imagens, gráficos e informações presentes neste website são de responsabilidade da all4esthetic e destinam-se exclusivamente a fornecer informações sobre os produtos e serviços oferecidos.</p>
 
               <h2>2. Direitos de Propriedade Intelectual</h2>
-              <p>Todos os direitos de propriedade intelectual, incluindo marcas, logotipos, imagens, textos e design gráfico, são propriedade exclusiva da All4esthetic ou dos seus licenciadores, estando protegidos por legislação nacional e internacional.</p>
+              <p>Todos os direitos de propriedade intelectual, incluindo marcas, logotipos, imagens, textos e design gráfico, são propriedade exclusiva da all4esthetic ou dos seus licenciadores, estando protegidos por legislação nacional e internacional.</p>
 
               <h2>3. Limitação de Responsabilidade</h2>
-              <p>A All4esthetic não se responsabiliza por quaisquer danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do uso ou impossibilidade de uso deste website, incluindo erros ou omissões nas informações apresentadas.</p>
+              <p>A all4esthetic não se responsabiliza por quaisquer danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do uso ou impossibilidade de uso deste website, incluindo erros ou omissões nas informações apresentadas.</p>
 
               <h2>4. Conteúdos de Terceiros</h2>
-              <p>Este website pode conter links para sites de terceiros, sobre os quais a All4esthetic não exerce controle e não assume responsabilidade pelo conteúdo, políticas de privacidade ou práticas desses sites.</p>
+              <p>Este website pode conter links para sites de terceiros, sobre os quais a all4esthetic não exerce controle e não assume responsabilidade pelo conteúdo, políticas de privacidade ou práticas desses sites.</p>
 
               <h2>5. Alterações ao Website</h2>
-              <p>A All4esthetic reserva-se o direito de modificar, atualizar ou remover qualquer conteúdo do website a qualquer momento, sem aviso prévio.</p>
+              <p>A all4esthetic reserva-se o direito de modificar, atualizar ou remover qualquer conteúdo do website a qualquer momento, sem aviso prévio.</p>
 
               <h2>6. Lei Aplicável e Jurisdição</h2>
               <p>Este aviso legal é regido pela legislação portuguesa. Quaisquer litígios relacionados com o uso do website serão submetidos aos tribunais competentes de Lisboa, Portugal.</p>

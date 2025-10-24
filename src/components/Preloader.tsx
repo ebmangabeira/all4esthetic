@@ -100,7 +100,7 @@ export default function Preloader({
         <img
           className="preloader__logo"
           src="/assets/img/logo-header.png"
-          alt="All4esthetic"
+          alt="all4esthetic"
           decoding="async"
         />
         <p className="preloader__label">

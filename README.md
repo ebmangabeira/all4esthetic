@@ -3,9 +3,9 @@
 Desenvolvido por **Emerson Botelho Mangabeira** com foco em tecnologia, estética e inovação.  
 Contato: [ebmangabeira@gmail.com](mailto:ebmangabeira@gmail.com)
 
-# All4esthetic — Catálogo e Site Institucional
+# all4esthetic — Catálogo e Site Institucional
 
-Projeto **Next.js (App Router) + TypeScript + Tailwind v4 + Bootstrap 5** para apresentar o catálogo de equipamentos estéticos da All4esthetic.  
+Projeto **Next.js (App Router) + TypeScript + Tailwind v4 + Bootstrap 5** para apresentar o catálogo de equipamentos estéticos da all4esthetic.  
 Inclui **lista com filtros e paginação**, **página de detalhes**, **banner de cookies acessível**, **páginas legais** e **componentes utilitários** (preloader, voltar ao topo, etc.).
 
 > Atualizado em **2025-09-03** a partir do código enviado (`all4esthetic.zip`).
@@ -206,11 +206,11 @@ npm run export  # gera ./out/ para hospedagem estática
 
 ## 👤 Autor & Contato
 
-Desenvolvido por **All4esthetic**.  
+Desenvolvido por **all4esthetic**.  
 📧 E-mail: **geral@all4esthetic.com**
 
 ---
 
 ## 📄 Licença
 
-Definir licença do repositório (por ora, todos os direitos reservados a All4esthetic).
+Definir licença do repositório (por ora, todos os direitos reservados a all4esthetic).

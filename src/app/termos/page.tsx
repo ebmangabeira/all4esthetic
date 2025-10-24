@@ -58,13 +58,13 @@ export default function TermosDeUsoPage() {
 							<h2>3. Propriedade Intelectual</h2>
 							<p>
 								Todos os conteúdos, imagens, textos, logos e demais materiais
-								são de propriedade da All4esthetic ou de seus licenciadores,
+								são de propriedade da all4esthetic ou de seus licenciadores,
 								estando protegidos pelas leis de propriedade intelectual.
 							</p>
 
 							<h2>4. Limitação de Responsabilidade</h2>
 							<p>
-								A All4esthetic não se responsabiliza por quaisquer danos
+								A all4esthetic não se responsabiliza por quaisquer danos
 								diretos ou indiretos decorrentes do uso ou impossibilidade de
 								uso do site, incluindo a precisão das informações fornecidas.
 							</p>

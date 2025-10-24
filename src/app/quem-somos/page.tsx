@@ -60,7 +60,7 @@ export default function QuemSomosPage() {
                   data-bs-toggle="modal"
                   data-bs-target="#modalHistoria"
                   aria-describedby="feature-historia"
-                  aria-label="Abrir modal sobre a História da All4esthetic"
+                  aria-label="Abrir modal sobre a História da all4esthetic"
                   aria-haspopup="dialog"
                   aria-controls="modalHistoria"
                 >
@@ -68,7 +68,7 @@ export default function QuemSomosPage() {
                     <i className="bi bi-book-half"></i>
                   </div>
                   <h3 id="feature-historia" className="mb-2">História</h3>
-                  <p className="mb-0">A All4esthetic nasce de um sonho que iniciou em 2006 e evoluiu até hoje.</p>
+                  <p className="mb-0">A all4esthetic nasce de um sonho que iniciou em 2006 e evoluiu até hoje.</p>
                 </button>
               </div>
 
@@ -79,7 +79,7 @@ export default function QuemSomosPage() {
                   data-bs-toggle="modal"
                   data-bs-target="#modalEquipa"
                   aria-describedby="feature-equipa"
-                  aria-label="Abrir modal sobre a Equipa da All4esthetic"
+                  aria-label="Abrir modal sobre a Equipa da all4esthetic"
                   aria-haspopup="dialog"
                   aria-controls="modalEquipa"
                 >
@@ -98,7 +98,7 @@ export default function QuemSomosPage() {
                   data-bs-toggle="modal"
                   data-bs-target="#modalVisao"
                   aria-describedby="feature-visao"
-                  aria-label="Abrir modal sobre a Visão da All4esthetic"
+                  aria-label="Abrir modal sobre a Visão da all4esthetic"
                   aria-haspopup="dialog"
                   aria-controls="modalVisao"
                 >
@@ -128,13 +128,13 @@ export default function QuemSomosPage() {
                     <div className="history-quote mb-4">
                       <i className="bi bi-quote" aria-hidden="true"></i>
                       <p id="modalHistoriaLabel">
-                        “A All4esthetic nasce de um sonho que começou em 2006 com apenas dois equipamentos. Após sete anos de aprendizagem, em 2013 criámos a marca All4esthetic e, desde então, não parámos na busca da excelência, inovação e compromisso, pois acreditamos que essas são as bases para transformar ideias em resultados.”
+                        “A all4esthetic nasce de um sonho que começou em 2006 com apenas dois equipamentos. Após sete anos de aprendizagem, em 2013 criámos a marca all4esthetic e, desde então, não parámos na busca da excelência, inovação e compromisso, pois acreditamos que essas são as bases para transformar ideias em resultados.”
                       </p>
                     </div>
                     <div className="history-client mb-3">
                       <div className="history-info">
                         <h5 className="history-name mb-1">Nuno Jorge</h5>
-                        <span className="history-role">CEO da All4esthetic</span>
+                        <span className="history-role">CEO da all4esthetic</span>
                       </div>
                     </div>
                     <button
@@ -167,7 +167,7 @@ export default function QuemSomosPage() {
                     <div className="history-image mb-4">
                       <img
                         src="/assets/img/equipa/equipa.webp"
-                        alt="Foto da equipa All4esthetic"
+                        alt="Foto da equipa all4esthetic"
                         className="history-image__img"
                         width={600}
                         height={400}
@@ -177,12 +177,12 @@ export default function QuemSomosPage() {
                     <div className="history-quote mb-4">
                       <i className="bi bi-quote" aria-hidden="true"></i>
                       <p id="modalEquipaLabel">
-                        Na All4esthetic, somos uma equipa dedicada à inovação e à excelência no mercado da estética. Com vasta experiência na comercialização de produtos e equipamentos, formação especializada e assistência técnica de ponta, trabalhamos diariamente para oferecer soluções completas e personalizadas aos nossos clientes.
+                        Na all4esthetic, somos uma equipa dedicada à inovação e à excelência no mercado da estética. Com vasta experiência na comercialização de produtos e equipamentos, formação especializada e assistência técnica de ponta, trabalhamos diariamente para oferecer soluções completas e personalizadas aos nossos clientes.
                       </p>
                     </div>
                     <div className="history-client mb-3">
                       <div className="history-info">
-                        <h5 className="history-name mb-1">Equipa All4esthetic</h5>
+                        <h5 className="history-name mb-1">Equipa all4esthetic</h5>
                       </div>
                     </div>
                     <button
@@ -215,12 +215,12 @@ export default function QuemSomosPage() {
                     <div className="history-quote mb-4">
                       <i className="bi bi-quote" aria-hidden="true"></i>
                       <p id="modalVisaoLabel">
-                        Na All4esthetic, a nossa visão é liderar a estética com inovação sustentável e confiança. Ambicionamos elevar padrões, unindo tecnologia, formação e serviço próximo, para criar valor duradouro. Queremos ser a primeira escolha de profissionais e clientes, inspirando bem-estar e resultados em cada projeto hoje.
+                        Na all4esthetic, a nossa visão é liderar a estética com inovação sustentável e confiança. Ambicionamos elevar padrões, unindo tecnologia, formação e serviço próximo, para criar valor duradouro. Queremos ser a primeira escolha de profissionais e clientes, inspirando bem-estar e resultados em cada projeto hoje.
                       </p>
                     </div>
                     <div className="history-client mb-3">
                       <div className="history-info">
-                        <h5 className="history-name mb-1">Visão All4esthetic</h5>
+                        <h5 className="history-name mb-1">Visão all4esthetic</h5>
                       </div>
                     </div>
                     <button

@@ -187,7 +187,7 @@ export default function HomePage() {
                         </div>
                         <p>
                           <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                            Tem sido uma experiência muito boa a parceria com a All4Esthetic. Estou muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. Quanto à equipa, é mesmo de excelência e está sempre pronta para nos atender e ajudar. Foi a Miriam quem me apresentou a empresa e sou mesmo grata a ela por tudo. Simpática e profissional.
+                            Tem sido uma experiência muito boa a parceria com a all4esthetic. Estou muito satisfeita e feliz com os resultados obtidos com a tecnologia do laser. Quanto à equipa, é mesmo de excelência e está sempre pronta para nos atender e ajudar. Foi a Miriam quem me apresentou a empresa e sou mesmo grata a ela por tudo. Simpática e profissional.
                           <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
                         </p>
                       </div>
@@ -218,7 +218,7 @@ export default function HomePage() {
                         </div>
                         <p>
                           <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                            Sou parceira da All4Esthetic há mais de 4 anos e super recomendo, desde a qualidade dos equipamentos, ao conhecimento transmitido nas formações, até à simpatia e disponibilidade dos funcionários!
+                            Sou parceira da all4esthetic há mais de 4 anos e super recomendo, desde a qualidade dos equipamentos, ao conhecimento transmitido nas formações, até à simpatia e disponibilidade dos funcionários!
                           <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
                         </p>
                       </div>
@@ -280,7 +280,7 @@ export default function HomePage() {
                         </div>
                         <p>
                           <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                            Sou extremamente grata à All4Esthetic, uma parceira que me acompanha com excelência e comprometimento. Sempre que preciso, sou atendida com agilidade, atenção e, principalmente, qualidade - pontos essenciais para quem, como eu, valoriza oferecer um atendimento de alto nível aos seus clientes.
+                            Sou extremamente grata à all4esthetic, uma parceira que me acompanha com excelência e comprometimento. Sempre que preciso, sou atendida com agilidade, atenção e, principalmente, qualidade - pontos essenciais para quem, como eu, valoriza oferecer um atendimento de alto nível aos seus clientes.
                           <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
                         </p>
                       </div>
@@ -311,7 +311,7 @@ export default function HomePage() {
                         </div>
                         <p>
                           <i className="bi bi-quote quote-icon-left" aria-hidden="true"></i>
-                            Gostaria de destacar a excelente qualidade dos produtos e serviços oferecidos pela All4Esthetic! Já sou cliente há 6 anos e só tenho a agradecer e dar os parabéns pelo trabalho excecional e pelo compromisso com a satisfação dos clientes!
+                            Gostaria de destacar a excelente qualidade dos produtos e serviços oferecidos pela all4esthetic! Já sou cliente há 6 anos e só tenho a agradecer e dar os parabéns pelo trabalho excecional e pelo compromisso com a satisfação dos clientes!
                           <i className="bi bi-quote quote-icon-right" aria-hidden="true"></i>
                         </p>
                       </div>

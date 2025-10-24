@@ -9,7 +9,7 @@
     "functions": [
       {
         "nome": "Eletroterapia",
-        "descricao": "É uma corrente alternada de média frequência em kHz com formas de ondas diferenciadas e moduladas em pulsos de curta duração o que a torna eficiente a força de contração muscular. Equipamento bastante completo com 9 programas como emagrecimento, de drenagem, de ginástica passiva / tonificação muscular e de fisioterapia."
+        "descricao": "É uma corrente alternada de média frequência em kHz com formas de ondas diferenciadas e moduladas em pulsos de curta duração o que torna eficiente a força de contração muscular. Equipamento bastante completo com 9 programas como emagrecimento, drenagem, ginástica passiva / tonificação muscular e fisioterapia."
       }
     ],
     "technical_data": {
@@ -49,14 +49,14 @@
   {
     "id": "E012V1",
     "name": "Emsculpt",
-    "designação": "com 2 Manipuladores",
+    "designação": "com 2 Manípulos",
     "detalhe":"Ondas electromagnéticas intensas para acções musculares involuntárias localizadas no abdómen e nádegas." ,
     "ref": "E012V1",
     "code_rev": "FTE012V1.01",
     "functions": [
       {
         "nome": "EMS",
-        "descricao": "A tecnologia Emsculpt utiliza ondas electromagnéticas localizadas de alta intensidade. Estas são responsáveis por produzir acções musculares involuntárias e com intensidades que naturalmente o músculo, por si só, não é capaz de efectuar. É indicado para tonificação muscular, em específico para abdómen e nádegas."
+        "descricao": "A tecnologia Emsculpt utiliza ondas electromagnéticas localizadas de alta intensidade. Estas são responsáveis por produzir acções musculares involuntárias e com intensidades que naturalmente o músculo, por si só, não é capaz de efetuar. É indicado para tonificação muscular, em específico para abdómen e nádegas."
       }
     ],
     "technical_data": {
@@ -94,14 +94,14 @@
   },
   {
     "id": "E025",
-    "name": "Microdermoabrasão",
+    "name": "Microdermobrasão",
     "designação": "",
     "detalhe":"Circuito de vácuo ajustável, promove esfoliação profunda, regeneração celular e melhora a qualidade da pele." ,
     "ref": "E025",
     "code_rev": "FTE025.03",
     "functions": [
       {
-        "nome": "Lipolaser",
+        "nome": " ",
         "descricao": "Equipamento com circuito de vácuo que promove uma esfoliação mecânica progressiva e controlada através da aplicação de uma caneta promovendo a sucção da epiderme. A pressão negativa é ajustável, permitindo controlo e segurança na aplicação. Atua ao nível da regeneração celular ; produção de colagénio; melhorar a qualidade da pele."
       }
     ],
@@ -129,7 +129,7 @@
       "assets/img/equipments/E025/E025-3.png",
       "assets/img/equipments/E025/E025-4.png"
     ],
-    "category": "Microdermoabrasão",
+    "category": "Microdermobrasão",
     "sale": true,
     "rental": {
       "diario": false,
@@ -148,7 +148,7 @@
     "functions": [
       {
         "nome": "Drenagem pneumática",
-        "descricao": "A Drenagem pneumática é recomendada para tratamento anti-celulítico, emagrecimento, retenção de líquidos e desintoxicação corporal. Através de uma eficaz drenagem linfática, ajuda a promover as funções do corpo fazendo uma revitalização e oxigenação do tecido magro, que contribui para redefinir as pernas, abdómen e braços e que consiste em melhorar o perfil e contorno corporal. Alivia a dor e inchaço, reduz a inflamação e edema, alivia a fadiga nas pernas, acelera a cicatrização e melhora o fluxo de oxigénio pelo corpo."
+        "descricao": "A Drenagem pneumática é recomendada para tratamento anti-celulítico, emagrecimento, retenção de líquidos e desintoxicação corporal. Através de uma eficaz drenagem linfática, ajuda a promover as funções do corpo fazendo uma revitalização e oxigenação do tecido magro, que contribui para redefinir as pernas, abdómen e braços e que consiste em melhorar o perfil e contorno corporal. Alivia a dor e inchaço, reduz a inflamação e edema, alivia a fadiga nas pernas, acelera a cicatrização e melhora o fluxo de oxigénio pelo corpo. Uma eficaz drenagem linfática, promove as funções do corpo fazendo uma revitalização e oxigenação do tecido magro, contribuindo assim, para redefinir pernas, abdómen e braços, melhorando o perfil e contorno corporal."
       },
       {
         "nome": "Infra-Vermelhos",
@@ -156,7 +156,7 @@
       },
       {
         "nome": "Electroestimulação",
-        "descricao": "Tratamento que utiliza a técnica de estimulação muscular, ou seja, provoca movimentação (contracção e relaxamento) muscular. Principais benefícios: Melhora a circulação sanguínea, aumenta o oxigénio nos músculos, combate a flacidez, celulite e promove a tonificação muscular."
+        "descricao": "Tratamento que utiliza a técnica de estimulação muscular, ou seja, provoca movimentação (contracção e relaxamento) muscular. Principais benefícios: Melhora a circulação sanguínea, potencia a oxigenação tecidular, combate a flacidez, celulite e promove a tonificação muscular."
       }
     ],
     "technical_data": {
@@ -301,7 +301,7 @@
   {
     "id": "E058V2",
     "name": "Criolipólise 360º",
-    "designação": "com 2 Manipulos",
+    "designação": "com 2 Manípulos",
     "detalhe":"Tratamento não invasivo que congela e suga gordura localizada, eliminada pelo sistema linfático." ,
     "ref": "E058V2",
     "code_rev": "FTE058V2.02",
@@ -391,13 +391,13 @@
     "id": "E059",
     "name": "Radiofrequência",
     "designação": "Bi e Tripolar (Rosto e Corpo)",
-    "detalhe":"Reduz flacidez, celulite e gordura, estimulando colágeno." ,
+    "detalhe":"Reduz flacidez, celulite e gordura, estimulando colagénio." ,
     "ref": "E059",
     "code_rev": "FTE059.02",
     "functions": [
       {
         "nome": "Radiofrequência",
-        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes manípulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia permite que o profissional possa trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colágeno e elastina), redução de gordura, celulite, tonificação e firmeza da pele."
+        "descricao": "Técnica mais eficaz no combate à flacidez, celulite e rugas. O tratamento pode ser realizado na face e no corpo porque possui diferentes manípulos. Funciona através de ondas eletromagnéticas que provoca um aquecimento gradual e profundo das camadas da pele. O aparelho faz com que a energia focada chegue onde é necessário. A alta concentração de energia permite que o profissional possa trabalhar com baixa potência e por isso o tratamento é indolor e seguro. Durante a aplicação da radiofrequência tripolar ocorre o aumento da microcirculação sanguínea, estímulo dos fibroblastos (responsáveis pela produção das fibras de colagénio e elastina), redução de gordura, celulite, tonificação e firmeza da pele."
       }
     ],
     "technical_data": {
@@ -442,7 +442,7 @@
     "functions": [
       {
         "nome": "IPL - SHR",
-        "descricao": "A IPL convencional aplica impulsos curtos de aproximadamente 2-300 ms com aplicação de energia 12-120 J/cm2, energia essa que é transportada para a raiz do cabelo através da melanina onde normalmente chega a atingir 65-72 °C, provocando desconforto, dor e por vezes queimaduras irreversíveis. A tecnologia SHR, usa apenas 50% da energia das tradicionais equipamentos de fotodepilação, mas com uma alta taxa de repetição (até 10 Hz, ou seja, 10 vezes por segundo ). O resultado é um tratamento mais eficaz e com uma redução significativa da temperatura na área de atuação que ronda os 45ºC, eliminando praticamente o desconforto durante o tratamento. Equipamento ultra rápido, com a capacidade máxima de 10 disparos por segundo."
+        "descricao": "A IPL convencional aplica impulsos curtos de aproximadamente 2-300 ms com aplicação de energia 12-120 J/cm2, energia essa que é transportada para a raiz do cabelo através da melanina onde normalmente chega a atingir 65-72 °C, provocando desconforto, dor e por vezes queimaduras irreversíveis. A tecnologia SHR, usa apenas 50% da energia dos tradicionais equipamentos de fotodepilação, mas com uma alta taxa de repetição (até 10 Hz, ou seja, 10 vezes por segundo ). O resultado é um tratamento mais eficaz e com uma redução significativa da temperatura na área de atuação que ronda os 45ºC, eliminando praticamente o desconforto durante o tratamento. Equipamento ultra rápido, com a capacidade máxima de 10 disparos por segundo."
       }
     ],
     "technical_data": {
@@ -488,7 +488,7 @@
     "functions": [
       {
         "nome": "V-Shape",
-        "descricao": "combina a tecnologia de Radiofrequência Bipolar, com movimentos modeladores executados pelos cilindros circulantes, vacuoterapia, infravermelhos e ultrassom. A combinação perfeita para a modelação corporal, com resultados totalmente eficazes na redução de volume corporal e uma ferramenta extremamente útil no combate à celulite. Possui 4 manipulos, sendo que o de rosto ainda contem 3 cabeçotes ajustáveis de tamanhos diferentes."
+        "descricao": "combina a tecnologia de Radiofrequência Bipolar, com movimentos modeladores executados pelos cilindros circulantes, vacuoterapia, infravermelhos e ultrassom. A combinação perfeita para a modelação corporal, com resultados totalmente eficazes na redução de volume corporal e uma ferramenta extremamente útil no combate à celulite. Possui 4 manípulos, sendo que o de rosto ainda contem 3 cabeçotes ajustáveis de tamanhos diferentes."
       }
     ],
     "technical_data": {
@@ -641,7 +641,7 @@
     "functions": [
       {
         "nome": "Laser Diodo",
-        "descricao": "Equipado com software de programação automática de acordo com a zona. Actua em 3 niveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manipulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
+        "descricao": "Equipado com software de programação automática de acordo com a zona. Actua em 3 niveis de profundidade diferentes e em simultâneo, permitindo resultados rápidos e eficazes logo na primeira sessão. Sistemas de alerta e de segurança incorporados, como de regulação de caudal de água, sensores de temperatura do manípulo, sensores de temperatura interna da Main Machine e sensores de temperatura da água."
       }
     ],
     "technical_data": {
@@ -696,7 +696,7 @@
     "technical_data": {
       "Ecrã:": "Sistema Android com 15,6 polegadas e resolução 1920x1080",
       "Programação:": "Automática e através de sonda",
-      "Potência:": "1 Manipulo com 2000W + 1 Manipulo com 1000W",
+      "Potência:": "1 Manípulo com 2000W + 1 Manípulo com 1000W",
       "Espectro_laser:": "755nm, 808nm e 1064nm",
       "Energia_regulável:": "2 a 95J/cm² + 2 a 50J/cm²",
       "Fonte_de_alimentacao_de_laser:": "1 fonte de 1000W + 1 fonte de 2000W",

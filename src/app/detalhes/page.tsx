@@ -885,7 +885,7 @@ function DetalhesInner() {
                     )}
 
                     <div id="pdf-contact-info" className="pd-box" aria-hidden="true">
-                      <h5>All4Esthetic — innovating beauty</h5>
+                      <h5>all4esthetic — innovating beauty</h5>
                       <p><strong>Morada:</strong> Rua dos Tratores nº 506, Armazém AE, 2870-607 Alto Estanqueiro/Jardia</p>
                       <p><strong>Contactos:</strong> +351 214 095 469 | +351 936 623 907</p>
                       <p><strong>E-mail:</strong> geral@all4esthetic.com</p>
